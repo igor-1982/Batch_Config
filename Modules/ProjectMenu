@@ -1,0 +1,17 @@
+My_Modules {
+ modules="/home/igor/Dropbox/SourceCode-Pool/My_Modules"  {
+  gaussian_manage.py
+  dft_d.py
+  my_io.py
+  opt.py
+  pos_scf.py
+  Gau_Environment
+  config
+  rGO="/home/igor/Dropbox/SourceCode-Pool/My_Modules/rGO" CD=. {
+    Igor_rGO.f90
+    opt.f90
+    bash.f90
+    red.f90
+  }
+ }
+}

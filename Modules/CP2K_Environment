@@ -1,0 +1,26 @@
+#!/bin/csh -f
+#filename : CP2K_Environment
+#Author:    Igor Ying Zhang, Xin Xu
+#Purpose:   Setting Q-Chem running environment and run qchem
+#
+#Usage:     CP2K_Environment CP2K_Input
+
+# Now set script for CP2K
+set NN = `wc -l $2|cut -f1 -d' '`
+set CP2K_PATH = /share/apps/cp2k/exe/Linux-x86-64-gfortran
+# Now set mpich environments
+set MPI_PATH = /opt/intel/impi/3.2.2.006/bin64
+
+set FileName=$1:r
+set PostFix=$1:e
+
+#
+if ($PostFix == 'inp' || $PostFix == 'com') then
+    if ($NN == 1) then
+        $CP2K_PATH/cp2k.sopt -i $FileName.$PostFix -o $FileName.log
+    else
+        $MPI_PATH/mpiexec -n $NN $CP2K_PATH/cp2k.popt -i $FileName.$PostFix -o $FileName.log
+else
+    echo "Error PostFix found"
+endif
+

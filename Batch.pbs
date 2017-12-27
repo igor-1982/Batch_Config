@@ -1,0 +1,55 @@
+#!/bin/csh -xf
+#PBS -N jobname
+#PBS -e jobname.err
+#PBS -o jobname.out
+#PBS -q queue
+#PBS -l nodes=nnode:ppn=nppn
+
+setenv BATCH_PATH /home/wenxinzy/export/softs/Batch_Config
+setenv IGOR_MODULES_PATH /home/wenxinzy/export/softs/My_Modules
+
+echo $PBS_O_WORKDIR
+cd $PBS_O_WORKDIR
+set job=jobname
+uname -a
+ setenv QCLOCALSCR /state/partition1/$USER/scratch
+# Then to creat $QCLOCALSCR in every node applied
+ set MPI_PATH = /opt/intel/impi/3.2.2.006/bin64
+ set MYNODE=`sed -n -e "1 p" $PBS_NODEFILE`
+ cat  $PBS_NODEFILE > $PBS_O_WORKDIR/mpd.hosts
+ set NN = `cat $PBS_NODEFILE | wc -l`
+ ssh $MYNODE mkdir -p $QCLOCALSCR
+ ssh $MYNODE pkill -9 qcprog.exe_DHDF
+ ssh $MYNODE rm /tmp/mpd2.console_$USER
+ ssh $MYNODE $MPI_PATH/mpdallexit
+ @ IPROC = 2
+ @ NNODES = 1
+ @ NSMPCPU = 1
+ while($IPROC <= $NN)
+    set MYPROC=`sed -n -e "$IPROC p" $PBS_NODEFILE`
+    if($MYPROC != $MYNODE) then
+       set MYNODE=$MYPROC
+       ssh $MYNODE mkdir -p $QCLOCALSCR
+       ssh $MYNODE pkill -9 qcprog.exe_DHDF
+       ssh $MYNODE rm /tmp/mpd2.console_$USER
+       ssh $MYNODE pkill python2.4
+       ssh $MYNODE $MPI_PATH/mpdallexit
+       @ NSMPCPU = 0
+       @ NNODES++
+    endif
+    @ IPROC++
+    @ NSMPCPU++
+ end
+
+# Setup mpich service
+#$MPI_PATH/mpdboot -n nnode -f $PBS_O_WORKDIR/mpd.hosts -r ssh
+# Run Batch
+$BATCH_PATH/Batch.csh $job.postfix
+# Exit mpich service
+#$MPI_PATH/mpdallexit
+
+#
+#Move the results to origin dir
+#
+rm $PBS_O_WORKDIR/Batch.pbs
+

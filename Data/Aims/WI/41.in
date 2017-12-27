@@ -1,0 +1,32 @@
+$molecule
+0   1
+ C                                                                              
+Ne   1 nec2
+ H    1 hc3         2 hcne3
+ H    1 hc4         2 hcne4         3 dih4
+ H    1 hc5         2 hcne5         4 dih5
+ H    1 hc6         5 hch6          2 dih6
+
+nec2        3.485884
+hc3         1.089462
+hcne3        70.502
+hc4         1.089463
+hcne4        70.547
+dih4        120.009
+hc5         1.089463
+hcne5        70.547
+dih5        119.982
+hc6         1.089518
+hch6        109.468
+dih6       -179.973
+$end
+   
+$rem
+mem_static = 200
+mem_total  = 7500
+exchange = b3lyp
+basis = 6-311+g(3df,2p)
+scf_convergence = 7
+symmetry = false
+xc_grid = 000075000302
+$end

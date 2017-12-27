@@ -1,0 +1,3343 @@
+=>Batch start from Thu Jun  2 23:48:30 2011
+=>This project aims to ::
+  "============================ G2 set ==============================="
+  "All the geometries are optimized at the level of B3LYP/6-311+G(d,p)"
+=>1) Project pool is "/home/wenxinzy/Project/Gaussian/G3_opt_6-31g2dfp/G2"
+=>2) Project batch type is "2" which to run the job, if no log and chk exist
+=>3) QC package employed is "gaussian"
+=>There are 2 <Macro-Path>s specified in G2-2.ctl :
+  Macro-Path :   <PATH1> = /home/wenxinzy/export/softs/Batch_Config/Data/Gaus...
+  Macro-Path :   <PATH2> = /home/wenxinzy/export/softs/Batch_Config/Data/Gaus...
+=>Following option(s) is(are) invalid in BATCH :
+  nonstd
+=>Loaded ConfigIO.BatcList :
+==----------------------------------------------------------------------------==
+Index        Name                        Direction    JobInput         JobType
+--------------------------------------------------------------------------------
+  0th       G2-56  /home/wenxinzy/export/softs/...   G2-56.com     energy|geom
+  1th       G2-57  /home/wenxinzy/export/softs/...   G2-57.com     energy|geom
+  2th       G2-58  /home/wenxinzy/export/softs/...   G2-58.com     energy|geom
+  3th       G2-59  /home/wenxinzy/export/softs/...   G2-59.com     energy|geom
+  4th       G2-60  /home/wenxinzy/export/softs/...   G2-60.com     energy|geom
+  5th       G2-61  /home/wenxinzy/export/softs/...   G2-61.com     energy|geom
+  6th       G2-62  /home/wenxinzy/export/softs/...   G2-62.com     energy|geom
+  7th       G2-63  /home/wenxinzy/export/softs/...   G2-63.com     energy|geom
+  8th       G2-64  /home/wenxinzy/export/softs/...   G2-64.com     energy|geom
+  9th       G2-65  /home/wenxinzy/export/softs/...   G2-65.com     energy|geom
+ 10th       G2-66  /home/wenxinzy/export/softs/...   G2-66.com     energy|geom
+ 11th       G2-67  /home/wenxinzy/export/softs/...   G2-67.com     energy|geom
+ 12th       G2-68  /home/wenxinzy/export/softs/...   G2-68.com     energy|geom
+ 13th       G2-69  /home/wenxinzy/export/softs/...   G2-69.com     energy|geom
+ 14th       G2-70  /home/wenxinzy/export/softs/...   G2-70.com     energy|geom
+ 15th       G2-71  /home/wenxinzy/export/softs/...   G2-71.com     energy|geom
+ 16th       G2-72  /home/wenxinzy/export/softs/...   G2-72.com     energy|geom
+ 17th       G2-73  /home/wenxinzy/export/softs/...   G2-73.com     energy|geom
+ 18th       G2-74  /home/wenxinzy/export/softs/...   G2-74.com     energy|geom
+ 19th       G2-75  /home/wenxinzy/export/softs/...   G2-75.com     energy|geom
+ 20th       G2-76  /home/wenxinzy/export/softs/...   G2-76.com     energy|geom
+ 21th       G2-77  /home/wenxinzy/export/softs/...   G2-77.com     energy|geom
+ 22th       G2-78  /home/wenxinzy/export/softs/...   G2-78.com     energy|geom
+ 23th       G2-79  /home/wenxinzy/export/softs/...   G2-79.com     energy|geom
+ 24th       G2-80  /home/wenxinzy/export/softs/...   G2-80.com     energy|geom
+ 25th       G2-81  /home/wenxinzy/export/softs/...   G2-81.com     energy|geom
+ 26th       G2-82  /home/wenxinzy/export/softs/...   G2-82.com     energy|geom
+ 27th       G2-83  /home/wenxinzy/export/softs/...   G2-83.com     energy|geom
+ 28th       G2-84  /home/wenxinzy/export/softs/...   G2-84.com     energy|geom
+ 29th       G2-85  /home/wenxinzy/export/softs/...   G2-85.com     energy|geom
+ 30th       G2-86  /home/wenxinzy/export/softs/...   G2-86.com     energy|geom
+ 31th       G2-87  /home/wenxinzy/export/softs/...   G2-87.com     energy|geom
+ 32th       G2-88  /home/wenxinzy/export/softs/...   G2-88.com     energy|geom
+ 33th       G2-89  /home/wenxinzy/export/softs/...   G2-89.com     energy|geom
+ 34th       G2-90  /home/wenxinzy/export/softs/...   G2-90.com     energy|geom
+ 35th       G2-91  /home/wenxinzy/export/softs/...   G2-91.com     energy|geom
+ 36th       G2-92  /home/wenxinzy/export/softs/...   G2-92.com     energy|geom
+ 37th       G2-93  /home/wenxinzy/export/softs/...   G2-93.com     energy|geom
+ 38th       G2-94  /home/wenxinzy/export/softs/...   G2-94.com     energy|geom
+ 39th       G2-95  /home/wenxinzy/export/softs/...   G2-95.com     energy|geom
+ 40th       G2-96  /home/wenxinzy/export/softs/...   G2-96.com     energy|geom
+ 41th       G2-97  /home/wenxinzy/export/softs/...   G2-97.com     energy|geom
+ 42th       G2-98  /home/wenxinzy/export/softs/...   G2-98.com     energy|geom
+ 43th       G2-99  /home/wenxinzy/export/softs/...   G2-99.com     energy|geom
+ 44th      G2-100  /home/wenxinzy/export/softs/...  G2-100.com     energy|geom
+ 45th      G2-101  /home/wenxinzy/export/softs/...  G2-101.com     energy|geom
+ 46th      G2-102  /home/wenxinzy/export/softs/...  G2-102.com     energy|geom
+ 47th      G2-103  /home/wenxinzy/export/softs/...  G2-103.com     energy|geom
+ 48th      G2-104  /home/wenxinzy/export/softs/...  G2-104.com     energy|geom
+ 49th      G2-105  /home/wenxinzy/export/softs/...  G2-105.com     energy|geom
+ 50th      G2-106  /home/wenxinzy/export/softs/...  G2-106.com     energy|geom
+ 51th      G2-107  /home/wenxinzy/export/softs/...  G2-107.com     energy|geom
+ 52th      G2-108  /home/wenxinzy/export/softs/...  G2-108.com     energy|geom
+ 53th      G2-109  /home/wenxinzy/export/softs/...  G2-109.com     energy|geom
+ 54th      G2-110  /home/wenxinzy/export/softs/...  G2-110.com     energy|geom
+ 55th      G2-111  /home/wenxinzy/export/softs/...  G2-111.com     energy|geom
+ 56th      G2-112  /home/wenxinzy/export/softs/...  G2-112.com     energy|geom
+ 57th      G2-113  /home/wenxinzy/export/softs/...  G2-113.com     energy|geom
+ 58th      G2-114  /home/wenxinzy/export/softs/...  G2-114.com     energy|geom
+ 59th      G2-115  /home/wenxinzy/export/softs/...  G2-115.com     energy|geom
+ 60th      G2-116  /home/wenxinzy/export/softs/...  G2-116.com     energy|geom
+ 61th      G2-117  /home/wenxinzy/export/softs/...  G2-117.com     energy|geom
+ 62th      G2-118  /home/wenxinzy/export/softs/...  G2-118.com     energy|geom
+ 63th      G2-119  /home/wenxinzy/export/softs/...  G2-119.com     energy|geom
+ 64th      G2-120  /home/wenxinzy/export/softs/...  G2-120.com     energy|geom
+ 65th      G2-121  /home/wenxinzy/export/softs/...  G2-121.com     energy|geom
+ 66th      G2-122  /home/wenxinzy/export/softs/...  G2-122.com     energy|geom
+ 67th      G2-123  /home/wenxinzy/export/softs/...  G2-123.com     energy|geom
+ 68th      G2-124  /home/wenxinzy/export/softs/...  G2-124.com     energy|geom
+ 69th      G2-125  /home/wenxinzy/export/softs/...  G2-125.com     energy|geom
+ 70th      G2-126  /home/wenxinzy/export/softs/...  G2-126.com     energy|geom
+ 71th      G2-127  /home/wenxinzy/export/softs/...  G2-127.com     energy|geom
+ 72th      G2-128  /home/wenxinzy/export/softs/...  G2-128.com     energy|geom
+ 73th      G2-129  /home/wenxinzy/export/softs/...  G2-129.com     energy|geom
+ 74th      G2-130  /home/wenxinzy/export/softs/...  G2-130.com     energy|geom
+ 75th      G2-131  /home/wenxinzy/export/softs/...  G2-131.com     energy|geom
+ 76th      G2-132  /home/wenxinzy/export/softs/...  G2-132.com     energy|geom
+ 77th      G2-133  /home/wenxinzy/export/softs/...  G2-133.com     energy|geom
+ 78th      G2-134  /home/wenxinzy/export/softs/...  G2-134.com     energy|geom
+ 79th      G2-135  /home/wenxinzy/export/softs/...  G2-135.com     energy|geom
+ 80th      G2-136  /home/wenxinzy/export/softs/...  G2-136.com     energy|geom
+ 81th      G2-137  /home/wenxinzy/export/softs/...  G2-137.com     energy|geom
+ 82th      G2-138  /home/wenxinzy/export/softs/...  G2-138.com     energy|geom
+ 83th      G2-139  /home/wenxinzy/export/softs/...  G2-139.com     energy|geom
+ 84th      G2-140  /home/wenxinzy/export/softs/...  G2-140.com     energy|geom
+ 85th      G2-141  /home/wenxinzy/export/softs/...  G2-141.com     energy|geom
+ 86th      G2-142  /home/wenxinzy/export/softs/...  G2-142.com     energy|geom
+ 87th      G2-143  /home/wenxinzy/export/softs/...  G2-143.com     energy|geom
+ 88th      G2-144  /home/wenxinzy/export/softs/...  G2-144.com     energy|geom
+ 89th      G2-145  /home/wenxinzy/export/softs/...  G2-145.com     energy|geom
+ 90th      G2-146  /home/wenxinzy/export/softs/...  G2-146.com     energy|geom
+ 91th      G2-147  /home/wenxinzy/export/softs/...  G2-147.com     energy|geom
+ 92th      G2-148  /home/wenxinzy/export/softs/...  G2-148.com     energy|geom
+==----------------------------------------------------------------------------==
+=>Loaded ConfigIO.EngyList :
+==----------------------------------------------------------------------------==
+ Num. Ind. Sca.       Ref. Data  Weight
+--------------------------------------------------------------------------------
+    1    0    1      0.00000000    1.00
+    1    1    1      0.00000000    1.00
+    1    2    1      0.00000000    1.00
+    1    3    1      0.00000000    1.00
+    1    4    1      0.00000000    1.00
+    1    5    1      0.00000000    1.00
+    1    6    1      0.00000000    1.00
+    1    7    1      0.00000000    1.00
+    1    8    1      0.00000000    1.00
+    1    9    1      0.00000000    1.00
+    1   10    1      0.00000000    1.00
+    1   11    1      0.00000000    1.00
+    1   12    1      0.00000000    1.00
+    1   13    1      0.00000000    1.00
+    1   14    1      0.00000000    1.00
+    1   15    1      0.00000000    1.00
+    1   16    1      0.00000000    1.00
+    1   17    1      0.00000000    1.00
+    1   18    1      0.00000000    1.00
+    1   19    1      0.00000000    1.00
+    1   20    1      0.00000000    1.00
+    1   21    1      0.00000000    1.00
+    1   22    1      0.00000000    1.00
+    1   23    1      0.00000000    1.00
+    1   24    1      0.00000000    1.00
+    1   25    1      0.00000000    1.00
+    1   26    1      0.00000000    1.00
+    1   27    1      0.00000000    1.00
+    1   28    1      0.00000000    1.00
+    1   29    1      0.00000000    1.00
+    1   30    1      0.00000000    1.00
+    1   31    1      0.00000000    1.00
+    1   32    1      0.00000000    1.00
+    1   33    1      0.00000000    1.00
+    1   34    1      0.00000000    1.00
+    1   35    1      0.00000000    1.00
+    1   36    1      0.00000000    1.00
+    1   37    1      0.00000000    1.00
+    1   38    1      0.00000000    1.00
+    1   39    1      0.00000000    1.00
+    1   40    1      0.00000000    1.00
+    1   41    1      0.00000000    1.00
+    1   42    1      0.00000000    1.00
+    1   43    1      0.00000000    1.00
+    1   44    1      0.00000000    1.00
+    1   45    1      0.00000000    1.00
+    1   46    1      0.00000000    1.00
+    1   47    1      0.00000000    1.00
+    1   48    1      0.00000000    1.00
+    1   49    1      0.00000000    1.00
+    1   50    1      0.00000000    1.00
+    1   51    1      0.00000000    1.00
+    1   52    1      0.00000000    1.00
+    1   53    1      0.00000000    1.00
+    1   54    1      0.00000000    1.00
+    1   55    1      0.00000000    1.00
+    1   56    1      0.00000000    1.00
+    1   57    1      0.00000000    1.00
+    1   58    1      0.00000000    1.00
+    1   59    1      0.00000000    1.00
+    1   60    1      0.00000000    1.00
+    1   61    1      0.00000000    1.00
+    1   62    1      0.00000000    1.00
+    1   63    1      0.00000000    1.00
+    1   64    1      0.00000000    1.00
+    1   65    1      0.00000000    1.00
+    1   66    1      0.00000000    1.00
+    1   67    1      0.00000000    1.00
+    1   68    1      0.00000000    1.00
+    1   69    1      0.00000000    1.00
+    1   70    1      0.00000000    1.00
+    1   71    1      0.00000000    1.00
+    1   72    1      0.00000000    1.00
+    1   73    1      0.00000000    1.00
+    1   74    1      0.00000000    1.00
+    1   75    1      0.00000000    1.00
+    1   76    1      0.00000000    1.00
+    1   77    1      0.00000000    1.00
+    1   78    1      0.00000000    1.00
+    1   79    1      0.00000000    1.00
+    1   80    1      0.00000000    1.00
+    1   81    1      0.00000000    1.00
+    1   82    1      0.00000000    1.00
+    1   83    1      0.00000000    1.00
+    1   84    1      0.00000000    1.00
+    1   85    1      0.00000000    1.00
+    1   86    1      0.00000000    1.00
+    1   87    1      0.00000000    1.00
+    1   88    1      0.00000000    1.00
+    1   89    1      0.00000000    1.00
+    1   90    1      0.00000000    1.00
+    1   91    1      0.00000000    1.00
+    1   92    1      0.00000000    1.00
+==----------------------------------------------------------------------------==
+=>No first-excitation PT2 data for training
+=>No second-excitation PT2 data for training
+=>No polar data for training
+=>No nmr data for training
+=>No geom data for training
+=>Open Gau-Input file "G2-56.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-56"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-56
+  B                  0.00000000    0.00000000    0.00000000
+  F                  0.00000000    1.31744900    0.00000000
+  F                  1.14094400   -0.65872400    0.00000000
+  F                 -1.14094400   -0.65872400    0.00000000
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -3.24577267E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   4 atoms in this molecule
+==----------------------------------------------------------------------------==
+    B      0.00000000       -0.00003556        0.00000000
+    F      0.00000000        1.30876397        0.00000000
+    F      1.13350516       -0.65436371        0.00000000
+    F     -1.13350516       -0.65436371        0.00000000
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.012658
+=>Thermal correction to Enthalpy=                  0.017084
+=>Open Gau-Input file "G2-57.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-57"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-57
+  B                  0.00000000    0.00000000    0.00000000
+  Cl                 0.00000000    1.75133600    0.00000000
+  Cl                 1.51670100   -0.87566800    0.00000000
+  Cl                -1.51670100   -0.87566800    0.00000000
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.40557079E+03
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   4 atoms in this molecule
+==----------------------------------------------------------------------------==
+    B      0.00000000        0.00000000        0.00000000
+   Cl      0.00000000        1.75133600        0.00000000
+   Cl      1.51670100       -0.87566800        0.00000000
+   Cl     -1.51670100       -0.87566800        0.00000000
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.007517
+=>Thermal correction to Enthalpy=                  0.012866
+=>Open Gau-Input file "G2-58.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-58"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-58
+  Al                 0.00000000    0.00000000    0.00000000
+  F                  0.00000000    1.65669900    0.00000000
+  F                  1.43474400   -0.82835000    0.00000000
+  F                 -1.43474400   -0.82835000    0.00000000
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -5.42203360E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   4 atoms in this molecule
+==----------------------------------------------------------------------------==
+   Al      0.00000000       -0.00008392        0.00000000
+    F      0.00000000        1.63161161        0.00000000
+    F      1.41291714       -0.81576434        0.00000000
+    F     -1.41291714       -0.81576434        0.00000000
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.007861
+=>Thermal correction to Enthalpy=                  0.013255
+=>Open Gau-Input file "G2-59.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-59"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-59
+  Al                 0.00000000    0.00000000    0.00000000
+  Cl                 0.00000000    2.08356900    0.00000000
+  Cl                 1.80442400   -1.04178500    0.00000000
+  Cl                -1.80442400   -1.04178500    0.00000000
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.62324821E+03
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   4 atoms in this molecule
+==----------------------------------------------------------------------------==
+   Al      0.00000000        0.00012000       -0.00000000
+   Cl      0.00000000        2.08020482        0.00000000
+   Cl      1.80124976       -1.04016291        0.00000000
+   Cl     -1.80124976       -1.04016291        0.00000000
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.004797
+=>Thermal correction to Enthalpy=                  0.011060
+=>Open Gau-Input file "G2-60.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-60"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-60
+  C                  0.00000000    0.00000000    0.00000000
+  F                  0.76693100    0.76693100    0.76693100
+  F                 -0.76693100   -0.76693100    0.76693100
+  F                 -0.76693100    0.76693100   -0.76693100
+  F                  0.76693100   -0.76693100   -0.76693100
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -4.37502018E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   5 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.00000000        0.00000000        0.00000000
+    F      0.76302471        0.76302471        0.76302471
+    F     -0.76302471       -0.76302471        0.76302471
+    F     -0.76302471        0.76302471       -0.76302471
+    F      0.76302471       -0.76302471       -0.76302471
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.017131
+=>Thermal correction to Enthalpy=                  0.021996
+=>Open Gau-Input file "G2-61.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-61"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-61
+  C                  0.00000000    0.00000000    0.00000000
+  Cl                 1.03443700    1.03443700    1.03443700
+  Cl                -1.03443700   -1.03443700    1.03443700
+  Cl                -1.03443700    1.03443700   -1.03443700
+  Cl                 1.03443700   -1.03443700   -1.03443700
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.87887220E+03
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   5 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.00000000        0.00000000        0.00000000
+   Cl      1.03025060        1.03025060        1.03025060
+   Cl     -1.03025060       -1.03025060        1.03025060
+   Cl     -1.03025060        1.03025060       -1.03025060
+   Cl      1.03025060       -1.03025060       -1.03025060
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.009248
+=>Thermal correction to Enthalpy=                  0.015869
+=>Open Gau-Input file "G2-62.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-62"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-62
+  O                  0.00000000    0.00000000   -1.68505900
+  C                  0.00000000    0.00000000   -0.52789200
+  S                  0.00000000    0.00000000    1.04048900
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -5.11552350E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   3 atoms in this molecule
+==----------------------------------------------------------------------------==
+    O      0.00000000        0.00000000       -1.68492172
+    C      0.00000000        0.00000000       -0.52741082
+    S      0.00000000        0.00000000        1.03987054
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.009330
+=>Thermal correction to Enthalpy=                  0.013088
+=>Open Gau-Input file "G2-63.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-63"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-63
+  S                  0.00000000    0.00000000    1.56046800
+  C                  0.00000000    0.00000000    0.00000000
+  S                  0.00000000    0.00000000   -1.56046800
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -8.34501824E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   3 atoms in this molecule
+==----------------------------------------------------------------------------==
+    S      0.00000000        0.00000000        1.55640571
+    C      0.00000000        0.00000000        0.00000000
+    S      0.00000000        0.00000000       -1.55640571
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.007012
+=>Thermal correction to Enthalpy=                  0.011031
+=>Open Gau-Input file "G2-64.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-64"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-64
+  O                  0.00000000    0.00000000    1.31718600
+  C                  0.00000000    0.00000000    0.14624300
+  F                  0.00000000    1.06672900   -0.63416400
+  F                  0.00000000   -1.06672900   -0.63416400
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -3.13030618E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   4 atoms in this molecule
+==----------------------------------------------------------------------------==
+    O     -0.00000000        0.00000000        1.31618828
+    C      0.00000000        0.00000000        0.14140706
+    F     -0.00000000        1.06059448       -0.63124717
+    F     -0.00000000       -1.06059448       -0.63124717
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.014265
+=>Thermal correction to Enthalpy=                  0.018491
+=>Open Gau-Input file "G2-65.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-65"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-65
+  Si                 0.00000000    0.00000000    0.00000000
+  F                  0.91470400    0.91470400    0.91470400
+  F                 -0.91470400   -0.91470400    0.91470400
+  F                 -0.91470400    0.91470400   -0.91470400
+  F                  0.91470400   -0.91470400   -0.91470400
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -6.89151207E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   5 atoms in this molecule
+==----------------------------------------------------------------------------==
+   Si      0.00000000        0.00000000        0.00000000
+    F      0.90344754        0.90344754        0.90344754
+    F     -0.90344754       -0.90344754        0.90344754
+    F     -0.90344754        0.90344754       -0.90344754
+    F      0.90344754       -0.90344754       -0.90344754
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.012742
+=>Thermal correction to Enthalpy=                  0.018606
+=>Open Gau-Input file "G2-66.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-66"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-66
+  Si                 0.00000000    0.00000000    0.00000000
+  Cl                 1.17980100    1.17980100    1.17980100
+  Cl                -1.17980100   -1.17980100    1.17980100
+  Cl                 1.17980100   -1.17980100   -1.17980100
+  Cl                -1.17980100    1.17980100   -1.17980100
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -2.13049869E+03
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   5 atoms in this molecule
+==----------------------------------------------------------------------------==
+   Si      0.00000000        0.00000000        0.00000000
+   Cl      1.17876579        1.17876579        1.17876579
+   Cl     -1.17876579       -1.17876579        1.17876579
+   Cl      1.17876579       -1.17876579       -1.17876579
+   Cl     -1.17876579        1.17876579       -1.17876579
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.007165
+=>Thermal correction to Enthalpy=                  0.014645
+=>Open Gau-Input file "G2-67.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-67"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-67
+  N                  0.00000000    0.00000000   -1.19837800
+  N                  0.00000000    0.00000000   -0.07292000
+  O                  0.00000000    0.00000000    1.11238600
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.84674460E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   3 atoms in this molecule
+==----------------------------------------------------------------------------==
+    N     -0.00000001        0.00000001       -1.20006536
+    N      0.00000003       -0.00000003       -0.07233219
+    O     -0.00000001        0.00000001        1.11348555
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.011281
+=>Thermal correction to Enthalpy=                  0.014889
+=>Open Gau-Input file "G2-68.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-68"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-68
+  Cl                -0.52438600   -0.96034800    0.00000000
+  N                  0.00000000    0.99074600    0.00000000
+  O                  1.11432100    1.17383700    0.00000000
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -5.90097756E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   3 atoms in this molecule
+==----------------------------------------------------------------------------==
+   Cl     -0.51368046       -0.94176731        0.00000000
+    N     -0.00814762        0.98265001        0.00000000
+    O      1.11176308        1.16335230        0.00000000
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.006567
+=>Thermal correction to Enthalpy=                  0.010867
+=>Open Gau-Input file "G2-69.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-69"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-69
+  N                  0.00000000    0.00000000    0.48300300
+  F                  0.00000000    1.24038000   -0.12522300
+  F                  1.07420100   -0.62019000   -0.12522300
+  F                 -1.07420100   -0.62019000   -0.12522300
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -3.54090545E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   4 atoms in this molecule
+==----------------------------------------------------------------------------==
+    N      0.00005647        0.00003759        0.48168407
+    F     -0.00011874        1.23170081       -0.12477174
+    F      1.06675721       -0.61595577       -0.12477406
+    F     -1.06669494       -0.61578263       -0.12480426
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.010427
+=>Thermal correction to Enthalpy=                  0.014915
+=>Open Gau-Input file "G2-70.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-70"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-70
+  P                  0.00000000    0.00000000    0.51254800
+  F                  0.00000000    1.39336400   -0.28474900
+  F                  1.20668900   -0.69668200   -0.28474900
+  F                 -1.20668900   -0.69668200   -0.28474900
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -6.40992410E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   4 atoms in this molecule
+==----------------------------------------------------------------------------==
+    P      0.00003441       -0.00001912        0.49797337
+    F     -0.00007420        1.37075929       -0.27989860
+    F      1.18737082       -0.68542438       -0.27987604
+    F     -1.18733103       -0.68531580       -0.27989772
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.008566
+=>Thermal correction to Enthalpy=                  0.013527
+=>Open Gau-Input file "G2-71.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-71"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-71
+  O                  0.00000000    1.07934500   -0.21423600
+  O                  0.00000000    0.00000000    0.42847200
+  O                  0.00000000   -1.07934500   -0.21423600
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -2.25426658E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   3 atoms in this molecule
+==----------------------------------------------------------------------------==
+    O      0.00000000        1.07573698       -0.21571360
+    O      0.00000000        0.00000000        0.43142720
+    O      0.00000000       -1.07573698       -0.21571360
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.007463
+=>Thermal correction to Enthalpy=                  0.011358
+=>Open Gau-Input file "G2-72.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-72"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-72
+  F                  0.00000000    1.11001700   -0.26609300
+  O                  0.00000000    0.00000000    0.59870900
+  F                  0.00000000   -1.11001700   -0.26609300
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -2.74666148E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   3 atoms in this molecule
+==----------------------------------------------------------------------------==
+    F      0.00000000        1.09875084       -0.26473980
+    O      0.00000000        0.00000000        0.59600261
+    F      0.00000000       -1.09875084       -0.26473980
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.005554
+=>Thermal correction to Enthalpy=                  0.009648
+=>Open Gau-Input file "G2-73.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-73"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-73
+  Cl                 0.00000000    0.00000000    0.37102600
+  F                  0.00000000    0.00000000   -1.29272500
+  F                  0.00000000    1.76623900    0.29594900
+  F                  0.00000000   -1.76623900    0.29594900
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -7.59496610E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   4 atoms in this molecule
+==----------------------------------------------------------------------------==
+   Cl     -0.00000000        0.00000000        0.36341863
+    F      0.00000000        0.00000000       -1.26272071
+    F      0.00000000        1.71271839        0.28475054
+    F      0.00000000       -1.71271839        0.28475054
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.006965
+=>Thermal correction to Enthalpy=                  0.012231
+=>Open Gau-Input file "G2-74.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-74"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-74
+  C                  0.00000000    0.00000000    0.66125000
+  C                  0.00000000    0.00000000   -0.66125000
+  F                  0.00000000    1.10240200    1.38884500
+  F                  0.00000000   -1.10240200    1.38884500
+  F                  0.00000000    1.10240200   -1.38884500
+  F                  0.00000000   -1.10240200   -1.38884500
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -4.75530874E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   6 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.00000000        0.00000000        0.66175087
+    C      0.00000000        0.00000000       -0.66175087
+    F      0.00000000        1.09854021        1.38329676
+    F      0.00000000       -1.09854021        1.38329676
+    F      0.00000000        1.09854021       -1.38329676
+    F      0.00000000       -1.09854021       -1.38329676
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.021676
+=>Thermal correction to Enthalpy=                  0.027862
+=>Open Gau-Input file "G2-75.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-75"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-75
+  C                  0.00000000    0.00000000    0.67105100
+  C                  0.00000000    0.00000000   -0.67105100
+  Cl                 0.00000000    1.45874600    1.60274500
+  Cl                 0.00000000   -1.45874600    1.60274500
+  Cl                 0.00000000   -1.45874600   -1.60274500
+  Cl                 0.00000000    1.45874600   -1.60274500
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.91696887E+03
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   6 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.00000000        0.00000000        0.67173637
+    C      0.00000000        0.00000000       -0.67173637
+   Cl      0.00000000        1.45421951        1.59718244
+   Cl      0.00000000       -1.45421951        1.59718244
+   Cl      0.00000000       -1.45421951       -1.59718244
+   Cl      0.00000000        1.45421951       -1.59718244
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.015296
+=>Thermal correction to Enthalpy=                  0.022760
+=>Open Gau-Input file "G2-76.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-76"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-76
+  C                  0.00000000    0.00000000   -0.31945100
+  C                  0.00000000    0.00000000    1.16022100
+  F                  0.00000000    1.25506200   -0.78569500
+  F                  1.08691500   -0.62753100   -0.78569500
+  F                 -1.08691500   -0.62753100   -0.78569500
+  N                  0.00000000    0.00000000    2.30987700
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -4.30470858E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   6 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.00004179       -0.00010718       -0.32655925
+    C     -0.00000101       -0.00019716        1.15850173
+    F     -0.00001566        1.24837766       -0.78272856
+    F      1.08110082       -0.62424057       -0.78337127
+    F     -1.08107058       -0.62420500       -0.78323005
+    N     -0.00005537        0.00037224        2.31094940
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.022811
+=>Thermal correction to Enthalpy=                  0.028822
+=>Open Gau-Input file "G2-77.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-77"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-77
+  C                  0.00000000    0.00000000    0.21846700
+  C                  0.00000000    0.00000000    1.42076700
+  C                  0.00000000    0.00000000   -1.23838700
+  H                  0.00000000    0.00000000    2.48305200
+  H                  0.00000000    1.02124000   -1.62937900
+  H                  0.88441900   -0.51062000   -1.62937900
+  H                 -0.88441900   -0.51062000   -1.62937900
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.16664959E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   7 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.00000170       -0.00098796        0.21990011
+    C      0.00000316        0.00088933        1.42135018
+    C      0.00000071       -0.00015001       -1.23501809
+    H     -0.00000327        0.00002113        2.48282210
+    H     -0.00000148        1.02125290       -1.63050013
+    H      0.88436221       -0.51051335       -1.63139636
+    H     -0.88436303       -0.51051204       -1.63139580
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.055410
+=>Thermal correction to Enthalpy=                  0.060353
+=>Open Gau-Input file "G2-78.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-78"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-78
+  C                  0.00000000    0.00000000    0.00000000
+  C                  0.00000000    0.00000000    1.30340000
+  C                  0.00000000    0.00000000   -1.30340000
+  H                  0.00000000    0.92742300    1.86754100
+  H                  0.00000000   -0.92742300    1.86754100
+  H                  0.92742300    0.00000000   -1.86754100
+  H                 -0.92742300    0.00000000   -1.86754100
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.16668856E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   7 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.00000000        0.00000000        0.00000000
+    C      0.00000000        0.00000000        1.30134055
+    C      0.00000000        0.00000000       -1.30134055
+    H     -0.00000000        0.92598405        1.86914433
+    H     -0.00000000       -0.92598405        1.86914433
+    H      0.92598405        0.00000000       -1.86914433
+    H     -0.92598405        0.00000000       -1.86914433
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.055178
+=>Thermal correction to Enthalpy=                  0.059892
+=>Open Gau-Input file "G2-79.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-79"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-79
+  C                  0.00000000    0.00000000    0.86390100
+  C                  0.00000000    0.64539400   -0.50158700
+  C                  0.00000000   -0.64539400   -0.50158700
+  H                 -0.91317200    0.00000000    1.46022700
+  H                  0.91317200    0.00000000    1.46022700
+  H                  0.00000000    1.57594100   -1.04240600
+  H                  0.00000000   -1.57594100   -1.04240600
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.16630104E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   7 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.00000000        0.00000000        0.85934422
+    C      0.00000000        0.64526504       -0.50188843
+    C      0.00000000       -0.64526504       -0.50188843
+    H     -0.91220004        0.00000000        1.46064055
+    H      0.91220004        0.00000000        1.46064055
+    H      0.00000000        1.57649449       -1.04023973
+    H      0.00000000       -1.57649449       -1.04023973
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.056218
+=>Thermal correction to Enthalpy=                  0.060461
+=>Open Gau-Input file "G2-80.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-80"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-80
+  C                  1.29186300    0.15133500    0.00000000
+  C                  0.00000000    0.47271600    0.00000000
+  H                  1.62124000   -0.88380500    0.00000000
+  H                  2.06653600    0.90986300    0.00000000
+  H                 -0.27739600    1.52574600    0.00000000
+  C                 -1.13785600   -0.50513000    0.00000000
+  H                 -0.78046200   -1.53765800    0.00000000
+  H                 -1.77698000   -0.36383500    0.87863600
+  H                 -1.77698000   -0.36383500   -0.87863600
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.17918629E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   9 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      1.29108089        0.15213173        0.00000000
+    C      0.00123356        0.47330644        0.00000000
+    H      1.62098899       -0.88337731        0.00000000
+    H      2.06972955        0.90750858        0.00000000
+    H     -0.28039540        1.52596611        0.00000000
+    C     -1.13663321       -0.50381998        0.00000000
+    H     -0.77889031       -1.53758131        0.00000000
+    H     -1.77857454       -0.36436864        0.87878964
+    H     -1.77857454       -0.36436864       -0.87878964
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.079561
+=>Thermal correction to Enthalpy=                  0.084582
+=>Open Gau-Input file "G2-81.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-81"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-81
+  C                  0.00000000    0.87094400    0.00000000
+  C                  0.75425900   -0.43547200    0.00000000
+  C                 -0.75425900   -0.43547200    0.00000000
+  H                  0.00000000    1.45948200    0.90972300
+  H                  0.00000000    1.45948200   -0.90972300
+  H                  1.26394900   -0.72974100   -0.90972300
+  H                  1.26394900   -0.72974100    0.90972300
+  H                 -1.26394900   -0.72974100    0.90972300
+  H                 -1.26394900   -0.72974100   -0.90972300
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.17906023E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   9 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.00000000        0.87050387        0.00000000
+    C      0.75377919       -0.43518500        0.00000000
+    C     -0.75377919       -0.43518500        0.00000000
+    H     -0.00000000        1.46020890        0.90996403
+    H      0.00000000        1.46020890       -0.90996403
+    H      1.26451240       -0.73013792       -0.90994370
+    H      1.26451240       -0.73013792        0.90994370
+    H     -1.26451240       -0.73013792        0.90994370
+    H     -1.26451240       -0.73013792       -0.90994370
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.081191
+=>Thermal correction to Enthalpy=                  0.085510
+=>Open Gau-Input file "G2-82.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-82"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-82
+  C                  0.00000000    0.00000000    0.58577400
+  C                  0.00000000    1.27707700   -0.25961800
+  C                  0.00000000   -1.27707700   -0.25961800
+  H                 -0.87544600    0.00000000    1.24503200
+  H                  0.87544600    0.00000000    1.24503200
+  H                  0.00000000    2.17376500    0.36632100
+  H                  0.00000000   -2.17376500    0.36632100
+  H                  0.88272100    1.32236100   -0.90548500
+  H                 -0.88272100    1.32236100   -0.90548500
+  H                 -0.88272100   -1.32236100   -0.90548500
+  H                  0.88272100   -1.32236100   -0.90548500
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.19155657E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are  11 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.00000000        0.00000000        0.58671715
+    C      0.00000000        1.27622647       -0.25969820
+    C      0.00000000       -1.27622647       -0.25969820
+    H     -0.87640648        0.00000000        1.24689692
+    H      0.87640648        0.00000000        1.24689692
+    H      0.00000000        2.17415495        0.36644838
+    H      0.00000000       -2.17415495        0.36644838
+    H      0.88342676        1.32090938       -0.90667684
+    H     -0.88342676        1.32090938       -0.90667684
+    H     -0.88342676       -1.32090938       -0.90667684
+    H      0.88342676       -1.32090938       -0.90667684
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.103182
+=>Thermal correction to Enthalpy=                  0.108674
+=>Open Gau-Input file "G2-83.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-83"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-83
+  C                  0.60128800    1.74911800    0.00000000
+  C                  0.60128800    0.41077600    0.00000000
+  C                 -0.60128800   -0.41077600    0.00000000
+  C                 -0.60128800   -1.74911800    0.00000000
+  H                  1.52323500    2.31803800    0.00000000
+  H                 -0.32473200    2.31580700    0.00000000
+  H                  1.54993200   -0.12256900    0.00000000
+  H                 -1.54993200    0.12256900    0.00000000
+  H                  0.32473200   -2.31580700    0.00000000
+  H                 -1.52323500   -2.31803800    0.00000000
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.56005885E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are  10 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.60109355        1.74723575        0.00000000
+    C      0.59983557        0.41086555       -0.00000000
+    C     -0.59983557       -0.41086555        0.00000000
+    C     -0.60109355       -1.74723575       -0.00000000
+    H      1.52183584        2.31936264        0.00000000
+    H     -0.32489637        2.31503769       -0.00000000
+    H      1.54743595       -0.12608112        0.00000000
+    H     -1.54743595        0.12608112        0.00000000
+    H      0.32489637       -2.31503769        0.00000000
+    H     -1.52183584       -2.31936264        0.00000000
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.085115
+=>Thermal correction to Enthalpy=                  0.090706
+=>Open Gau-Input file "G2-84.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-84"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-84
+  C                  0.00000000    0.00000000    2.06084000
+  C                  0.00000000    0.00000000    0.60213700
+  C                  0.00000000    0.00000000   -0.60213700
+  C                  0.00000000    0.00000000   -2.06084000
+  H                  0.00000000    1.02018700    2.45609500
+  H                 -0.88350800   -0.51009300    2.45609500
+  H                  0.88350800   -0.51009300    2.45609500
+  H                  0.00000000    1.02018700   -2.45609500
+  H                  0.88350800   -0.51009300   -2.45609500
+  H                 -0.88350800   -0.51009300   -2.45609500
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.55992839E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are  10 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.00000000        0.00001709        2.05792995
+    C      0.00000000       -0.00074640        0.60178080
+    C      0.00000000       -0.00090314       -0.60177826
+    C     -0.00000000       -0.00000830       -2.05793000
+    H     -0.00000000        1.02060908        2.45723421
+    H     -0.88362454       -0.50989700        2.45824686
+    H      0.88362454       -0.50989700        2.45824686
+    H     -0.00000000        1.02061397       -2.45715832
+    H      0.88362329       -0.50989315       -2.45828605
+    H     -0.88362329       -0.50989315       -2.45828605
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.083926
+=>Thermal correction to Enthalpy=                  0.090604
+=>Open Gau-Input file "G2-85.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-85"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-85
+  C                  0.00000000    0.00000000    0.31647800
+  C                  0.00000000    0.77091700   -0.93151300
+  C                  0.00000000   -0.77091700   -0.93151300
+  C                  0.00000000    0.00000000    1.63622700
+  H                  0.91229500    1.27571200   -1.23500300
+  H                 -0.91229500    1.27571200   -1.23500300
+  H                 -0.91229500   -1.27571200   -1.23500300
+  H                  0.91229500   -1.27571200   -1.23500300
+  H                  0.00000000    0.92684600    2.20097000
+  H                  0.00000000   -0.92684600    2.20097000
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.55976850E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are  10 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.00000000       -0.00000000        0.31717023
+    C      0.00000000        0.76947855       -0.93038110
+    C      0.00000000       -0.76947855       -0.93038109
+    C     -0.00000000        0.00000000        1.63339265
+    H      0.91150765        1.27704587       -1.23543626
+    H     -0.91150765        1.27704587       -1.23543626
+    H     -0.91150765       -1.27704587       -1.23543626
+    H      0.91150765       -1.27704587       -1.23543626
+    H     -0.00000000        0.92525770        2.20177567
+    H      0.00000000       -0.92525770        2.20177567
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.085113
+=>Thermal correction to Enthalpy=                  0.090310
+=>Open Gau-Input file "G2-86.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-86"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-86
+  C                  0.00000000    1.13742500    0.31340400
+  C                  0.00000000   -1.13742500    0.31340400
+  C                  0.74604300    0.00000000   -0.31775500
+  C                 -0.74604300    0.00000000   -0.31775500
+  H                  0.00000000    1.23767600    1.40007000
+  H                  0.00000000    2.08326200   -0.22169800
+  H                  0.00000000   -1.23767600    1.40007000
+  H                  0.00000000   -2.08326200   -0.22169800
+  H                  1.42892300    0.00000000   -1.15226700
+  H                 -1.42892300    0.00000000   -1.15226700
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.55960705E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are  10 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.00000000        1.13530224        0.31217690
+    C      0.00000000       -1.13530224        0.31217690
+    C      0.74319011        0.00000000       -0.32377485
+    C     -0.74319011        0.00000000       -0.32377485
+    H      0.00000000        1.23676911        1.39984814
+    H      0.00000000        2.08357320       -0.22079841
+    H      0.00000000       -1.23676911        1.39984814
+    H      0.00000000       -2.08357320       -0.22079841
+    H      1.44064507        0.00000000       -1.14569778
+    H     -1.44064507        0.00000000       -1.14569778
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.086268
+=>Thermal correction to Enthalpy=                  0.090957
+=>Open Gau-Input file "G2-87.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-87"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-87
+  C                  0.00000000    0.66940700    0.81435000
+  C                  0.00000000   -0.66940700    0.81435000
+  C                  0.00000000    0.78659600   -0.70021400
+  C                  0.00000000   -0.78659600   -0.70021400
+  H                  0.00000000    1.41500600    1.60152300
+  H                  0.00000000   -1.41500600    1.60152300
+  H                  0.88866800    1.24610300   -1.14316900
+  H                 -0.88866800    1.24610300   -1.14316900
+  H                 -0.88866800   -1.24610300   -1.14316900
+  H                  0.88866800   -1.24610300   -1.14316900
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.55985527E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are  10 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.00000000        0.66882075        0.81563205
+    C      0.00000000       -0.66882075        0.81563205
+    C      0.00000000        0.78602539       -0.69813799
+    C     -0.00000000       -0.78602539       -0.69813799
+    H      0.00000000        1.41785502        1.59956215
+    H     -0.00000000       -1.41785502        1.59956215
+    H      0.88837025        1.24646732       -1.14386761
+    H     -0.88837025        1.24646732       -1.14386760
+    H     -0.88837025       -1.24646732       -1.14386761
+    H      0.88837025       -1.24646732       -1.14386761
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.086385
+=>Thermal correction to Enthalpy=                  0.091146
+=>Open Gau-Input file "G2-88.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-88"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-88
+  C                  0.00000000    1.08498300    0.12344700
+  C                  0.00000000   -1.08498300    0.12344700
+  C                 -1.08498300    0.00000000   -0.12344700
+  C                  1.08498300    0.00000000   -0.12344700
+  H                  0.00000000    1.96172400   -0.52759600
+  H                  0.00000000    1.42488000    1.16242700
+  H                  0.00000000   -1.96172400   -0.52759600
+  H                  0.00000000   -1.42488000    1.16242700
+  H                 -1.96172400    0.00000000    0.52759600
+  H                 -1.42488000    0.00000000   -1.16242700
+  H                  1.96172400    0.00000000    0.52759600
+  H                  1.42488000    0.00000000   -1.16242700
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.57225997E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are  12 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.00000000        1.08473008        0.12428810
+    C      0.00000000       -1.08473008        0.12428810
+    C     -1.08473008        0.00000000       -0.12428810
+    C      1.08473008        0.00000000       -0.12428810
+    H      0.00000000        1.96387652       -0.52482940
+    H      0.00000000        1.42362050        1.16458093
+    H      0.00000000       -1.96387652       -0.52482940
+    H      0.00000000       -1.42362050        1.16458093
+    H     -1.96387652        0.00000000        0.52482940
+    H     -1.42362050        0.00000000       -1.16458093
+    H      1.96387652        0.00000000        0.52482940
+    H      1.42362050        0.00000000       -1.16458093
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.110547
+=>Thermal correction to Enthalpy=                  0.115644
+=>Open Gau-Input file "G2-89.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-89"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-89
+  C                  0.00000000    0.00000000    1.45852300
+  C                  0.00000000    0.00000000    0.12374000
+  H                  0.00000000    0.92397100    2.02713100
+  H                  0.00000000   -0.92397100    2.02713100
+  C                  0.00000000    1.27586700   -0.67876500
+  H                  0.00000000    2.15884400   -0.03704600
+  H                  0.87881300    1.32581000   -1.33214300
+  H                 -0.87881300    1.32581000   -1.33214300
+  C                  0.00000000   -1.27586700   -0.67876500
+  H                  0.00000000   -2.15884400   -0.03704600
+  H                 -0.87881300   -1.32581000   -1.33214300
+  H                  0.87881300   -1.32581000   -1.33214300
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.57241630E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are  12 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C     -0.00000000        0.00000000        1.45719632
+    C      0.00000000        0.00000000        0.12479855
+    H      0.00000000        0.92373004        2.02713579
+    H      0.00000000       -0.92373004        2.02713579
+    C      0.00000000        1.27536622       -0.67775842
+    H      0.00000000        2.15943383       -0.03540405
+    H      0.87871719        1.32721329       -1.33340262
+    H     -0.87871719        1.32721329       -1.33340262
+    C      0.00000000       -1.27536622       -0.67775842
+    H      0.00000000       -2.15943383       -0.03540405
+    H     -0.87871719       -1.32721329       -1.33340262
+    H      0.87871719       -1.32721329       -1.33340262
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.107644
+=>Thermal correction to Enthalpy=                  0.113897
+=>Open Gau-Input file "G2-90.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-90"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-90
+  C                  0.70376800    1.83518000    0.00000000
+  C                  0.70376800    0.30396700    0.00000000
+  C                 -0.70376800   -0.30396700    0.00000000
+  C                 -0.70376800   -1.83518000    0.00000000
+  H                  1.72086000    2.23661100    0.00000000
+  H                 -1.72086000   -2.23661100    0.00000000
+  H                  0.19101700    2.23021600    0.88272500
+  H                  0.19101700    2.23021600   -0.88272500
+  H                 -0.19101700   -2.23021600    0.88272500
+  H                 -0.19101700   -2.23021600   -0.88272500
+  H                  1.25317900   -0.06214900   -0.87605200
+  H                  1.25317900   -0.06214900    0.87605200
+  H                 -1.25317900    0.06214900   -0.87605200
+  H                 -1.25317900    0.06214900    0.87605200
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.58472657E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are  14 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.70299329        1.83352315       -0.00000000
+    C      0.70410749        0.30255417       -0.00000000
+    C     -0.70410749       -0.30255417       -0.00000000
+    C     -0.70299329       -1.83352315       -0.00000000
+    H      1.72102355        2.23570072        0.00000000
+    H     -1.72102355       -2.23570072        0.00000000
+    H      0.18896428        2.22865961        0.88348128
+    H      0.18896428        2.22865961       -0.88348128
+    H     -0.18896428       -2.22865961        0.88348128
+    H     -0.18896428       -2.22865961       -0.88348128
+    H      1.25433423       -0.06451536       -0.87675993
+    H      1.25433423       -0.06451536        0.87675993
+    H     -1.25433423        0.06451536       -0.87675993
+    H     -1.25433423        0.06451536        0.87675993
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.131633
+=>Thermal correction to Enthalpy=                  0.138377
+=>Open Gau-Input file "G2-91.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-91"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-91
+  C                  0.00000000    0.00000000    0.37209600
+  H                  0.00000000    0.00000000    1.47017900
+  C                  0.00000000    1.46147700   -0.09576000
+  H                  0.00000000    1.52001300   -1.19004300
+  H                 -0.88413700    1.99553400    0.26517700
+  H                  0.88413700    1.99553400    0.26517700
+  C                  1.26567700   -0.73073900   -0.09576000
+  H                  1.31637000   -0.76000700   -1.19004300
+  H                  2.17025200   -0.23208200    0.26517700
+  H                  1.28611400   -1.76345200    0.26517700
+  C                 -1.26567700   -0.73073900   -0.09576000
+  H                 -1.31637000   -0.76000700   -1.19004300
+  H                 -1.28611400   -1.76345200    0.26517700
+  H                 -2.17025200   -0.23208200    0.26517700
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.58473493E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are  14 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.00000000       -0.00002490        0.37310093
+    H      0.00000000       -0.00054897        1.47235540
+    C      0.00000000        1.46128973       -0.09471270
+    H      0.00000000        1.52071259       -1.18997580
+    H     -0.88511951        1.99595653        0.26616104
+    H      0.88511951        1.99595653        0.26616104
+    C      1.26504832       -0.73057776       -0.09596618
+    H      1.31396642       -0.76214575       -1.19125790
+    H      2.17097800       -0.23009458        0.26215732
+    H      1.28662336       -1.76385367        0.26648580
+    C     -1.26504832       -0.73057776       -0.09596618
+    H     -1.31396642       -0.76214575       -1.19125790
+    H     -1.28662336       -1.76385367        0.26648580
+    H     -2.17097800       -0.23009458        0.26215732
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.131152
+=>Thermal correction to Enthalpy=                  0.137838
+=>Open Gau-Input file "G2-92.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-92"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-92
+  C                  0.00000000    0.00000000    0.00000000
+  C                  0.00000000    0.76567800    1.27019200
+  C                  0.00000000   -0.76567800    1.27019200
+  C                  0.76567800    0.00000000   -1.27019200
+  C                 -0.76567800    0.00000000   -1.27019200
+  H                 -0.91296200    1.26761400    1.57308300
+  H                  0.91296200    1.26761400    1.57308300
+  H                 -0.91296200   -1.26761400    1.57308300
+  H                  0.91296200   -1.26761400    1.57308300
+  H                  1.26761400   -0.91296200   -1.57308300
+  H                  1.26761400    0.91296200   -1.57308300
+  H                 -1.26761400   -0.91296200   -1.57308300
+  H                 -1.26761400    0.91296200   -1.57308300
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.95288398E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are  13 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.00000000        0.00000000        0.00000000
+    C      0.00000000        0.76466525        1.26927499
+    C      0.00000000       -0.76466525        1.26927499
+    C      0.76466525        0.00000000       -1.26927499
+    C     -0.76466525        0.00000000       -1.26927499
+    H     -0.91288683        1.26769353        1.57342288
+    H      0.91288683        1.26769353        1.57342288
+    H     -0.91288683       -1.26769353        1.57342288
+    H      0.91288683       -1.26769353        1.57342288
+    H      1.26769353       -0.91288683       -1.57342288
+    H      1.26769353        0.91288683       -1.57342288
+    H     -1.26769353       -0.91288683       -1.57342288
+    H     -1.26769353        0.91288683       -1.57342288
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.114831
+=>Thermal correction to Enthalpy=                  0.120689
+=>Open Gau-Input file "G2-93.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-93"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-93
+  C                  0.00000000    1.39470800    0.00000000
+  C                  1.20785300    0.69735400    0.00000000
+  C                  1.20785300   -0.69735400    0.00000000
+  C                  0.00000000   -1.39470800    0.00000000
+  C                 -1.20785300   -0.69735400    0.00000000
+  C                 -1.20785300    0.69735400    0.00000000
+  H                  0.00000000    2.47914600    0.00000000
+  H                  2.14700300    1.23957300    0.00000000
+  H                  2.14700300   -1.23957300    0.00000000
+  H                  0.00000000   -2.47914600    0.00000000
+  H                 -2.14700300   -1.23957300    0.00000000
+  H                 -2.14700300    1.23957300    0.00000000
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -2.32264749E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are  12 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.00000000        1.39350009        0.00000000
+    C      1.20674540        0.69673610        0.00000000
+    C      1.20674540       -0.69673610        0.00000000
+    C      0.00000000       -1.39350009        0.00000000
+    C     -1.20674540       -0.69673610        0.00000000
+    C     -1.20674540        0.69673610        0.00000000
+    H      0.00000000        2.47867049        0.00000000
+    H      2.14653255        1.23932106        0.00000000
+    H      2.14653255       -1.23932106        0.00000000
+    H      0.00000000       -2.47867049        0.00000000
+    H     -2.14653255       -1.23932106        0.00000000
+    H     -2.14653255        1.23932106        0.00000000
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.100166
+=>Thermal correction to Enthalpy=                  0.105510
+=>Open Gau-Input file "G2-94.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-94"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-94
+  C                  0.00000000    0.00000000    0.50669200
+  F                  0.00000000    1.10891700   -0.29150100
+  F                  0.00000000   -1.10891700   -0.29150100
+  H                 -0.91374600    0.00000000    1.10343200
+  H                  0.91374600    0.00000000    1.10343200
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -2.38989131E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   5 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C     -0.00001231        0.00000000        0.49416771
+    F      0.00000967        1.09996530       -0.29055838
+    F      0.00000967       -1.09996530       -0.29055838
+    H     -0.90921048        0.00000000        1.10876224
+    H      0.90920345        0.00000000        1.10874082
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.032793
+=>Thermal correction to Enthalpy=                  0.036854
+=>Open Gau-Input file "G2-95.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-95"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-95
+  C                  0.00000000    0.00000000    0.34107500
+  H                  0.00000000    0.00000000    1.43081200
+  F                  0.00000000    1.25861200   -0.12878800
+  F                  1.08999000   -0.62930600   -0.12878800
+  F                 -1.08999000   -0.62930600   -0.12878800
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -3.38246693E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   5 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C     -0.00001357        0.00000669        0.33550756
+    H     -0.00011801       -0.00004402        1.43084241
+    F      0.00013785        1.25069785       -0.12697774
+    F      1.08319069       -0.62524887       -0.12701253
+    F     -1.08319696       -0.62541166       -0.12683670
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.025408
+=>Thermal correction to Enthalpy=                  0.029806
+=>Open Gau-Input file "G2-96.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-96"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-96
+  C                  0.00000000    0.00000000    0.76899100
+  Cl                 0.00000000    1.49517200   -0.21657800
+  Cl                 0.00000000   -1.49517200   -0.21657800
+  H                 -0.89910200    0.00000000    1.37484800
+  H                  0.89910200    0.00000000    1.37484800
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -9.59706280E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   5 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.00001111        0.00000000        0.76953479
+   Cl     -0.00000876        1.48873227       -0.21740872
+   Cl     -0.00000876       -1.48873227       -0.21740872
+    H     -0.90144735        0.00000000        1.37539506
+    H      0.90145376        0.00000000        1.37541859
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.029251
+=>Thermal correction to Enthalpy=                  0.033781
+=>Open Gau-Input file "G2-97.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-97"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-97
+  C                  0.00000000    0.00000000    0.45371400
+  H                  0.00000000    0.00000000    1.53588700
+  Cl                 0.00000000    1.70368400   -0.08349400
+  Cl                 1.47543400   -0.85184200   -0.08349400
+  Cl                -1.47543400   -0.85184200   -0.08349400
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.41929273E+03
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   5 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C     -0.00000323        0.00000418        0.45529573
+    H     -0.00001008       -0.00013446        1.53988048
+   Cl      0.00001465        1.69675505       -0.08543729
+   Cl      1.46956837       -0.84830354       -0.08531630
+   Cl     -1.46956972       -0.84832123       -0.08530363
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.019725
+=>Thermal correction to Enthalpy=                  0.025156
+=>Open Gau-Input file "G2-98.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-98"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-98
+  C                  0.04825100    0.70766800    0.00000000
+  N                  0.04825100   -0.75795900    0.00000000
+  H                 -0.94754100    1.17588100    0.00000000
+  H                 -0.42874100   -1.12458800    0.81637300
+  H                 -0.42874100   -1.12458800   -0.81637300
+  H                  0.58887800    1.06650000    0.87921400
+  H                  0.58887800    1.06650000   -0.87921400
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -9.58661700E+01
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   7 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.05055683        0.69925032        0.00000000
+    N      0.06712460       -0.76450320        0.00000000
+    H     -0.94894524        1.16562929        0.00000000
+    H     -0.43670955       -1.11260060        0.80957496
+    H     -0.43670955       -1.11260060       -0.80957496
+    H      0.58695896        1.06711939        0.88107935
+    H      0.58695896        1.06711939       -0.88107935
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.063991
+=>Thermal correction to Enthalpy=                  0.068346
+=>Open Gau-Input file "G2-99.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-99"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-99
+  C                  0.00000000    0.00000000   -1.17595000
+  C                  0.00000000    0.00000000    0.28044200
+  N                  0.00000000    0.00000000    1.43304500
+  H                  0.00000000    1.02475500   -1.55275500
+  H                  0.88746300   -0.51237700   -1.55275500
+  H                 -0.88746300   -0.51237700   -1.55275500
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.32763436E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   6 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.00000191       -0.00001055       -1.17537462
+    C      0.00000294       -0.00003868        0.28204695
+    N      0.00000376        0.00005296        1.43696715
+    H     -0.00001183        1.02535380       -1.55473501
+    H      0.88797508       -0.51268602       -1.55480646
+    H     -0.88797186       -0.51267051       -1.55482601
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.045285
+=>Thermal correction to Enthalpy=                  0.049816
+=>Open Gau-Input file "G2-100.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-100"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-100
+  C                  1.32885800    0.00035200   -0.00292500
+  N                 -0.17481300    0.00000300   -0.01052200
+  O                 -0.73262700    1.08597300    0.00277900
+  O                 -0.73201700   -1.08628500    0.00277300
+  H                  1.63351600   -0.00701800    1.04363900
+  H                  1.66717800   -0.90179100   -0.50447300
+  H                  1.66699800    0.90917000   -0.49237100
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -2.45029716E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   7 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      1.32512582        0.00034588       -0.00225645
+    N     -0.17483110        0.00007323       -0.00980766
+    O     -0.72843805        1.08738554        0.00147400
+    O     -0.72760869       -1.08766010        0.00131053
+    H      1.63522963       -0.00699300        1.04429354
+    H      1.66386543       -0.90343326       -0.50407366
+    H      1.66374997        0.91068571       -0.49204030
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.049812
+=>Thermal correction to Enthalpy=                  0.055110
+=>Open Gau-Input file "G2-101.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-101"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-101
+  C                 -1.33440000    0.33700700    0.00000000
+  O                  0.00000000    0.88227400    0.00000000
+  H                 -1.98322300    1.20936900    0.00000000
+  H                 -1.50257700   -0.27110500    0.89110700
+  H                 -1.50257700   -0.27110500   -0.89110700
+  N                  1.04852500   -0.04731300    0.00000000
+  O                  0.70688800   -1.17702500    0.00000000
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -2.45026821E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   7 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C     -1.32275729        0.33851140        0.00000000
+    O      0.00146251        0.88964244        0.00000000
+    H     -1.98454775        1.20378688       -0.00000000
+    H     -1.48876614       -0.27590745        0.88949266
+    H     -1.48876614       -0.27590745       -0.88949266
+    N      1.03646692       -0.04476168        0.00000001
+    O      0.67954389       -1.17326213       -0.00000001
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.048448
+=>Thermal correction to Enthalpy=                  0.053776
+=>Open Gau-Input file "G2-102.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-102"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-102
+  C                  0.00000000    0.00000000   -1.24778600
+  Si                 0.00000000    0.00000000    0.63699200
+  H                  0.00000000   -1.02066700   -1.63893000
+  H                 -0.88392400    0.51033400   -1.63893000
+  H                  0.88392400    0.51033400   -1.63893000
+  H                  0.00000000    1.39160300    1.16187500
+  H                 -1.20516300   -0.69580100    1.16187500
+  H                  1.20516300   -0.69580100    1.16187500
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -3.31223539E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   8 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.00000000        0.00000711       -1.24666587
+   Si      0.00000000        0.00002489        0.63445753
+    H      0.00000000       -1.02197416       -1.63722727
+    H     -0.88506450        0.51095669       -1.63727705
+    H      0.88506450        0.51095669       -1.63727705
+    H      0.00000000        1.38974369        1.16076967
+    H     -1.20357234       -0.69485646        1.16063052
+    H      1.20357234       -0.69485646        1.16063052
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.060899
+=>Thermal correction to Enthalpy=                  0.066042
+=>Open Gau-Input file "G2-103.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-103"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-103
+  O                 -1.02883400   -0.44703000    0.00000000
+  C                  0.00000000    0.42148800    0.00000000
+  O                  1.15979700    0.11800000    0.00000000
+  H                 -0.66109700   -1.34546900    0.00000000
+  H                 -0.38660400    1.44878100    0.00000000
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.89775290E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   5 atoms in this molecule
+==----------------------------------------------------------------------------==
+    O     -1.03222577       -0.44372996        0.00000000
+    C     -0.00044342        0.41808649        0.00000000
+    O      1.15774178        0.11099651        0.00000000
+    H     -0.65168298       -1.33676188        0.00000000
+    H     -0.39012761        1.44717884        0.00000000
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.033892
+=>Thermal correction to Enthalpy=                  0.037997
+=>Open Gau-Input file "G2-104.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-104"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-104
+  C                 -0.93463000   -0.09371000    0.00000000
+  O                 -0.72699300   -1.27687900    0.00000000
+  O                  0.00000000    0.86689300    0.00000000
+  H                 -1.92873800    0.37339300    0.00000000
+  C                  1.37184500    0.41759800    0.00000000
+  H                  1.97332000    1.32324300    0.00000000
+  H                  1.57403600   -0.18003800    0.88958200
+  H                  1.57403600   -0.18003800   -0.88958200
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -2.29082027E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   8 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C     -0.92630347       -0.09337353        0.00000000
+    O     -0.71138187       -1.27403523       -0.00000000
+    O     -0.00090078        0.87437024        0.00000000
+    H     -1.92379501        0.37265501       -0.00000000
+    C      1.36212165        0.41890884        0.00000000
+    H      1.97480689        1.31983657       -0.00000000
+    H      1.56416429       -0.18394995        0.88863919
+    H      1.56416429       -0.18394995       -0.88863919
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.061931
+=>Thermal correction to Enthalpy=                  0.067448
+=>Open Gau-Input file "G2-105.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-105"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-105
+  C                 -1.36087400   -0.35081800   -0.00014200
+  C                  0.07449200    0.14654300   -0.00155600
+  O                  0.34882100    1.33281800    0.00007900
+  N                  1.04011500   -0.82253200   -0.00040100
+  H                  2.00676500   -0.53561600    0.00533800
+  H                  0.82395800   -1.80440100   -0.00102200
+  H                 -1.45108800   -1.43771400   -0.04902900
+  H                 -1.85057400    0.00699400    0.90792200
+  H                 -1.88214000    0.09156400   -0.85083800
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -2.09232406E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   9 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C     -1.35860253       -0.35172945       -0.00131953
+    C      0.07837573        0.15285635       -0.00624872
+    O      0.35373766        1.33540572       -0.01245334
+    N      1.03696247       -0.82147447        0.00074239
+    H      2.00341507       -0.53928273        0.00923015
+    H      0.81774170       -1.80099455        0.01214076
+    H     -1.44642542       -1.43923911       -0.06412488
+    H     -1.84630585       -0.00863723        0.91502476
+    H     -1.88942381        0.09993347       -0.84264058
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.073002
+=>Thermal correction to Enthalpy=                  0.078539
+=>Open Gau-Input file "G2-106.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-106"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-106
+  C                 -0.03811000   -0.39777800    0.74231700
+  N                 -0.03811000    0.87412600    0.00000000
+  C                 -0.03811000   -0.39777800   -0.74231700
+  H                  0.89256700    1.28161700    0.00000000
+  H                 -0.95446700   -0.60832400    1.28256200
+  H                 -0.95446700   -0.60832400   -1.28256200
+  H                  0.87022800   -0.70525800    1.25196300
+  H                  0.87022800   -0.70525800   -1.25196300
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.33932657E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   8 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C     -0.03777555       -0.39571236        0.74160061
+    N     -0.04107842        0.87494480       -0.00000000
+    C     -0.03777555       -0.39571236       -0.74160061
+    H      0.89287973        1.27573141        0.00000000
+    H     -0.95415349       -0.60854827        1.28478071
+    H     -0.95415349       -0.60854826       -1.28478071
+    H      0.87090789       -0.70456598        1.25191902
+    H      0.87090789       -0.70456598       -1.25191901
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.070160
+=>Thermal correction to Enthalpy=                  0.074343
+=>Open Gau-Input file "G2-107.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-107"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-107
+  N                  0.00000000    0.00000000    1.84264300
+  C                  0.00000000    0.00000000    0.68763700
+  C                  0.00000000    0.00000000   -0.68763700
+  N                  0.00000000    0.00000000   -1.84264300
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.85664484E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   4 atoms in this molecule
+==----------------------------------------------------------------------------==
+    N      0.00000000        0.00000000        1.84592515
+    C      0.00000000       -0.00000000        0.68788098
+    C      0.00000000        0.00000000       -0.68788098
+    N      0.00000000        0.00000000       -1.84592515
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.016545
+=>Thermal correction to Enthalpy=                  0.021197
+=>Open Gau-Input file "G2-108.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-108"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-108
+  C                 -0.02636700   -0.22176300    1.21860700
+  N                 -0.02636700    0.57812100    0.00000000
+  C                 -0.02636700   -0.22176300   -1.21860700
+  H                  0.80540400   -0.94577000    1.27961400
+  H                  0.02347200    0.43453800    2.09048600
+  H                 -0.96162500   -0.78645100    1.28211400
+  H                  0.76647400    1.20967500    0.00000000
+  H                  0.80540400   -0.94577000   -1.27961400
+  H                  0.02347200    0.43453800   -2.09048600
+  H                 -0.96162500   -0.78645100   -1.28211400
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.35176823E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are  10 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C     -0.02671062       -0.21888422        1.21292158
+    N     -0.03647568        0.58512980        0.00000000
+    C     -0.02671062       -0.21888422       -1.21292158
+    H      0.80551974       -0.94519103        1.27110482
+    H      0.02729884        0.43356935        2.08960193
+    H     -0.96114051       -0.78866229        1.27967353
+    H      0.76841577        1.20211058        0.00000000
+    H      0.80551974       -0.94519102       -1.27110482
+    H      0.02729884        0.43356935       -2.08960193
+    H     -0.96114051       -0.78866229       -1.27967353
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.092226
+=>Thermal correction to Enthalpy=                  0.097578
+=>Open Gau-Input file "G2-109.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-109"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-109
+  C                  1.22139300   -0.35538600    0.00000000
+  C                  0.00000000    0.57181900    0.00000000
+  N                 -1.30981000   -0.08740200    0.00000000
+  H                  2.15394400    0.21894800    0.00000000
+  H                  1.22472700   -1.00058200    0.88457700
+  H                  1.22472700   -1.00058200   -0.88457700
+  H                  0.03659200    1.22892000   -0.87479200
+  H                  0.03659200    1.22892000    0.87479200
+  H                 -1.41813400   -0.68120200    0.81665000
+  H                 -1.41813400   -0.68120200   -0.81665000
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.35186628E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are  10 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      1.21128834       -0.35520176        0.00000000
+    C     -0.00638744        0.57720971        0.00000000
+    N     -1.31615045       -0.07929285        0.00000000
+    H      2.15016681        0.21052021       -0.00000000
+    H      1.20948729       -1.00202364        0.88521466
+    H      1.20948729       -1.00202364       -0.88521466
+    H      0.03680259        1.23612998       -0.87616169
+    H      0.03680259        1.23612998        0.87616169
+    H     -1.38980000       -0.68959849        0.80969607
+    H     -1.38980000       -0.68959849       -0.80969607
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.092578
+=>Thermal correction to Enthalpy=                  0.097920
+=>Open Gau-Input file "G2-110.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-110"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-110
+  C                  0.00000000    0.00000000   -1.20729700
+  C                  0.00000000    0.00000000    0.10271000
+  H                  0.00000000    0.93826800   -1.74266500
+  H                  0.00000000   -0.93826800   -1.74266500
+  O                  0.00000000    0.00000000    1.26410600
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.52614324E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   5 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.00000000        0.00000000       -1.20700089
+    C      0.00000000        0.00000000        0.10136197
+    H     -0.00000000        0.93842230       -1.74248256
+    H     -0.00000000       -0.93842230       -1.74248256
+    O     -0.00000000        0.00000000        1.26479303
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.031695
+=>Thermal correction to Enthalpy=                  0.036150
+=>Open Gau-Input file "G2-111.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-111"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-111
+  C                  0.00000000    0.73370000   -0.37322200
+  O                  0.00000000    0.00000000    0.85519400
+  C                  0.00000000   -0.73370000   -0.37322200
+  H                  0.91971200    1.27061800   -0.59072300
+  H                 -0.91971200    1.27061800   -0.59072300
+  H                 -0.91971200   -1.27061800   -0.59072300
+  H                  0.91971200   -1.27061800   -0.59072300
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.53799850E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   7 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.00000000        0.73375667       -0.36896420
+    O      0.00000000       -0.00000000        0.85283456
+    C     -0.00000000       -0.73375667       -0.36896421
+    H      0.92000000        1.27251048       -0.59226204
+    H     -0.92000000        1.27251048       -0.59226204
+    H     -0.92000000       -1.27251048       -0.59226203
+    H      0.92000000       -1.27251048       -0.59226204
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.057281
+=>Thermal correction to Enthalpy=                  0.061376
+=>Open Gau-Input file "G2-112.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-112"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-112
+  O                  1.20372700    0.38809500    0.00000000
+  C                  0.00000000    0.46039300    0.00000000
+  H                 -0.49889200    1.45451400    0.00000000
+  C                 -0.93154600   -0.72058900    0.00000000
+  H                 -0.37426500   -1.65721700    0.00000000
+  H                 -1.58369100   -0.67044200    0.87899500
+  H                 -1.58369100   -0.67044200   -0.87899500
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.53842967E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   7 atoms in this molecule
+==----------------------------------------------------------------------------==
+    O      1.20660073        0.38563554       -0.00000000
+    C      0.00526445        0.46147413        0.00000000
+    H     -0.50389490        1.45331867       -0.00000000
+    C     -0.93203217       -0.71913495        0.00000000
+    H     -0.37213799       -1.65574219        0.00000000
+    H     -1.58607906       -0.67061960        0.87914702
+    H     -1.58607906       -0.67061960       -0.87914702
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.055361
+=>Thermal correction to Enthalpy=                  0.060187
+=>Open Gau-Input file "G2-113.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-113"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-113
+  C                 -0.32814000    0.69005300    0.00000000
+  C                  0.32814000   -0.69005300    0.00000000
+  O                  0.32814000    1.69838500    0.00000000
+  H                 -1.43556000    0.68082900    0.00000000
+  O                 -0.32814000   -1.69838500    0.00000000
+  H                  1.43556000   -0.68082900    0.00000000
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -2.27835733E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   6 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C     -0.32383251        0.69061815        0.00000000
+    C      0.32383251       -0.69061815        0.00000000
+    O      0.33314798        1.69784603       -0.00000000
+    H     -1.43340583        0.67155488        0.00000000
+    O     -0.33314798       -1.69784603       -0.00000000
+    H      1.43340583       -0.67155488        0.00000000
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.036951
+=>Thermal correction to Enthalpy=                  0.042107
+=>Open Gau-Input file "G2-114.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-114"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-114
+  C                  1.17733900   -0.40123000    0.00000000
+  C                  0.00000000    0.55564700    0.00000000
+  O                 -1.20055100   -0.22171000    0.00000000
+  H                 -1.95757400    0.37136200    0.00000000
+  H                  0.03782700    1.20205300    0.88754400
+  H                  0.03782700    1.20205300   -0.88754400
+  H                  2.11977400    0.15333200    0.00000000
+  H                  1.15125900   -1.04081300    0.88552700
+  H                  1.15125900   -1.04081300   -0.88552700
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.55052491E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   9 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      1.17600872       -0.40078186        0.00000000
+    C     -0.00775207        0.55242828        0.00000000
+    O     -1.19574212       -0.22671695        0.00000000
+    H     -1.94737263        0.37301584       -0.00000000
+    H      0.03774931        1.20576227        0.88643469
+    H      0.03774931        1.20576227       -0.88643469
+    H      2.11864691        0.15470696       -0.00000000
+    H      1.14893628       -1.04214791        0.88579644
+    H      1.14893628       -1.04214791       -0.88579644
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.079754
+=>Thermal correction to Enthalpy=                  0.085021
+=>Open Gau-Input file "G2-115.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-115"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-115
+  C                  0.00000000    1.17620900   -0.19503700
+  O                  0.00000000    0.00000000    0.58695600
+  C                  0.00000000   -1.17620900   -0.19503700
+  H                  0.00000000    2.02261600    0.49226900
+  H                  0.89262100    1.23443300   -0.83493400
+  H                 -0.89262100    1.23443300   -0.83493400
+  H                  0.00000000   -2.02261600    0.49226900
+  H                 -0.89262100   -1.23443300   -0.83493400
+  H                  0.89262100   -1.23443300   -0.83493400
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.55039896E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   9 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.00000000        1.16868868       -0.19175549
+    O      0.00000000        0.00000000        0.59006234
+    C      0.00000000       -1.16868868       -0.19175549
+    H      0.00000000        2.02136462        0.49189842
+    H      0.89149234        1.23067702       -0.83716605
+    H     -0.89149234        1.23067702       -0.83716605
+    H      0.00000000       -2.02136462        0.49189842
+    H     -0.89149234       -1.23067702       -0.83716605
+    H      0.89149234       -1.23067702       -0.83716605
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.079535
+=>Thermal correction to Enthalpy=                  0.084794
+=>Open Gau-Input file "G2-116.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-116"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-116
+  C                  0.00000000    0.73955700   -0.80635800
+  S                  0.00000000    0.00000000    0.87468000
+  C                  0.00000000   -0.73955700   -0.80635800
+  H                  0.91408700    1.25359700   -1.07964700
+  H                 -0.91408700    1.25359700   -1.07964700
+  H                 -0.91408700   -1.25359700   -1.07964700
+  H                  0.91408700   -1.25359700   -1.07964700
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -4.76795718E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   7 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.00000000        0.74063961       -0.80505226
+    S      0.00000000        0.00000000        0.86946173
+    C      0.00000000       -0.74063961       -0.80505226
+    H      0.91459808        1.25643159       -1.07899530
+    H     -0.91459808        1.25643159       -1.07899530
+    H     -0.91459808       -1.25643159       -1.07899530
+    H      0.91459808       -1.25643159       -1.07899530
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.054906
+=>Thermal correction to Enthalpy=                  0.059229
+=>Open Gau-Input file "G2-117.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-117"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-117
+  S                 -0.00000600    0.23419800   -0.44385800
+  O                  0.00003600    1.50035800    0.38642800
+  C                  1.36982200   -0.81350800    0.18468000
+  C                 -1.36984800   -0.81345900    0.18469500
+  H                  1.27403300   -0.91289600    1.26694100
+  H                 -2.29600900   -0.29449600   -0.06045600
+  H                  1.34428000   -1.78672000   -0.30928200
+  H                  2.29593200   -0.29456700   -0.06068600
+  H                 -1.34446400   -1.78661700   -0.30938600
+  H                 -1.27379800   -0.91292400    1.26692100
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -5.53217556E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are  10 atoms in this molecule
+==----------------------------------------------------------------------------==
+    S     -0.00000785        0.24665722       -0.43538287
+    O      0.00004107        1.48979782        0.38638079
+    C      1.35789842       -0.81020052        0.18350549
+    C     -1.35791127       -0.81015299        0.18359557
+    H      1.26925034       -0.91054645        1.26807776
+    H     -2.29064601       -0.30163454       -0.06677066
+    H      1.32332216       -1.78619188       -0.30738053
+    H      2.29063870       -0.30171429       -0.06690556
+    H     -1.32339424       -1.78614818       -0.30728692
+    H     -1.26921332       -0.91049719        1.26816393
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.079019
+=>Thermal correction to Enthalpy=                  0.085635
+=>Open Gau-Input file "G2-118.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-118"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-118
+  C                  1.52029900    0.70919500    0.00000000
+  C                  0.00000000    0.83563400    0.00000000
+  S                 -0.75769400   -0.85088000    0.00000000
+  H                 -2.04608000   -0.45177000    0.00000000
+  H                 -0.33972700    1.37223600    0.88682500
+  H                 -0.33972700    1.37223600   -0.88682500
+  H                  1.97788000    1.70220100    0.00000000
+  H                  1.87448100    0.17510200    0.88510700
+  H                  1.87448100    0.17510200   -0.88510700
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -4.78028232E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   9 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      1.52029996        0.70879816       -0.00000000
+    C     -0.00089702        0.83620224        0.00000000
+    S     -0.75344211       -0.84568544        0.00000000
+    H     -2.04085759       -0.45305313        0.00000000
+    H     -0.34339668        1.37321622        0.88742281
+    H     -0.34339668        1.37321622       -0.88742281
+    H      1.97990296        1.70229088        0.00000000
+    H      1.87285008        0.17203542        0.88580454
+    H      1.87285008        0.17203542       -0.88580454
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.074595
+=>Thermal correction to Enthalpy=                  0.080323
+=>Open Gau-Input file "G2-119.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-119"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-119
+  C                  0.00000000    1.39406700   -0.51473600
+  S                  0.00000000    0.00000000    0.66173500
+  C                  0.00000000   -1.39406700   -0.51473600
+  H                  0.00000000    2.30930900    0.07797500
+  H                  0.89368800    1.38115800   -1.14172000
+  H                 -0.89368800    1.38115800   -1.14172000
+  H                  0.00000000   -2.30930900    0.07797500
+  H                 -0.89368800   -1.38115800   -1.14172000
+  H                  0.89368800   -1.38115800   -1.14172000
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -4.78027237E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   9 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.00000000        1.39065239       -0.51434033
+    S      0.00000000        0.00000000        0.65961195
+    C      0.00000000       -1.39065239       -0.51434033
+    H     -0.00000000        2.30713350        0.07936584
+    H      0.89465851        1.37472767       -1.14208249
+    H     -0.89465851        1.37472767       -1.14208249
+    H      0.00000000       -2.30713350        0.07936584
+    H     -0.89465851       -1.37472767       -1.14208249
+    H      0.89465851       -1.37472767       -1.14208249
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.075466
+=>Thermal correction to Enthalpy=                  0.081318
+=>Open Gau-Input file "G2-120.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-120"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-120
+  C                  0.00000000    0.43650500    0.00000000
+  C                  1.18860200   -0.13862300    0.00000000
+  F                 -1.14537000   -0.28367000    0.00000000
+  H                 -0.19873400    1.50120100    0.00000000
+  H                  1.29966700   -1.21525600    0.00000000
+  H                  2.07578500    0.47979100    0.00000000
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.77833264E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   6 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C     -0.00744355        0.42768625       -0.00000000
+    C      1.18661575       -0.13851669       -0.00000000
+    F     -1.14282041       -0.27438636        0.00000000
+    H     -0.19352235        1.49753717        0.00000000
+    H      1.30467511       -1.21495688       -0.00000000
+    H      2.07244544        0.48258451        0.00000000
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.044120
+=>Thermal correction to Enthalpy=                  0.048408
+=>Open Gau-Input file "G2-121.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-121"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-121
+  C                  0.00000000    0.82300200    0.00000000
+  C                  1.50946000    0.68360300    0.00000000
+  Cl                -0.82374300   -0.80528300    0.00000000
+  H                 -0.36533600    1.33652300    0.88750300
+  H                 -0.36533600    1.33652300   -0.88750300
+  H                  1.96394800    1.67980700    0.00000000
+  H                  1.85680000    0.14866400    0.88575800
+  H                  1.85680000    0.14866400   -0.88575800
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -5.39436312E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   8 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C     -0.00143473        0.82145303        0.00000000
+    C      1.50966418        0.68339379        0.00000000
+   Cl     -0.81683228       -0.80199855        0.00000000
+    H     -0.36801639        1.33777988        0.88796831
+    H     -0.36801639        1.33777988       -0.88796831
+    H      1.96554411        1.68053384        0.00000000
+    H      1.85584225        0.14628056        0.88665262
+    H      1.85584225        0.14628056       -0.88665262
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.066430
+=>Thermal correction to Enthalpy=                  0.071416
+=>Open Gau-Input file "G2-122.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-122"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-122
+  C                  0.00000000    0.76643900    0.00000000
+  C                  1.29246900    1.05194100    0.00000000
+  Cl                -0.62524800   -0.87003900    0.00000000
+  H                 -0.78953300    1.50550600    0.00000000
+  H                  2.05733800    0.28574300    0.00000000
+  H                  1.60659800    2.08913700    0.00000000
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -5.38195615E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   6 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C     -0.00114034        0.76622987        0.00000000
+    C      1.29131494        1.05166564        0.00000000
+   Cl     -0.62105116       -0.86557619       -0.00000000
+    H     -0.79357602        1.50343100       -0.00000000
+    H      2.05605439        0.28469050        0.00000000
+    H      1.61002218        2.08828618       -0.00000000
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.042630
+=>Thermal correction to Enthalpy=                  0.047111
+=>Open Gau-Input file "G2-123.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-123"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-123
+  C                  1.31815800    0.98329500    0.00000000
+  C                  0.00000000    0.77063800    0.00000000
+  C                 -0.57876400   -0.53448300    0.00000000
+  H                  2.02817100    0.16514000    0.00000000
+  H                  1.71345100    1.99147400    0.00000000
+  H                 -0.70311900    1.59720700    0.00000000
+  N                 -1.06783800   -1.58150400    0.00000000
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.70842973E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   7 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      1.31778705        0.98418464        0.00000000
+    C      0.00100334        0.76911549        0.00000000
+    C     -0.57777786       -0.53435090        0.00000000
+    H      2.02980492        0.16708544       -0.00000000
+    H      1.71518371        1.99242088       -0.00000000
+    H     -0.70407533        1.59509326       -0.00000000
+    N     -1.07186683       -1.58178180       -0.00000000
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.050805
+=>Thermal correction to Enthalpy=                  0.055877
+=>Open Gau-Input file "G2-124.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-124"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-124
+  O                  0.00000000    0.00000000    1.39649700
+  C                  0.00000000    0.00000000    0.18493900
+  C                  0.00000000    1.29059000   -0.61288900
+  C                  0.00000000   -1.29059000   -0.61288900
+  H                 -0.11836000    2.14303100    0.05464400
+  H                  0.11836000   -2.14303100    0.05464400
+  H                 -0.79976600    1.28573900   -1.35969200
+  H                  0.94495500    1.38589400   -1.15842300
+  H                  0.79976600   -1.28573900   -1.35969200
+  H                 -0.94495500   -1.38589400   -1.15842300
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.93171723E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are  10 atoms in this molecule
+==----------------------------------------------------------------------------==
+    O      0.00000015        0.00000000        1.39998493
+    C     -0.00000100       -0.00000001        0.19133249
+    C     -0.01577507        1.29003254       -0.61235300
+    C      0.01577496       -1.29003254       -0.61235300
+    H     -0.03471918        2.14745015        0.06114438
+    H      0.03472013       -2.14745012        0.06114438
+    H     -0.89033387        1.31855468       -1.27225466
+    H      0.86817177        1.34729813       -1.25783744
+    H      0.89033386       -1.31855355       -1.27225458
+    H     -0.86817175       -1.34729927       -1.25783751
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.083358
+=>Thermal correction to Enthalpy=                  0.089697
+=>Open Gau-Input file "G2-125.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-125"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-125
+  C                  0.00000000    0.15623600    0.00000000
+  O                  0.17613100    1.34805200    0.00000000
+  O                 -1.24184100   -0.39498300    0.00000000
+  H                 -1.87807600    0.33599700    0.00000000
+  C                  1.07126900   -0.89967100    0.00000000
+  H                  2.04993500   -0.42558100    0.00000000
+  H                  0.96310400   -1.53718000    0.88046500
+  H                  0.96310400   -1.53718000   -0.88046500
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -2.29104693E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   8 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C     -0.00452178        0.15798926        0.00000000
+    O      0.16977949        1.34879882        0.00000000
+    O     -1.24062802       -0.39891860        0.00000000
+    H     -1.86672708        0.34055758        0.00000000
+    C      1.06982665       -0.89948609        0.00000000
+    H      2.04945645       -0.42400317        0.00000000
+    H      0.96322014       -1.53962390        0.88044970
+    H      0.96322014       -1.53962390       -0.88044970
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.061730
+=>Thermal correction to Enthalpy=                  0.067234
+=>Open Gau-Input file "G2-126.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-126"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-126
+  C                  0.00000000    0.18964000    0.00000000
+  O                  0.08732400    1.36845000    0.00000000
+  F                 -1.23734100   -0.40512300    0.00000000
+  C                  1.07537400   -0.84933700    0.00000000
+  H                  2.05170700   -0.36995800    0.00000000
+  H                  0.96676600   -1.48667500    0.88054200
+  H                  0.96676600   -1.48667500   -0.88054200
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -2.53110579E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   7 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C     -0.01038841        0.18807326        0.00000000
+    O      0.08859384        1.36892183       -0.00000000
+    F     -1.22533895       -0.40070336        0.00000000
+    C      1.07310213       -0.84953415        0.00000000
+    H      2.04915979       -0.36678984        0.00000000
+    H      0.96773380       -1.48982287        0.88057692
+    H      0.96773380       -1.48982287       -0.88057692
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.048961
+=>Thermal correction to Enthalpy=                  0.054210
+=>Open Gau-Input file "G2-127.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-127"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-127
+  C                  0.00000000    0.54426200    0.00000000
+  C                  1.48683000    0.74288400    0.00000000
+  Cl                -0.45161600   -1.23431200    0.00000000
+  O                 -0.84850500    1.36534700    0.00000000
+  H                  1.70654200    1.81005200    0.00000000
+  H                  1.91899500    0.26379800    0.88073900
+  H                  1.91899500    0.26379800   -0.88073900
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -6.13461852E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   7 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C     -0.00326410        0.54810511       -0.00000000
+    C      1.48534700        0.74208622        0.00000000
+   Cl     -0.44044920       -1.23185539        0.00000000
+    O     -0.85269285        1.36770177        0.00000000
+    H      1.70886359        1.81005115       -0.00000000
+    H      1.91671829        0.25987007        0.88099349
+    H      1.91671829        0.25987007       -0.88099349
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.047195
+=>Thermal correction to Enthalpy=                  0.052779
+=>Open Gau-Input file "G2-128.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-128"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-128
+  C                  0.91899700   -0.62299100    0.00000000
+  C                  2.39440300   -0.20379200    0.00000000
+  C                  0.00000000    0.58816600    0.00000000
+  H                  0.70338700   -1.23804900    0.87826200
+  H                  0.70338700   -1.23804900   -0.87826200
+  H                  3.04333800   -1.08262600    0.00000000
+  Cl                -1.75834700    0.10593000    0.00000000
+  H                  2.64192000    0.39110900   -0.88411800
+  H                  2.64192000    0.39110900    0.88411800
+  H                  0.13877600    1.20369800    0.88804100
+  H                  0.13877600    1.20369800   -0.88804100
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -5.78753290E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are  11 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.91853022       -0.62466947        0.00000000
+    C      2.39379650       -0.20436958        0.00000000
+    C     -0.00111301        0.58744800        0.00000000
+    H      0.70025550       -1.24042824        0.87895364
+    H      0.70025550       -1.24042824       -0.87895364
+    H      3.04598121       -1.08255566        0.00000000
+   Cl     -1.75084970        0.10472357        0.00000000
+    H      2.63948839        0.39312115       -0.88470256
+    H      2.63948839        0.39312115        0.88470256
+    H      0.14036199        1.20612017        0.88804690
+    H      0.14036199        1.20612017       -0.88804690
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.094836
+=>Thermal correction to Enthalpy=                  0.101161
+=>Open Gau-Input file "G2-129.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-129"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-129
+  O                  0.00000000    0.00000000    0.00000000
+  C                  0.00000000    0.00000000    1.43689600
+  H                  0.91177300    0.00000000   -0.30885800
+  H                  0.45650400    0.93582500    1.79165100
+  C                 -1.45959900   -0.02670800    1.86537500
+  C                  0.79943200   -1.17955000    1.98800700
+  H                 -1.93966500   -0.94618500    1.51899200
+  H                  0.36661300   -2.12495200    1.64920000
+  H                 -1.99753200    0.82233800    1.43856500
+  H                  1.84180300   -1.14079000    1.65447200
+  H                 -1.54247400    0.02117900    2.95441800
+  H                  0.80294400   -1.17008800    3.08208600
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.94374909E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are  12 atoms in this molecule
+==----------------------------------------------------------------------------==
+    O     -0.00343509       -0.00035230        0.00486108
+    C      0.00155406        0.00339713        1.43113910
+    H      0.91141069       -0.00831963       -0.29383347
+    H      0.45740470        0.93876199        1.79874186
+    C     -1.45914662       -0.02547501        1.86488317
+    C      0.79922777       -1.17832646        1.98493097
+    H     -1.93701431       -0.94953707        1.52356445
+    H      0.36601597       -2.12360854        1.64197411
+    H     -2.00083985        0.81908254        1.43067351
+    H      1.84255917       -1.13945314        1.64957681
+    H     -1.54250066        0.02868626        2.95431575
+    H      0.80456318       -1.17378676        3.07997665
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.107678
+=>Thermal correction to Enthalpy=                  0.114110
+=>Open Gau-Input file "G2-130.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-130"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-130
+  O                  0.01347400   -0.71078700    0.00000000
+  C                  0.00000000    0.70853600    0.00000000
+  C                  1.31780100   -1.25242200    0.00000000
+  C                 -1.44152000    1.18282900    0.00000000
+  H                  0.53291500    1.08596900    0.88691900
+  H                  0.53291500    1.08596900   -0.88691900
+  H                  1.21829600   -2.33831000    0.00000000
+  H                  1.88234800   -0.94535200   -0.89242600
+  H                  1.88234800   -0.94535200    0.89242600
+  H                 -1.96628900    0.81707300   -0.88559800
+  H                 -1.96628900    0.81707300    0.88559800
+  H                 -1.48171500    2.27556800    0.00000000
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.94362025E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are  12 atoms in this molecule
+==----------------------------------------------------------------------------==
+    O      0.01054157       -0.70843680        0.00000000
+    C      0.00302059        0.70348802        0.00000000
+    C      1.30856301       -1.24740570        0.00000000
+    C     -1.43945808        1.18048466        0.00000000
+    H      0.53838747        1.08718639        0.88606875
+    H      0.53838747        1.08718639       -0.88606875
+    H      1.21328633       -2.33622784        0.00000000
+    H      1.88076548       -0.94179714       -0.89123957
+    H      1.88076548       -0.94179714        0.89123957
+    H     -1.96442662        0.81215224       -0.88598989
+    H     -1.96442662        0.81215224        0.88598989
+    H     -1.48112208        2.27380866        0.00000000
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.107875
+=>Thermal correction to Enthalpy=                  0.114372
+=>Open Gau-Input file "G2-131.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-131"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-131
+  N                  0.00000000    0.00000000    0.36722200
+  C                  0.00000000    1.39112300   -0.05990700
+  C                  1.20474800   -0.69556200   -0.05990700
+  C                 -1.20474800   -0.69556200   -0.05990700
+  H                  0.00000000    1.50309500   -1.16152100
+  H                  0.88457900    1.89933100    0.33205500
+  H                 -0.88457900    1.89933100    0.33205500
+  H                  1.30171900   -0.75154800   -1.16152100
+  H                  1.20257900   -1.71573300    0.33205500
+  H                  2.08715800   -0.18359800    0.33205500
+  H                 -1.30171900   -0.75154800   -1.16152100
+  H                 -2.08715800   -0.18359800    0.33205500
+  H                 -1.20257900   -1.71573300    0.33205500
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.74489613E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are  13 atoms in this molecule
+==----------------------------------------------------------------------------==
+    N      0.00000000        0.00011094        0.36707565
+    C      0.00000000        1.38841249       -0.05943464
+    C      1.20205618       -0.69416699       -0.05987823
+    C     -1.20205618       -0.69416699       -0.05987823
+    H      0.00000000        1.50741992       -1.16136764
+    H      0.88620622        1.89792495        0.33266227
+    H     -0.88620622        1.89792495        0.33266227
+    H      1.30409994       -0.75444439       -1.16191720
+    H      1.20031591       -1.71624449        0.33262771
+    H      2.08667334       -0.18104175        0.33100276
+    H     -1.30409994       -0.75444439       -1.16191720
+    H     -2.08667334       -0.18104175        0.33100276
+    H     -1.20031591       -1.71624449        0.33262771
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.119944
+=>Thermal correction to Enthalpy=                  0.126365
+=>Open Gau-Input file "G2-132.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-132"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-132
+  O                  0.00000000    0.00000000    1.15831300
+  C                  0.00000000    1.09533900    0.34699800
+  C                  0.00000000   -1.09533900    0.34699800
+  C                  0.00000000    0.71776300   -0.95772700
+  C                  0.00000000   -0.71776300   -0.95772700
+  H                  0.00000000    2.04990000    0.84511100
+  H                  0.00000000   -2.04990000    0.84511100
+  H                  0.00000000    1.37317000   -1.81399300
+  H                  0.00000000   -1.37317000   -1.81399300
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -2.30039011E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   9 atoms in this molecule
+==----------------------------------------------------------------------------==
+    O      0.00000000        0.00000000        1.15625473
+    C      0.00000000        1.09190361        0.34630249
+    C      0.00000000       -1.09190361        0.34630249
+    C     -0.00000000        0.71724926       -0.95864716
+    C      0.00000000       -0.71724926       -0.95864716
+    H      0.00000000        2.04498404        0.84877233
+    H     -0.00000000       -2.04498404        0.84877233
+    H     -0.00000000        1.37300912       -1.81500952
+    H      0.00000000       -1.37300912       -1.81500952
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.069885
+=>Thermal correction to Enthalpy=                  0.074544
+=>Open Gau-Input file "G2-133.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-133"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-133
+  S                  0.00000000    0.00000000    1.19805700
+  C                  0.00000000    1.24136400   -0.01159600
+  C                  0.00000000   -1.24136400   -0.01159600
+  C                  0.00000000    0.71392100   -1.27145300
+  C                  0.00000000   -0.71392100   -1.27145300
+  H                  0.00000000    2.27952700    0.28259600
+  H                  0.00000000   -2.27952700    0.28259600
+  H                  0.00000000    1.31859400   -2.16875900
+  H                  0.00000000   -1.31859400   -2.16875900
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -5.53021345E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   9 atoms in this molecule
+==----------------------------------------------------------------------------==
+    S      0.00000000        0.00000000        1.19038488
+    C      0.00000000        1.23999774       -0.01107134
+    C      0.00000000       -1.23999774       -0.01107134
+    C      0.00000000        0.71298317       -1.27057148
+    C      0.00000000       -0.71298317       -1.27057148
+    H      0.00000000        2.27754318        0.28585352
+    H      0.00000000       -2.27754318        0.28585352
+    H      0.00000000        1.31642560       -2.16958663
+    H      0.00000000       -1.31642560       -2.16958663
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.066635
+=>Thermal correction to Enthalpy=                  0.071641
+=>Open Gau-Input file "G2-134.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-134"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-134
+  H                  0.00000000    0.00000000    2.12751500
+  N                  0.00000000    0.00000000    1.12143900
+  C                  0.00000000    1.12501200    0.33121800
+  C                  0.00000000   -1.12501200    0.33121800
+  C                  0.00000000    0.71239100   -0.98231400
+  C                  0.00000000   -0.71239100   -0.98231400
+  H                  0.00000000    2.11237700    0.76339100
+  H                  0.00000000   -2.11237700    0.76339100
+  H                  0.00000000    1.35935800   -1.84561100
+  H                  0.00000000   -1.35935800   -1.84561100
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -2.10184222E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are  10 atoms in this molecule
+==----------------------------------------------------------------------------==
+    H      0.00000000        0.00000000        2.12343719
+    N      0.00000000        0.00000000        1.11908275
+    C      0.00000000        1.12275085        0.33039273
+    C      0.00000000       -1.12275085        0.33039273
+    C      0.00000000        0.71156424       -0.98180317
+    C      0.00000000       -0.71156424       -0.98180317
+    H      0.00000000        2.10852552        0.76671203
+    H      0.00000000       -2.10852552        0.76671203
+    H      0.00000000        1.35869183       -1.84540056
+    H      0.00000000       -1.35869183       -1.84540056
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.082441
+=>Thermal correction to Enthalpy=                  0.087359
+=>Open Gau-Input file "G2-135.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-135"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-135
+  N                  0.00000000    0.00000000    1.41668900
+  C                  0.00000000    0.00000000   -1.38310400
+  C                  0.00000000    1.14164300    0.72136200
+  C                  0.00000000   -1.14164300    0.72136200
+  C                  0.00000000   -1.19660900   -0.67170400
+  C                  0.00000000    1.19660900   -0.67170400
+  H                  0.00000000    0.00000000   -2.46744200
+  H                  0.00000000    2.05695300    1.30676500
+  H                  0.00000000   -2.05695300    1.30676500
+  H                  0.00000000   -2.15366300   -1.18009200
+  H                  0.00000000    2.15366300   -1.18009200
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -2.48300616E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are  11 atoms in this molecule
+==----------------------------------------------------------------------------==
+    N     -0.00000000        0.00000000        1.41765812
+    C      0.00000000        0.00000000       -1.38225491
+    C      0.00000000        1.13936766        0.72055351
+    C      0.00000000       -1.13936766        0.72055351
+    C     -0.00000000       -1.19540222       -0.67118189
+    C     -0.00000000        1.19540222       -0.67118189
+    H     -0.00000000        0.00000000       -2.46737134
+    H     -0.00000000        2.05619300        1.30565201
+    H     -0.00000000       -2.05619300        1.30565201
+    H      0.00000000       -2.15331121       -1.17963706
+    H      0.00000000        2.15331121       -1.17963706
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.088681
+=>Thermal correction to Enthalpy=                  0.093891
+=>Open Gau-Input file "G2-136.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-136"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-136
+  H                  0.00000000    0.00000000    0.37219400
+  H                  0.00000000    0.00000000   -0.37219400
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.17853934E+00
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 1
+=>There are   2 atoms in this molecule
+==----------------------------------------------------------------------------==
+    H      0.00000000        0.00000000        0.37141143
+    H      0.00000000        0.00000000       -0.37141143
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.010173
+=>Thermal correction to Enthalpy=                  0.013477
+=>Open Gau-Input file "G2-137.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-137"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-137
+  S                  0.00000000    0.00000000    0.07960400
+  H                  0.00000000    0.00000000   -1.27366200
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -3.98746531E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 2
+=>There are   2 atoms in this molecule
+==----------------------------------------------------------------------------==
+    S      0.00000000        0.00000000        0.07801841
+    H      0.00000000        0.00000000       -1.27207641
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.006103
+=>Thermal correction to Enthalpy=                  0.009408
+=>Open Gau-Input file "G2-138.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-138"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-138
+  C                 -0.00001700   -0.72973500    0.00000000
+  C                 -0.00001700    0.47341300    0.00000000
+  H                  0.00020900    1.53793300    0.00000000
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -7.66105063E+01
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 2
+=>There are   3 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C     -0.00001710       -0.73000600        0.00000000
+    C     -0.00001672        0.47395499        0.00000000
+    H      0.00020882        1.53766200        0.00000000
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.012759
+=>Thermal correction to Enthalpy=                  0.016536
+=>Open Gau-Input file "G2-139.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-139"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-139
+  C                  0.04798700   -0.58617200    0.00000000
+  C                  0.04798700    0.71928800    0.00000000
+  H                 -0.88062200   -1.16410900    0.00000000
+  H                  0.96845100   -1.16634600    0.00000000
+  H                 -0.66367900    1.53175800    0.00000000
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -7.79086937E+01
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 2
+=>There are   5 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.04786492       -0.58515125        0.00000000
+    C      0.04843752        0.72063855        0.00000000
+    H     -0.87942636       -1.16595260        0.00000000
+    H      0.96733150       -1.16781510        0.00000000
+    H     -0.66408357        1.53269940        0.00000000
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.036513
+=>Thermal correction to Enthalpy=                  0.040562
+=>Open Gau-Input file "G2-140.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-140"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-140
+  C                 -0.96507900   -0.66673900    0.00000000
+  C                  0.00000000    0.49440000    0.00000000
+  H                 -0.43516200   -1.62472400    0.00000000
+  H                 -1.60729700   -0.58387200    0.87964700
+  H                 -1.60729700   -0.58387200   -0.87964700
+  O                  1.18002800    0.47831200    0.00000000
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.53192534E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 2
+=>There are   6 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C     -0.96436042       -0.66614878        0.00000000
+    C      0.00097303        0.50175669       -0.00000000
+    H     -0.43638191       -1.62613800        0.00000000
+    H     -1.60906226       -0.58623517        0.88000992
+    H     -1.60906226       -0.58623517       -0.88000992
+    O      1.18308682        0.47650543        0.00000000
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.043028
+=>Thermal correction to Enthalpy=                  0.047926
+=>Open Gau-Input file "G2-141.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-141"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-141
+  C                  0.00000000    0.00000000    0.00000000
+  O                  0.00000000    0.00000000    1.36650800
+  H                  0.90475400    0.00000000    1.69433000
+  H                  0.87632900   -0.35901500   -0.52677900
+  H                 -0.98669700   -0.05979700   -0.43409400
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.15068112E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 2
+=>There are   5 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.00556249        0.02622278        0.00198976
+    O     -0.00376150       -0.00649151        1.36670404
+    H      0.90351367       -0.00076184        1.68681117
+    H      0.87118691       -0.36787098       -0.52381181
+    H     -0.98211557       -0.06991046       -0.43172816
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.037408
+=>Thermal correction to Enthalpy=                  0.041652
+=>Open Gau-Input file "G2-142.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-142"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-142
+  C                 -0.01125500   -0.57397000    0.00000000
+  O                 -0.01125500    0.79097400    0.00000000
+  H                  1.05910600   -0.86666700    0.00000000
+  H                 -0.45076600   -1.00865400    0.91023400
+  H                 -0.45076600   -1.00865400   -0.91023400
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.15059793E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 2
+=>There are   5 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C     -0.01098867       -0.56864047        0.00000428
+    O     -0.00919005        0.79345417       -0.00000036
+    H      1.05908961       -0.86640335       -0.00000658
+    H     -0.45192795       -1.01269056        0.90852412
+    H     -0.45191895       -1.01269078       -0.90852146
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.036309
+=>Thermal correction to Enthalpy=                  0.040271
+=>Open Gau-Input file "G2-143.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-143"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-143
+  C                  1.04441800   -0.60322000    0.00000000
+  C                  0.00000000    0.50966100    0.00000000
+  O                 -1.30447500    0.10406200    0.00000000
+  H                  0.12586800    1.19156400    0.86530200
+  H                  0.12586800    1.19156400   -0.86530200
+  H                  2.05637200   -0.18706900    0.00000000
+  H                  0.93059100   -1.23360300    0.88508100
+  H                  0.93059100   -1.23360300   -0.88508100
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.54382468E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 2
+=>There are   8 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      1.04380870       -0.60217071        0.00000000
+    C     -0.00363358        0.51076719        0.00000000
+    O     -1.30458738        0.10006679        0.00000000
+    H      0.12876880        1.19216542        0.86662842
+    H      0.12876880        1.19216542       -0.86662842
+    H      2.05702321       -0.18633284        0.00000000
+    H      0.92954223       -1.23365264        0.88588736
+    H      0.92954223       -1.23365264       -0.88588736
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.063765
+=>Thermal correction to Enthalpy=                  0.068547
+=>Open Gau-Input file "G2-144.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-144"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-144
+  C                 -0.00450500    1.11327500    0.00000000
+  S                 -0.00450500   -0.69596200    0.00000000
+  H                  1.04651800    1.42551000    0.00000000
+  H                 -0.47370400    1.51511600    0.89873100
+  H                 -0.47370400    1.51511600   -0.89873100
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -4.38067438E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 2
+=>There are   5 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C     -0.00438456        1.11345377       -0.00000308
+    S     -0.00381561       -0.69178926       -0.00000722
+    H      1.04864914        1.42300682        0.00001440
+    H     -0.47516500        1.51420068        0.90010382
+    H     -0.47518398        1.51418299       -0.90010792
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.035414
+=>Thermal correction to Enthalpy=                  0.039570
+=>Open Gau-Input file "G2-145.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-145"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-145
+  C                 -0.00952400   -0.69361800    0.00000000
+  C                 -0.00952400    0.79401200    0.00000000
+  H                  1.01428400   -1.10311100    0.00000000
+  H                 -0.50467100   -1.10123600    0.88660300
+  H                 -0.50467100   -1.10123600   -0.88660300
+  H                  0.05467100    1.35160800    0.92631300
+  H                  0.05467100    1.35160800   -0.92631300
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -7.91657967E+01
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 2
+=>There are   7 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C     -0.00970153       -0.69250479        0.00000000
+    C     -0.01720603        0.79521235        0.00000000
+    H      1.01522589       -1.10268650        0.00000000
+    H     -0.50479381       -1.10362981        0.88681511
+    H     -0.50479381       -1.10362981       -0.88681511
+    H      0.05825264        1.35263278        0.92647969
+    H      0.05825264        1.35263278       -0.92647969
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.059138
+=>Thermal correction to Enthalpy=                  0.064051
+=>Open Gau-Input file "G2-146.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-146"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-146
+  C                  0.00914900    0.53614000    0.00000000
+  C                  0.00914900   -0.19780200    1.29721700
+  C                  0.00914900   -0.19780200   -1.29721700
+  H                 -0.18431900    1.60333300    0.00000000
+  H                  0.18861900    0.46762300    2.14513200
+  H                  0.18861900    0.46762300   -2.14513200
+  H                 -0.95264600   -0.70564400    1.48336500
+  H                  0.77384800   -0.98525200    1.31481700
+  H                 -0.95264600   -0.70564400   -1.48336500
+  H                  0.77384800   -0.98525200   -1.31481700
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.18489048E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 2
+=>There are  10 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C     -0.00700398        0.53337890        0.00000000
+    C      0.01936767       -0.19637851        1.29952881
+    C      0.01936767       -0.19637851       -1.29952881
+    H     -0.29136086        1.58156708        0.00000000
+    H      0.25311885        0.46714535        2.13814352
+    H      0.25311885        0.46714535       -2.13814352
+    H     -0.95057877       -0.67140270        1.53235712
+    H      0.75865967       -1.00817562        1.29138527
+    H     -0.95057877       -0.67140270       -1.53235712
+    H      0.75865967       -1.00817562       -1.29138527
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.087827
+=>Thermal correction to Enthalpy=                  0.093908
+=>Open Gau-Input file "G2-147.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-147"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-147
+  C                  0.00000000    0.00000000    0.15450700
+  C                  0.00000000    1.48570300   -0.01525200
+  C                  1.28665600   -0.74285100   -0.01525200
+  C                 -1.28665600   -0.74285100   -0.01525200
+  H                  0.00000000    1.77685400   -1.08160500
+  H                 -0.88688300    1.94583200    0.43205200
+  H                  0.88688300    1.94583200    0.43205200
+  H                  1.53880000   -0.88842700   -1.08160500
+  H                  2.12858100   -0.20485300    0.43205200
+  H                  1.24169800   -1.74097900    0.43205200
+  H                 -1.53880000   -0.88842700   -1.08160500
+  H                 -1.24169800   -1.74097900    0.43205200
+  H                 -2.12858100   -0.20485300    0.43205200
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -1.57812298E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 2
+=>There are  13 atoms in this molecule
+==----------------------------------------------------------------------------==
+    C      0.00000000       -0.00002271        0.12968907
+    C      0.00000000        1.48791146       -0.01853487
+    C      1.28852780       -0.74392479       -0.01890049
+    C     -1.28852780       -0.74392479       -0.01890049
+    H      0.00000000        1.80291179       -1.07841749
+    H     -0.88789399        1.94192261        0.43671051
+    H      0.88789399        1.94192261        0.43671051
+    H      1.56131302       -0.90193095       -1.07872091
+    H      2.12569317       -0.20172595        0.43596397
+    H      1.23778194       -1.73974069        0.43670258
+    H     -1.56131302       -0.90193095       -1.07872091
+    H     -1.23778194       -1.73974069        0.43670258
+    H     -2.12569317       -0.20172595        0.43596397
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.116105
+=>Thermal correction to Enthalpy=                  0.123491
+=>Open Gau-Input file "G2-148.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "G2-148"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=G2-148
+  N                  0.00000000    0.00000000    0.32194500
+  O                  0.00000000    1.09994600   -0.14085100
+  O                  0.00000000   -1.09994600   -0.14085100
+=>Geometry optimization turns on
+=>Frequence calculation turns on
+=>This is a batch job for geom. opt.
+==----------------------------------------------------------------------------==
+  QM Energy = -2.05088842E+02
+==----------------------------------------------------------------------------==
+=>Charge =  0 Multiplicity = 2
+=>There are   3 atoms in this molecule
+==----------------------------------------------------------------------------==
+    N      0.00000000       -0.00000003        0.32307993
+    O      0.00000000        1.10181766       -0.14141847
+    O      0.00000000       -1.10181762       -0.14141846
+==----------------------------------------------------------------------------==
+=>Zero-point correction=                           0.008837
+=>Thermal correction to Enthalpy=                  0.012715
+=>Statistic result of energy :
+==----------------------------------------------------------------------------==
+                        Name       Reference    Calc. Result    Deviation Weight
+--------------------------------------------------------------------------------
+                       1*0th      0.00000000   -324.57726711      -324.58   1.00
+                       1*1th      0.00000000  -1405.57079164     -1405.57   1.00
+                       1*2th      0.00000000   -542.20335967      -542.20   1.00
+                       1*3th      0.00000000  -1623.24820785     -1623.25   1.00
+                       1*4th      0.00000000   -437.50201789      -437.50   1.00
+                       1*5th      0.00000000  -1878.87219556     -1878.87   1.00
+                       1*6th      0.00000000   -511.55235047      -511.55   1.00
+                       1*7th      0.00000000   -834.50182414      -834.50   1.00
+                       1*8th      0.00000000   -313.03061819      -313.03   1.00
+                       1*9th      0.00000000   -689.15120665      -689.15   1.00
+                      1*10th      0.00000000  -2130.49868644     -2130.50   1.00
+                      1*11th      0.00000000   -184.67445989      -184.67   1.00
+                      1*12th      0.00000000   -590.09775642      -590.10   1.00
+                      1*13th      0.00000000   -354.09054460      -354.09   1.00
+                      1*14th      0.00000000   -640.99240996      -640.99   1.00
+                      1*15th      0.00000000   -225.42665788      -225.43   1.00
+                      1*16th      0.00000000   -274.66614764      -274.67   1.00
+                      1*17th      0.00000000   -759.49661045      -759.50   1.00
+                      1*18th      0.00000000   -475.53087428      -475.53   1.00
+                      1*19th      0.00000000  -1916.96887061     -1916.97   1.00
+                      1*20th      0.00000000   -430.47085847      -430.47   1.00
+                      1*21th      0.00000000   -116.66495929      -116.66   1.00
+                      1*22th      0.00000000   -116.66885607      -116.67   1.00
+                      1*23th      0.00000000   -116.63010444      -116.63   1.00
+                      1*24th      0.00000000   -117.91862877      -117.92   1.00
+                      1*25th      0.00000000   -117.90602284      -117.91   1.00
+                      1*26th      0.00000000   -119.15565669      -119.16   1.00
+                      1*27th      0.00000000   -156.00588540      -156.01   1.00
+                      1*28th      0.00000000   -155.99283871      -155.99   1.00
+                      1*29th      0.00000000   -155.97685037      -155.98   1.00
+                      1*30th      0.00000000   -155.96070455      -155.96   1.00
+                      1*31th      0.00000000   -155.98552695      -155.99   1.00
+                      1*32th      0.00000000   -157.22599662      -157.23   1.00
+                      1*33th      0.00000000   -157.24162998      -157.24   1.00
+                      1*34th      0.00000000   -158.47265727      -158.47   1.00
+                      1*35th      0.00000000   -158.47349294      -158.47   1.00
+                      1*36th      0.00000000   -195.28839832      -195.29   1.00
+                      1*37th      0.00000000   -232.26474939      -232.26   1.00
+                      1*38th      0.00000000   -238.98913119      -238.99   1.00
+                      1*39th      0.00000000   -338.24669338      -338.25   1.00
+                      1*40th      0.00000000   -959.70627952      -959.71   1.00
+                      1*41th      0.00000000  -1419.29272914     -1419.29   1.00
+                      1*42th      0.00000000    -95.86616998       -95.87   1.00
+                      1*43th      0.00000000   -132.76343561      -132.76   1.00
+                      1*44th      0.00000000   -245.02971573      -245.03   1.00
+                      1*45th      0.00000000   -245.02682052      -245.03   1.00
+                      1*46th      0.00000000   -331.22353875      -331.22   1.00
+                      1*47th      0.00000000   -189.77528972      -189.78   1.00
+                      1*48th      0.00000000   -229.08202665      -229.08   1.00
+                      1*49th      0.00000000   -209.23240630      -209.23   1.00
+                      1*50th      0.00000000   -133.93265712      -133.93   1.00
+                      1*51th      0.00000000   -185.66448411      -185.66   1.00
+                      1*52th      0.00000000   -135.17682338      -135.18   1.00
+                      1*53th      0.00000000   -135.18662827      -135.19   1.00
+                      1*54th      0.00000000   -152.61432400      -152.61   1.00
+                      1*55th      0.00000000   -153.79984989      -153.80   1.00
+                      1*56th      0.00000000   -153.84296658      -153.84   1.00
+                      1*57th      0.00000000   -227.83573307      -227.84   1.00
+                      1*58th      0.00000000   -155.05249083      -155.05   1.00
+                      1*59th      0.00000000   -155.03989573      -155.04   1.00
+                      1*60th      0.00000000   -476.79571822      -476.80   1.00
+                      1*61th      0.00000000   -553.21755648      -553.22   1.00
+                      1*62th      0.00000000   -478.02823218      -478.03   1.00
+                      1*63th      0.00000000   -478.02723665      -478.03   1.00
+                      1*64th      0.00000000   -177.83326371      -177.83   1.00
+                      1*65th      0.00000000   -539.43631215      -539.44   1.00
+                      1*66th      0.00000000   -538.19561534      -538.20   1.00
+                      1*67th      0.00000000   -170.84297337      -170.84   1.00
+                      1*68th      0.00000000   -193.17172257      -193.17   1.00
+                      1*69th      0.00000000   -229.10469299      -229.10   1.00
+                      1*70th      0.00000000   -253.11057890      -253.11   1.00
+                      1*71th      0.00000000   -613.46185229      -613.46   1.00
+                      1*72th      0.00000000   -578.75328983      -578.75   1.00
+                      1*73th      0.00000000   -194.37490898      -194.37   1.00
+                      1*74th      0.00000000   -194.36202510      -194.36   1.00
+                      1*75th      0.00000000   -174.48961329      -174.49   1.00
+                      1*76th      0.00000000   -230.03901135      -230.04   1.00
+                      1*77th      0.00000000   -553.02134543      -553.02   1.00
+                      1*78th      0.00000000   -210.18422176      -210.18   1.00
+                      1*79th      0.00000000   -248.30061555      -248.30   1.00
+                      1*80th      0.00000000     -1.17853934        -1.18   1.00
+                      1*81th      0.00000000   -398.74653075      -398.75   1.00
+                      1*82th      0.00000000    -76.61050625       -76.61   1.00
+                      1*83th      0.00000000    -77.90869373       -77.91   1.00
+                      1*84th      0.00000000   -153.19253399      -153.19   1.00
+                      1*85th      0.00000000   -115.06811244      -115.07   1.00
+                      1*86th      0.00000000   -115.05979265      -115.06   1.00
+                      1*87th      0.00000000   -154.38246788      -154.38   1.00
+                      1*88th      0.00000000   -438.06743776      -438.07   1.00
+                      1*89th      0.00000000    -79.16579667       -79.17   1.00
+                      1*90th      0.00000000   -118.48904814      -118.49   1.00
+                      1*91th      0.00000000   -157.81229791      -157.81   1.00
+                      1*92th      0.00000000   -205.08884180      -205.09   1.00
+--------------------------------------------------------------------------------
+        AD   =      -370.80492634
+       MAD   =       370.80492634
+       RMS   =        57.15384402
+       wAD   =      -370.80492634
+      wMAD   =       370.80492634
+      wRMS   =        57.15384402
+==----------------------------------------------------------------------------==
+=>Total job time:       0.49(wall)
+=>Batch end at Thu Jun  2 23:48:30 2011
+=>----------------------------------------------------------------------------==
+  #Filename:  Batch
+  #Author  :  Igor Ying Zhang, Xin Xu
+  #Version :  1.5(20101228)
+  #Purpose :  Batch jobs based on the special config interface

@@ -1,0 +1,8 @@
+atom      0.00000000      0.00000000      0.00000000    C
+initial_moment 2
+atom      0.53865808      0.93298316      0.00000000    H
+initial_moment 1
+atom      0.53865808     -0.93298316      0.00000000    H
+initial_moment 1
+atom     -1.07731616      0.00000000      0.00000000    H
+initial_moment 1

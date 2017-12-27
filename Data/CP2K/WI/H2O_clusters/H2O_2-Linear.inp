@@ -1,0 +1,29 @@
+&FORCE_EVAL 
+  &DFT 
+    MULTIPLICITY 1
+    CHARGE 0
+    &POISSON 
+      PERIODIC NONE
+      PSOLVER MT
+    &END POISSON
+  &END DFT
+  &SUBSYS 
+    &CELL 
+      PERIODIC NONE
+      ABC     13.02068000     15.04876000     16.21854000
+    &END CELL
+    &COORD 
+          O      6.13925000      6.26219000      8.72152500
+          H      6.17942000      6.44299000      9.66390500
+          H      6.27534000      7.11821000      8.28782500
+          O      6.52148000      8.68616000      7.14633500
+          H      5.75517000      8.78657000      6.57264500
+          H      7.26551000      8.53529000      6.55463500
+    &END COORD
+  &END SUBSYS
+&END FORCE_EVAL
+
+&GLOBAL 
+  PROJECT H2O_2-Linear
+&END GLOBAL
+

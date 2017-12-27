@@ -1,0 +1,18 @@
+$molecule
+0    1
+   Al      0.00000000      0.00000000      0.00000000
+   Br      1.11890693      1.93800365      0.00000000
+   Br      1.11890693     -1.93800365      0.00000000
+   Br     -2.23781385      0.00000000      0.00000000
+$end
+   
+$rem
+mem_static = 200
+mem_total  = 7500
+exchange = b3lyp
+basis = G3Large
+max_scf_cycles = 50
+scf_convergence = 7
+symmetry = false
+xc_grid = 000075000302
+$end

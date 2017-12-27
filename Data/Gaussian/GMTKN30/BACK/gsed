@@ -1,0 +1,8 @@
+#!/usr/bin/env tcsh
+
+foreach x ($argv)
+    cat $1
+    sed 's/ 1$/ 2/g' $1 > test
+    mv test $1
+    cat $1
+end

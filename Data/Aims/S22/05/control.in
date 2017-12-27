@@ -1,0 +1,303 @@
+xc                      pbe                  
+total_energy_method     rpa
+relativistic            none
+occupation_type         integer 0.0001
+mixer                   pulay
+n_max_pulay             10
+charge_mix_param        0.6
+sc_accuracy_rho         1E-6
+sc_accuracy_eev         1E-4
+sc_accuracy_etot        1E-6
+sc_iter_limit           200
+rpa_frozen_core         1
+charge                  0     
+################################################################################
+#
+#  FHI-aims code project
+# Igor Ying Zhang and Xinguo Ren, Fritz Haber Institute Berlin, 2012
+#
+#  Suggested "cc-pVDZ" defaults for O atom (to be pasted into control.in file)
+#
+################################################################################
+  species        O
+#     global species definitions
+    nucleus             8
+    mass                15.9994
+#
+    l_hartree           6
+#
+    cut_pot             4.0  2.0  1.0
+    basis_dep_cutoff    0e-0
+#
+    radial_base         36 7.0
+    radial_multiplier   6
+    angular_grids       specified
+      division   0.1817   50
+      division   0.3417  110
+      division   0.4949  194
+      division   0.6251  302
+      division   0.8014  434
+#      division   0.8507  590
+#      division   0.8762  770
+#      division   0.9023  974
+#      division   1.2339 1202
+#      outer_grid 974
+      outer_grid  434
+################################################################################
+#
+#  Definition of "minimal" basis
+#
+################################################################################
+#     valence basis states
+    valence      2  s   2.
+    valence      2  p   4.
+#     ion occupancy
+    ion_occ      2  s   1.
+    ion_occ      2  p   3.
+################################################################################
+#
+#   For exact comparison with all GTO-based codes, one or more of
+#   the following flags are needed:
+#
+    include_min_basis   .false.
+    pure_gauss          .true.
+#
+
+# O cc-pVDZ
+ gaussian 0 8
+     11720.0000000            0.0007100  
+      1759.0000000            0.0054700  
+       400.8000000            0.0278370  
+       113.7000000            0.1048000  
+        37.0300000            0.2830620  
+        13.2700000            0.4487190  
+         5.0250000            0.2709520  
+         1.0130000            0.0154580  
+ gaussian 0 8
+     11720.0000000           -0.0001600  
+      1759.0000000           -0.0012630  
+       400.8000000           -0.0062670  
+       113.7000000           -0.0257160  
+        37.0300000           -0.0709240  
+        13.2700000           -0.1654110  
+         5.0250000           -0.1169550  
+         1.0130000            0.5573680  
+ gaussian 0 1 0.3023000
+ gaussian 1 3
+        17.7000000            0.0430180  
+         3.8540000            0.2289130  
+         1.0460000            0.5087280  
+ gaussian 1 1 0.2753000
+ gaussian 2 1 1.1850000
+################################################################################
+#
+#  FHI-aims code project
+# Igor Ying Zhang and Xinguo Ren, Fritz Haber Institute Berlin, 2012
+#
+#  Suggested "cc-pVDZ" defaults for C atom (to be pasted into control.in file)
+#
+################################################################################
+  species        C
+#     global species definitions
+    nucleus             6
+    mass                12.0107
+#
+    l_hartree           6
+#
+    cut_pot             4.0  2.0  1.0
+    basis_dep_cutoff    0e-0
+#
+    radial_base         34 7.0
+    radial_multiplier   6
+    angular_grids       specified
+      division   0.2187   50
+      division   0.4416  110
+      division   0.6335  194
+      division   0.7727  302
+      division   0.8772  434
+#      division   0.9334  590
+#      division   0.9924  770
+#      division   1.0230  974
+#      division   1.5020 1202
+#     outer_grid  974
+      outer_grid  434
+################################################################################
+#
+#  Definition of "minimal" basis
+#
+################################################################################
+#     valence basis states
+    valence      2  s   2.
+    valence      2  p   2.
+#     ion occupancy
+    ion_occ      2  s   1.
+    ion_occ      2  p   1.
+################################################################################
+#
+#   For exact comparison with all GTO-based codes, one or more of
+#   the following flags are needed:
+#
+    include_min_basis   .false.
+    pure_gauss          .true.
+#
+
+# C cc-pVDZ
+ gaussian 0 8
+      6665.0000000            0.0006920  
+      1000.0000000            0.0053290  
+       228.0000000            0.0270770  
+        64.7100000            0.1017180  
+        21.0600000            0.2747400  
+         7.4950000            0.4485640  
+         2.7970000            0.2850740  
+         0.5215000            0.0152040  
+ gaussian 0 8
+      6665.0000000           -0.0001460  
+      1000.0000000           -0.0011540  
+       228.0000000           -0.0057250  
+        64.7100000           -0.0233120  
+        21.0600000           -0.0639550  
+         7.4950000           -0.1499810  
+         2.7970000           -0.1272620  
+         0.5215000            0.5445290  
+ gaussian 0 1 0.1596000
+ gaussian 1 3
+         9.4390000            0.0381090  
+         2.0020000            0.2094800  
+         0.5456000            0.5085570  
+ gaussian 1 1 0.1517000
+ gaussian 2 1 0.5500000
+################################################################################
+#
+#  FHI-aims code project
+# Igor Ying Zhang and Xinguo Ren, Fritz Haber Institute Berlin, 2012
+#
+#  Suggested "cc-pVDZ" defaults for N atom (to be pasted into control.in file)
+#
+################################################################################
+  species        N
+#     global species definitions
+    nucleus             7
+    mass                14.0067
+#
+    l_hartree           6
+#
+    cut_pot             4.0  2.0  1.0
+    basis_dep_cutoff    0e-0
+#
+    radial_base         35 7.0
+    radial_multiplier   6
+    angular_grids       specified
+      division   0.1841   50
+      division   0.3514  110
+      division   0.5126  194
+      division   0.6292  302
+      division   0.6939  434
+#      division   0.7396  590
+#      division   0.7632  770
+#      division   0.8122  974
+#      division   1.1604 1202
+#      outer_grid  974
+      outer_grid  434
+################################################################################
+#
+#  Definition of "minimal" basis
+#
+################################################################################
+#     valence basis states
+    valence      2  s   2.
+    valence      2  p   3.
+#     ion occupancy
+    ion_occ      2  s   1.
+    ion_occ      2  p   2.
+################################################################################
+#
+#   For exact comparison with all GTO-based codes, one or more of
+#   the following flags are needed:
+#
+    include_min_basis   .false.
+    pure_gauss          .true.
+#
+
+# N cc-pVDZ
+ gaussian 0 8
+      9046.0000000            0.0007000  
+      1357.0000000            0.0053890  
+       309.3000000            0.0274060  
+        87.7300000            0.1032070  
+        28.5600000            0.2787230  
+        10.2100000            0.4485400  
+         3.8380000            0.2782380  
+         0.7466000            0.0154400  
+ gaussian 0 8
+      9046.0000000           -0.0001530  
+      1357.0000000           -0.0012080  
+       309.3000000           -0.0059920  
+        87.7300000           -0.0245440  
+        28.5600000           -0.0674590  
+        10.2100000           -0.1580780  
+         3.8380000           -0.1218310  
+         0.7466000            0.5490030  
+ gaussian 0 1 0.2248000
+ gaussian 1 3
+        13.5500000            0.0399190  
+         2.9170000            0.2171690  
+         0.7973000            0.5103190  
+ gaussian 1 1 0.2185000
+ gaussian 2 1 0.8170000
+################################################################################
+#
+#  FHI-aims code project
+# Igor Ying Zhang and Xinguo Ren, Fritz Haber Institute Berlin, 2012
+#
+#  Suggested "cc-pVDZ" defaults for H atom (to be pasted into control.in file)
+#
+################################################################################
+  species        H
+#     global species definitions
+    nucleus             1
+    mass                1.00794
+#
+    l_hartree           6
+#
+    cut_pot             4.0  2.0  1.0
+    basis_dep_cutoff    0e-0
+#     
+    radial_base         24 7.0
+    radial_multiplier   6
+    angular_grids       specified
+      division   0.1930   50
+      division   0.3175  110
+      division   0.4293  194
+      division   0.5066  302
+      division   0.5626  434
+#      division   0.5922  590
+#      division   0.6227  974
+#      division   0.6868 1202
+#      outer_grid  770
+      outer_grid  434
+################################################################################
+#
+#  Definition of "minimal" basis
+#
+################################################################################
+#     valence basis states
+    valence      1  s   1.
+#     ion occupancy
+    ion_occ      1  s   0.5
+################################################################################
+#
+#   For exact comparison with all GTO-based codes, one or more of
+#   the following flags are needed:
+#
+    include_min_basis   .false.
+    pure_gauss          .true.
+#
+
+# H cc-pVDZ
+ gaussian 0 3
+        13.0100000            0.0196850  
+         1.9620000            0.1379770  
+         0.4446000            0.4781480  
+ gaussian 0 1 0.1220000
+ gaussian 1 1 0.7270000

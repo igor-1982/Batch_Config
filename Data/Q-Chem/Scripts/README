@@ -1,0 +1,67 @@
+=============================
+1) CMD      :: gaussian2qchem.csh 
+   USAGE    :: change gaussian input file in current DIR to qchem input file
+
+
+=============================
+2) CMD     :: mcp_batch.py proj_name [options] ...
+   USAGE   :: collect useful data from an existed project to an new project.
+              If the directions of the new project exist, they do not be copied again
+              "scf_guess = read" is added into "rem" block automatically, 
+              using the converged wavefunctions obtained from previous project.
+2a)CMD     :: mcp_batch_input_only.py proj_name [options] ...
+   USAGE   :: collect useful data from an existed project to an new project.
+              Do not copy the chk file from previous project into the current project
+              So "scf_guess = read" isn't added by default.
+
+   OPTION  :: -o, --original
+                 the main DIR of the exisited project.
+                 default one is 'B3LYP'
+              -b, --basis
+                 the basis set for the new project, relating to the Q-Chem key of 'basis'.
+              -m, --method
+                 the method used for the new project, relating to the Q-Chem key of 'exchange'.
+              -af, --appendfile
+                 the file contains the keys which needs append to batch control file
+              -jf, --jobflag,  e.g. energy|pt21|pt22|nmr....
+                 the flag tells batch what you need to collect from the Q-Chem output file.
+              -cfg, default = rmp2
+                 the flag to choose a specific version of Q-Chem, relating to the Q-Chem global variable 'QCCFG'.
+              -par, default is turn on
+                 to run Q-Chem using 8 process in a node. This is the default running mode
+              -ser, default is turn off
+                 to run Q-Chem using 1 process in a node.
+
+===============================
+3) CMD     :: mqsub_batch.py proj_name
+   USAGE   :: submit all the projects in proj_name
+
+
+===============================
+4) CMD     :: check_collect_batch.py proj_name
+   USAGE   :: check the batch results from "proj_name" and then collect them into "%s_Data" %proj_name.
+
+
+==============================
+5) CMD     :: qchem_batch_del.py dir_name
+   USAGE   :: check the batch results in dir_name and then move the unsuccessful Q-Chem job into 'check'
+
+
+==============================
+6) CMD     :: mgrep_batch.py proj_name [option]
+   USAGE   :: collect the results based on the specific flag list and print them out formally.
+   OPTION  :: xyg3
+                collect results based on the "xyg3_flag_list" which contains each components of total energy
+              b3lyp
+                collect results based on the "b3lyp_flag_list" which contains only total energy of SCF_procedure 
+              rsxyg3
+                collect results based on the "rsxyg3_flag_list" which contains only pt2 components
+6a) CMD    :: mgrep_batch_2.py batch_file [option]
+   USAGE   :: collect the results from the batchfile only
+
+
+==============================
+7) CMD     :: mdel_scratch_batch.py dir_1 dir_2 ...
+   USAGE   :: delete all the scratchs of the projects in "dir_1", "dir_2", and so on.
+
+               

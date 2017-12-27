@@ -1,0 +1,52 @@
+molec-C2H4 	    			 0.86
+molec-C2H5           		 0.78
+molec-C3H7           		 0.75
+molec-CH3            		 0.79
+molec-CH3F           		 0.76
+molec-CH3Cl          		 0.76
+molec-CH3OH          		 0.74
+molec-ClF    	        		 0.75
+molec-Clmin          		 0.73
+molec-F2            	 		 0.66
+molec-Fmin           	 	 0.61
+molec-HNC            		 0.77
+molec-N2             			 0.76
+molec-N2O            		 0.79
+molec-OH             		 0.76
+molec-OHmin          		 0.66
+molec-H						 0.96
+molec-F						 0.78
+molec-CO						 0.81	
+molec-Cl						 0.84
+molec-HCl            			 0.78
+molec-HCN            		 0.87
+molec-HCO            		 0.78
+molec-HF             			 0.69
+molec-HN2            		 0.76
+molec-FmindotsCH3Cl   0.58    fch3clcomp1
+molec-CH3FdotsClmin   0.72    fch3clcomp2
+molec-FmindotsCH3F    0.60    fch3fcomp
+molec-CH3OHdotsFmin 0.69    hoch3fcomp1
+molec-OHmindotsCH3F 0.65    hoch3fcomp2
+molec-ClmindotsCH3Cl  0.71    clch3clcomp
+
+molec-CH3-C2H4_C3H7_ts							 0.74
+molec-CH3-ClF_CH3F-Cl_ts	 						 0.78
+molec-Fmin-CH3Cl_CH3F-Clmin_ts  				 0.60
+molec-FmindotsCH3Cl_CH3FdotsClmin_ts 	 0.60
+molec-Clmin-CH3Cl_CH3Cl-Clmin_ts	 			 0.70
+molec-ClmindotsCH3Cl_ClmindotsCH3Cl_ts 	 0.70
+molec-Fmin-CH3F_CH3F-Fmin_ts					 0.61
+molec-FmindotsCH3F_FmindotsCH3F_ts		 0.61
+molec-H-C2H4_C2H5_ts 								 0.82
+molec-H-CH3F_HF-CH3_ts	 							 0.89
+molec-HCN_HNC_ts     									 0.79
+molec-H-CO_HCO_ts    									 0.86
+molec-H-F2_HF-F_ts   									 0.86
+molec-H-HCl_HCl-H_ts 									 0.87
+molec-H-HF_FH-H_ts   									 0.98
+molec-H-HF_HF-H_ts   									 0.98
+molec-H-N2_HN2_ts    									 0.85
+molec-H-N2O_OH-N2_ts 								 0.88
+molec-OHmin-CH3F_CH3OH-Fmin_ts 			 0.65
+molec-OHmindotsCH3F_CH3OHdotsFmin_ts	 0.65

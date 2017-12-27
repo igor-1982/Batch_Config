@@ -1,0 +1,9 @@
+atom	0.0000000	0.0000000	0.0000000	C
+initial_moment 2
+atom	0.0000000	0.0000000	1.7813000	Ni
+initial_moment 2
+atom	0.9328700	0.0000000	-0.5871800	H
+initial_moment 1
+atom	-0.9328700	0.0000000	-0.5871800	H
+initial_moment 1
+

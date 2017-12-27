@@ -1,0 +1,6 @@
+lattice_vector 0.0000 1.8809 1.8809
+lattice_vector 1.8809 0.0000 1.8809
+lattice_vector 1.8809 1.8809 0.0000
+
+atom   0.0000 0.0000 0.0000 Be
+atom   0.9404 0.9404 0.9404 O

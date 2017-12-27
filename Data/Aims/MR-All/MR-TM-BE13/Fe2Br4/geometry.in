@@ -1,0 +1,13 @@
+atom	-0.0000020	-1.6229260	0.0000000	Fe
+initial_moment 4
+atom	-0.0000010	-3.9000320	0.0000000	Br
+initial_moment 1
+atom	-1.8673960	0.0000090	0.0000000	Br
+initial_moment 1
+atom	1.8673980	0.0000050	0.0000000	Br
+initial_moment 1
+atom	0.0000030	1.6229180	0.0000000	Fe
+initial_moment 1
+atom	-0.0000020	3.9000240	0.0000000	Br
+initial_moment 1
+

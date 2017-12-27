@@ -1,0 +1,6 @@
+lattice_vector 0.0000 2.7326 2.7326
+lattice_vector 2.7326 0.0000 2.7326
+lattice_vector 2.7326 2.7326 0.0000
+
+atom   0.0000 0.0000 0.0000 Na
+atom   2.7326 2.7326 2.7326 Cl

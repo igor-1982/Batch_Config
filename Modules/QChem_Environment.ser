@@ -1,0 +1,48 @@
+#!/bin/csh -f
+#filename : QChem_Environment
+#Author:    Igor Ying Zhang, Xin Xu
+#Purpose:   Setting Q-Chem running environment and run qchem
+#
+#Usage:     QChem_Environment QChem_Input
+
+# Now set script for Q-Chem
+ setenv NN 1
+ setenv QCCFG $1
+ setenv QCPLATFORM LINUX_Ix86_64
+ setenv QC /home/wenxinzy/export/qchem40
+ setenv QCAUX /home/wenxinzy/export/softs/aux
+ setenv ONEEXE -DONEEXE
+ setenv QCRSH ssh
+ setenv QCBIN "$QC/qcbin_$QCCFG"
+ setenv QCPROG "$QCBIN/qcprog.exe_${QCCFG}"
+ # QCSCRATCH  is the global scratch to save scratch for restart computing
+ #               which should be located at NFS
+ setenv QCSCRATCH $PWD/QChem_Scratch
+ if ( -d /state/partition2 ) then
+  setenv QCLOCALSCR /state/partition2/$USER/scratch
+ else
+  setenv QCLOCALSCR /state/partition1/$USER/scratch
+ endif
+
+ pkill -9 qcprog.exe_$QCCFG
+ pkill -9 qcprog.exe_DHDF
+ pkill -9 qcprog.exe_open
+
+ if ( ! -d $QCSCRATCH ) then
+     mkdir -p $QCSCRATCH
+     endif
+
+set FileName=$2:r
+set PostFix=$2:e
+
+#
+if ($PostFix == 'in' || $PostFix == 'com') then
+#run qchem
+    $QC/bin/qchem -pbs -np $NN $2 $FileName.log  $FileName.SCR # Run qchem on single processor
+    if ( -d $QCLOCALSCR/$FileName.SCR ) then
+        rm -r $QCLOCALSCR/$FileName.SCR
+    endif
+else
+    echo "Error PostFix found"
+endif
+

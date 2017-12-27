@@ -1,0 +1,4 @@
+#!/bin/csh
+
+setenv IGOR_MODULES_PATH $pwd
+

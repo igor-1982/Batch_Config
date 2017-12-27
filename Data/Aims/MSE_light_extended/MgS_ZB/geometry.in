@@ -1,0 +1,6 @@
+lattice_vector 0.0000 2.7991 2.7991
+lattice_vector 2.7991 0.0000 2.7991
+lattice_vector 2.7991 2.7991 0.0000
+
+atom   0.0000 0.0000 0.0000 Mg
+atom   1.3995 1.3995 1.3995 S

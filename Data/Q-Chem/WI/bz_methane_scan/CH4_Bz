@@ -1,0 +1,164 @@
+// POV 3.x input script : CH4_Bz 
+// try povray +W512 +H512 -ICH4_Bz -OCH4_Bz.tga +P +X +A +FT +C
+#if (version < 3.5) 
+#error "POV3DisplayDevice has been compiled for POV-Ray 3.5 or above.\nPlease upgrade POV-Ray or recompile VMD."
+#end 
+#declare VMD_clip_on=array[3] {0, 0, 0};
+#declare VMD_clip=array[3];
+#declare VMD_scaledclip=array[3];
+#declare VMD_line_width=0.0020;
+#macro VMDC ( C1 )
+  texture { pigment { rgbt C1 }}
+#end
+#macro VMD_point (P1, R1, C1)
+  #local T = texture { finish { ambient 1.0 diffuse 0.0 phong 0.0 specular 0.0 } pigment { C1 } }
+  #if(VMD_clip_on[2])
+  intersection {
+    sphere {P1, R1 texture {T} #if(VMD_clip_on[1]) clipped_by {VMD_clip[1]} #end no_shadow}
+    VMD_clip[2]
+  }
+  #else
+  sphere {P1, R1 texture {T} #if(VMD_clip_on[1]) clipped_by {VMD_clip[1]} #end no_shadow}
+  #end
+#end
+#macro VMD_line (P1, P2, C1)
+  #local T = texture { finish { ambient 1.0 diffuse 0.0 phong 0.0 specular 0.0 } pigment { C1 } }
+  #if(VMD_clip_on[2])
+  intersection {
+    cylinder {P1, P2, VMD_line_width texture {T} #if(VMD_clip_on[1]) clipped_by {VMD_clip[1]} #end no_shadow}
+    VMD_clip[2]
+  }
+  #else
+  cylinder {P1, P2, VMD_line_width texture {T} #if(VMD_clip_on[1]) clipped_by {VMD_clip[1]} #end no_shadow}
+  #end
+#end
+#macro VMD_sphere (P1, R1, C1)
+  #local T = texture { pigment { C1 } }
+  #if(VMD_clip_on[2])
+  intersection {
+    sphere {P1, R1 texture {T} #if(VMD_clip_on[1]) clipped_by {VMD_clip[1]} #end no_shadow}
+    VMD_clip[2]
+  }
+  #else
+  sphere {P1, R1 texture {T} #if(VMD_clip_on[1]) clipped_by {VMD_clip[1]} #end no_shadow}
+  #end
+#end
+#macro VMD_cylinder (P1, P2, R1, C1, O1)
+  #local T = texture { pigment { C1 } }
+  #if(VMD_clip_on[2])
+  intersection {
+    cylinder {P1, P2, R1 #if(O1) open #end texture {T} #if(VMD_clip_on[1]) clipped_by {VMD_clip[1]} #end no_shadow}
+    VMD_clip[2]
+  }
+  #else
+  cylinder {P1, P2, R1 #if(O1) open #end texture {T} #if(VMD_clip_on[1]) clipped_by {VMD_clip[1]} #end no_shadow}
+  #end
+#end
+#macro VMD_cone (P1, P2, R1, C1)
+  #local T = texture { pigment { C1 } }
+  #if(VMD_clip_on[2])
+  intersection {
+    cone {P1, R1, P2, VMD_line_width texture {T} #if(VMD_clip_on[1]) clipped_by {VMD_clip[1]} #end no_shadow}
+    VMD_clip[2]
+  }
+  #else
+  cone {P1, R1, P2, VMD_line_width texture {T} #if(VMD_clip_on[1]) clipped_by {VMD_clip[1]} #end no_shadow}
+  #end
+#end
+#macro VMD_triangle (P1, P2, P3, N1, N2, N3, C1)
+  #local T = texture { pigment { C1 } }
+  smooth_triangle {P1, N1, P2, N2, P3, N3 texture {T} #if(VMD_clip_on[1]) clipped_by {VMD_clip[1]} #end no_shadow}
+#end
+#macro VMD_tricolor (P1, P2, P3, N1, N2, N3, C1, C2, C3)
+  #local NX = P2-P1;
+  #local NY = P3-P1;
+  #local NZ = vcross(NX, NY);
+  #local T = texture { pigment {
+    average pigment_map {
+      [1 gradient x color_map {[0 rgb 0] [1 C2*3]}]
+      [1 gradient y color_map {[0 rgb 0] [1 C3*3]}]
+      [1 gradient z color_map {[0 rgb 0] [1 C1*3]}]
+    }
+    matrix <1.01,0,1,0,1.01,1,0,0,1,-.002,-.002,-1>
+    matrix <NX.x,NX.y,NX.z,NY.x,NY.y,NY.z,NZ.x,NZ.y,NZ.z,P1.x,P1.y,P1.z>
+  } }
+  smooth_triangle {P1, N1, P2, N2, P3, N3 texture {T} #if(VMD_clip_on[1]) clipped_by {VMD_clip[1]} #end no_shadow}
+#end
+camera {
+  orthographic
+  location <0.0000, 0.0000, -2.0000>
+  look_at <-0.0000, -0.0000, 2.0000>
+  up <0.0000, 3.0000, 0.0000>
+  right <3.0000, 0.0000, 0.0000>
+}
+light_source { 
+  <-0.1000, 0.1000, -1.0000> 
+  color rgb<1.000, 1.000, 1.000> 
+  parallel 
+  point_at <0.0, 0.0, 0.0> 
+}
+light_source { 
+  <1.0000, 2.0000, -0.5000> 
+  color rgb<1.000, 1.000, 1.000> 
+  parallel 
+  point_at <0.0, 0.0, 0.0> 
+}
+background {
+  color rgb<1.000, 1.000, 1.000>
+}
+#default { texture {
+ finish { ambient 0.000 diffuse 0.650 phong 0.1 phong_size 40.000 specular 0.500 }
+} }
+#declare VMD_line_width=0.0020;
+// MoleculeID: 0 ReprID: 0 Beginning CPK
+// MoleculeID: 0 ReprID: 0 Beginning VDW
+VMD_sphere(<0.1627,-0.4429,-0.2364>,0.1020,rgbt<0.250,0.750,0.750,0.000>)
+VMD_sphere(<0.4349,-0.2949,0.0495>,0.1020,rgbt<0.250,0.750,0.750,0.000>)
+VMD_sphere(<0.2932,-0.1411,0.4155>,0.1020,rgbt<0.250,0.750,0.750,0.000>)
+VMD_sphere(<-0.1207,-0.1353,0.4957>,0.1020,rgbt<0.250,0.750,0.750,0.000>)
+VMD_sphere(<-0.3928,-0.2833,0.2097>,0.1020,rgbt<0.250,0.750,0.750,0.000>)
+VMD_sphere(<-0.2511,-0.4371,-0.1563>,0.1020,rgbt<0.250,0.750,0.750,0.000>)
+VMD_sphere(<-0.0505,0.6938,-0.3111>,0.1020,rgbt<0.250,0.750,0.750,0.000>)
+VMD_sphere(<0.2731,-0.5627,-0.5216>,0.0600,rgbt<1.000,0.730,0.600,0.000>)
+VMD_sphere(<0.7573,-0.2995,-0.0129>,0.0600,rgbt<1.000,0.730,0.600,0.000>)
+VMD_sphere(<0.5052,-0.0258,0.6383>,0.0600,rgbt<1.000,0.730,0.600,0.000>)
+VMD_sphere(<-0.2310,-0.0155,0.7808>,0.0600,rgbt<1.000,0.730,0.600,0.000>)
+VMD_sphere(<-0.7152,-0.2787,0.2722>,0.0600,rgbt<1.000,0.730,0.600,0.000>)
+VMD_sphere(<-0.4632,-0.5524,-0.3791>,0.0600,rgbt<1.000,0.730,0.600,0.000>)
+VMD_sphere(<-0.0286,0.3936,-0.1765>,0.0600,rgbt<1.000,0.730,0.600,0.000>)
+VMD_sphere(<0.0467,0.6805,-0.6259>,0.0600,rgbt<1.000,0.730,0.600,0.000>)
+VMD_sphere(<-0.3629,0.7982,-0.2969>,0.0600,rgbt<1.000,0.730,0.600,0.000>)
+VMD_sphere(<0.1430,0.9030,-0.1451>,0.0600,rgbt<1.000,0.730,0.600,0.000>)
+VMD_cylinder(<0.16271019,-0.44291097,-0.23641330>,<-0.04420771,-0.43999830,-0.19635415>0.0225,rgbt<0.250,0.750,0.750,0.000>,1)
+VMD_cylinder(<0.16271019,-0.44291097,-0.23641330>,<0.21790402,-0.50282776,-0.37900236>0.0225,rgbt<0.250,0.750,0.750,0.000>,1)
+VMD_cylinder(<0.16271019,-0.44291097,-0.23641330>,<0.29878530,-0.36891887,-0.09345545>0.0225,rgbt<0.250,0.750,0.750,0.000>,1)
+VMD_cylinder(<0.43486041,-0.29492676,0.04950237>,<0.36401772,-0.21802208,0.23251909>0.0225,rgbt<0.250,0.750,0.750,0.000>,1)
+VMD_cylinder(<0.43486041,-0.29492676,0.04950237>,<0.59607065,-0.29719606,0.01829216>0.0225,rgbt<0.250,0.750,0.750,0.000>,1)
+VMD_cylinder(<0.43486041,-0.29492676,0.04950237>,<0.29878530,-0.36891887,-0.09345545>0.0225,rgbt<0.250,0.750,0.750,0.000>,1)
+VMD_cylinder(<0.29317504,-0.14111739,0.41553581>,<0.39919150,-0.08346993,0.52691472>0.0225,rgbt<0.250,0.750,0.750,0.000>,1)
+VMD_cylinder(<0.29317504,-0.14111739,0.41553581>,<0.36401772,-0.21802208,0.23251909>0.0225,rgbt<0.250,0.750,0.750,0.000>,1)
+VMD_cylinder(<0.29317504,-0.14111739,0.41553581>,<0.08625715,-0.13820472,0.45559496>0.0225,rgbt<0.250,0.750,0.750,0.000>,1)
+VMD_cylinder(<-0.12066075,-0.13529204,0.49565411>,<0.08625715,-0.13820472,0.45559496>0.0225,rgbt<0.250,0.750,0.750,0.000>,1)
+VMD_cylinder(<-0.12066075,-0.13529204,0.49565411>,<-0.25673583,-0.20928416,0.35269624>0.0225,rgbt<0.250,0.750,0.750,0.000>,1)
+VMD_cylinder(<-0.12066075,-0.13529204,0.49565411>,<-0.17585458,-0.07537529,0.63824320>0.0225,rgbt<0.250,0.750,0.750,0.000>,1)
+VMD_cylinder(<-0.39281094,-0.28327626,0.20973842>,<-0.25673583,-0.20928416,0.35269624>0.0225,rgbt<0.250,0.750,0.750,0.000>,1)
+VMD_cylinder(<-0.39281094,-0.28327626,0.20973842>,<-0.32196826,-0.36018094,0.02672170>0.0225,rgbt<0.250,0.750,0.750,0.000>,1)
+VMD_cylinder(<-0.39281094,-0.28327626,0.20973842>,<-0.55402124,-0.28100696,0.24094865>0.0225,rgbt<0.250,0.750,0.750,0.000>,1)
+VMD_cylinder(<-0.25112557,-0.43708563,-0.15629500>,<-0.04420771,-0.43999830,-0.19635415>0.0225,rgbt<0.250,0.750,0.750,0.000>,1)
+VMD_cylinder(<-0.25112557,-0.43708563,-0.15629500>,<-0.35714203,-0.49473310,-0.26767388>0.0225,rgbt<0.250,0.750,0.750,0.000>,1)
+VMD_cylinder(<-0.25112557,-0.43708563,-0.15629500>,<-0.32196826,-0.36018094,0.02672170>0.0225,rgbt<0.250,0.750,0.750,0.000>,1)
+VMD_cylinder(<-0.05045933,0.69384384,-0.31108913>,<-0.20668443,0.74602652,-0.30398181>0.0225,rgbt<0.250,0.750,0.750,0.000>,1)
+VMD_cylinder(<-0.05045933,0.69384384,-0.31108913>,<0.04624704,0.79844224,-0.22810179>0.0225,rgbt<0.250,0.750,0.750,0.000>,1)
+VMD_cylinder(<-0.05045933,0.69384384,-0.31108913>,<-0.03954308,0.54373950,-0.24378893>0.0225,rgbt<0.250,0.750,0.750,0.000>,1)
+VMD_cylinder(<-0.05045933,0.69384384,-0.31108913>,<-0.00185687,0.68716717,-0.46848366>0.0225,rgbt<0.250,0.750,0.750,0.000>,1)
+VMD_cylinder(<0.27309787,-0.56274450,-0.52159142>,<0.21790402,-0.50282776,-0.37900236>0.0225,rgbt<1.000,0.730,0.600,0.000>,1)
+VMD_cylinder(<0.75728101,-0.29946533,-0.01291804>,<0.59607065,-0.29719606,0.01829216>0.0225,rgbt<1.000,0.730,0.600,0.000>,1)
+VMD_cylinder(<0.50520796,-0.02582246,0.63829362>,<0.39919150,-0.08346993,0.52691472>0.0225,rgbt<1.000,0.730,0.600,0.000>,1)
+VMD_cylinder(<-0.23104842,-0.01545852,0.78083229>,<-0.17585458,-0.07537529,0.63824320>0.0225,rgbt<1.000,0.730,0.600,0.000>,1)
+VMD_cylinder(<-0.71523160,-0.27873769,0.27215886>,<-0.55402124,-0.28100696,0.24094865>0.0225,rgbt<1.000,0.730,0.600,0.000>,1)
+VMD_cylinder(<-0.46315852,-0.55238056,-0.37905279>,<-0.35714203,-0.49473310,-0.26767388>0.0225,rgbt<1.000,0.730,0.600,0.000>,1)
+VMD_cylinder(<-0.02862685,0.39363515,-0.17648873>,<-0.03954308,0.54373950,-0.24378893>0.0225,rgbt<1.000,0.730,0.600,0.000>,1)
+VMD_cylinder(<0.04674559,0.68049037,-0.62587821>,<-0.00185687,0.68716717,-0.46848366>0.0225,rgbt<1.000,0.730,0.600,0.000>,1)
+VMD_cylinder(<-0.36290950,0.79820907,-0.29687452>,<-0.20668443,0.74602652,-0.30398181>0.0225,rgbt<1.000,0.730,0.600,0.000>,1)
+VMD_cylinder(<0.14295343,0.90304053,-0.14511445>,<0.04624704,0.79844224,-0.22810179>0.0225,rgbt<1.000,0.730,0.600,0.000>,1)
+// End of POV-Ray 3.x generation 

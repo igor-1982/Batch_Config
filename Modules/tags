@@ -1,0 +1,77 @@
+ChkHandle	gaussian_manage.py	/^class ChkHandle:$/
+ConfigIO	my_io.py	/^class ConfigIO:$/
+DFTD	gaussian_manage.py	/^class DFTD:$/
+DispGrimme	dft_d.py	/^class DispGrimme:$/
+GauIO	gaussian_manage.py	/^class GauIO:$/
+LogHandle	gaussian_manage.py	/^class LogHandle:$/
+OptHandle	gaussian_manage.py	/^class OptHandle:$/
+R5DFT	gaussian_manage.py	/^class R5DFT:$/
+__del__	gaussian_manage.py	/^    def __del__(self):$/
+__del__	gaussian_manage.py	/^    def __del__(self):$/
+__del__	gaussian_manage.py	/^    def __del__(self):$/
+__del__	gaussian_manage.py	/^    def __del__(self):$/
+__del__	gaussian_manage.py	/^    def __del__(self):$/
+__del__	gaussian_manage.py	/^    def __del__(self):$/
+__del__	my_io.py	/^    def __del__(self):$/
+__init__	gaussian_manage.py	/^    def __init__(self,iout,fn=None,bugctrl=0):$/
+__init__	gaussian_manage.py	/^    def __init__(self,iout,GauIO,bugctrl=0): $/
+__init__	gaussian_manage.py	/^    def __init__(self,iout,GauIO,bugctrl=0):$/
+__init__	gaussian_manage.py	/^    def __init__(self,iout,IOClass,bugctrl=0):$/
+__init__	gaussian_manage.py	/^    def __init__(self,IOut,GauIO,OptClass,bugctrl=/
+__init__	gaussian_manage.py	/^    def __init__(self, iout, GauIO, OptClass, bugc/
+__init__	my_io.py	/^    def __init__(self,iout,fn=None,bugctrl=0):$/
+collect_DFT	gaussian_manage.py	/^    def collect_DFT(self,methodflag='b3lyp',iflag=/
+collect_DFT_0	gaussian_manage.py	/^    def collect_DFT_0(self,methodflag='b3lyp'):$/
+collect_Dipole	gaussian_manage.py	/^    def collect_Dipole(self):$/
+collect_ElecResp	gaussian_manage.py	/^    def collect_ElecResp(self):$/
+collect_EngyReal	gaussian_manage.py	/^    def collect_EngyReal(self):$/
+collect_EngyReal	gaussian_manage.py	/^    def collect_EngyReal(self,iop=0):             /
+collect_EngyReal	gaussian_manage.py	/^    def collect_EngyReal(self):$/
+collect_ForcList	gaussian_manage.py	/^    def collect_ForcList(self):$/
+collect_Geom	gaussian_manage.py	/^    def collect_Geom(self):$/
+collect_Geom	gaussian_manage.py	/^    def collect_Geom(self):$/
+collect_Geom	gaussian_manage.py	/^    def collect_Geom(self):$/
+collect_HessList	gaussian_manage.py	/^    def collect_HessList(self):$/
+collect_MP2	gaussian_manage.py	/^    def collect_MP2(self):$/
+collect_OptInfo	gaussian_manage.py	/^    def collect_OptInfo(self):$/
+collect_rGOResult	gaussian_manage.py	/^    def collect_rGOResult(self):$/
+copy_DataIO	gaussian_manage.py	/^    def copy_DataIO(self,DataIO):$/
+copy_Geom	gaussian_manage.py	/^    def copy_Geom(self,DataIO):$/
+ctrl_Option	gaussian_manage.py	/^    def ctrl_Option(self):$/
+form_Inp	gaussian_manage.py	/^    def form_Inp(self):$/
+gen_OptionList	gaussian_manage.py	/^    def gen_OptionList(self):$/
+gen_OptionList	gaussian_manage.py	/^    def gen_OptionList(self):$/
+gen_rGOInp	gaussian_manage.py	/^    def gen_rGOInp(self):$/
+get_BatcList	my_io.py	/^    def get_BatcList(self):$/
+get_Damp	dft_d.py	/^def get_Damp(d,Rij,Rr):$/
+get_DampD	dft_d.py	/^def get_DampD(Atom1,Atom2,d,Rij,Rr):$/
+get_Dist	dft_d.py	/^def get_Dist(Atom1,Atom2):$/
+get_EngyReal	gaussian_manage.py	/^    def get_EngyReal(self):$/
+get_ForcList	gaussian_manage.py	/^    def get_ForcList(self):$/
+get_Force_6	dft_d.py	/^def get_Force_6(Atom1,Atom2,Rij):$/
+get_Freq	pos_scf.py	/^def get_Freq(IOut,NAtom,HessList):$/
+get_GauIOCommand	my_io.py	/^    def get_GauIOCommand(self):$/
+get_HessList	gaussian_manage.py	/^    def get_HessList(self):$/
+get_Hess_6	dft_d.py	/^def get_Hess_6(Atom1,Atom2):$/
+get_MachAndOpt	gaussian_manage.py	/^    def get_MachAndOpt(self):$/
+get_ProjEnvr	my_io.py	/^    def get_ProjEnvr(self):$/
+get_Result	my_io.py	/^    def get_Result(self):$/
+get_TCSGR	gaussian_manage.py	/^    def get_TCSGR(self):$/
+get_TrainSet	my_io.py	/^    def get_TrainSet(self):$/
+my_divide	my_io.py	/^def my_divide(a1,a2):$/
+my_plus	my_io.py	/^def my_plus(a1,a2):$/
+my_product	my_io.py	/^def my_product(a1,a2):$/
+my_substract	my_io.py	/^def my_substract(a1,a2):$/
+print_Error	my_io.py	/^def print_Error(IOut,Info):$/
+print_List	my_io.py	/^def print_List(IOut,PList,IPrint,Info=''):$/
+print_List_free	my_io.py	/^def print_List_free(IOut,PList,IPrint,FormList,Inf/
+print_Matrix_headed	my_io.py	/^def print_Matrix_headed(IOut,PMatrix,Info=''):$/
+print_Matrix_numpy	my_io.py	/^def print_Matrix_numpy(IOut,PMatrix,IPrint,Info=''/
+print_SList	my_io.py	/^def print_SList(IOut,SList,Info=''):$/
+print_String	my_io.py	/^def print_String(IOut,PString,IPrint,Info=''):$/
+read_Matrix_headed	my_io.py	/^def read_Matrix_headed(IOut,FileName,Info=''):$/
+run_GauBatch	my_io.py	/^    def run_GauBatch(self):$/
+run_GauJob	gaussian_manage.py	/^    def run_GauJob(self,iop=0):$/
+run_Job	gaussian_manage.py	/^    def run_Job(self):$/
+run_rGO	gaussian_manage.py	/^    def run_rGO(self):$/
+update_CList	gaussian_manage.py	/^    def update_CList(self):$/

@@ -1,0 +1,6 @@
+lattice_vector 0.0000 2.3992 2.3992
+lattice_vector 2.3992 0.0000 2.3992
+lattice_vector 2.3992 2.3992 0.0000
+
+atom   0.0000 0.0000 0.0000 Be
+atom   1.1996 1.1996 1.1996 S

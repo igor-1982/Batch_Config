@@ -1,0 +1,18 @@
+%nproc=8
+%chk=W40-29.chk
+#p b3lyp/6-311+G(d,p) opt freq
+
+ClCN
+
+0 1
+Cl
+C 1 R1
+X 2 RD 1 TH
+N 2 R2 3 TH 1 TH2
+
+R1=1.63570561
+R2=1.16198281
+RD=1.0
+TH=90.00000000
+TH2=180.00000000
+ 

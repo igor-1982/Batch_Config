@@ -1,0 +1,29 @@
+&FORCE_EVAL 
+  &DFT 
+    MULTIPLICITY 1
+    CHARGE 0
+    &POISSON 
+      PERIODIC NONE
+      PSOLVER MT
+    &END POISSON
+  &END DFT
+  &SUBSYS 
+    &CELL 
+      PERIODIC NONE
+      ABC     13.54985200     13.07426400     15.97160000
+    &END CELL
+    &COORD 
+          C      6.77492600      6.28094300      6.86970500
+          C      6.77492600      6.28094300      8.32609700
+          N      6.77492600      6.28094300      9.47870000
+          H      6.77492600      7.30569800      6.49290000
+          H      7.66238900      5.76856600      6.49290000
+          H      5.88746300      5.76856600      6.49290000
+    &END COORD
+  &END SUBSYS
+&END FORCE_EVAL
+
+&GLOBAL 
+  PROJECT G2-99
+&END GLOBAL
+

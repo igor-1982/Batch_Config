@@ -1,0 +1,32 @@
+&FORCE_EVAL 
+  &DFT 
+    MULTIPLICITY 1
+    CHARGE 0
+    &POISSON 
+      PERIODIC NONE
+      PSOLVER MT
+    &END POISSON
+  &END DFT
+  &SUBSYS 
+    &CELL 
+      PERIODIC NONE
+      ABC     16.62880000     14.28948000     17.99706000
+    &END CELL
+    &COORD 
+          O      9.12738000      8.21711000      9.07285500
+          H      8.44328000      8.04791000      9.74634500
+          H      9.97160000      8.17123000      9.52946500
+          O      6.81065000      7.16829000     10.25514500
+          H      6.65720000      6.57838000     10.99779500
+          H      6.88890000      6.59976000      9.46634500
+          O      7.78700000      6.07237000      7.86903500
+          H      8.43243000      6.78618000      8.02927500
+          H      7.41442000      6.24103000      6.99926500
+    &END COORD
+  &END SUBSYS
+&END FORCE_EVAL
+
+&GLOBAL 
+  PROJECT H2O_3-Cyclic
+&END GLOBAL
+

@@ -1,0 +1,22 @@
+atom	-1.4857000	-0.4481600	-0.0000200	C
+initial_moment 2
+atom	-0.5050400	0.7017400	0.0000300	C
+initial_moment 2
+atom	1.8651600	-0.3401700	-0.0000600	N
+initial_moment 3
+atom	-1.3541900	-1.0765100	-0.8805000	H
+initial_moment 1
+atom	-1.3541600	-1.0766100	0.8803800	H
+initial_moment 1
+atom	-2.5170200	-0.0861700	0.0000300	H
+initial_moment 1
+atom	-0.5222200	1.3161200	-0.8972200	H
+initial_moment 1
+atom	-0.5222100	1.3160300	0.8973400	H
+initial_moment 1
+atom	0.6650500	0.1479600	-0.0000300	H
+initial_moment 1
+atom	2.2466400	0.1597200	-0.8048100	H
+initial_moment 1
+atom	2.2464400	0.1591300	0.8051500	H
+initial_moment 1

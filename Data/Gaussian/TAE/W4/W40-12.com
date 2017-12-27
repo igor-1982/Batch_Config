@@ -1,0 +1,17 @@
+%nproc=8
+%chk=W40-12.chk
+#p b3lyp/6-311+G(d,p) opt freq
+
+N2H2
+
+0 1
+H
+N 1 RNH
+N 2 RNN 1 AN
+H 3 RNH 2 AN 1 DIH
+
+RNH=1.02953903
+RNN=1.24938029
+AN=106.05848315
+DIH=180.00 
+

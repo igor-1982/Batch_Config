@@ -1,0 +1,29 @@
+&FORCE_EVAL 
+  &DFT 
+    MULTIPLICITY 1
+    CHARGE 0
+    &POISSON 
+      PERIODIC NONE
+      PSOLVER MT
+    &END POISSON
+  &END DFT
+  &SUBSYS 
+    &CELL 
+      PERIODIC NONE
+      ABC     13.02692800     14.82542000     16.22341000
+    &END CELL
+    &COORD 
+          O      6.51346400      6.20635500      9.07845750
+          H      7.27019600      6.20635500      9.66755750
+          H      5.75673200      6.20635500      9.66755750
+          O      6.51346400      8.61906500      7.48756850
+          H      6.51346400      7.77153400      7.93631250
+          H      6.51346400      8.39193800      6.55585250
+    &END COORD
+  &END SUBSYS
+&END FORCE_EVAL
+
+&GLOBAL 
+  PROJECT H2O_dimer_2dot89
+&END GLOBAL
+

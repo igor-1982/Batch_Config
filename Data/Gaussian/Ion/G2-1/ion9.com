@@ -1,0 +1,19 @@
+#p b3lyp 6-311+g(3df,2p) scf=tight nosymm
+
+METHANE CATION 2-B2 //MP2(full)/6-31G* MP2=-39.8736814
+
+1    2
+C
+X,1,1.
+H,1,CH,2,HCX
+H,1,CH,2,HCX,3,180.,0
+H,1,CHP,2,HPCX,3,90.,0
+H,1,CHP,2,HPCX,3,-90.,0
+ 
+CH=1.173292
+CHP=1.083863
+HCX=29.280619
+HPCX=118.269863
+  
+ 
+ 

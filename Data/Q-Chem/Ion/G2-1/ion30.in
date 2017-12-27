@@ -1,0 +1,22 @@
+$molecule
+1    2
+H
+C,1,CH
+X,2,1.,1,90.
+C,2,CC,3,90.,1,180.,0
+X,4,CC,2,90.,3,180.,0
+H,4,CH,5,90.,2,180.,0
+ 
+CH=1.081382
+CC=1.257817
+$end
+   
+$rem
+mem_static = 200
+mem_total  = 7500
+exchange = b3lyp
+basis = 6-311+g(3df,2p)
+scf_convergence = 7
+symmetry = false
+xc_grid = 000075000302
+$end

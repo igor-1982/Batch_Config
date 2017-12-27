@@ -1,0 +1,151 @@
+=>Batch start from Thu Sep 20 21:45:03 2012
+=>This project aims to ::
+  "============================== S22 set ============================="
+  "             This is S22 subset from GMTKN30 proposed by Grimme     "
+=>1) Project pool is 
+  "/home/zhang/Dropbox/SourceCode-Pool/Batch_Config/Data/Aims/S22"
+=>2) Project batch type is "2" which to run the job, if no log and chk exist
+=>3) QC package employed is "aims"
+=>There are 1 <Macro-Path>s specified in S22.ctl :
+  Macro-Path :   <PATH1> = /home/zhang/Dropbox/SourceCode-Pool/Batch_Config/D...
+=>This batch run for aims
+=>Basis sets are loading from 
+  /home/zhang/Documents/Package-Pool/aims/my_basis_pool/gaussian/cc-pVDZ
+=>Loaded ConfigIO.BatcList :
+==----------------------------------------------------------------------------==
+Index        Name                        Direction    JobInput         JobType
+--------------------------------------------------------------------------------
+  0th          01  /home/zhang/Dropbox/SourceCo...          01      energy|rpa
+  1th         01a  /home/zhang/Dropbox/SourceCo...         01a      energy|rpa
+  2th          02  /home/zhang/Dropbox/SourceCo...          02      energy|rpa
+  3th         02a  /home/zhang/Dropbox/SourceCo...         02a      energy|rpa
+  4th          03  /home/zhang/Dropbox/SourceCo...          03      energy|rpa
+  5th         03a  /home/zhang/Dropbox/SourceCo...         03a      energy|rpa
+  6th          04  /home/zhang/Dropbox/SourceCo...          04      energy|rpa
+  7th         04a  /home/zhang/Dropbox/SourceCo...         04a      energy|rpa
+==----------------------------------------------------------------------------==
+=>Loaded ConfigIO.EngyList :
+==----------------------------------------------------------------------------==
+ Num. Ind. Sca. Ind. Sca.       Ref. Data  Weight
+--------------------------------------------------------------------------------
+    2    0 -1.0    1  2.0      3.17000000    1.00
+    2    2 -1.0    3  2.0      5.02000000    1.00
+    2    4 -1.0    5  2.0     18.80000000    1.00
+    2    6 -1.0    7  2.0     16.12000000    1.00
+==----------------------------------------------------------------------------==
+=>No first-excitation PT2 data for training
+=>No second-excitation PT2 data for training
+=>No polar data for training
+=>No nmr data for training
+=>No geom data for training
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 8 atom(s) in this case
+=>SCF energy                  :    -112.96222128
+=>RPA correlation energy      :      -0.60990847
+=>RPA total energy            :    -112.99389912
+=>RPA+SE total energy         :    -113.00854725
+=>RPA+rSE (diag) total energy :    -113.00439216
+=>RPA+rSE (full) total energy :    -113.00427360
+=>RPA+ total energy           :    -112.61474770
+=>Exact exchange energy       :     -15.35574408
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 4 atom(s) in this case
+=>SCF energy                  :     -56.47641562
+=>RPA correlation energy      :      -0.30329777
+=>RPA total energy            :     -56.49384082
+=>RPA+SE total energy         :     -56.49975359
+=>RPA+rSE (diag) total energy :     -56.49836868
+=>RPA+rSE (full) total energy :     -56.49832324
+=>RPA+ total energy           :     -56.30428532
+=>Exact exchange energy       :      -7.68435944
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 6 atom(s) in this case
+=>SCF energy                  :    -152.68103191
+=>RPA correlation energy      :      -0.61401822
+=>RPA total energy            :    -152.66467919
+=>RPA+SE total energy         :    -152.67861684
+=>RPA+rSE (diag) total energy :    -152.67442152
+=>RPA+rSE (full) total energy :    -152.67440857
+=>RPA+ total energy           :    -152.27790927
+=>Exact exchange energy       :     -17.92558014
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 3 atom(s) in this case
+=>SCF energy                  :     -76.33337718
+=>RPA correlation energy      :      -0.30516048
+=>RPA total energy            :     -76.32730138
+=>RPA+SE total energy         :     -76.33252860
+=>RPA+rSE (diag) total energy :     -76.33121164
+=>RPA+rSE (full) total energy :     -76.33122805
+=>RPA+ total energy           :     -76.13395616
+=>Exact exchange energy       :      -8.96905892
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 10 atom(s) in this case
+=>SCF energy                  :    -379.17905390
+=>RPA correlation energy      :      -1.51203348
+=>RPA total energy            :    -379.02908430
+=>RPA+SE total energy         :    -379.12677422
+=>RPA+rSE (diag) total energy :    -379.08717246
+=>RPA+rSE (full) total energy :    -379.08599907
+=>RPA+ total energy           :    -378.09464087
+=>Exact exchange energy       :     -44.64574137
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 5 atom(s) in this case
+=>SCF energy                  :    -189.57027417
+=>RPA correlation energy      :      -0.75256989
+=>RPA total energy            :    -189.49883946
+=>RPA+SE total energy         :    -189.54505664
+=>RPA+rSE (diag) total energy :    -189.52595288
+=>RPA+rSE (full) total energy :    -189.52543444
+=>RPA+ total energy           :    -189.03196746
+=>Exact exchange energy       :     -22.30854576
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 12 atom(s) in this case
+=>SCF energy                  :    -339.45139952
+=>RPA correlation energy      :      -1.49496779
+=>RPA total energy            :    -339.34728898
+=>RPA+SE total energy         :    -339.43686130
+=>RPA+rSE (diag) total energy :    -339.40124686
+=>RPA+rSE (full) total energy :    -339.40001255
+=>RPA+ total energy           :    -338.41993318
+=>Exact exchange energy       :     -42.14909897
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 6 atom(s) in this case
+=>SCF energy                  :    -169.70979016
+=>RPA correlation energy      :      -0.74453018
+=>RPA total energy            :    -169.66011066
+=>RPA+SE total energy         :    -169.70378581
+=>RPA+rSE (diag) total energy :    -169.68588140
+=>RPA+rSE (full) total energy :    -169.68531744
+=>RPA+ total energy           :    -169.19671025
+=>Exact exchange energy       :     -21.06522067
+=>Statistic result of energy :
+==----------------------------------------------------------------------------==
+                        Name       Reference    Calc. Result    Deviation Weight
+--------------------------------------------------------------------------------
+                1*0th->2*1th      3.17000000      3.90153087         0.73   1.00
+                1*2th->2*3th      5.02000000      6.32306059         1.30   1.00
+                1*4th->2*5th     18.80000000     19.70719000         0.91   1.00
+                1*6th->2*7th     16.12000000     16.98522733         0.87   1.00
+--------------------------------------------------------------------------------
+        AD   =         0.95175220
+       MAD   =         0.95175220
+       RMS   =         0.48764205
+       wAD   =         0.95175220
+      wMAD   =         0.95175220
+      wRMS   =         0.48764205
+==----------------------------------------------------------------------------==
+=>Total job time:       0.03(wall)
+=>Batch end at Thu Sep 20 21:45:03 2012
+=>----------------------------------------------------------------------------==
+  #Filename:  Batch
+  #Author  :  Igor Ying Zhang, Xin Xu
+  #Version :  1.6(20120522)
+  #Purpose :  Batch jobs based on the special config interface

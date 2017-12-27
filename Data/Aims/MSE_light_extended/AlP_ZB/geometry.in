@@ -1,0 +1,6 @@
+lattice_vector 0.0000 2.7179 2.7179
+lattice_vector 2.7179 0.0000 2.7179
+lattice_vector 2.7179 2.7179 0.0000
+
+atom   0.0000 0.0000 0.0000 Al
+atom   1.3590 1.3590 1.3590 P

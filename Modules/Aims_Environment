@@ -1,0 +1,16 @@
+#!/bin/csh -f
+#filename : Aims_Environment
+#Author:    Igor Ying Zhang
+#Purpose:   Setting aims running environment and run aims
+#
+#Usage:     Aims_Environment Aims_Input
+
+ setenv OMP_NUM_THREADS 1
+ setenv AIMS /home/zhang/Documents/Package-Pool/aims/bin
+# setenv MPI  /home/zhang/export/openmpi/bin
+
+ set aimsx="$AIMS/aims.$2.x"
+
+$aimsx > $3
+
+

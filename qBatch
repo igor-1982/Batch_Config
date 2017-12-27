@@ -1,0 +1,94 @@
+#!/bin/csh 
+#Purpose: This shell is used to initialize the mutilevel program's pbsfile and run it.
+#Author:  Igor Ying Zhang
+#Revise:  2009-09-14
+#
+setenv BATCH_PATH /home/wenxinzy/export/softs/Batch_Config
+setenv IGOR_MODULES_PATH /home/wenxinzy/export/softs/My_Modules
+
+while ($#argv)
+    switch ($argv[1])
+        case -[qQ]:
+            echo $argv[1]
+            shift
+            set QUEUE=$argv[1]
+            echo $QUEUE
+            breaksw
+        case -[pP]:
+            echo $argv[1]
+            shift
+            set NPPN=$argv[1]
+            echo $QUEUE
+            breaksw
+        case -[nN]:
+            echo $argv[1]
+            shift
+            set NPROC=$argv[1]
+            echo $QUEUE
+            breaksw
+        case -[hH]:
+            echo "USAGE :: qCP2K -q queue -n nproc -p nproc@node job.inp"
+            echo "Detail infomation about constructing Batch config:"
+            cat $CMDPath/README
+            exit 1
+        default:
+            if (-e $argv[1]) then
+                set FileName=$argv[1]:r
+                set PostFix=$argv[1]:e
+                echo "ok"
+            else
+                echo "Error option or Error input filename!"
+                exit 1
+            endif
+            breaksw
+    endsw
+    shift
+end
+
+# default queue is 'dft'
+if ($?QUEUE == 0) then
+    set QUEUE=dft
+endif
+if ($QUEUE == 'dft' || $QUEUE == 'nas' || $QUEUE == 'hpib' || $QUEUE == 'test' || $QUEUE == 'mpi') then
+    if ($?NPROC == 0) then
+        set NPROC = 8
+    endif
+    if ($?NPPN == 0) then
+        set NPPN = 8
+    endif
+    set NNODE = $NPROC
+    @ NNODE /= $NPPN
+else if ($QUEUE == 'i5472') then
+    if ($?NPROC == 0) then
+        set NPROC = 8
+    endif
+    if ($?NPPN == 0) then
+        set NPPN = 8
+    endif
+    set NNODE = $NPROC
+    @ NNODE /= $NPPN
+else
+    echo 'Unknown queue, using default NPPN=8, NPROC=8 in one node'$QUEUE
+    set NPROC = 8
+    set NPPN = 8
+    set NNODE = 1
+endif
+
+#initialize pbs file for current job
+cp $BATCH_PATH/Batch.pbs ./
+sed s/jobname/$FileName/g Batch.pbs > tmp.tt
+mv tmp.tt Batch.pbs
+sed s/postfix/$PostFix/g Batch.pbs > tmp.tt
+mv tmp.tt Batch.pbs
+sed s/queue/$QUEUE/g Batch.pbs > tmp.tt
+mv tmp.tt Batch.pbs
+sed s/nnode/$NNODE/g Batch.pbs > tmp.tt
+mv tmp.tt Batch.pbs
+sed s/nppn/$NPPN/g Batch.pbs > tmp.tt
+mv tmp.tt Batch.pbs
+sed s/nproc/$NPROC/g Batch.pbs > tmp.tt
+mv tmp.tt Batch.pbs
+
+#run multilevel program in PBS eviroment
+qsub Batch.pbs
+

@@ -1,0 +1,6 @@
+lattice_vector 0.0000 1.9557 1.9557
+lattice_vector 1.9557 0.0000 1.9557
+lattice_vector 1.9557 1.9557 0.0000
+
+atom   0.0000 0.0000 0.0000 Li
+atom   1.9557 1.9557 1.9557 F

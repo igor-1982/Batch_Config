@@ -1,0 +1,6 @@
+lattice_vector 0.0000 2.0046 2.0046
+lattice_vector 2.0046 0.0000 2.0046
+lattice_vector 2.0046 2.0046 0.0000
+
+atom   0.0000 0.0000 0.0000 Al
+atom   2.0046 2.0046 2.0046 N

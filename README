@@ -1,0 +1,53 @@
+#Filename:  Batch
+#Author  :  Igor Ying Zhang, Xin Xu 
+#Purpose :  Batch job based on the special config interface
+#
+#Usage   :  Batch.py Config
+#
+#Version :  1.4(20101013)
+#
+#Improve :  1.0) Complete basic batch function
+#           1.1) Add energy and polarizability calculation batch
+#           1.2) Add geometry optimization batch
+#           1.3) 1. Support qchem job in batch
+#                2. Show time consuming
+#           1.4) 1. Replace ".my_modules_path" by the grobal environment of "IGOR_MODULES_PATH"
+#                2. Replace ".batch_path" by the grobal environment of "BATCH_PATH"
+#
+
+This is a batch scheme to run a set of gaussian or qchem jobs.
+
+All you need to do is to generate a config interface and batch it.
+
+There are about several input groups should be specified in the interface to handle different type of batch jobs.
+
+Groups         Label                  Added keywords
+ Env_1)        "__project__ ::"       "ProjDir"  "ProjCtrl"
+
+ Env_2)        "__title__ ::"
+
+ Env_3)        "__macro_path__ ::"
+
+ Gau_4)        "__gaussian__ ::"
+
+ Qch_5)        "__qchem__ ::"        "ParaOrSer" "QchCfg"
+
+ Bat_6)        "__batch__ ::"        "NMole"
+
+ Train_7)      "__energy__ ::"       "NEngy" "SEngy"
+
+ Train_8)      "__polar__  ::"       "NResp" "SResp*3"
+
+ Train_9)      "__nmr__    ::"       "NNMR"  "SNMR"
+
+ Train_10)     "__geom__    ::"       "NGeom" "SGeom*3"
+
+ Aim_11)       "__aims__   ::"       "Procs"   "AimsCFG"
+
+ Aim_12)       "__aims_basis__ ::"
+
+NOTE :
+       A)   Annotation is allowed, begining by '#'.
+       B)   upper and lower cases are identical.
+       C)   Since the program rewinds the config file before searching required group, the group order is immaterial.
+       D)   Spaces or commas may be used to separate items.

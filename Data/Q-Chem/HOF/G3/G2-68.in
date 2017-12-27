@@ -1,0 +1,12 @@
+$molecule
+0 1
+ Cl                -0.52438600   -0.96034800    0.00000000
+ N                  0.00000000    0.99074600    0.00000000
+ O                  1.11432100    1.17383700    0.00000000 
+$end
+   
+$rem
+exchange = b3lyp
+basis = 6-311+g(3df,2p)
+3333 = 1 ! do the MP2 calculation using KS-orbitals
+$end

@@ -1,0 +1,374 @@
+=>Batch start from Tue Aug 12 11:12:58 2014
+=>This project aims to ::
+  "============================= H-H ==============================="
+  " Reference data were calculated by CCSD(T)/aug-cc-pVQZ           "
+=>1) Project pool is 
+  "/home/zhang/Dropbox/SourceCode-Pool/Batch_Config/Data/Aims/PEC_Dimer/H2_MP2"
+=>2) Project batch type is "2" which to run the job, if no log and chk exist
+=>3) QC package employed is "aims"
+=>There are 2 <Macro-Path>s specified in H2.ctl :
+  Macro-Path :   <PATH1> = /home/zhang/Dropbox/SourceCode-Pool/Batch_Config/D...
+  Macro-Path :   <PATH2> = .
+=>This batch run for aims
+=>Basis sets are loading from 
+  /home/zhang/Documents/Package-Pool/aims/aimsfiles/species_defaults/non-standard/NAO-VCC-nZ/NAO-VCC-4Z
+=>Loaded ConfigIO.BatcList :
+==----------------------------------------------------------------------------==
+Index        Name                        Direction    JobInput         JobType
+--------------------------------------------------------------------------------
+  0th           H  /home/zhang/Dropbox/SourceCo...           H      energy|mp2
+  1th      H2_0_6  /home/zhang/Dropbox/SourceCo...      H2_0_6      energy|mp2
+  2th    H2_0_6_5  /home/zhang/Dropbox/SourceCo...    H2_0_6_5      energy|mp2
+  3th      H2_0_7  /home/zhang/Dropbox/SourceCo...      H2_0_7      energy|mp2
+  4th    H2_0_7_5  /home/zhang/Dropbox/SourceCo...    H2_0_7_5      energy|mp2
+  5th      H2_0_8  /home/zhang/Dropbox/SourceCo...      H2_0_8      energy|mp2
+  6th      H2_0_9  /home/zhang/Dropbox/SourceCo...      H2_0_9      energy|mp2
+  7th      H2_1_0  /home/zhang/Dropbox/SourceCo...      H2_1_0      energy|mp2
+  8th      H2_1_2  /home/zhang/Dropbox/SourceCo...      H2_1_2      energy|mp2
+  9th      H2_1_4  /home/zhang/Dropbox/SourceCo...      H2_1_4      energy|mp2
+ 10th      H2_1_6  /home/zhang/Dropbox/SourceCo...      H2_1_6      energy|mp2
+ 11th      H2_1_8  /home/zhang/Dropbox/SourceCo...      H2_1_8      energy|mp2
+ 12th      H2_2_0  /home/zhang/Dropbox/SourceCo...      H2_2_0      energy|mp2
+ 13th      H2_2_2  /home/zhang/Dropbox/SourceCo...      H2_2_2      energy|mp2
+ 14th      H2_2_4  /home/zhang/Dropbox/SourceCo...      H2_2_4      energy|mp2
+ 15th      H2_2_6  /home/zhang/Dropbox/SourceCo...      H2_2_6      energy|mp2
+ 16th      H2_2_8  /home/zhang/Dropbox/SourceCo...      H2_2_8      energy|mp2
+ 17th      H2_3_0  /home/zhang/Dropbox/SourceCo...      H2_3_0      energy|mp2
+ 18th      H2_3_2  /home/zhang/Dropbox/SourceCo...      H2_3_2      energy|mp2
+ 19th      H2_3_4  /home/zhang/Dropbox/SourceCo...      H2_3_4      energy|mp2
+ 20th      H2_3_6  /home/zhang/Dropbox/SourceCo...      H2_3_6      energy|mp2
+ 21th      H2_3_8  /home/zhang/Dropbox/SourceCo...      H2_3_8      energy|mp2
+ 22th      H2_4_0  /home/zhang/Dropbox/SourceCo...      H2_4_0      energy|mp2
+ 23th      H2_4_2  /home/zhang/Dropbox/SourceCo...      H2_4_2      energy|mp2
+ 24th      H2_4_6  /home/zhang/Dropbox/SourceCo...      H2_4_6      energy|mp2
+ 25th      H2_5_0  /home/zhang/Dropbox/SourceCo...      H2_5_0      energy|mp2
+ 26th      H2_5_4  /home/zhang/Dropbox/SourceCo...      H2_5_4      energy|mp2
+ 27th      H2_5_8  /home/zhang/Dropbox/SourceCo...      H2_5_8      energy|mp2
+ 28th      H2_6_2  /home/zhang/Dropbox/SourceCo...      H2_6_2      energy|mp2
+ 29th      H2_6_6  /home/zhang/Dropbox/SourceCo...      H2_6_6      energy|mp2
+ 30th      H2_7_0  /home/zhang/Dropbox/SourceCo...      H2_7_0      energy|mp2
+ 31th      H2_7_4  /home/zhang/Dropbox/SourceCo...      H2_7_4      energy|mp2
+==----------------------------------------------------------------------------==
+=>Loaded ConfigIO.EngyList :
+==----------------------------------------------------------------------------==
+ Num. Ind. Sca. Ind. Sca.       Ref. Data  Weight
+--------------------------------------------------------------------------------
+    2    1  1.0    0 -2.0     -0.15546645    1.00
+    2    2  1.0    0 -2.0     -0.16798407    1.00
+    2    3  1.0    0 -2.0     -0.17269549    1.00
+    2    4  1.0    0 -2.0     -0.17392928    1.00
+    2    5  1.0    0 -2.0     -0.17200743    1.00
+    2    6  1.0    0 -2.0     -0.16199823    1.00
+    2    7  1.0    0 -2.0     -0.14735649    1.00
+    2    8  1.0    0 -2.0     -0.11375545    1.00
+    2    9  1.0    0 -2.0     -0.08194259    1.00
+    2   10  1.0    0 -2.0     -0.05565932    1.00
+    2   11  1.0    0 -2.0     -0.03584206    1.00
+    2   12  1.0    0 -2.0     -0.02203175    1.00
+    2   13  1.0    0 -2.0     -0.01305196    1.00
+    2   14  1.0    0 -2.0     -0.00753252    1.00
+    2   15  1.0    0 -2.0     -0.00427712    1.00
+    2   16  1.0    0 -2.0     -0.00240904    1.00
+    2   17  1.0    0 -2.0     -0.00135465    1.00
+    2   18  1.0    0 -2.0     -0.00076472    1.00
+    2   19  1.0    0 -2.0     -0.00043577    1.00
+    2   20  1.0    0 -2.0     -0.00025228    1.00
+    2   21  1.0    0 -2.0     -0.00014935    1.00
+    2   22  1.0    0 -2.0     -0.00009094    1.00
+    2   23  1.0    0 -2.0     -0.00005717    1.00
+    2   24  1.0    0 -2.0     -0.00002508    1.00
+    2   25  1.0    0 -2.0     -0.00001272    1.00
+    2   26  1.0    0 -2.0     -0.00000730    1.00
+    2   27  1.0    0 -2.0     -0.00000451    1.00
+    2   28  1.0    0 -2.0     -0.00000297    1.00
+    2   29  1.0    0 -2.0     -0.00000197    1.00
+    2   30  1.0    0 -2.0     -0.00000134    1.00
+    2   31  1.0    0 -2.0     -0.00000095    1.00
+==----------------------------------------------------------------------------==
+=>No first-excitation PT2 data for training
+=>No second-excitation PT2 data for training
+=>No polar data for training
+=>No nmr data for training
+=>No geom data for training
+=>NProcs for AIMS jobs
+  4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+=>NProcs for AIMS jobs
+  4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 1 atom(s) in this case
+=>Error :: SCF doesn't sucess in H
+=>SCF energy                  :              NAN
+=>Error :: MP2 result was not found in H
+=>MP2 total energy            :              NAN
+=>Error :: MP2 result was not found in H
+=>MP2 correlation             :              NAN
+=>Error :: MP2 result was not found in H
+=>HF energy                   :              NAN
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>SCF energy                  :      -1.11640170
+=>MP2 total energy            :      -1.14912029
+=>MP2 correlation             :      -0.03271859
+=>HF Energy                   :      -1.11640170
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>SCF energy                  :      -1.12766549
+=>MP2 total energy            :      -1.16045545
+=>MP2 correlation             :      -0.03278996
+=>HF Energy                   :      -1.12766549
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>SCF energy                  :      -1.13279976
+=>MP2 total energy            :      -1.16571049
+=>MP2 correlation             :      -0.03291072
+=>HF Energy                   :      -1.13279976
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>SCF energy                  :      -1.13347797
+=>MP2 total energy            :      -1.16656561
+=>MP2 correlation             :      -0.03308764
+=>HF Energy                   :      -1.13347797
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>SCF energy                  :      -1.13090372
+=>MP2 total energy            :      -1.16420853
+=>MP2 correlation             :      -0.03330481
+=>HF Energy                   :      -1.13090372
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>SCF energy                  :      -1.11928427
+=>MP2 total energy            :      -1.15316572
+=>MP2 correlation             :      -0.03388145
+=>HF Energy                   :      -1.11928427
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>SCF energy                  :      -1.10259248
+=>MP2 total energy            :      -1.13724039
+=>MP2 correlation             :      -0.03464791
+=>HF Energy                   :      -1.10259248
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>SCF energy                  :      -1.06340154
+=>MP2 total energy            :      -1.10016206
+=>MP2 correlation             :      -0.03676052
+=>HF Energy                   :      -1.06340154
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>SCF energy                  :      -1.02374268
+=>MP2 total energy            :      -1.06341784
+=>MP2 correlation             :      -0.03967516
+=>HF Energy                   :      -1.02374268
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>SCF energy                  :      -0.98714412
+=>MP2 total energy            :      -1.03057877
+=>MP2 correlation             :      -0.04343465
+=>HF Energy                   :      -0.98714412
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>SCF energy                  :      -0.95464180
+=>MP2 total energy            :      -1.00272402
+=>MP2 correlation             :      -0.04808223
+=>HF Energy                   :      -0.95464180
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>SCF energy                  :      -0.92631164
+=>MP2 total energy            :      -0.97996248
+=>MP2 correlation             :      -0.05365084
+=>HF Energy                   :      -0.92631164
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>SCF energy                  :      -0.90186155
+=>MP2 total energy            :      -0.96202097
+=>MP2 correlation             :      -0.06015942
+=>HF Energy                   :      -0.90186155
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>SCF energy                  :      -0.88087384
+=>MP2 total energy            :      -0.94847683
+=>MP2 correlation             :      -0.06760299
+=>HF Energy                   :      -0.88087384
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>SCF energy                  :      -0.86290857
+=>MP2 total energy            :      -0.93887024
+=>MP2 correlation             :      -0.07596167
+=>HF Energy                   :      -0.86290857
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>SCF energy                  :      -0.84754851
+=>MP2 total energy            :      -0.93274534
+=>MP2 correlation             :      -0.08519682
+=>HF Energy                   :      -0.84754851
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>SCF energy                  :      -0.83441737
+=>MP2 total energy            :      -0.92967017
+=>MP2 correlation             :      -0.09525281
+=>HF Energy                   :      -0.83441737
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>SCF energy                  :      -0.82318470
+=>MP2 total energy            :      -0.92924288
+=>MP2 correlation             :      -0.10605818
+=>HF Energy                   :      -0.82318470
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>SCF energy                  :      -0.81356428
+=>MP2 total energy            :      -0.93109223
+=>MP2 correlation             :      -0.11752795
+=>HF Energy                   :      -0.81356428
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>SCF energy                  :      -0.80531001
+=>MP2 total energy            :      -0.93487690
+=>MP2 correlation             :      -0.12956689
+=>HF Energy                   :      -0.80531001
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>SCF energy                  :      -0.79821151
+=>MP2 total energy            :      -0.94028533
+=>MP2 correlation             :      -0.14207382
+=>HF Energy                   :      -0.79821151
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>SCF energy                  :      -0.79208963
+=>MP2 total energy            :      -0.94703673
+=>MP2 correlation             :      -0.15494710
+=>HF Energy                   :      -0.79208963
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>SCF energy                  :      -0.78679166
+=>MP2 total energy            :      -0.95488361
+=>MP2 correlation             :      -0.16809196
+=>HF Energy                   :      -0.78679166
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>SCF energy                  :      -0.77816680
+=>MP2 total energy            :      -0.97304652
+=>MP2 correlation             :      -0.19487972
+=>HF Energy                   :      -0.77816680
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>SCF energy                  :      -0.77152596
+=>MP2 total energy            :      -0.99343706
+=>MP2 correlation             :      -0.22191109
+=>HF Energy                   :      -0.77152596
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>SCF energy                  :      -0.76630234
+=>MP2 total energy            :      -1.01513702
+=>MP2 correlation             :      -0.24883469
+=>HF Energy                   :      -0.76630234
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>SCF energy                  :      -0.76209845
+=>MP2 total energy            :      -1.03757262
+=>MP2 correlation             :      -0.27547417
+=>HF Energy                   :      -0.76209845
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>SCF energy                  :      -0.75863923
+=>MP2 total energy            :      -1.06040335
+=>MP2 correlation             :      -0.30176413
+=>HF Energy                   :      -0.75863923
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>SCF energy                  :      -0.75573512
+=>MP2 total energy            :      -1.08343713
+=>MP2 correlation             :      -0.32770200
+=>HF Energy                   :      -0.75573512
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>SCF energy                  :      -0.75325378
+=>MP2 total energy            :      -1.10657926
+=>MP2 correlation             :      -0.35332548
+=>HF Energy                   :      -0.75325378
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>SCF energy                  :      -0.75109676
+=>MP2 total energy            :      -1.12980943
+=>MP2 correlation             :      -0.37871267
+=>HF Energy                   :      -0.75109676
+=>Statistic result of energy :
+==----------------------------------------------------------------------------==
+                        Name       Reference    Calc. Result    Deviation Weight
+--------------------------------------------------------------------------------
+                2*0th->1*1th     -0.15546645             NAN          NAN   1.00
+                2*0th->1*2th     -0.16798407             NAN          NAN   1.00
+                2*0th->1*3th     -0.17269549             NAN          NAN   1.00
+                2*0th->1*4th     -0.17392928             NAN          NAN   1.00
+                2*0th->1*5th     -0.17200743             NAN          NAN   1.00
+                2*0th->1*6th     -0.16199823             NAN          NAN   1.00
+                2*0th->1*7th     -0.14735649             NAN          NAN   1.00
+                2*0th->1*8th     -0.11375545             NAN          NAN   1.00
+                2*0th->1*9th     -0.08194259             NAN          NAN   1.00
+               2*0th->1*10th     -0.05565932             NAN          NAN   1.00
+               2*0th->1*11th     -0.03584206             NAN          NAN   1.00
+               2*0th->1*12th     -0.02203175             NAN          NAN   1.00
+               2*0th->1*13th     -0.01305196             NAN          NAN   1.00
+               2*0th->1*14th     -0.00753252             NAN          NAN   1.00
+               2*0th->1*15th     -0.00427712             NAN          NAN   1.00
+               2*0th->1*16th     -0.00240904             NAN          NAN   1.00
+               2*0th->1*17th     -0.00135465             NAN          NAN   1.00
+               2*0th->1*18th     -0.00076472             NAN          NAN   1.00
+               2*0th->1*19th     -0.00043577             NAN          NAN   1.00
+               2*0th->1*20th     -0.00025228             NAN          NAN   1.00
+               2*0th->1*21th     -0.00014935             NAN          NAN   1.00
+               2*0th->1*22th     -0.00009094             NAN          NAN   1.00
+               2*0th->1*23th     -0.00005717             NAN          NAN   1.00
+               2*0th->1*24th     -0.00002508             NAN          NAN   1.00
+               2*0th->1*25th     -0.00001272             NAN          NAN   1.00
+               2*0th->1*26th     -0.00000730             NAN          NAN   1.00
+               2*0th->1*27th     -0.00000451             NAN          NAN   1.00
+               2*0th->1*28th     -0.00000297             NAN          NAN   1.00
+               2*0th->1*29th     -0.00000197             NAN          NAN   1.00
+               2*0th->1*30th     -0.00000134             NAN          NAN   1.00
+               2*0th->1*31th     -0.00000095             NAN          NAN   1.00
+--------------------------------------------------------------------------------
+        AD   =                NAN
+       MAD   =                NAN
+       RMS   =                NAN
+       wAD   =                NAN
+      wMAD   =                NAN
+      wRMS   =                NAN
+==----------------------------------------------------------------------------==
+=>Total job time:     981.61(wall)
+=>Batch end at Tue Aug 12 11:29:20 2014
+=>----------------------------------------------------------------------------==
+  #Filename:  Batch
+  #Author  :  Igor Ying Zhang, Xin Xu
+  #Version :  1.6(20120522)
+  #Purpose :  Batch jobs based on the special config interface

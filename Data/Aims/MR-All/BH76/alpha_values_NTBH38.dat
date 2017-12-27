@@ -1,0 +1,41 @@
+molec-C2H5     		         0.78
+molec-C2H6          		 0.82
+molec-C5H8           		 0.83
+molec-CH3            		 0.80
+molec-CH4             		 0.84
+molec-H2              		 0.93
+molec-H2O             		 0.73
+molec-H2S             		 0.82
+molec-HCl             		 0.78
+molec-HF              		 0.69
+molec-HS              		 0.83
+molec-NH             		 0.82
+molec-NH2            		 0.79
+molec-NH3            		 0.78
+molec-OH             		 0.77
+molec-PH2            		 0.80
+molec-PH3            		 0.86
+molec-Cl                        0.84
+molec-F                         0.78
+molec-H                         0.96
+molec-O                        0.80
+
+molec-H-HCl_H2-Cl_ts 					0.75     RKT01/13
+molec-OH-H2_H-H2O_ts 				0.75		RKT02
+molec-CH3-H2_H-CH4_ts 				0.82     RKT03
+molec-OH-CH4_CH3-H2O_ts			0.72     RKT04/05
+molec-H-H2_H2-H_ts   					0.91     RKT06
+molec-OH-NH3_H2O-NH2_ts		 	0.83     RKT07
+molec-HCl-CH3_Cl-CH4_ts				0.74     RKT08
+molec-OH-C2H6_H2O-C2H5_ts		0.73     RKT09
+molec-F-H2_HF-H_ts    					0.85     RKT10
+molec-O-CH4_OH-CH3_ts				0.74     RKT11
+molec-H-PH3_PH2-H2_ts				0.83     RKT12
+molec-H-OH_H2-O_ts   					0.72     RKT14
+molec-H-H2S_H2-HS_ts 				0.79     RKT16
+molec-O-HCl_OH-Cl_ts 					0.76     RKT17
+molec-NH2-CH3_CH4-NH_ts			0.74     RKT18
+molec-NH2-C2H5_C2H6-NH_ts		0.73     RKT19
+molec-C2H6-NH2_NH3-C2H5_ts	0.72     RKT20
+molec-NH2-CH4_CH3-NH3_ts		0.73     RKT21
+molec-C5H8_C5H8_ts   				0.81     RKT22

@@ -1,0 +1,23 @@
+atom	-0.2017300	-0.0720500	0.0000000	Fe
+initial_moment 4 
+atom	1.7282600	-0.0720500	0.0000000	C
+initial_moment 2 
+atom	2.8436700	-0.0720500	0.0000000	O
+initial_moment 2 
+atom	-0.2017000	-0.0720500	-1.9300000	C
+initial_moment 2 
+atom	-0.2017300	-0.0720500	-3.0454000	O
+initial_moment 2 
+atom	-0.2017000	-0.0720500	1.9300000	C
+initial_moment 2 
+atom	-0.2017300	-0.0720500	3.0454000	O
+initial_moment 2 
+atom	-1.1667500	-1.7434700	0.0000000	C
+initial_moment 2 
+atom	-1.7244300	-2.7094400	0.0000000	O
+initial_moment 2 
+atom	-1.1667500	1.5993800	0.0000000	C
+initial_moment 2 
+atom	-1.7244300	2.5653500	0.0000000	O
+initial_moment 2 
+

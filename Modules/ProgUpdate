@@ -1,0 +1,44 @@
+#!/usr/bin/env python
+# FileName      :: sync several python codes between cilent and several services
+# Authors       :: Igor Ying Zhang, and Xin Xu
+#
+#
+import os
+import sys
+import py_compile
+
+CodeDict    = {
+    '/home/igor/Dropbox/SourceCode-Pool/My_Modules':
+    [
+        #        ['xuxin','dalian','~/softs/My_Modules'],
+        ['wenxinzy','hpib','~/export/softs/My_Modules']
+        ]
+        }
+
+ICtrl = 2                                                            # 0 : default, same as 1
+                                                                     # 1 : update '.pyc' only
+                                                                     # 2 : update source codes
+
+def main():
+    WorkDir	= os.getcwd().strip()                                    # STRING, current DIR 
+    HomeDir	= os.getenv('HOME')                                      # STRING, Home DIR
+    if os.path.isfile('%s/.my_modules_path' %HomeDir):               # Load Private Modules DIR
+        tmpf	= file('%s/.my_modules_path'\
+            %HomeDir,'r')
+        ModuDir=tmpf.read().strip()                                  # STRING, PATH of my modules
+        sys.path.append(ModuDir)                                     # Append it into "sys.path"
+        tmpf.close()
+        import rsync_project as update                               # Import private modules
+    else:
+        print '\n'+\
+            'Error in loading \"$HOME/.my_modules_path\" \n'+\
+            'which contains absolute path of personal python modules'
+        sys.exit(1)
+    Update  = update.rsync_Proj(CodeDict,ICtrl)
+    Update.update_Data()
+
+###################################################################
+#                      MAIN PRODUCE                               #
+###################################################################
+main()
+

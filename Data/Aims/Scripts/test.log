@@ -1,0 +1,51 @@
+  MPI-parallelism will be employed.
+------------------------------------------------------------
+          Invoking FHI-aims ...
+          Version 171117
+          Git rev.: e2516967 Merge remotetracking branch origin
+          Compiled on 2017/11/18 at 14:50:28 on host igor-VirtualBox.
+
+          When using FHI-aims, please cite the following reference:
+
+          Volker Blum, Ralf Gehrke, Felix Hanke, Paula Havu,
+          Ville Havu, Xinguo Ren, Karsten Reuter, and Matthias Scheffler,
+          'Ab Initio Molecular Simulations with Numeric Atom-Centered Orbitals',
+          Computer Physics Communications 180, 2175-2196 (2009)
+
+          For any questions about FHI-aims, please visit the aimsclub website
+          with its forums and wiki. Contributions to both the forums and the
+          wiki are warmly encouraged - they are for you, and everyone is welcome there.
+
+------------------------------------------------------------
+
+
+
+  Date     :  20171118, Time     :  153145.466
+  Time zero on CPU 1             :   0.800000000000000E-01  s.
+  Internal wall clock time zero  :           280251105.466  s.
+
+  FHI-aims created a unique identifier for this run for later identification
+  aims_uuid : A5D108F7-3DEE-4E3D-A1A1-20FE2663E921
+
+  Using        1 parallel tasks.
+  Task        0 on host igor-VirtualBox reporting.
+
+  Performing system and environment tests:
+  *** Environment variable OMP_NUM_THREADS is not set
+  *** For performance reasons you might want to set it to 1
+  | Maximum stacksize for task 0: unlimited
+  | Current stacksize for task 0: 8 [Mb]
+  | Checking for scalapack...
+  | Testing pdtran()...
+  | All pdtran() tests passed.
+
+  Obtaining array dimensions for all initial allocations:
+  
+  -----------------------------------------------------------------------
+  Parsing control.in (first pass over file, find array dimensions only).
+  The contents of control.in will be repeated verbatim below
+  unless switched off by setting 'verbatim_writeout .false.' .
+  in the first line of control.in .
+  -----------------------------------------------------------------------
+  
+ *** Proc    0 in parse_control: * Input file control.in not found.

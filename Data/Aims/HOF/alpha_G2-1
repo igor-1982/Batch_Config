@@ -1,0 +1,88 @@
+molec-Ar              0.82
+molec-He              0.89
+molec-Ne              0.76
+
+molec-H               0.96
+molec-Li              1.00    molec-Na              1.00
+molec-Be              1.00    molec-Mg              1.00
+molec-B               0.90    molec-Al              0.92
+molec-C               0.86    molec-Si              0.89
+molec-N               0.82    molec-P               0.86
+molec-O               0.80    molec-S               0.85
+molec-F               0.78    molec-Cl              0.84
+molec-Na              1.00
+molec-Mg              1.00
+molec-Al              0.92
+molec-Si              0.89
+molec-P               0.86
+molec-S               0.85
+molec-Cl              0.84
+molec-LiH             1.00    G2-1
+molec-BeH             0.94    G2-2
+molec-CH              0.82    G2-3
+molec-CH2_1           0.80    G2-4
+molec-CH2_3           0.81    G2-5
+molec-CH3             0.80    G2-6
+molec-CH4             0.84    G2-7
+molec-NH              0.82    G2-8
+molec-NH2             0.79    G2-9
+molec-NH3             0.78    G2-10
+molec-OH              0.77    G2-11
+molec-H2O             0.73    G2-12
+molec-HF              0.69    G2-13
+molec-SiH2_1          0.86    G2-14
+molec-SiH2_3          0.86    G2-15
+molec-SiH3            0.85    G2-16
+molec-SiH4            0.84    G2-17
+molec-PH2             0.80    G2-18
+molec-PH3             0.86    G2-19
+molec-SH2             0.84    G2-20
+molec-HCl             0.78    G2-21
+molec-Li2             1.00    G2-22
+molec-LiF             0.66    G2-23
+molec-C2H2            0.88    G2-24
+molec-C2H4            0.88    G2-25
+molec-C2H6            0.82    G2-26
+molec-CN              0.86    G2-27
+molec-HCN             0.86    G2-28
+molec-CO              0.81    G2-29
+molec-HCO             0.78    G2-30
+molec-H2CO            0.75    G2-31
+molec-CH3OH           0.74    G2-32
+molec-N2              0.75    G2-33
+molec-N2H4            0.75    G2-34
+molec-NO              0.73    G2-35
+molec-O2              0.70    G2-36
+molec-H2O2            0.71    G2-37
+molec-F2              0.66    G2-38
+molec-CO2             0.76    G2-39
+molec-Na2             0.93    G2-40
+molec-Si2             0.83    G2-41
+molec-P2              0.87    G2-42
+molec-S2              0.76    G2-43
+molec-Cl2             0.80    G2-44
+molec-NaCl            0.78    G2-45
+molec-SiO             0.80    G2-46
+molec-CS              0.75    G2-47
+molec-SO              0.75    G2-48
+molec-ClO             0.74    G2-49
+molec-ClF             0.82    G2-50
+molec-Si2H6           0.78    G2-51
+molec-CH3Cl           0.80    G2-52
+molec-CH3SH           0.81    G2-53
+molec-HOCl            0.74    G2-54
+molec-SO2             0.74    G2-55
+
+
+molec-BCl3            0.76
+molec-BF3             0.70
+molec-C2H5OH          0.75
+molec-C6H6            0.80
+molec-CH2CCH2         0.84
+molec-CH2S            0.81
+molec-CH3F            0.78
+molec-CHO             0.78
+molec-CS2             0.82
+molec-FH              0.74
+molec-OCS             0.82
+molec-H2S             0.82

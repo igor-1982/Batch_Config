@@ -1,0 +1,27 @@
+## run in /bin/bash
+#$ -S /bin/bash
+## do not join stdout and stderr
+#$ -j n
+## name of the job
+#$ -N <jobname>
+## execute job from the current working directory
+#$ -cwd
+## do not send mail
+#$ -m n
+## request 1 nodes (x 32 cores), must be a multiple of 32
+#$ -pe impi_hydra <nproc>
+## run for 30 minutes
+#$ -l h_rt=24:00:00
+ 
+module purge
+module load intel impi mkl hdf5-mpi
+export OMP_NUM_THREADS=<nthread>
+export KMP_STACKSIZE=200Mb
+
+AIMS=/u/thshen/bin
+
+aimsx="$AIMS/aims.<version>.x"
+
+mpiexec -envlist LD_LIBRARY_PATH -n <ntasks> -perhost <ntaskpernode> $aimsx > <joblog>
+
+rm RUNNING

@@ -1,0 +1,17 @@
+%nproc=8
+%chk=W40-15.chk
+#p b3lyp/6-311+G(d,p) opt freq
+
+F2O2
+
+0 1
+F
+O 1 RFO
+O 2 ROO 1 TH
+F 3 RFO 2 TH 1 TAU
+
+RFO=1.53229741
+ROO=1.23407466
+TH=108.45853898
+TAU=87.52399646 
+

@@ -1,0 +1,17 @@
+$molecule
+0        2
+C     -0.00002847       -0.00002469        0.32304371
+F      0.00004229        1.25747045       -0.07134018
+F      1.08907083       -0.62869447       -0.07133751
+F     -1.08908465       -0.62875129       -0.07132702
+$end
+   
+$rem
+mem_static = 200
+mem_total  = 7500
+exchange = b3lyp
+basis = 6-311+g(3df,2p)
+scf_convergence = 7
+symmetry = false
+xc_grid = 000075000302
+$end

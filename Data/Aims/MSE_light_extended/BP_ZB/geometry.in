@@ -1,0 +1,6 @@
+lattice_vector 0.0000 2.2462 2.2462
+lattice_vector 2.2462 0.0000 2.2462
+lattice_vector 2.2462 2.2462 0.0000
+
+atom   0.0000 0.0000 0.0000 B
+atom   1.1231 1.1231 1.1231 P

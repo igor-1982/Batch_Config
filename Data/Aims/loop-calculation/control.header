@@ -1,0 +1,72 @@
+#########################################################################################
+#
+#  Volker Blum, FHI 2008 : Test run input file control.in for simple H2O
+#
+#########################################################################################
+#
+#  Physical model
+#
+  xc                 pw-lda
+#  hse_unit b
+  spin               none
+  relativistic       zora scalar 1E-12
+  charge             0.
+#
+#  SCF convergence
+#
+  occupation_type    gaussian 0.01
+  mixer              pulay
+  n_max_pulay        30
+  charge_mix_param   0.05
+  sc_accuracy_rho    1E-6
+  sc_accuracy_eev    1E-6
+  sc_accuracy_etot   1E-6
+#  sc_accuracy_forces 1E-3
+  sc_iter_limit      1000
+#
+#  Eigenvalue solution
+#
+  KS_method          scalapack
+    empty_states       20
+#    basis_threshold    1.0e-8
+#    prodbas_threshold  1.0e-6
+#
+#  Relaxation
+#
+#  relax_geometry   bfgs 1.e-2
+#
+
+output_level full
+
+# multip_radius_free_threshold 1.0d-10 
+# disk_storage_for_hf_exchange .true.
+#partition_type rho_r2
+# RI_method lvl
+
+ k_grid 10	10	10 
+
+# sbtgrid_N 1000
+# preconditioner kerker off	
+
+# override_illconditioning .true.
+
+output band 0.5 0.5 0.5 0.0 0.0 0.0 101 L Gamma
+output band 0.0 0.0 0.0 0.0 0.5 0.5 101 Gamma X
+
+# memory
+#  grid_partitioning_method parallel_octree
+#  collect_eigenvectors .false.
+#  use_ovlp_swap
+#  distributed_spline_storage .true.
+#  use_density_matrix
+#  packed_matrix_format index
+#  use_local_index .true.
+#  prune_basis_once .true.
+#  communication_type bluegene
+#  squeeze_memory .true.
+#  restart_relaxations .true.
+#  restart wave
+#  hartree_worksize 100
+#  batch_size_limit 100
+#  points_in_batch 50
+

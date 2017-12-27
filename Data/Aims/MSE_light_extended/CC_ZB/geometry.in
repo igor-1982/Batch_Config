@@ -1,0 +1,6 @@
+lattice_vector 0.0000 1.7670 1.7670
+lattice_vector 1.7670 0.0000 1.7670
+lattice_vector 1.7670 1.7670 0.0000
+
+atom   0.0000 0.0000 0.0000 C
+atom   0.8835 0.8835 0.8835 C

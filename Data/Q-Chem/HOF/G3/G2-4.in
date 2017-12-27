@@ -1,0 +1,12 @@
+$molecule
+0 3
+ C                  0.00000000    0.00000000    0.10255200
+ H                  0.00000000    0.99884300   -0.30765700
+ H                  0.00000000   -0.99884300   -0.30765700 
+$end
+   
+$rem
+exchange = b3lyp
+basis = 6-311+g(3df,2p)
+3333 = 1 ! do the MP2 calculation using KS-orbitals
+$end

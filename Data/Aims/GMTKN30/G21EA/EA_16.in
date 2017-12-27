@@ -1,0 +1,18 @@
+$molecule
+-1    1
+   Si      0.00000000      0.00000000     -0.62109028
+    H      0.65437846     -1.13341673      0.20703009
+    H      0.65437846      1.13341673      0.20703009
+    H     -1.30875691      0.00000000      0.20703009
+$end
+   
+$rem
+mem_static = 200
+mem_total  = 7500
+exchange = b3lyp
+basis = G3Large
+max_scf_cycles = 50
+scf_convergence = 7
+symmetry = false
+xc_grid = 000075000302
+$end

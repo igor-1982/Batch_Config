@@ -1,0 +1,573 @@
+=>Open Gau-Input file "H2O_dimer_2dot93.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_2dot93"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_2dot93
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     2.446104    -0.612909
+  H     0.000000     1.598573    -0.164164
+  H     0.000000     2.218976    -1.544624
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      2.44610400      3.13372400)
+=>Recommaned ABC(MT) is (ABC     13.02692800     14.89220800     16.26744800)
+=>Now generating CP2K input file for the job of H2O_dimer_2dot93
+=>Open Gau-Input file "H2O_dimer_2dot89.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_2dot89"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_2dot89
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     2.412710    -0.590889
+  H     0.000000     1.565179    -0.142145
+  H     0.000000     2.185583    -1.522605
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      2.41271000      3.11170500)
+=>Recommaned ABC(MT) is (ABC     13.02692800     14.82542000     16.22341000)
+=>Now generating CP2K input file for the job of H2O_dimer_2dot89
+=>Open Gau-Input file "H2O_dimer_3dot60.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_3dot60"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_3dot60
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     3.005452    -0.981731
+  H     0.000000     2.157921    -0.532986
+  H     0.000000     2.778325    -1.913446
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      3.00545200      3.50254600)
+=>Recommaned ABC(MT) is (ABC     13.02692800     16.01090400     17.00509200)
+=>Now generating CP2K input file for the job of H2O_dimer_3dot60
+=>Open Gau-Input file "H2O_dimer_1dot60.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_1dot60"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_1dot60
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     1.335757     0.119231
+  H     0.000000     0.488225     0.567976
+  H     0.000000     1.108629    -0.812485
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      1.33575700      2.40158500)
+=>Recommaned ABC(MT) is (ABC     13.02692800     12.67151400     14.80317000)
+=>Now generating CP2K input file for the job of H2O_dimer_1dot60
+=>Open Gau-Input file "H2O_dimer_2dot80.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_2dot80"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_2dot80
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     2.337574    -0.541346
+  H     0.000000     1.490043    -0.092601
+  H     0.000000     2.110446    -1.473062
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      2.33757400      3.06216200)
+=>Recommaned ABC(MT) is (ABC     13.02692800     14.67514800     16.12432400)
+=>Now generating CP2K input file for the job of H2O_dimer_2dot80
+=>Open Gau-Input file "H2O_dimer_2dot00.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_2dot00"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_2dot00
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     1.669696    -0.100961
+  H     0.000000     0.822164     0.347783
+  H     0.000000     1.442568    -1.032677
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      1.66969600      2.62177700)
+=>Recommaned ABC(MT) is (ABC     13.02692800     13.33939200     15.24355400)
+=>Now generating CP2K input file for the job of H2O_dimer_2dot00
+=>Open Gau-Input file "H2O_dimer_2dot70.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_2dot70"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_2dot70
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     2.254089    -0.486298
+  H     0.000000     1.406558    -0.037553
+  H     0.000000     2.026961    -1.418014
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      2.25408900      3.00711400)
+=>Recommaned ABC(MT) is (ABC     13.02692800     14.50817800     16.01422800)
+=>Now generating CP2K input file for the job of H2O_dimer_2dot70
+=>Open Gau-Input file "H2O_dimer_4dot40.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_4dot40"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_4dot40
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     3.673331    -1.422115
+  H     0.000000     2.825799    -0.973371
+  H     0.000000     3.446203    -2.353831
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      3.67333100      3.94293100)
+=>Recommaned ABC(MT) is (ABC     13.02692800     17.34666200     17.88586200)
+=>Now generating CP2K input file for the job of H2O_dimer_4dot40
+=>Open Gau-Input file "H2O_dimer_3dot30.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_3dot30"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_3dot30
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     2.754998    -0.816586
+  H     0.000000     1.907467    -0.367842
+  H     0.000000     2.527870    -1.748302
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      2.75499800      3.33740200)
+=>Recommaned ABC(MT) is (ABC     13.02692800     15.50999600     16.67480400)
+=>Now generating CP2K input file for the job of H2O_dimer_3dot30
+=>Open Gau-Input file "H2O_dimer_2dot20.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_2dot20"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_2dot20
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     1.836665    -0.211058
+  H     0.000000     0.989134     0.237687
+  H     0.000000     1.609538    -1.142773
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      1.83666500      2.73187300)
+=>Recommaned ABC(MT) is (ABC     13.02692800     13.67333000     15.46374600)
+=>Now generating CP2K input file for the job of H2O_dimer_2dot20
+=>Open Gau-Input file "H2O_dimer_4dot20.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_4dot20"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_4dot20
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     3.506361    -1.312019
+  H     0.000000     2.658830    -0.863274
+  H     0.000000     3.279233    -2.243735
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      3.50636100      3.83283500)
+=>Recommaned ABC(MT) is (ABC     13.02692800     17.01272200     17.66567000)
+=>Now generating CP2K input file for the job of H2O_dimer_4dot20
+=>Open Gau-Input file "H2O_dimer_2dot94.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_2dot94"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_2dot94
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     2.454453    -0.618413
+  H     0.000000     1.606921    -0.169669
+  H     0.000000     2.227325    -1.550129
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      2.45445300      3.13922900)
+=>Recommaned ABC(MT) is (ABC     13.02692800     14.90890600     16.27845800)
+=>Now generating CP2K input file for the job of H2O_dimer_2dot94
+=>Open Gau-Input file "H2O_dimer_5dot00.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_5dot00"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_5dot00
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     4.174239    -1.752404
+  H     0.000000     3.326708    -1.303659
+  H     0.000000     3.947112    -2.684119
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      4.17423900      4.27321900)
+=>Recommaned ABC(MT) is (ABC     13.02692800     18.34847800     18.54643800)
+=>Now generating CP2K input file for the job of H2O_dimer_5dot00
+=>Open Gau-Input file "H2O_dimer_2dot86.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_2dot86"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_2dot86
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     2.387665    -0.574375
+  H     0.000000     1.540134    -0.125630
+  H     0.000000     2.160537    -1.506091
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      2.38766500      3.09519100)
+=>Recommaned ABC(MT) is (ABC     13.02692800     14.77533000     16.19038200)
+=>Now generating CP2K input file for the job of H2O_dimer_2dot86
+=>Open Gau-Input file "H2O_dimer_2dot90.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_2dot90"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_2dot90
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     2.421059    -0.596394
+  H     0.000000     1.573528    -0.147649
+  H     0.000000     2.193931    -1.528110
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      2.42105900      3.11721000)
+=>Recommaned ABC(MT) is (ABC     13.02692800     14.84211800     16.23442000)
+=>Now generating CP2K input file for the job of H2O_dimer_2dot90
+=>Open Gau-Input file "H2O_dimer_4dot60.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_4dot60"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_4dot60
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     3.840300    -1.532211
+  H     0.000000     2.992769    -1.083467
+  H     0.000000     3.613172    -2.463927
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      3.84030000      4.05302700)
+=>Recommaned ABC(MT) is (ABC     13.02692800     17.68060000     18.10605400)
+=>Now generating CP2K input file for the job of H2O_dimer_4dot60
+=>Open Gau-Input file "H2O_dimer_2dot95.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_2dot95"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_2dot95
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     2.462801    -0.623918
+  H     0.000000     1.615270    -0.175173
+  H     0.000000     2.235673    -1.555634
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      2.46280100      3.14473400)
+=>Recommaned ABC(MT) is (ABC     13.02692800     14.92560200     16.28946800)
+=>Now generating CP2K input file for the job of H2O_dimer_2dot95
+=>Open Gau-Input file "H2O_dimer_2dot87.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_2dot87"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_2dot87
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     2.396013    -0.579880
+  H     0.000000     1.548482    -0.131135
+  H     0.000000     2.168886    -1.511595
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      2.39601300      3.10069500)
+=>Recommaned ABC(MT) is (ABC     13.02692800     14.79202600     16.20139000)
+=>Now generating CP2K input file for the job of H2O_dimer_2dot87
+=>Open Gau-Input file "H2O_dimer_5dot20.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_5dot20"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_5dot20
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     4.341209    -1.862500
+  H     0.000000     3.493678    -1.413755
+  H     0.000000     4.114081    -2.794215
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      4.34120900      4.38331500)
+=>Recommaned ABC(MT) is (ABC     13.02692800     18.68241800     18.76663000)
+=>Now generating CP2K input file for the job of H2O_dimer_5dot20
+=>Open Gau-Input file "H2O_dimer_3dot20.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_3dot20"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_3dot20
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     2.671513    -0.761538
+  H     0.000000     1.823982    -0.312794
+  H     0.000000     2.444385    -1.693254
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      2.67151300      3.28235400)
+=>Recommaned ABC(MT) is (ABC     13.02692800     15.34302600     16.56470800)
+=>Now generating CP2K input file for the job of H2O_dimer_3dot20
+=>Open Gau-Input file "H2O_dimer_2dot92.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_2dot92"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_2dot92
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     2.437756    -0.607404
+  H     0.000000     1.590225    -0.158659
+  H     0.000000     2.210628    -1.539119
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      2.43775600      3.12821900)
+=>Recommaned ABC(MT) is (ABC     13.02692800     14.87551200     16.25643800)
+=>Now generating CP2K input file for the job of H2O_dimer_2dot92
+=>Open Gau-Input file "H2O_dimer_2dot40.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_2dot40"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_2dot40
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     2.003635    -0.321154
+  H     0.000000     1.156104     0.127591
+  H     0.000000     1.776507    -1.252869
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      2.00363500      2.84196900)
+=>Recommaned ABC(MT) is (ABC     13.02692800     14.00727000     15.68393800)
+=>Now generating CP2K input file for the job of H2O_dimer_2dot40
+=>Open Gau-Input file "H2O_dimer_3dot00.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_3dot00"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_3dot00
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     2.504544    -0.651442
+  H     0.000000     1.657012    -0.202698
+  H     0.000000     2.277416    -1.583158
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      2.50454400      3.17225800)
+=>Recommaned ABC(MT) is (ABC     13.02692800     15.00908800     16.34451600)
+=>Now generating CP2K input file for the job of H2O_dimer_3dot00
+=>Open Gau-Input file "H2O_dimer_4dot00.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_4dot00"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_4dot00
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     3.339391    -1.201923
+  H     0.000000     2.491860    -0.753178
+  H     0.000000     3.112264    -2.133639
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      3.33939100      3.72273900)
+=>Recommaned ABC(MT) is (ABC     13.02692800     16.67878200     17.44547800)
+=>Now generating CP2K input file for the job of H2O_dimer_4dot00
+=>Open Gau-Input file "H2O_dimer_1dot80.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_1dot80"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_1dot80
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     1.502726     0.009135
+  H     0.000000     0.655195     0.457879
+  H     0.000000     1.275598    -0.922581
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      1.50272600      2.51168100)
+=>Recommaned ABC(MT) is (ABC     13.02692800     13.00545200     15.02336200)
+=>Now generating CP2K input file for the job of H2O_dimer_1dot80
+=>Open Gau-Input file "H2O_dimer_3dot80.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_3dot80"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_3dot80
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     3.172422    -1.091827
+  H     0.000000     2.324891    -0.643082
+  H     0.000000     2.945294    -2.023542
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      3.17242200      3.61264200)
+=>Recommaned ABC(MT) is (ABC     13.02692800     16.34484400     17.22528400)
+=>Now generating CP2K input file for the job of H2O_dimer_3dot80
+=>Open Gau-Input file "H2O_dimer_2dot50.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_2dot50"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_2dot50
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     2.087120    -0.376202
+  H     0.000000     1.239588     0.072543
+  H     0.000000     1.859992    -1.307917
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      2.08712000      2.89701700)
+=>Recommaned ABC(MT) is (ABC     13.02692800     14.17424000     15.79403400)
+=>Now generating CP2K input file for the job of H2O_dimer_2dot50
+=>Open Gau-Input file "H2O_dimer_4dot80.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_4dot80"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_4dot80
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     4.007270    -1.642308
+  H     0.000000     3.159739    -1.193563
+  H     0.000000     3.780142    -2.574023
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      4.00727000      4.16312300)
+=>Recommaned ABC(MT) is (ABC     13.02692800     18.01454000     18.32624600)
+=>Now generating CP2K input file for the job of H2O_dimer_4dot80
+=>Open Gau-Input file "H2O_dimer_3dot10.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_3dot10"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_3dot10
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     2.588028    -0.706490
+  H     0.000000     1.740497    -0.257746
+  H     0.000000     2.360901    -1.638206
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      2.58802800      3.22730600)
+=>Recommaned ABC(MT) is (ABC     13.02692800     15.17605600     16.45461200)
+=>Now generating CP2K input file for the job of H2O_dimer_3dot10
+=>Open Gau-Input file "H2O_dimer_5dot40.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_5dot40"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_5dot40
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     4.508178    -1.972596
+  H     0.000000     3.660647    -1.523851
+  H     0.000000     4.281051    -2.904312
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      4.50817800      4.49341200)
+=>Recommaned ABC(MT) is (ABC     13.02692800     19.01635600     18.98682400)
+=>Now generating CP2K input file for the job of H2O_dimer_5dot40
+=>Open Gau-Input file "H2O_dimer_2dot91.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_2dot91"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_2dot91
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     2.429407    -0.601899
+  H     0.000000     1.581876    -0.153154
+  H     0.000000     2.202280    -1.533615
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      2.42940700      3.12271500)
+=>Recommaned ABC(MT) is (ABC     13.02692800     14.85881400     16.24543000)
+=>Now generating CP2K input file for the job of H2O_dimer_2dot91
+=>Open Gau-Input file "H2O_monomer.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_monomer"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_monomer
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      0.00000000      0.58910000)
+=>Recommaned ABC(MT) is (ABC     13.02692800     10.00000000     11.17820000)
+=>Now generating CP2K input file for the job of H2O_monomer
+=>Open Gau-Input file "H2O_dimer_2dot88.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_2dot88"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_2dot88
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     2.404362    -0.585385
+  H     0.000000     1.556831    -0.136640
+  H     0.000000     2.177234    -1.517100
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      2.40436200      3.10620000)
+=>Recommaned ABC(MT) is (ABC     13.02692800     14.80872400     16.21240000)
+=>Now generating CP2K input file for the job of H2O_dimer_2dot88
+=>Open Gau-Input file "H2O_dimer_3dot40.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_3dot40"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_3dot40
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     2.838483    -0.871635
+  H     0.000000     1.990951    -0.422890
+  H     0.000000     2.611355    -1.803350
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      2.83848300      3.39245000)
+=>Recommaned ABC(MT) is (ABC     13.02692800     15.67696600     16.78490000)
+=>Now generating CP2K input file for the job of H2O_dimer_3dot40
+=>Open Gau-Input file "H2O_dimer_2dot85.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_2dot85"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_2dot85
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     2.379316    -0.568870
+  H     0.000000     1.531785    -0.120125
+  H     0.000000     2.152189    -1.500586
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      2.37931600      3.08968600)
+=>Recommaned ABC(MT) is (ABC     13.02692800     14.75863200     16.17937200)
+=>Now generating CP2K input file for the job of H2O_dimer_2dot85
+=>Open Gau-Input file "H2O_dimer_2dot60.com" for GauIO class
+==----------------------------------------------------------------------------==
+  Enter the job : "H2O_dimer_2dot60"
+==----------------------------------------------------------------------------==
+=>Loading Cartesian coordinates
+=>In job=H2O_dimer_2dot60
+  O     0.000000     0.000000     1.000000
+  H     0.756732     0.000000     1.589100
+  H    -0.756732     0.000000     1.589100
+  O     0.000000     2.170604    -0.431250
+  H     0.000000     1.323073     0.017495
+  H     0.000000     1.943477    -1.362966
+=>Do not open input file for CP2KIO class
+=>The min box size is (ABC      1.51346400      2.17060400      2.95206600)
+=>Recommaned ABC(MT) is (ABC     13.02692800     14.34120800     15.90413200)
+=>Now generating CP2K input file for the job of H2O_dimer_2dot60

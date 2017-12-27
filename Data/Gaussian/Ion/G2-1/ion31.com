@@ -1,0 +1,18 @@
+#p b3lyp 6-311+g(3df,2p) scf=tight nosymm
+
+H2C=CH2+ ETHYLENE CATION D2H //MP2(full)/6-31G* MP2=-77.926503
+
+1    2
+C
+C,1,CC
+H,1,CH,2,HCC
+H,1,CH,2,HCC,3,180.,0
+H,2,CH,1,HCC,3,180.,0
+H,2,CH,1,HCC,5,180.,0
+ 
+CC=1.41632
+CH=1.08624
+HCC=120.67794
+  
+ 
+ 

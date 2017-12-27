@@ -1,0 +1,6 @@
+lattice_vector 0.0000 1.7916 1.7916
+lattice_vector 1.7916 0.0000 1.7916
+lattice_vector 1.7916 1.7916 0.0000
+
+atom   0.0000 0.0000 0.0000 B
+atom   0.8958 0.8958 0.8958 N

@@ -1,0 +1,17 @@
+$molecule
+0   1
+     Cl           1.860824   -0.065411   -0.000068
+      H           1.753941    1.210981    0.000341
+     Cl          -1.925266    0.005571   -0.000097
+      H          -0.658427   -0.193703    0.002476
+$end
+   
+$rem
+mem_static = 200
+mem_total  = 7500
+exchange = b3lyp
+basis = 6-311+g(3df,2p)
+scf_convergence = 7
+symmetry = false
+xc_grid = 000075000302
+$end

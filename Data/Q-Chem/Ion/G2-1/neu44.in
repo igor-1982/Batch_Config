@@ -1,0 +1,19 @@
+$molecule
+0    3
+C
+H,1,RCH
+H,1,RCH,2,HCH
+ 
+RCH=1.07726
+HCH=131.60824
+$end
+   
+$rem
+mem_static = 200
+mem_total  = 7500
+exchange = b3lyp
+basis = 6-311+g(3df,2p)
+scf_convergence = 7
+symmetry = false
+xc_grid = 000075000302
+$end

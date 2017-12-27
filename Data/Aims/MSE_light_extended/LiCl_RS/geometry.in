@@ -1,0 +1,6 @@
+lattice_vector 0.0000 2.4831 2.4831
+lattice_vector 2.4831 0.0000 2.4831
+lattice_vector 2.4831 2.4831 0.0000
+
+atom   0.0000 0.0000 0.0000 Li
+atom   2.4831 2.4831 2.4831 Cl

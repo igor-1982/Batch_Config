@@ -1,0 +1,20 @@
+%nproc=8
+%chk=W42-06.chk
+#p b3lyp/6-311+G(d,p) opt freq
+
+C2H4
+
+0 1
+C
+C 1 RCC
+H 2 RCH 1 TH
+H 2 RCH 1 TH 3 PI
+H 1 RCH 2 TH 3 NUL
+H 1 RCH 2 TH 3 PI
+
+RCC=1.3342
+RCH=1.0823
+TH=121.44
+NUL=0.0
+PI=180.0
+ 

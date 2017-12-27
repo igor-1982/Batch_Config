@@ -1,0 +1,17 @@
+%nproc=8
+%chk=W42-16.chk
+#p b3lyp/6-311+G(d,p) opt freq
+
+H2O2
+
+0 1
+H
+O 1 ROH
+O 2 ROO 1 THETA
+H 3 ROH 2 THETA 1 TAU
+
+ROH=0.96268727
+ROO=1.45248134
+THETA=99.91097385
+TAU=112.45186211 
+
