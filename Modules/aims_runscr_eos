@@ -1,27 +1,31 @@
-## run in /bin/bash
-#$ -S /bin/bash
-## do not join stdout and stderr
-#$ -j n
-## name of the job
-#$ -N <jobname>
-## execute job from the current working directory
-#$ -cwd
-## do not send mail
-#$ -m n
-## request 1 nodes (x 32 cores), must be a multiple of 32
-#$ -pe impi_hydra <nproc>
-## run for 30 minutes
-#$ -l h_rt=24:00:00
- 
-module purge
-module load intel impi mkl hdf5-mpi
-export OMP_NUM_THREADS=<nthread>
-export KMP_STACKSIZE=200Mb
+#!/bin/bash -l
+# Standard output and error:
+#SBATCH -o ./tjob.out.%j
+#SBATCH -e ./tjob.err.%j
+# Initial working directory:
+#SBATCH -D ./
+# Job Name:
+#SBATCH -J <jobname>
+# Queue (Partition):
+# Number of nodes and MPI tasks per node:
+#SBATCH --nodes=<nodes>
+#SBATCH --ntasks-per-node=32
+#
+##SBATCH --mail-type=none
+##SBATCH --mail-user=<userid>@rzg.mpg.de
+#
+# Wall clock limit:
+#SBATCH --time=24:00:00
 
-AIMS=/u/thshen/bin
+# Run the program:
+
+OMP_NUM_THREADS=1; export OMP_NUM_THREADS
+LD_LIBRARY_PATH=$MKL_HOME/lib/intel64_lin:$LD_LIBRARY_PATH; export LD_LIBRARY_PATH
+
+AIMS=/eos/u/igor1982/export/bin
 
 aimsx="$AIMS/aims.<version>.x"
 
-mpiexec -envlist LD_LIBRARY_PATH -n <ntasks> -perhost <ntaskpernode> $aimsx > <joblog>
+srun $aimsx > <joblog>
 
 rm RUNNING

@@ -23,7 +23,8 @@ class AimsIO:
   'fe':26 , 'co':27 , 'ni':28 , 'cu':29 , 'zn':30 ,\
   'rb':37 , 'sr':38 , 'in':49 , 'sn':50 , 'sb':51 , 'te':52 ,  'i':53 , 'xe':54 ,\
    'y':39 , 'zr':40 , 'nb':41 , 'mo':42 , 'tc':43 ,\
-  'ru':44 , 'rh':45 , 'pd':46 , 'ag':47 , 'cd':48 \
+  'ru':44 , 'rh':45 , 'pd':46 , 'ag':47 , 'cd':48 ,\
+  'pb':82 , 'bi':83 , 'rn':86   \
                   }
     def __init__(self,iout,proj=None,bugctrl=0):
         '''\
@@ -182,6 +183,12 @@ class AimsIO:
                 except ValueError:
                     print_Error(self.IOut,
                         "Error in getting spin info. from 'elec_state'" )
+            elif xl[0]=='atoms':
+                try:
+                    self.Atoms = int(xl[-1])
+                except ValueError:
+                    print_Error(self.IOut,
+                        "Error in getting atom info. from 'elec_state'" )
             elif xl[0].lower()=='alpha_ex':
                 try:
                     self.Alpha_ex = float(xl[-1])
@@ -198,7 +205,6 @@ class AimsIO:
         tmpSpin = {\
                 'spin':None,
                 'fixed_spin_moment':None,
-                'default_initial_moment':None,
                 }
         tmpAlpha_dog = False
         for x in fl:
@@ -209,11 +215,6 @@ class AimsIO:
                     tmpSpin['spin']=[x.split('#')[0].split()[1],'%-16s%16s\n']
                 except ValueError:
                     print_Error(self.IOut,'Error in getting spin')
-            elif x.split('#')[0].lower().find('default_initial_moment')!=-1:
-                try:
-                    tmpSpin['default_initial_moment']=[x.split('#')[0].split()[1],'%-16s%16s\n']
-                except ValueError:
-                    print_Error(self.IOut,'Error in getting default_initial_moment')
             elif x.split('#')[0].lower().find('fixed_spin_moment')!=-1:
                 try:
                     tmpSpin['fixed_spin_moment']=[x.split('#')[0].split()[1],'%-16s%16s\n']
@@ -234,7 +235,7 @@ class AimsIO:
         if tmpAlpha_dog:
             nff.write('hybrid_xc_coeff %-6.2f\n' %self.Alpha_ex)
             print_String(self.IOut,'hybrid_xc_coeff %-6.2f' %self.Alpha_ex,1)
-        if self.Spin !=1:
+        if self.Spin != 1:
             if tmpSpin['spin']==None:
                 nff.write("spin                    collinear\n")
             else:
@@ -244,12 +245,10 @@ class AimsIO:
             else:
                 nff.write(tmpSpin['fixed_spin_moment'][1]
                         %tuple(tmpSpin['fixed_spin_moment'][0]))
-            if tmpSpin['default_initial_moment']==None:
-            #    nff.write("default_initial_moment  hund\n")
-                pass
+            if self.Atoms==1:
+                nff.write("default_initial_moment  hund\n")
             else:
-                nff.write(tmpSpin['default_initial_moment'][1]
-                        %tuple(tmpSpin['default_initial_moment'][0]))
+                nff.write("default_initial_moment  %-5i\n" %(0))
         if len(self.add_CMD)!=0:
             for cmd in self.add_CMD:
                 nff.write("%s\n" %cmd)
@@ -345,12 +344,10 @@ class AimsIO:
             print_Error(self.IOut,
                     "Error :: No %s direction" %(self.Proj))
         chdir(self.Proj)
-        system('%s/Aims_Environment %s %s %s.log'
-            % (self.ModuDir, nproc, cfg, self.Proj))
         system('mv %s.log ../%s.log'
             %(self.Proj, self.Proj))
-        #print('IGOR debug: %s/Aims_Environment %s %s %s.log'
-        #    % (self.ModuDir, nproc, cfg, self.Proj))
+        system('%s/Aims_Environment %s %s %s.log'
+            % (self.ModuDir, nproc, cfg, self.Proj))
         #if self.IPrint<=1:
         #    remove('%s/Job_%s.in' % (CurrScr, self.JobName))
         #    removedirs('%s' %CurrScr)
@@ -415,7 +412,7 @@ class AimsIO:
             iof = open('runscr','w')
             iof.write(iFile1)
             iof.close()
-            jobId = system('qsub runscr')
+            jobId = system('sbatch runscr')
             system('echo %s > %s' %(jobId, 'RUNNING'))
             chdir(self.WorkDir)
             return False
@@ -813,42 +810,68 @@ class AimsIO:
             if len(p16p)!=0:
                 self.Energy['metaGGA'] = float(p16p[-1])
                 print_String(self.IOut,'Meta-GGA total energy       : %16.8f' %self.Energy['metaGGA'],1)
-        elif iop==12: # for DHDF energy
-            p16 = re.compile('Total ZRPS\(DH\) energy              :\s*(?P<iters>-?\d+.\d+) Ha')  #to ZRPS(DH) total energy
+        elif iop==12: # for ZRPS energy
+            p16 = re.compile('Total ZRPS\(DH\) energy *:\s*(?P<iters>-?\d+.\d+) Ha')  #to ZRPS(DH) total energy
             p16p = p16.findall(lfs)
             if len(p16p)!=0:
                 tmpValue = float(p16p[-1])
-                print_String(self.IOut,'ZRPS\(DH\) total energy       : %16.8f' %tmpValue,1)
+                print_String(self.IOut,'ZRPS(DH) total energy       : %16.8f' %tmpValue,1)
             p16 = re.compile('Total ZRPS energy              :\s*(?P<iters>-?\d+.\d+) Ha')  #to ZRPS total energy
             p16p = p16.findall(lfs)
             if len(p16p)!=0:
-                self.Energy['DHDF'] = float(p16p[-1])
-                print_String(self.IOut,'ZRPS total energy           : %16.8f' %self.Energy['DHDF'],1)
-            p16 = re.compile('Total XYG3 energy *:\s*(?P<iters>-?\d+.\d+) Ha')
+                self.Energy['ZRPS'] = float(p16p[-1])
+                print_String(self.IOut,'ZRPS total energy           : %16.8f' %self.Energy['ZRPS'],1)
+        elif iop==16: # for XYG3 energy
+            p16 = re.compile('Total XYG3 energy *:\s*(?P<iters>-?\d+.\d+) Ha')  #to XYG3 total energy
             p16p = p16.findall(lfs)
             if len(p16p)!=0:
-                self.Energy['DHDF'] = float(p16p[-1])
-                print_String(self.IOut,'XYG3 total energy           : %16.8f' %self.Energy['DHDF'],1)
-            p16 = re.compile('Total lrc-XYG3 energy *:\s*(?P<iters>-?\d+.\d+) Ha')
+                self.Energy['XYG3'] = float(p16p[-1])
+                print_String(self.IOut,'XYG3 total energy           : %16.8f' %self.Energy['XYG3'],1)
+            p16 = re.compile('Total XYGJOS energy *:\s*(?P<iters>-?\d+.\d+) Ha')  #to XYGJOS total energy
             p16p = p16.findall(lfs)
             if len(p16p)!=0:
-                self.Energy['DHDF'] = float(p16p[-1])
-                print_String(self.IOut,'lrc-XYG3 total energy       : %16.8f' %self.Energy['DHDF'],1)
-            p16 = re.compile('Total XYG5 energy *:\s*(?P<iters>-?\d+.\d+) Ha')
+                self.Energy['XYG3'] = float(p16p[-1])
+                print_String(self.IOut,'XYGJOS total energy         : %16.8f' %self.Energy['XYG3'],1)
+        elif iop==17: # for osRPA
+            p16 = re.compile('osRPA total energy *:\s*(?P<iters>-?\d+.\d+) Ha')  #osRPA total energy
             p16p = p16.findall(lfs)
             if len(p16p)!=0:
-                self.Energy['DHDF'] = float(p16p[-1])
-                print_String(self.IOut,'XYG5 total energy           : %16.8f' %self.Energy['DHDF'],1)
-            p16 = re.compile('Total lrc-XYG6 energy *:\s*(?P<iters>-?\d+.\d+) Ha')
+                self.Energy['osrpa'] = float(p16p[-1])
+                print_String(self.IOut,'osRPA total energy          : %16.8f' %self.Energy['osrpa'],1)
+            p16 = re.compile('OS-RPA correlation energy *:\s*(?P<iters>-?\d+.\d+)  Ha')  #osRPA correlation
             p16p = p16.findall(lfs)
             if len(p16p)!=0:
-                self.Energy['DHDF'] = float(p16p[-1])
-                print_String(self.IOut,'lrc-XYG6 total energy       : %16.8f' %self.Energy['DHDF'],1)
-            p16 = re.compile('Total XYGJOS energy *:\s*(?P<iters>-?\d+.\d+) Ha')
+                self.Energy['EcosRPA'] = float(p16p[-1])
+                print_String(self.IOut,'osRPA correlation energy    : %16.8f' %self.Energy['EcosRPA'],1)
+            p16 = re.compile('OS-MP2 correlation energy *:\s*(?P<iters>-?\d+.\d+)  Ha')  #osPT2 correlation
             p16p = p16.findall(lfs)
             if len(p16p)!=0:
-                self.Energy['DHDF'] = float(p16p[-1])
-                print_String(self.IOut,'XYGJOS total energy      : %16.8f' %self.Energy['DHDF'],1)
+                self.Energy['EcosMP2'] = float(p16p[-1])
+                print_String(self.IOut,'osMP2 correlation energy    : %16.8f' %self.Energy['EcosMP2'],1)
+            p16 = re.compile('Exact exchange energy *:\s*(?P<iters>-?\d+.\d+) Ha')  #Exx energy
+            p16p = p16.findall(lfs)
+            if len(p16p)!=0:
+                self.Energy['Exx'] = float(p16p[-1])
+                print_String(self.IOut,'Exact exchange energy       : %16.8f' %self.Energy['Exx'],1)
+            p13  = re.compile('XC contributuion for \s*(?P<iters>\w+)')  #to find XC contributions for various DFTs
+            p13p = p13.findall(lfs)
+            if p13p:
+                for x in p13p[-4:]:
+                    xlenght = len(x)
+                    p14 = re.compile('X %s *:\s*(?P<iters>-?\d+.\d+) Ha' %x)
+                    #p14p = p14.search(lfs)
+                    p14p = p14.findall(lfs)
+                    if p14p:
+                        #tmpv = float(p14p.group('iters'))
+                        tmpv = float(p14p[-1])
+                        print_String(self.IOut,'X %s%s: %16.8f' %(x,' '*(26-xlenght),tmpv),1)
+                    p14 = re.compile('C %s *:\s*(?P<iters>-?\d+.\d+) Ha' %x)
+                    #p14p = p14.search(lfs)
+                    p14p = p14.findall(lfs)
+                    if p14p:
+                        #tmpv = float(p14p.group('iters'))
+                        tmpv = float(p14p[-1])
+                        print_String(self.IOut,'C %s%s: %16.8f' %(x,' '*(26-xlenght),tmpv),1)
         return
     def parse_Control(self):
         '''parse control.in'''
