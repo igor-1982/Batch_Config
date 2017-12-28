@@ -857,7 +857,7 @@ class ConfigIO:
         self.Special_Procs = {}   # Num. of CPUs to run aims for special jobs
         self.BatchType = 'series'
         self.BatchCmd = ''
-        self.BatchScrptName = 'Aims_Environment'
+        self.BatchScriptName = 'Aims_Environment'
 
         # Number of batch jobs
         self.NBatc = 0
@@ -1250,28 +1250,36 @@ class ConfigIO:
             self.f.seek(LocPos)
             tmpList = self.f.readline().split("#")[0].split("::")
             if len(tmpList) == 2:
-                self.BatchType = tmpList[-1].strip().lower()
-                if self.BatchType == 'queue':
-                    self.BatchCmd = 'sbatch'
-                    self.BatchScrptName = 'aims_runscr'
-                elif self.BatchType == 'series':
-                    self.BatchScrptName = 'Aims_Environment'
-            elif len(tmpList) == 3:
-                self.BatchType = tmpList[-2].strip().lower()
-                if self.BatchType == 'queue':
-                    self.BatchCmd = tmpList[-1].strip()
-                    self.BatchScrptName = 'aims_runscr'
-                elif self.BatchType == 'series':
-                    self.BatchScrptName = tmpList[-1].strip()
-            elif len(tmpList) == 4:
-                self.BatchType = tmpList[-3].strip().lower()
-                if self.BatchType == 'queue':
-                    self.BatchCmd = tmpList[-2].strip()
-                    self.BatchScrptName = tmpList[-1].strip()
-                elif self.BatchType == 'series':
-                    self.BatchScrptName = tmpList[-1].strip()
-            print_String(self.IOut, 'The batch type is %s'
-                         % self.BatchType, 1)
+                tmpList = tmpList[1].split('#')[0].split()
+                if len(tmpList) == 2:
+                    self.BatchType = tmpList[-1].strip().lower()
+                    if self.BatchType == 'queue':
+                        self.BatchCmd = 'sbatch'
+                        self.BatchScriptName = 'aims_runscr'
+                    elif self.BatchType == 'series':
+                        self.BatchScriptName = 'Aims_Environment'
+                elif len(tmpList) == 3:
+                    self.BatchType = tmpList[-2].strip().lower()
+                    if self.BatchType == 'queue':
+                        self.BatchCmd = tmpList[-1].strip()
+                        self.BatchScriptName = 'aims_runscr'
+                    elif self.BatchType == 'series':
+                        self.BatchScriptName = tmpList[-1].strip()
+                elif len(tmpList) == 4:
+                    self.BatchType = tmpList[-3].strip().lower()
+                    if self.BatchType == 'queue':
+                        self.BatchCmd = tmpList[-2].strip()
+                        self.BatchScriptName = tmpList[-1].strip()
+                    elif self.BatchType == 'series':
+                        self.BatchScriptName = tmpList[-1].strip()
+                else:
+                    print_Error(self.IOut,
+                                'Error :: Unknown input for aims_batch_type')
+                print_String(self.IOut, 'The batch type is %s'
+                             % self.BatchType, 1)
+            else:
+                print_Error(self.IOut,
+                            'Error :: Unknown input for aims_batch_type')
         return
 
     def get_CP2IOCmd(self):
