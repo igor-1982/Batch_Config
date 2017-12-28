@@ -1,114 +1,109 @@
 #!/bin/env python2
-#Module     :: Aims_Manage
-#Authors    :: Igor Ying Zhang
-#Purpose    :: 1) Analysis the input file of aims package;
-#           :: 2) Generate the input file of aims package;
-#           :: 3) Collect results from Aims package;
-#           :: All in all, a well-defined private interface with aims package
-#              package
-#Version    :: 0.1(20120521)
-#Revise     :: 2012-05-21
-#History    :: 0.1(20120521) Completes basic functions for QChem IO.
-#                            There is one classe:
-#                                1) AimsIO     : manage Aims input, output and running
+# Module     :: Aims_Manage
+# Authors    :: Igor Ying Zhang
+# Purpose    :: 1) Analysis the input file of aims package;
+#            :: 2) Generate the input file of aims package;
+#            :: 3) Collect results from Aims package;
+#            :: All in all, a well-defined private interface with aims package
+#               package
+# Version    :: 0.1(20120521)
+# Revise     :: 2012-05-21
+# History    :: 0.1(20120521) Completes basic functions for QChem IO.
+#                             There is one classe:
+#                             1) AimsIO : manage Aims input, output and running
+
 
 class AimsIO:
-    AtDict    = {\
-   'x':0  ,
-   'h':1  , 'he':2  ,\
-  'li':3  , 'be':4  ,  'b':5  ,  'c':6  ,  'n':7  ,  'o':8  ,  'f':9  , 'ne':10 ,\
-  'na':11 , 'mg':12 , 'al':13 , 'si':14 ,  'p':15 ,  's':16 , 'cl':17 , 'ar':18 ,\
-   'k':19 , 'ca':20 , 'ga':31 , 'ge':32 , 'as':33 , 'se':34 , 'br':35 , 'kr':36 ,\
-  'sc':21 , 'ti':22 ,  'v':23 , 'cr':24 , 'mn':25 ,\
-  'fe':26 , 'co':27 , 'ni':28 , 'cu':29 , 'zn':30 ,\
-  'rb':37 , 'sr':38 , 'in':49 , 'sn':50 , 'sb':51 , 'te':52 ,  'i':53 , 'xe':54 ,\
-   'y':39 , 'zr':40 , 'nb':41 , 'mo':42 , 'tc':43 ,\
-  'ru':44 , 'rh':45 , 'pd':46 , 'ag':47 , 'cd':48 ,\
-  'pb':82 , 'bi':83 , 'rn':86   \
-                  }
-    def __init__(self,iout,proj=None,bugctrl=0):
-        '''\
-        Initialize variables belonged to GauIO\
-        '''
-        from os      import getcwd
-        from os      import getenv
-        from os.path import isfile
+    AtDict = {'x': 0, 'h': 1, 'he': 2, 'li': 3, 'be': 4, 'b': 5, 'c': 6,
+              'n': 7, 'o': 8, 'f': 9, 'ne': 10,
+              'na': 11, 'mg': 12, 'al': 13, 'si': 14, 'p': 15,
+              's': 16, 'cl': 17, 'ar': 18,
+              'k': 19, 'ca': 20, 'ga': 31, 'ge': 32, 'as': 33,
+              'se': 34, 'br': 35, 'kr': 36,
+              'sc': 21, 'ti': 22,  'v': 23, 'cr': 24, 'mn': 25,
+              'fe': 26, 'co': 27, 'ni': 28, 'cu': 29, 'zn': 30,
+              'rb': 37, 'sr': 38, 'in': 49, 'sn': 50, 'sb': 51,
+              'te': 52,  'i': 53, 'xe': 54,
+              'y': 39, 'zr': 40, 'nb': 41, 'mo': 42, 'tc': 43,
+              'ru': 44, 'rh': 45, 'pd': 46, 'ag': 47, 'cd': 48,
+              'pb': 82, 'bi': 83, 'rn': 86
+              }
+
+    def __init__(self, iout, proj=None, bugctrl=0):
+        '''Initialize variables belonged to GauIO'''
+        from os import getcwd, getenv
         from os.path import splitext
+        from my_io import print_String, print_Error
 
-        from my_io   import print_Error
-        from my_io   import print_String
+        if getenv('IGOR_MODULES_PATH'):   # STRING, DIR to private modules
+            self.ModuDir = getenv('IGOR_MODULES_PATH')
+        else:
+            print_Error(self.IOut,
+                        'Error in getting grobal environment ' +
+                        '\"$IGOR_MODULES_PATH\" which is the ' +
+                        'direction to private modules')
 
-        self.IOut        = iout                                       # Flow of the output file
-        self.IPrint        = bugctrl                                    # to control the printing out
-        fn, fe          = splitext(proj)
-        self.Proj       = fn                                         # Name of the project
+        self.IOut = iout        # Flow of the output file
+        self.IPrint = bugctrl   # to control the printing out
+        fn, fe = splitext(proj)
+        self.Proj = fn          # Name of the project
 
-        self.WorkDir    = getcwd().strip()                           # STRING, current DIR 
-        self.HomeDir    = getenv('HOME')                             # STRING, Home DIR
-        self.BasisDir   = ''
-        print_String(self.IOut,'The direction of basis set is required',1)
+        self.WorkDir = getcwd().strip()  # STRING, current DIR
+        self.HomeDir = getenv('HOME')    # STRING, home DIR
+        self.BasisDir = ''
+        print_String(self.IOut, 'The direction of basis set is required', 1)
 
-        self.BasisDir   = ''                                         # basis set direction
+        self.BasisDir = ''   # basis set direction
 
-        self.Charge     = 0
-        self.Spin       = 0
-        self.ElemNum    = 0
-        self.Elems      = []
-
-        self.Energy     = {}   # SCF, EcRPA, RPA, RPA+SE, RPA+rSEd, RPA+rSEf, RPA+, and ExHF
-        self.Basis      = {}
-                #            'species'          :'Na',
-                #            'nucleus'          :11,
-                #            'mass'             :22.98976928,
-                #            'l_hartree'        :6,
-                #            'cut_pot'          :[5.0,2.0,1.0],
-                #            'basis_dep_cutoff' :1e-4,
-                #            'radial_base'      :[284,7.0],
-                #            'radial_multiplier':2,
-                #            'angular_grids'    :'specified',
-                #            'division'         :[[0.5925,110],[0.7843,194],[1.0201,302],[1.1879,434]],
-                #            'valence'          :[[3,'s',1.],[2,'p',6.]],
-                #            'ion_occ'          :[[2,'s',2.],[2,'p',6.]],
-                #            'include_min_basis':'.true.',
-                #            'pure_gauss'       :'.true.'
-                #            }
-        self.add_CMD     = []   # additional commands for the control.in
+        self.Charge = 0
+        self.Spin = 0
+        self.ElemNum = 0
+        self.Elems = []
+        # SCF, EcRPA, RPA, RPA+SE, RPA+rSEd, RPA+rSEf, RPA+, and ExHF
+        self.Energy = {}
+        self.Basis = {}
+        self.add_CMD = []   # additional commands for the control.in
         return
+
     def __del__(self):
         '''Close the document flow of input file'''
         return
-    def qchem2aims(self,qchem_input=None):
-        '''generate aims project direction and concequently "geomtry.in" and "elec_state" from qchem_input'''
-        import sys, re, os
+
+    def qchem2aims(self, qchem_input=None):
+        '''generate aims project direction and concequently '''
+        '''  "geomtry.in" and "elec_state" from qchem_input'''
+        import re
+        import os
         from my_io import print_String
         from my_io import print_Error
-        if qchem_input == None:
-            qchem_input = "%s.in" %(self.Proj)
-        fn     = self.Proj
+        if qchem_input is None:
+            qchem_input = "%s.in" % (self.Proj)
+        fn = self.Proj
 
-        #if os.path.isdir(fn) or os.path.isfile(fn):
+        # if os.path.isdir(fn) or os.path.isfile(fn):
         #    index = 0
         #    while os.path.isdir("%s.trace.%i" %(fn,index)):
         #        index += 1
-        #    print_String(self.IOut,"direction or file named as %s exists, now rename as %s.trace.%i" %(fn,fn,index),1)
-        #    os.rename(fn,"%s.trace.%i" %(fn,index))
-        if len(fn)!=0:
+        #    print_String(self.IOut,"direction or file named as %s exists," +
+        #                 " now rename as %s.trace.%i" %(fn,fn,index), 1)
+        #    os.rename(fn, "%s.trace.%i" % (fn, index))
+        if len(fn) != 0:
             if not os.path.isdir(fn):
                 os.mkdir(fn)
-        if not os.path.isfile("%s/geometry.in" %fn) or\
-           not os.path.isfile("%s/elec_state" %fn):
-            wff = open("%s/geometry.in" %fn,'w')
-            sff = open("%s/elec_state" %fn,'w')
+        if not os.path.isfile("%s/geometry.in" % fn) or \
+                not os.path.isfile("%s/elec_state" % fn):
+            wff = open("%s/geometry.in" % fn, 'w')
+            sff = open("%s/elec_state" % fn, 'w')
         else:
             return
-        
-        ff = open(qchem_input,'r')
+
+        ff = open(qchem_input, 'r')
         fs = ff.readlines()
         ff.close()
-        
-        p1 = re.compile('\$molecule')
-        p2 = re.compile('\$end')
-        
+
+        p1 = re.compile('$molecule')
+        p2 = re.compile('$end')
+
         num_atom = -1
         mol_flag = False
         for line in fs:
@@ -116,32 +111,38 @@ class AimsIO:
                 mol_flag = p1.match(line.strip())
             else:
                 if num_atom == -1:
-                    charge,spin = line.strip().split()
+                    charge, spin = line.strip().split()
                     try:
                         charge = int(charge)
-                        spin   = int(spin)
+                        spin = int(spin)
                     except ValueError:
-                        print_Error(self.IOut,"Error happens in getting charge and spin")
+                        print_Error(self.IOut,
+                                    "Error happens in getting charge and spin")
                     num_atom += 1
-                    sff.write('charge   %6i\n' %charge)
-                    sff.write('spin     %6i\n' %spin)
+                    sff.write('charge   %6i\n' % charge)
+                    sff.write('spin     %6i\n' % spin)
                 elif p2.match(line.strip()):
                     wff.close()
-                    print_String(self.IOut,"There is(are) %i atom(s) in this case" %num_atom,1)
-                    sff.write('electron %6i\n' %num_atom)
+                    print_String(self.IOut,
+                                 "There is(are) %i atom(s) in this case"
+                                 % num_atom, 1)
+                    sff.write('electron %6i\n' % num_atom)
                     sff.close()
                     self.ElemNum = num_atom
                     break
                 else:
                     tl = line.strip().split()
-                    if len(tl)==4:
-                        wff.write("atom%16s%16s%16s%5s\n" %(tl[1],tl[2],tl[3],tl[0]))
+                    if len(tl) == 4:
+                        wff.write("atom%16s%16s%16s%5s\n"
+                                  % (tl[1], tl[2], tl[3], tl[0]))
                         num_atom += 1
                         self.Elems.append(tl[0].lower())
                     else:
-                        print_Error(self.IOut,"Unknown geometry input \(elements are not equal 4\)")
+                        print_Error(self.IOut,
+                                    "Unknown geometry input (elements " +
+                                    "are not equal 4)")
         return
-    
+
     def form_Control(self):
         import os
         from my_io import print_String
@@ -150,108 +151,117 @@ class AimsIO:
         # check several files required
         #
         if not os.path.isdir(self.Proj):
+            print_Error(self.IOut, "Error :: No %s direction" % self.Proj)
+        elif not os.path.isfile("%s/%s" % (self.Proj, "geometry.in")):
             print_Error(self.IOut,
-                    "Error :: No %s direction" %self.Proj)
-        elif not os.path.isfile("%s/%s" %(self.Proj,"geometry.in")):
+                        "Error :: No 'geometry.in' in %s direction"
+                        % self.Proj)
+        elif not os.path.isfile("%s/%s" % (self.Proj, "elec_state")):
             print_Error(self.IOut,
-                    "Error :: No 'geometry.in' in %s direction" %self.Proj)
-        elif not os.path.isfile("%s/%s" %(self.Proj,"elec_state")):
-            print_Error(self.IOut,
-                    "Error :: No 'elec_state' in %s direction" %self.Proj)
+                        "Error :: No 'elec_state' in %s direction" % self.Proj)
         elif not os.path.isfile("control.in"):
             print_Error(self.IOut,
-                    "Error :: No 'control.in' in the current direction")
+                        "Error :: No 'control.in' in the current direction")
         #
         # get charge and spin info. from "elec_state"
         #
-        ff = open("%s/%s" %(self.Proj,"elec_state"),'r')
+        ff = open("%s/%s" % (self.Proj, "elec_state"), 'r')
         fl = ff.readlines()
         ff.close()
         self.Alpha_ex = 0.0
         for x in fl:
-            if len(x.strip())==0: continue
+            if len(x.strip()) == 0:
+                continue
             xl = x.strip().split()
-            if xl[0]=='charge':
+            if xl[0] == 'charge':
                 try:
                     self.Charge = int(xl[-1])
                 except ValueError:
                     print_Error(self.IOut,
-                        "Error in getting charge info. from 'elec_state'" )
-            elif xl[0]=='spin':
+                                "Error in getting charge info. " +
+                                "from 'elec_state'")
+            elif xl[0] == 'spin':
                 try:
                     self.Spin = int(xl[-1])
                 except ValueError:
                     print_Error(self.IOut,
-                        "Error in getting spin info. from 'elec_state'" )
-            elif xl[0]=='atoms':
+                                "Error in getting spin info. " +
+                                "from 'elec_state'")
+            elif xl[0] == 'atoms':
                 try:
                     self.Atoms = int(xl[-1])
                 except ValueError:
                     print_Error(self.IOut,
-                        "Error in getting atom info. from 'elec_state'" )
-            elif xl[0].lower()=='alpha_ex':
+                                "Error in getting atom info. " +
+                                "from 'elec_state'")
+            elif xl[0].lower() == 'alpha_ex':
                 try:
                     self.Alpha_ex = float(xl[-1])
                 except ValueError:
                     print_Error(self.IOut,
-                        "Error in getting the factor of the exact exchange from 'elec_state'" )
+                                "Error in getting the factor of " +
+                                "the exact exchange from 'elec_state'")
         #
         # get info. from standard "control.in"
         #
-        ff = open("control.in",'r')
-        nff = open("%s/control.in" %self.Proj,'w')
+        ff = open("control.in", 'r')
+        nff = open("%s/control.in" % self.Proj, 'w')
         fl = ff.readlines()
         ff.close()
-        tmpSpin = {\
-                'spin':None,
-                'fixed_spin_moment':None,
-                }
+        tmpSpin = {'spin': None,
+                   'fixed_spin_moment': None,
+                   }
         tmpAlpha_dog = False
         for x in fl:
-            if x.split('#')[0].lower().find('charge ')!=-1:
+            if x.split('#')[0].lower().find('charge ') != -1:
                 pass
-            elif x.split('#')[0].lower().find('spin')!=-1:
+            elif x.split('#')[0].lower().find('spin') != -1:
                 try:
-                    tmpSpin['spin']=[x.split('#')[0].split()[1],'%-16s%16s\n']
+                    tmpSpin['spin'] = \
+                        [x.split('#')[0].split()[1], '%-16s%16s\n']
                 except ValueError:
-                    print_Error(self.IOut,'Error in getting spin')
-            elif x.split('#')[0].lower().find('fixed_spin_moment')!=-1:
+                    print_Error(self.IOut, 'Error in getting spin')
+            elif x.split('#')[0].lower().find('fixed_spin_moment') != -1:
                 try:
-                    tmpSpin['fixed_spin_moment']=[x.split('#')[0].split()[1],'%-16s%16s\n']
+                    tmpSpin['fixed_spin_moment'] =\
+                        [x.split('#')[0].split()[1], '%-16s%16s\n']
                 except ValueError:
-                    print_Error(self.IOut,'Error in getting fixed_spin_moment')
-            elif x.split('#')[0].lower().find('radial_multiplier')!=-1:
+                    print_Error(self.IOut,
+                                'Error in getting fixed_spin_moment')
+            elif x.split('#')[0].lower().find('radial_multiplier') != -1:
                 try:
-                    self.Basis['radial_multiplier']=\
-                            [int(x.split('#')[0].split()[1]),'%-16s%16i\n']
+                    self.Basis['radial_multiplier'] =\
+                            [int(x.split('#')[0].split()[1]), '%-16s%16i\n']
                 except ValueError:
-                    print_Error(self.IOut,'Error in getting radial_multiplier')
-            elif x.split('#')[0].lower().find('alpha_dog')!=-1:
+                    print_Error(self.IOut,
+                                'Error in getting radial_multiplier')
+            elif x.split('#')[0].lower().find('alpha_dog') != -1:
                 # IGOR Mark here
                 tmpAlpha_dog = True
             else:
-                nff.write("%s" %x)
-        nff.write("charge                  %-6i\n" %self.Charge)
+                nff.write("%s" % x)
+        nff.write("charge                  %-6i\n" % self.Charge)
         if tmpAlpha_dog:
-            nff.write('hybrid_xc_coeff %-6.2f\n' %self.Alpha_ex)
-            print_String(self.IOut,'hybrid_xc_coeff %-6.2f' %self.Alpha_ex,1)
+            nff.write('hybrid_xc_coeff %-6.2f\n' % self.Alpha_ex)
+            print_String(self.IOut,
+                         'hybrid_xc_coeff %-6.2f' % self.Alpha_ex, 1)
         if self.Spin != 1:
-            if tmpSpin['spin']==None:
+            if tmpSpin['spin'] is None:
                 nff.write("spin                    collinear\n")
             else:
-                nff.write(tmpSpin['spin'][1] %tuple(tmpSpin['spin'][0]))
-            if tmpSpin['fixed_spin_moment']==None:
-                nff.write("fixed_spin_moment       %-5i\n" %(self.Spin-1))
+                nff.write(tmpSpin['spin'][1] % tuple(tmpSpin['spin'][0]))
+            if tmpSpin['fixed_spin_moment'] is None:
+                nff.write("fixed_spin_moment       %-5i\n" % (self.Spin-1))
             else:
                 nff.write(tmpSpin['fixed_spin_moment'][1]
-                        %tuple(tmpSpin['fixed_spin_moment'][0]))
-            if self.Atoms==1:
+                          % tuple(tmpSpin['fixed_spin_moment'][0]))
+            if self.Atoms == 1:
                 nff.write("default_initial_moment  hund\n")
             else:
-                nff.write("default_initial_moment  %-5i\n" %(0))
-        if len(self.add_CMD)!=0:
+                nff.write("default_initial_moment  %-5i\n" % (0))
+        if len(self.add_CMD) != 0:
             for cmd in self.add_CMD:
-                nff.write("%s\n" %cmd)
+                nff.write("%s\n" % cmd)
         nff.close()
         return
 
@@ -261,162 +271,143 @@ class AimsIO:
         from my_io import print_String
         from my_io import print_Error
 
-        if not os.path.isfile("%s/geometry.in" %self.Proj):
+        if not os.path.isfile("%s/geometry.in" % self.Proj):
             print_Error(self.IOut,
-                    "Error :: No 'geometry.in' in %s direction" %self.Proj)
+                        "Error :: No 'geometry.in' in %s direction"
+                        % self.Proj)
         else:
-            gff = open("%s/geometry.in" %self.Proj,'r')
+            gff = open("%s/geometry.in" % self.Proj, 'r')
             gfl = gff.readlines()
             gff.close()
             self.ElemNum = 0
-            self.Elems   = []
+            self.Elems = []
             for x in gfl:
                 xl = x.strip().split('#')[0].strip().split()
-                if len(xl)==5 and xl[0].lower()=='atom':
+                if len(xl) == 5 and xl[0].lower() == 'atom':
                     self.Elems.append(xl[-1].lower())
                     self.ElemNum += 1
-                elif len(xl)==5 and xl[0].lower()=='empty':
+                elif len(xl) == 5 and xl[0].lower() == 'empty':
                     self.Elems.append(xl[-1].lower())
                     self.ElemNum += 1
             else:
-                print_String(self.IOut,"There is(are) %i atom(s) in this case" %self.ElemNum,1)
+                print_String(self.IOut,
+                             "There is(are) %i atom(s) in this case"
+                             % self.ElemNum, 1)
 
-        if not os.path.isfile("%s/control.in" %self.Proj):
+        if not os.path.isfile("%s/control.in" % self.Proj):
             print_Error(self.IOut,
-                    "Error :: No 'control.in' in %s direction" %self.Proj)
+                        "Error :: No 'control.in' in %s direction" % self.Proj)
         else:
-            nff = open("%s/control.in" %self.Proj,'a')
-
+            nff = open("%s/control.in" % self.Proj, 'a')
 
         tmp_elems = []
         AtFlag = list(AimsIO.AtDict.keys())
         for x in self.Elems:
-            if AtFlag.count(x)==0:
+            if AtFlag.count(x) == 0:
                 print_Error(self.IOut,
-                        "Error :: Unknown element %s " %x)
-            if len(x)==1:
-                if tmp_elems.count(x.upper())==0:
+                            "Error :: Unknown element %s " % x)
+            if len(x) == 1:
+                if tmp_elems.count(x.upper()) == 0:
                     tmp_elems.append(x.upper())
-            elif len(x)==2:
-                if tmp_elems.count(x[0].upper()+x[1:])==0:
+            elif len(x) == 2:
+                if tmp_elems.count(x[0].upper()+x[1:]) == 0:
                     tmp_elems.append(x[0].upper()+x[1:])
         for x in tmp_elems:
-            if os.path.isfile("%s/%02i_%s_default" %(self.BasisDir,AimsIO.AtDict[x.lower()],x)):
-                bff=open("%s/%02i_%s_default" %(self.BasisDir,AimsIO.AtDict[x.lower()],x),'r')
+            if os.path.isfile("%s/%02i_%s_default"
+                              % (self.BasisDir, AimsIO.AtDict[x.lower()], x)):
+                bff = open("%s/%02i_%s_default"
+                           % (self.BasisDir, AimsIO.AtDict[x.lower()], x), 'r')
                 for line in bff:
-                    for x,y in self.Basis.items():
-                        if line.lower().find(x)!=-1:
-                            nff.write(y[-1] %tuple([x]+y[:-1]))
+                    for x, y in self.Basis.items():
+                        if line.lower().find(x) != -1:
+                            nff.write(y[-1] % tuple([x]+y[:-1]))
                             break
                     else:
                         nff.write(line)
                 bff.close()
             else:
                 print_Error(self.IOut,
-                        "Error :: No '%02i_%s_default' in %s direction" \
-                        %(AimsIO.AtDict[x.lower()],x,self.BasisDir))
+                            "Error :: No '%02i_%s_default' in %s direction"
+                            % (AimsIO.AtDict[x.lower()], x, self.BasisDir))
         nff.close()
         return
-    def run_Job(self,nproc=1,cfg=None):
-        '''run aims through a specified csh named "Aims_Environment"'''
-        from os         import system
-        from os         import getenv
-        from os         import mkdir
-        from os         import removedirs
-        from os         import remove
-        from os         import chdir
-        from os.path    import exists
-        from os.path    import isfile
-        from os         import getpid                                # To make more then 2 jobs
-                                                                     # running in one DIR
-        from my_io      import print_String
-        from my_io      import print_Error
 
-        if getenv('IGOR_MODULES_PATH'):                              # STRING, private module DIR
-            self.ModuDir=getenv('IGOR_MODULES_PATH')
-        else:
-            print_Error(self.IOut,
-                'Error in getting grobal environment '+\
-                '\"$IGOR_MODULES_PATH\" which is the direction to private modules')
-        if cfg == None:
+    def run_Job(self, nproc=1, cfg=None, script=None):
+        '''run aims through a specified csh named "Aims_Environment"'''
+        from os import system, chdir
+        from os.path import exists
+        from my_io import print_Error
+
+        if cfg is None:
             cfg = 'scalapack.mpi'
+        if script is None:
+            script = 'Aims_Environment'
         if not exists('%s' % self.Proj):
             print_Error(self.IOut,
-                    "Error :: No %s direction" %(self.Proj))
+                        "Error :: No %s direction" % (self.Proj))
         chdir(self.Proj)
-        system('mv %s.log ../%s.log'
-            %(self.Proj, self.Proj))
-        system('%s/Aims_Environment %s %s %s.log'
-            % (self.ModuDir, nproc, cfg, self.Proj))
-        #if self.IPrint<=1:
-        #    remove('%s/Job_%s.in' % (CurrScr, self.JobName))
-        #    removedirs('%s' %CurrScr)
+        system('mv %s.log ../%s.log' % (self.Proj, self.Proj))
+        system('%s/%s %s %s %s.log'
+               % (self.ModuDir, script, nproc, cfg, self.Proj))
+        # if self.IPrint<=1:
+        #     remove('%s/Job_%s.in' % (CurrScr, self.JobName))
+        #     removedirs('%s' %CurrScr)
         chdir(self.WorkDir)
         return
-    def run_Job_v02(self,nproc=1,nthread=1,ntaskpernode=1,cfg=None):
+
+    def run_Job_v02(self,
+                    nproc=1, nthread=1, ntaskpernode=1,
+                    cfg=None, script=None, cmd=None):
         '''run aims through a specified csh named "Aims_Environment"'''
-        from os         import system
-        from os         import getenv
-        from os         import mkdir
-        from os         import removedirs
-        from os         import remove
-        from os         import chdir
-        from os.path    import exists
-        from os.path    import isfile
-        from os         import getpid                                # To make more then 2 jobs
-                                                                     # running in one DIR
-        from my_io      import print_String
-        from my_io      import print_Error
+        from os import system, chdir
+        from os.path import exists, isfile
+        from my_io import print_Error
 
-        from re         import compile
-        pat1 = compile('--ntasks-per-node=(?P<npn>\d*)')
-
-        if getenv('IGOR_MODULES_PATH'):                              # STRING, private module DIR
-            self.ModuDir=getenv('IGOR_MODULES_PATH')
-        else:
-            print_Error(self.IOut,
-                'Error in getting grobal environment '+\
-                '\"$IGOR_MODULES_PATH\" which is the direction to private modules')
-        if cfg == None:
+        if cfg is None:
             cfg = 'scalapack.mpi'
+        if script is None:
+            script = 'aims_runscr'
+        if cmd is None:
+            cmd = 'sbatch'
         if not exists('%s' % self.Proj):
             print_Error(self.IOut,
-                    "Error :: No %s direction" %(self.Proj))
+                        "Error :: No %s direction" % (self.Proj))
         chdir(self.Proj)
         if isfile('RUNNING'):
             return False
-        elif isfile('%s.log' %self.Proj):
-            system('mv %s.log ../%s.log'
-                %(self.Proj, self.Proj))
+        elif isfile('%s.log' % self.Proj):
+            system('mv %s.log ../%s.log' % (self.Proj, self.Proj))
             chdir(self.WorkDir)
             return True
         else:
-            iof = open('%s/aims_runscr' %(self.ModuDir),'r')
+            iof = open('%s/%s' % (self.ModuDir, script), 'r')
             iFile1 = iof.read()
             iof.close()
-            #nprocpernode=npn/nthread
-            ntasks=nproc/nthread
-            if not ntasks*nthread==nproc: ntasks = ntasks+1
+            ntasks = nproc/nthread
+            if not ntasks*nthread == nproc:
+                ntasks = ntasks+1
             # evaluate how many nodes needed
-            nnode=ntasks/ntaskpernode
-            if not nnode*ntaskpernode==ntasks: nnode = nnode+1
-            iFile2 = iFile1.replace('<jobname>','job-%s' %self.Proj)
-            iFile1 = iFile2.replace('<version>',cfg)
-            iFile2 = iFile1.replace('<joblog>','%s.log' %self.Proj)
-            iFile1 = iFile2.replace('<nodes>','%i' %nnode)
-            iFile2 = iFile1.replace('<ntaskpernode>','%i' %ntaskpernode)
-            iFile1 = iFile2.replace('<nproc>','%i' %nproc)
-            iFile2 = iFile1.replace('<nthread>','%i' %nthread)
-            iFile1 = iFile2.replace('<ntasks>','%i' %ntasks)
-            #iFile1 = iFile2
-            iof = open('runscr','w')
+            nnode = ntasks/ntaskpernode
+            if not nnode*ntaskpernode == ntasks:
+                nnode = nnode+1
+            iFile2 = iFile1.replace('<jobname>', 'job-%s' % self.Proj)
+            iFile1 = iFile2.replace('<version>', cfg)
+            iFile2 = iFile1.replace('<joblog>', '%s.log' % self.Proj)
+            iFile1 = iFile2.replace('<nodes>', '%i' % nnode)
+            iFile2 = iFile1.replace('<ntaskpernode>', '%i' % ntaskpernode)
+            iFile1 = iFile2.replace('<nproc>', '%i' % nproc)
+            iFile2 = iFile1.replace('<nthread>', '%i' % nthread)
+            iFile1 = iFile2.replace('<ntasks>', '%i' % ntasks)
+            # iFile1 = iFile2
+            iof = open('runscr', 'w')
             iof.write(iFile1)
             iof.close()
-            jobId = system('sbatch runscr')
-            system('echo %s > %s' %(jobId, 'RUNNING'))
+            jobId = system('%s runscr' % cmd)
+            system('echo %s > %s' % (jobId, 'RUNNING'))
             chdir(self.WorkDir)
             return False
-    def get_Result(self,iop=0):
+
+    def get_Result(self, iop=0):
         '''Collect results'''
         import re
         import os
@@ -429,7 +420,7 @@ class AimsIO:
             lfs = lf.read()
         else:
             print_Error(self.IOut,'Error :: No %s.log in current direction' %self.Proj)
-        
+
         if iop==0:    #for scf energy
             p0 = re.compile('Self-consistency cycle converged.')                          #check whether SCF sucesses
             p0p = p0.search(lfs)

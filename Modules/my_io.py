@@ -1,333 +1,348 @@
 #!/bin/env python2
-#Module     :: my_io
-#Authors    :: Igor Ying Zhang and Xin Xu
-#Purpose    :: Private input and output formats
-#Version    :: v4.0(20120521)
-#Revised    :: 2012-05-21
-#NOTE       :: DEV for develop; DEB for debug.
-#History    :: v1.0(20090924) : Build personal-style output function: print_Error, print_String
-#                               print_List, and print_Matrix
-#              V2.0(20091009) : Creat new class "ConfigIO", which batch the group of jobs
-#                               through a config file.
-#              V2.1(20091011) : DEV1) Add two parameters "ProjDir" and "ProjCtrl" for the class
-#                                  "ConfigIO", where "ProjDir" is the running DIR of the project,
-#                                  and "ProjCtrl" control the batch manner.
-#                                  These two parameters should be specified following the label
-#                                  "__project__ ::" in the config input file.
-#                               DEV2) Add five math functions : my_Plus, my_Substract, my_Product,
-#                                  and my_Divide.
-#                                  In these functions, the general real result would be return, if
-#                                  plus, substract, product and divide operations are success.
-#                                  If not, functions would return a string of "NAN".
-#                               DEV3) Modify the class of "ConfigIO" to be able to continue batch
-#                                  when calculation fails during batching or statistic counting.
-#              V2.2(20091020) : DEV1) Add a list "PathList" to "ConfigIO", associated with one input
-#                                  group which is specified following the label "__macro_path__::"
-#                                  in the config input file.
-#                                  This is a list, of which elements are all dual-element tuple.
-#                                  In this tuple, the first element is <macro_path> name, and
-#                                  another one is the exact path relatively.
-#                               DEV2) Add one more print function "print_Matrix_headed",
-#                                  and corresponding "read_Matrix_headed" for matrix loading.
-#                               DEV3) Add one more print function "print_List_free".
-#                                  This is a print function, to print list by "Format" customized
-#                                  by users, which is exactly the reason why it names "free"
-#                               DEV4) Taking advantage of the new-added print function
-#                                  "print_List_free", ConfigIO.BatcList could be print more
-#                                  human-readable in the function of "ConfigIO.get_BatcList", and
-#                                  also ConfigIO.EngyList, ConfigIO.PolaList, ConfigIO.NMRList
-#                                  in the function of "ConfigIO.get_TrainSet"
-#                               DEV5) Due to the significant modification in the class of "DFTD",
-#                                  several changes are made in "ConfigIO.run_GauBatch"
-#              V2.3(20091106) : DEV1) Add geometry optimization into "ConfigIO" class
-#                               DEV2) Corresponding functions for bond, angel, and dihedral evalution
-#                                  are also added : my_bond, my_angle, and my_dihedral
-#              V2.4(20100321) : DEV1) Add one argument into the class "ConfigIO","ProjTool" which is
-#                                  used to determine the QC soft package employed for job batch.
-#                                  (Gaussian or QChem)
-#                               DEV2) Add the function "QcmIOCmd" into "ConfigIO", to collect the
-#                                  Q-Chem input (expecially for $rem group) in Batch Input.
-#                               DEV3) Add one more function "QcmBatch" into "ConfigIO" to control
-#                                  Batch running with Q-Chem
-#                               DEV4) Add two keys into the Dict of "ConfigIO.ResuDict", "PT21" and
-#                                  "PT22" which are corresponding to first-excitation contribution
-#                                  and second-exciation contibution in GLPT2 term
-#                               DEV5) "ConfigIO.GauIOCommand" is renamed as "ConfigIO.GauIOCmd", and
-#                                  "ConfigIO.BatcList" is renamed as "ConfigIO.Batch"
-#                               DEB6) Debug the error in printing the energy tranining set
-#                                  "ConfigIO.get_TrainSet"
-#                               DEB7) Debug the error in reading the energy tranining set when
-#                                  encounters blank line "ConfigIO.get_TrainSet"
-#              V3.0(20100705) : DEV1) Add seven functions into the class "ConfigIO" for "DFT_Fitting"
-#                                  They are: 1) get_OptComp; 2) get_OptInit; 3) get_OptFunc;
-#                                            4) get_OptAlgo; 5) get_OptResu; 6) run_OptCalc;
-#                                            7) run_Statistic
-#                               DEB2) Add the check procedure for duplicating redundant flags
-#                                  "ConfigIO.get_OptComp"
-#                               DEV3) Modify "ConfigIO.get_OptFunc" to surport existing modules and
-#                                  also the function of "update_qchem_xmp2" for xMP2 type optimization
-#                               DEV4) Add a new function into the class "ConfigIO" for "DFT_Fitting"
-#                                  : get_OptJob
-#                               DEB5) Remove the unrequired chk file after result collection.
-#                                  Changing code in "ConfigIO.run_GauBatch" for running energy
-#                                  collection
-#                               DEV6) Rename the late temp scratch as the current one, if there is
-#                                  only one existing scratch in "ProjDir" in "ConfigIO.QcmBatch"
-#                                  It is for "SCF_GUESS=read" utility in Q-Chem package.
-#                               DEB7) Turn on the function of "extraoverlay" in "ConfigIO.get_GauIOCmd".
-#                               DEB8) Additional stopgap about running Gaussian job because of G09
-#                                  being unable to handel "extraoverlay" correctly. "ConfigIO.run_GauBatch()"
-#              V3.1(20101017) : DEV1) Add seven functions into the class "ConfigIO" for "KMC":
-#                                  They are: 1) get_KMC_Environment; 2) get_KMC_Elements;
-#                                            3) get_KMC_Diffusions;  4) get_KMC_Desorptions;
-#                                            5) get_KMC_Reactions;   6) get_KMC_Adsorptions;
-#                                            7) calc_KMC_Adso_Rate;  8) calc_KMC_Deso_Rate;
-#                                            9) calc_KMC_Diff_Rate; 10) calc_KMC_Reac_Rate.
-#              V3.2(20101228) : DEV1) Add two functions into the class "ConfigIO" for "CP2K" batching:
-#                                  They are: 1) get_CP2IOCmd();      2) run_CP2Batch()
-#              V3.3(20110302) : DEV1) Add several functions into the class "ConfigIO" for "KMC"
-#              V4.0(20120521) : DEV1) ADD two functions into the class "ConfigIO" for Aims calculation
-#                               DEV2) ADD a flag "__aims_basis__" into the class "ConfigIO" for Aims basis set direction
-#              V4.1(20130426) : DEV1) ADD a flag "__aims_special_procs__" into the class "ConfigIO"
-#                                  specifing the CPU number for special Aims jobs
+# Module     :: my_io
+# Authors    :: Igor Ying Zhang and Xin Xu
+# Purpose    :: Private input and output formats
+# Version    :: v4.0(20120521)
+# Revised    :: 2012-05-21
+# NOTE       :: DEV for develop; DEB for debug.
+# History    ::
+#  v1.0(20090924) :
+#     Build personal-style output function: print_Error,
+#       print_String, print_List, and print_Matrix
+#  V2.0(20091009) :
+#     Creat new class "ConfigIO", which batch the group of jobs
+#       through a config file.
+#  V2.1(20091011) :
+#     DEV1) Add two parameters "ProjDir" and "ProjCtrl" for the class
+#        "ConfigIO", where "ProjDir" is the running DIR of the project,
+#        and "ProjCtrl" control the batch manner.
+#        These two parameters should be specified following the label
+#        "__project__ ::" in the config input file.
+#     DEV2) Add five math functions : my_Plus, my_Substract, my_Product,
+#        and my_Divide.
+#        In these functions, the general real result would be return, if
+#        plus, substract, product and divide operations are success.
+#        If not, functions would return a string of "NAN".
+#     DEV3) Modify the class of "ConfigIO" to be able to continue batch
+#        when calculation fails during batching or statistic counting.
+#  V2.2(20091020) :
+#     DEV1) Add a list "PathList" to "ConfigIO", associated with one input
+#        group which is specified following the label "__macro_path__::"
+#        in the config input file.
+#        This is a list, of which elements are all dual-element tuple.
+#        In this tuple, the first element is <macro_path> name, and
+#        another one is the exact path relatively.
+#     DEV2) Add one more print function "print_Matrix_headed",
+#        and corresponding "read_Matrix_headed" for matrix loading.
+#     DEV3) Add one more print function "print_List_free".
+#        This is a print function, to print list by "Format" customized
+#        by users, which is exactly the reason why it names "free"
+#     DEV4) Taking advantage of the new-added print function
+#        "print_List_free", ConfigIO.BatcList could be print more
+#        human-readable in the function of "ConfigIO.get_BatcList", and
+#        also ConfigIO.EngyList, ConfigIO.PolaList, ConfigIO.NMRList
+#        in the function of "ConfigIO.get_TrainSet"
+#     DEV5) Due to the significant modification in the class of "DFTD",
+#        several changes are made in "ConfigIO.run_GauBatch"
+#  V2.3(20091106) :
+#     DEV1) Add geometry optimization into "ConfigIO" class
+#     DEV2) Corresponding functions for bond, angel, and dihedral evalution
+#        are also added : my_bond, my_angle, and my_dihedral
+#  V2.4(20100321) :
+#     DEV1) Add one argument into the class "ConfigIO","ProjTool" which is
+#        used to determine the QC soft package employed for job batch.
+#        (Gaussian or QChem)
+#     DEV2) Add the function "QcmIOCmd" into "ConfigIO", to collect the
+#        Q-Chem input (expecially for $rem group) in Batch Input.
+#     DEV3) Add one more function "QcmBatch" into "ConfigIO" to control
+#        Batch running with Q-Chem
+#     DEV4) Add two keys into the Dict of "ConfigIO.ResuDict", "PT21" and
+#        "PT22" which are corresponding to first-excitation contribution
+#        and second-exciation contibution in GLPT2 term
+#     DEV5) "ConfigIO.GauIOCommand" is renamed as "ConfigIO.GauIOCmd", and
+#        "ConfigIO.BatcList" is renamed as "ConfigIO.Batch"
+#     DEB6) Debug the error in printing the energy tranining set
+#        "ConfigIO.get_TrainSet"
+#     DEB7) Debug the error in reading the energy tranining set when
+#        encounters blank line "ConfigIO.get_TrainSet"
+#  V3.0(20100705) :
+#     DEV1) Add seven functions into the class "ConfigIO" for "DFT_Fitting"
+#        They are: 1) get_OptComp; 2) get_OptInit; 3) get_OptFunc;
+#                  4) get_OptAlgo; 5) get_OptResu; 6) run_OptCalc;
+#                  7) run_Statistic
+#     DEB2) Add the check procedure for duplicating redundant flags
+#        "ConfigIO.get_OptComp"
+#     DEV3) Modify "ConfigIO.get_OptFunc" to surport existing modules and
+#        also the function of "update_qchem_xmp2" for xMP2 type optimization
+#     DEV4) Add a new function into the class "ConfigIO" for "DFT_Fitting"
+#        : get_OptJob
+#     DEB5) Remove the unrequired chk file after result collection.
+#        Changing code in "ConfigIO.run_GauBatch" for running energy
+#        collection
+#     DEV6) Rename the late temp scratch as the current one, if there is
+#        only one existing scratch in "ProjDir" in "ConfigIO.QcmBatch"
+#        It is for "SCF_GUESS=read" utility in Q-Chem package.
+#     DEB7) Turn on the function of "extraoverlay" in "ConfigIO.get_GauIOCmd".
+#     DEB8) Additional stopgap about running Gaussian job because of G09
+#        being unable to handel "extraoverlay" correctly.
+#        "ConfigIO.run_GauBatch()"
+#  V3.1(20101017) :
+#     DEV1) Add seven functions into the class "ConfigIO" for "KMC":
+#        They are: 1) get_KMC_Environment; 2) get_KMC_Elements;
+#                  3) get_KMC_Diffusions;  4) get_KMC_Desorptions;
+#                  5) get_KMC_Reactions;   6) get_KMC_Adsorptions;
+#                  7) calc_KMC_Adso_Rate;  8) calc_KMC_Deso_Rate;
+#                  9) calc_KMC_Diff_Rate; 10) calc_KMC_Reac_Rate.
+#  V3.2(20101228) :
+#     DEV1) Add two functions into the class "ConfigIO" for "CP2K" batching:
+#        They are: 1) get_CP2IOCmd();      2) run_CP2Batch()
+#  V3.3(20110302) :
+#     DEV1) Add several functions into the class "ConfigIO" for "KMC"
+#  V4.0(20120521) :
+#     DEV1) ADD two functions into the class "ConfigIO" for Aims calculation
+#     DEV2) ADD a flag "__aims_basis__" into the class "ConfigIO" for
+#       Aims basis set direction
+#  V4.1(20130426) :
+#     DEV1) ADD a flag "__aims_special_procs__" into the class "ConfigIO"
+#       specifing the CPU number for special Aims jobs
 
-def print_Error(IOut,Info):
-    '''\
-    Report the error information "Info", and abort the process\n\
-    INPUT ARGUMENTS    ::\n\
-    IOut                : FLOW of output file\n\
-    Info                : STRING of error information to print\
-    '''
+
+def print_Error(IOut, Info):
+    '''Report the error information "Info", and abort the process'''
+    '''INPUT ARGUMENTS    ::'''
+    '''IOut                : FLOW of output file'''
+    '''Info                : STRING of error information to print'''
     from sys import exit
     IOut.write('*****\n*%s\n*****\n' % Info)
     print(Info)
     exit()
     return
-def print_String(IOut,PString,IPrint,Info=''):
-    '''\
-    To print the string "PString"\n\
-      INPUT ARGUMENTS    ::\n\
-    IOut                : FLOW of output file\n\
-    PString             : SRING to print\n\
-    IPrint              : INTEGER to control the print formula\n\
-                           0    :: Bypass the print\n\
-                           1    :: Print both PString and Info\n\
-                           2    :: Print in highline style\n\
-                           3    :: Print PString and Info,\n\
-                                   without prompt "=>" before PString\n\
-                           4    :: Print PString in primitive way\n\
-    Info                : STRING of info. of what to print'''
+
+
+def print_String(IOut, PString, IPrint, Info=''):
+    '''To print the string "PString"'''
+    '''  INPUT ARGUMENTS    ::'''
+    '''IOut                : FLOW of output file'''
+    '''PString             : SRING to print'''
+    '''IPrint              : INTEGER to control the print formula'''
+    '''                      0    :: Bypass the print'''
+    '''                      1    :: Print both PString and Info'''
+    '''                      2    :: Print in highline style'''
+    '''                      3    :: Print PString and Info,'''
+    '''                              without prompt "=>" before PString'''
+    '''                      4    :: Print PString in primitive way'''
+    '''Info                : STRING of info. of what to print'''
     NT = 80
     NN = NT - 2
-    IL = len(Info)
     PL = len(PString)
 
-    if IPrint==0:                                                    # Bypass the print
+    if IPrint == 0:   # Bypass the print
         pass
-    elif IPrint==1:                                                  # Print both PString and Info
+    elif IPrint == 1:  # Print both PString and Info
         NL = int(PL / NN)
-        if PL==NL*NN:
+        if PL == NL*NN:
             NL = NL - 1
-        if NL>0:
-            BlankFlag=True
-            BlankCount=0
+        if NL > 0:
+            BlankFlag = True
+            BlankCount = 0
             for i in range(len(PString)):
-                if PString[i]==' ':
-                    BlankCount+=1
-            if BlankCount<NL:
-                BlankFlag= False
-            j=0
-            k=j+NN
+                if PString[i] == ' ':
+                    BlankCount += 1
+            if BlankCount < NL:
+                BlankFlag = False
+            j = 0
+            k = j+NN
             for i in range(NL):
-                while BlankFlag and PString[k-1]!=' ':
+                while BlankFlag and PString[k-1] != ' ':
                     k = k-1
-                StrSplit= [PString[0:k],PString[k:]]
+                StrSplit = [PString[0:k], PString[k:]]
                 PString = '\n  '.join(StrSplit)
                 j = k+3
                 k = j+NN
-        if Info=='':
+        if Info == '':
             IOut.write('=>%s\n' % PString)
         else:
-            IOut.write('=>%s\n  %s\n' % (Info,PString))
-    elif IPrint==2:                                                  # Print in highline style
-        NL=PL/NN
-        if PL==NL*NN:
-            NL=NL-1
-        if NL>0:
-            BlankFlag=True
-            BlankCount=0
+            IOut.write('=>%s\n  %s\n' % (Info, PString))
+    elif IPrint == 2:   # Print in highline style
+        NL = PL/NN
+        if PL == NL*NN:
+            NL = NL-1
+        if NL > 0:
+            BlankFlag = True
+            BlankCount = 0
             for i in range(len(PString)):
-                if PString[i]==' ':
-                    BlankCount+=1
-            if BlankCount<NL:
-                BlankFlag=False
-            j=0
-            k=j+NN
+                if PString[i] == ' ':
+                    BlankCount += 1
+            if BlankCount < NL:
+                BlankFlag = False
+            j = 0
+            k = j+NN
             for i in range(NL):
-                while BlankFlag and PString[k-1]!=' ':
-                    k=k-1
-                StrSplit=[PString[0:k],PString[k:]]
-                PString='\n  '.join(StrSplit)
-                j=k+3
-                k=j+NN
-        if Info!='':
-            IOut.write('=>%s\n==%s==\n  %s\n==%s==\n'
-                % (Info,'-'*(NN-2),PString,'-'*(NN-2)))
-        else:
-            IOut.write('==%s==\n  %s\n==%s==\n'
-                % ('-'*(NN-2),PString,'-'*(NN-2)))
-    elif IPrint==3:                                                  # Print string without prompt
-        NL = PL / NN                                            # of "=>"
-        if PL==NL*NN:
-            NL = NL - 1
-        if NL>0:
-            BlankFlag=True
-            BlankCount=0
-            for i in range(len(PString)):
-                if PString[i]==' ':
-                    BlankCount+=1
-            if BlankCount<NL:
-                BlankFlag= False
-            j=0
-            k=j+NN
-            for i in range(NL):
-                while BlankFlag and PString[k-1]!=' ':
+                while BlankFlag and PString[k-1] != ' ':
                     k = k-1
-                StrSplit= [PString[0:k],PString[k:]]
+                StrSplit = [PString[0:k], PString[k:]]
                 PString = '\n  '.join(StrSplit)
                 j = k+3
                 k = j+NN
-        if Info=='':
+        if Info != '':
+            IOut.write('=>%s\n==%s==\n  %s\n==%s==\n'
+                       % (Info, '-'*(NN-2), PString, '-'*(NN-2)))
+        else:
+            IOut.write('==%s==\n  %s\n==%s==\n'
+                       % ('-'*(NN-2), PString, '-'*(NN-2)))
+    elif IPrint == 3:    # Print string without prompt
+        NL = PL / NN     # of "=>"
+        if PL == NL*NN:
+            NL = NL - 1
+        if NL > 0:
+            BlankFlag = True
+            BlankCount = 0
+            for i in range(len(PString)):
+                if PString[i] == ' ':
+                    BlankCount += 1
+            if BlankCount < NL:
+                BlankFlag = False
+            j = 0
+            k = j+NN
+            for i in range(NL):
+                while BlankFlag and PString[k-1] != ' ':
+                    k = k-1
+                StrSplit = [PString[0:k], PString[k:]]
+                PString = '\n  '.join(StrSplit)
+                j = k+3
+                k = j+NN
+        if Info == '':
             IOut.write('  %s\n' % PString)
         else:
-            IOut.write('=>%s\n  %s\n' % (Info,PString))
-    elif IPrint==4:
-        IOut.write('%s\n' %PString)
+            IOut.write('=>%s\n  %s\n' % (Info, PString))
+    elif IPrint == 4:
+        IOut.write('%s\n' % PString)
     else:
-        print_Error(IOut,\
-           'Error :: Invalid IPrint for print_String\n')
+        print_Error(IOut, 'Error :: Invalid IPrint for print_String\n')
     return
-def print_List(IOut,PList,IPrint,Info=''):
-    '''\
- To print the list "PList"\n\
-   INPUT ARGUMENTS    ::\n\
- IOut                : FLOW of output file\n\
- PList               : LIST to print\n\
- IPrint              : INTEGER to control the print formula\n\
-                       0 :: Bypass print\n\
-                       1 :: General cases\n\
-                       2 :: Print PList separately in different lines formated in "  %s"\n\
-                       3 :: Integrating the whole PList to be printed in single line\n\
-                       4 :: Print each five numerical elements in one line formated in "%16.4E"\n\
-                       5 :: Similar with 4, but suit for interface of rGO package\n\
-                       6 :: Print list without info. and prompt "=>"\n\
- Info                : STRING of info. which to be printed before PList'''
+
+
+def print_List(IOut, PList, IPrint, Info=''):
+    '''To print the list "PList"'''
+    '''  INPUT ARGUMENTS    ::'''
+    '''    IOut   : FLOW of output file'''
+    '''    PList  : LIST to print'''
+    '''    IPrint : INTEGER to control the print formula'''
+    '''             0 :: Bypass print'''
+    '''             1 :: General cases'''
+    '''             2 :: Print PList separately in different lines'''
+    '''                  formated in "  %s"'''
+    '''             3 :: Integrating the whole PList to be printed '''
+    '''                  in a single line'''
+    '''             4 :: Print each five numerical elements in one line '''
+    '''                  formated in "%16.4E"'''
+    '''             5 :: Similar with 4, but suit for the IO interface of '''
+    '''                  the rGO package'''
+    '''             6 :: Print list without info. and prompt "=>"'''
+    '''    Info   : STRING of info. which to be printed before PList'''
     NT = 80
     NN = NT - 2
-    IL = len(Info)
-    if   IPrint==0:                                                  # Bypass the print
+    if IPrint == 0:  # Bypass the print
         return
-    elif IPrint==1:                                                  # Suit for general cases
-        if Info=='':
-            PString = '=>%s\n' %PList
+    elif IPrint == 1:  # Suit for general cases
+        if Info == '':
+            PString = '=>%s\n' % PList
         else:
-            PString = '=>%s\n%s\n' % (Info,PList)
-    elif IPrint==2:                                                  # Suit for "MachineList",
-        TmpList=[]                                                   # "ExOvList","RestList" and
-        for i in PList:                                              # text printing
-            if i[-1:]=='\n':
-                TmpList.append('  %s' %i)
+            PString = '=>%s\n%s\n' % (Info, PList)
+    elif IPrint == 2:    # Suit for "MachineList",
+        TmpList = []     # "ExOvList","RestList" and
+        for i in PList:  # text printing
+            if i[-1:] == '\n':
+                TmpList.append('  %s' % i)
             else:
-                TmpList.append('  %s\n' %i)
-        TmpPrint=''.join(TmpList)
-        if Info=='':
-            PString = '=>\n%s' %TmpPrint
+                TmpList.append('  %s\n' % i)
+        TmpPrint = ''.join(TmpList)
+        if Info == '':
+            PString = '=>\n%s' % TmpPrint
         else:
-            PString = '=>%s\n%s' % (Info,TmpPrint)
-    elif IPrint==3:                                                  # Suit for "OptionList",...
+            PString = '=>%s\n%s' % (Info, TmpPrint)
+    elif IPrint == 3:     # Suit for "OptionList",...
         try:
             TmpPrint = ' '.join(PList)
         except TypeError:
             TmpList = []
             for iterm in PList:
-                TmpList.append('%s' %iterm)
+                TmpList.append('%s' % iterm)
             TmpPrint = ' '.join(TmpList)
         PL = len(TmpPrint)
         NL = PL/NN
-        if NL*NN==PL:
+        if NL*NN == PL:
             NL = NL-1
-        if NL>0:
+        if NL > 0:
             j = 0
             k = j+NN
             for i in range(NL):
-                while TmpPrint[k-1]!=' ':
+                while TmpPrint[k-1] != ' ':
                     k = k-1
-                TmpPrint= '\n  '.join([TmpPrint[0:k],TmpPrint[k:]])
-                j=k+3
-                k=j+NN
-        if Info=='':
-            PString = '=>%s\n' %TmpPrint
+                TmpPrint = '\n  '.join([TmpPrint[0:k], TmpPrint[k:]])
+                j = k+3
+                k = j+NN
+        if Info == '':
+            PString = '=>%s\n' % TmpPrint
         else:
-            PString = '=>%s\n  %s\n' % (Info,TmpPrint)
-    elif IPrint==4:                                                  # Suit for numerical data
+            PString = '=>%s\n  %s\n' % (Info, TmpPrint)
+    elif IPrint == 4:     # Suit for numerical data
         NTT = len(PList)
         Index = 0
         OutPrint = []
-        while Index<NTT:
-             if ((Index+1)%5) ==0 or Index+1==NTT:
-                 OutPrint.append('%16.8E\n' % PList[Index])
-             else:
-                 OutPrint.append('%16.8E' % PList[Index])
-             Index=Index+1
-        TmpPrint=''.join(OutPrint)
-        if Info=='':
+        while Index < NTT:
+            if ((Index+1) % 5) == 0 or Index+1 == NTT:
+                OutPrint.append('%16.8E\n' % PList[Index])
+            else:
+                OutPrint.append('%16.8E' % PList[Index])
+            Index = Index+1
+        TmpPrint = ''.join(OutPrint)
+        if Info == '':
             PString = '=>\n%s' % TmpPrint
         else:
-            PString = '=>%s\n%s' % (Info,TmpPrint)
-    elif IPrint==5:                                                  # Suit for interface of rGO
+            PString = '=>%s\n%s' % (Info, TmpPrint)
+    elif IPrint == 5:     # Suit for interface of rGO
         NTT = len(PList)
         Index = 0
         OutPrint = []
-        while Index<NTT:
-             if ((Index+1)%5) ==0 or Index+1==NTT:
-                 OutPrint.append('%16.8E\n' % PList[Index])
-             else:
-                 OutPrint.append('%16.8E' % PList[Index])
-             Index=Index+1
-        TmpPrint=''.join(OutPrint)
-        PString = '%s\n%s' % (Info,TmpPrint)
-    elif IPrint==6:                                                  # Just print without
-                                                                     #  info and prompt
+        while Index < NTT:
+            if ((Index+1) % 5) == 0 or Index+1 == NTT:
+                OutPrint.append('%16.8E\n' % PList[Index])
+            else:
+                OutPrint.append('%16.8E' % PList[Index])
+            Index = Index+1
+        TmpPrint = ''.join(OutPrint)
+        PString = '%s\n%s' % (Info, TmpPrint)
+    elif IPrint == 6:    # Just print without info and prompt
         NTT = len(PList)
         Index = 0
         OutPrint = []
-        while Index<NTT:
-             if ((Index+1)%5) == 0 or Index+1==NTT:
-                 OutPrint.append('%16.8E\n' % PList[Index])
-             else:
-                 OutPrint.append('%16.8E' % PList[Index])
-             Index = Index + 1
-        PString =''.join(OutPrint)
+        while Index < NTT:
+            if ((Index+1) % 5) == 0 or Index+1 == NTT:
+                OutPrint.append('%16.8E\n' % PList[Index])
+            else:
+                OutPrint.append('%16.8E' % PList[Index])
+            Index = Index + 1
+        PString = ''.join(OutPrint)
     else:
-        print_Error(iout,
-            'Error :: Invalid IPrint for print_List\n')
+        print_Error(IOut, 'Error :: Invalid IPrint for print_List\n')
 
-    IOut.write(PString)                                              # Print result
+    IOut.write(PString)  # Print result
     return
-def print_List_free(IOut,PList,IPrint,FormList,Info=''):
-    '''\
-    Print PList in "FormList" format customized by user.\n\
-    IPrint = 0  :: default, the same as 1;\n\
- = 1  :: to print all the list in the same FormList[0];\n\
- = 2  :: to treat the first element of list as the head,\n\
-                    then FormList[1] is utilized to print the head.\
-    '''
+
+
+def print_List_free(IOut, PList, IPrint, FormList, Info=''):
+    '''Print PList in "FormList" format customized by user.'''
+    '''IPrint = 0  :: default, the same as 1;'''
+    '''       = 1  :: to print all the list in the same FormList[0];'''
+    '''       = 2  :: to treat the first element of list as the head,'''
+    '''                then FormList[1] is utilized to print the head.'''
     if len(Info) != 0:
         PString = '=>%s :\n' % Info
     else:
         PString = ''
     for i in range(len(FormList)):
-        if FormList[i][-2:]=='\n':
+        if FormList[i][-2:] == '\n':
             FormList[i] = FormList[i][:-2]
     PString = PString + '==' + '-'*76 + '==' + '\n'
     if IPrint == 0 or IPrint == 1:
@@ -337,12 +352,12 @@ def print_List_free(IOut,PList,IPrint,FormList,Info=''):
             except TypeError:
                 try:
                     PString = PString + FormList[0] % tuple(item) + '\n'
-                except:
+                except ValueError:
                     PString = PString + repr(item) + '\n'
     elif IPrint == 2:
         try:
             PString = PString + FormList[1] % tuple(PList[0]) + '\n'
-        except:
+        except ValueError:
             PString += repr(PList[0]) + '\n'
         PString += '-'*80 + '\n'
         for item in PList[1:]:
@@ -354,24 +369,22 @@ def print_List_free(IOut,PList,IPrint,FormList,Info=''):
                 except TypeError:
                     try:
                         PString += FormList[1] % tuple(item) + '\n'
-                    except:
+                    except ValueError:
                         PString += repr(item) + '\n'
     PString += '==' + '-'*76 + '==' + '\n'
     IOut.write(PString)
     return
-def print_SList(IOut,SList,Info=''):
-    '''\
-    Calculate statistic result based on SList, and print it.\n\
-    AD, MAD, RMS, and correspond weighted ones are obtained here.\n\
-    SList[item]=[MoleName, RefData, CalcData, Deviation, Weight]\
-    '''
-    from math    import sqrt
-    from math    import pow
-    if len(Info)>0:
+
+
+def print_SList(IOut, SList, Info=''):
+    '''Calculate statistic result based on SList, and print it.'''
+    '''AD, MAD, RMS, and correspond weighted ones are obtained here.'''
+    '''SList[item]=[MoleName, RefData, CalcData, Deviation, Weight]'''
+    from math import sqrt, pow
+    if len(Info) > 0:
         IOut.write('=>%s\n' % Info)
     IOut.write('==%s==\n' % ('-'*76))
-    TmpString =\
-        ['Name','Reference','Calc. Result','Deviation','Weight']
+    TmpString = ['Name', 'Reference', 'Calc. Result', 'Deviation', 'Weight']
     IOut.write('%28s%16s%16s%13s%7s\n' % tuple(TmpString))
     IOut.write('%s\n' % ('-'*80))
     AD = 0.0
@@ -387,33 +400,33 @@ def print_SList(IOut,SList,Info=''):
             ii = item[3]
             jj = item[4]
 
-            AD = AD   + ii
-            wAD = wAD  + ii*jj
+            AD = AD + ii
+            wAD = wAD + ii*jj
 
-            MAD = MAD  + abs(ii)
+            MAD = MAD + abs(ii)
             wMAD = wMAD + abs(ii*jj)
 
-            RMS = RMS  + pow(ii,2.0)
-            wRMS = wRMS + pow(ii,2.0)*jj
+            RMS = RMS + pow(ii, 2.0)
+            wRMS = wRMS + pow(ii, 2.0)*jj
 
             NumData = NumData + 1
         except TypeError:
             IOut.write('%28s%16.8f%16s%13s%7.2f\n' % tuple(item))
 
     IOut.write('%s\n' % ('-'*80))
-    if NumData>0:
-        AD = AD          / NumData
-        wAD = wAD         / NumData
-        MAD = MAD         / NumData
-        wMAD = wMAD        / NumData
-        RMS = sqrt(RMS)   / NumData
-        wRMS = sqrt(wRMS)  / NumData
-        IOut.write('%10s =   %16.8f\n' % (  'AD',  AD))
-        IOut.write('%10s =   %16.8f\n' % ( 'MAD', MAD))
-        IOut.write('%10s =   %16.8f\n' % ( 'RMS', RMS))
-        IOut.write('%10s =   %16.8f\n' % ( 'wAD', wAD))
-        IOut.write('%10s =   %16.8f\n' % ('wMAD',wMAD))
-        IOut.write('%10s =   %16.8f\n' % ('wRMS',wRMS))
+    if NumData > 0:
+        AD = AD / NumData
+        wAD = wAD / NumData
+        MAD = MAD / NumData
+        wMAD = wMAD / NumData
+        RMS = sqrt(RMS) / NumData
+        wRMS = sqrt(wRMS) / NumData
+        IOut.write('%10s =   %16.8f\n' % ('AD', AD))
+        IOut.write('%10s =   %16.8f\n' % ('MAD', MAD))
+        IOut.write('%10s =   %16.8f\n' % ('RMS', RMS))
+        IOut.write('%10s =   %16.8f\n' % ('wAD', wAD))
+        IOut.write('%10s =   %16.8f\n' % ('wMAD', wMAD))
+        IOut.write('%10s =   %16.8f\n' % ('wRMS', wRMS))
     else:
         AD = 'NAN'
         wAD = 'NAN'
@@ -421,64 +434,61 @@ def print_SList(IOut,SList,Info=''):
         wMAD = 'NAN'
         RMS = 'NAN'
         wRMS = 'NAN'
-        IOut.write('%10s =   %16s\n' % (  'AD',  AD))
-        IOut.write('%10s =   %16s\n' % ( 'MAD', MAD))
-        IOut.write('%10s =   %16s\n' % ( 'RMS', RMS))
-        IOut.write('%10s =   %16s\n' % ( 'wAD', wAD))
-        IOut.write('%10s =   %16s\n' % ('wMAD',wMAD))
-        IOut.write('%10s =   %16s\n' % ('wRMS',wRMS))
+        IOut.write('%10s =   %16s\n' % ('AD', AD))
+        IOut.write('%10s =   %16s\n' % ('MAD', MAD))
+        IOut.write('%10s =   %16s\n' % ('RMS', RMS))
+        IOut.write('%10s =   %16s\n' % ('wAD', wAD))
+        IOut.write('%10s =   %16s\n' % ('wMAD', wMAD))
+        IOut.write('%10s =   %16s\n' % ('wRMS', wRMS))
 
     IOut.write('==%s==\n' % ('-'*76))
-    return (AD,MAD,RMS,wAD,wMAD,wRMS)
-def print_Matrix_numpy(IOut,PMatrix,IPrint,Info=''):
-    '''\
-    Print Matrix\
-    '''
+    return (AD, MAD, RMS, wAD, wMAD, wRMS)
+
+
+def print_Matrix_numpy(IOut, PMatrix, IPrint, Info=''):
+    '''Print Matrix'''
     from numpy import array
-    NT = 80
-    NN = NT-2*2
-    IL = len(Info)
 
     len1, len2 = PMatrix.shape
-    if len1==len2:
+    if len1 == len2:
         Length = len1
     else:
-        print_Error(IOut,
-            'Error :: only square matrix could be printed'+\
-            ' at \"print_Matrix\"')
+        tmpString = 'Error :: only square matrix could be printed' +\
+            ' at \"print_Matrix\"'
+        print_Error(IOut, tmpString)
     TmpMat = array(PMatrix)
     NumLine = int(Length/5)
     OutPrint = []
-    if (Length%5) != 0:
-      NumLine    += 1
+    if (Length % 5) != 0:
+        NumLine += 1
     NumStart = 0
     for i in range(NumLine):
-        TmpString='     %s\n' % (5*'%15d'
-            % tuple(range(NumStart,NumStart+5)))
+        TmpString = '     %s\n' % (
+            5*'%15d' % tuple(range(NumStart, NumStart+5)))
         OutPrint.append('%s' % TmpString)
-        for j in srange(NumStart,Length):
-            if j-NumStart<5:
-                TmpString = '%5d%s\n'\
-                    %(j,(j-NumStart+1)*'%15.6E'\
-                    % tuple(TmpMat[j,NumStart:j+1]))
+        for j in range(NumStart, Length):
+            if j-NumStart < 5:
+                TmpString = '%5d%s\n' % (
+                    j, (j-NumStart+1)*'%15.6E' % tuple(
+                        TmpMat[j, NumStart:j+1]))
                 OutPrint.append('%s' % TmpString)
             else:
-                TmpString = '%5d%s\n'\
-                    %(j,5*'%15.6E'\
-                    % tuple(TmpMat[j,NumStart:NumStart+5]))
+                TmpString = '%5d%s\n' % (
+                    j, 5*'%15.6E' % tuple(
+                        TmpMat[j, NumStart:NumStart+5]))
                 OutPrint.append('%s' % TmpString)
-        NumStart+= 5
+        NumStart += 5
     TmpPrint = ''.join(OutPrint)
-    if Info=='':
+    if Info == '':
         PrintString = '=>\n%s' % TmpPrint
     else:
-        PrintString = '=>%s\n%s' % (Info,TmpPrint)
+        PrintString = '=>%s\n%s' % (Info, TmpPrint)
     IOut.write('%s' % PrintString)
     return
-def print_Matrix_headed(IOut,PMatrix,Info=''):
-    '''\
-    Print PMatrix each five columns per line\
-    '''
+
+
+def print_Matrix_headed(IOut, PMatrix, Info=''):
+    '''Print PMatrix each five columns per line'''
     form1 = '=>%14s%16s%16s%16s%16s\n'
     form2 = '%16.8f%16.8f%16.8f%16.8f%16.8f\n'
     NumRow = len(PMatrix[0])
@@ -508,28 +518,29 @@ def print_Matrix_headed(IOut,PMatrix,Info=''):
                 IOut.write(form2 % tuple(item[start:end]))
             except TypeError:
                 IOut.write(form1 % tuple(item[start:end]))
-    if NumRest!= 0:
+    if NumRest != 0:
         start = NumLine*5
         try:
             IOut.write(form4 % tuple(item[start:]))
         except TypeError:
             IOut.write(form3 % tuple(item[start:]))
     return
-def read_Matrix_headed(IOut,FileName,Info=''):
-    '''\
-    Loading the matrix from "FileName" which is stored each five columns per line\n\
-    The first line of matrix is a list of heads for each columns.\n\
-    The rest should be the data in numerical real format.\n\
-    If turned on, "Info" could be the label standing for the start of Matrix.\n\
-    Return this matrix and also the matrix length (PMatrix, Index).\
-    '''
+
+
+def read_Matrix_headed(IOut, FileName, Info=''):
+    '''Loading the formated matrix from the file named "FileName"'''
+    '''The first line of matrix is a list of heads for each columns.'''
+    '''The rest should be the data in numerical real format.'''
+    '''Optional: "Info" could be the label standing for the start of Matrix.'''
+    '''Return this matrix and also the matrix length (PMatrix, Index).'''
     from os.path import isfile
-    from re      import compile
+    from re import compile
     if not isfile(FileName):
-        print_Error(IOut,
-            'Error occurs :: the file of "%s" doesn\'t exist' % FileName)
+        tmpString = 'Error occurs :: the file of "%s" doesn\'t exist' \
+            % FileName
+        print_Error(IOut, tmpString)
     else:
-        rf = file(FileName,'r')
+        rf = file(FileName, 'r')
     if len(Info) != 0:
         p1 = compile(Info)
         TmpString = rf.read().strip()
@@ -549,130 +560,129 @@ def read_Matrix_headed(IOut,FileName,Info=''):
     for line in TmpList:
         item = [x.strip() for x in line.split()]
         rep = p1.match(item[0])
-        if len(item)==5 and rep:
+        if len(item) == 5 and rep:
             item[0] = item[0][2:]
             Index = 0
             try:
                 PMatrix[Index].extend(item)
-                Index   += 1
+                Index += 1
             except IndexError:
                 PMatrix.append(item)
-                Index   += 1
-        elif len(item)==6 and rep:
+                Index += 1
+        elif len(item) == 6 and rep:
             itemB = [x.strip() for x in item[1:]]
             Index = 0
             try:
                 PMatrix[Index].extend(itemB)
-                Index   += 1
+                Index += 1
             except IndexError:
                 PMatrix.append(itemB)
-                Index   += 1
-        elif len(item)==5 and not rep:
+                Index += 1
+        elif len(item) == 5 and not rep:
             try:
                 PMatrix[Index].extend([float(x) for x in item])
-                Index   += 1
+                Index += 1
             except IndexError:
                 PMatrix.append([float(x) for x in item])
-                Index   += 1
+                Index += 1
             except ValueError:
-                print_Error(IOut,
-                    'Error occures in converting string to float'+\
-                    ' "read_Matrix_headed"\n'+
-                    '%s' % item)
-    return (PMatrix,Index)
-def my_plus(a1,a2):
-    '''\
-    if valid :a = a1 + a2; else return a = "NAN"\
-    '''
+                tmpString = 'Error occures in converting string to float' +\
+                    ' "read_Matrix_headed"\n' + '%s' % item
+                print_Error(IOut, tmpString)
+    return (PMatrix, Index)
+
+
+def my_plus(a1, a2):
+    '''if valid :a = a1 + a2; else return a = "NAN"'''
     try:
         a = a1 + a2
     except TypeError:
         a = 'NAN'
     return a
-def my_substract(a1,a2):
-    '''\
-    if valid :a = a1 - a2; else return a = "NAN"\
-    '''
+
+
+def my_substract(a1, a2):
+    '''if valid :a = a1 - a2; else return a = "NAN"'''
     try:
         a = a1 - a2
     except TypeError:
         a = 'NAN'
     return a
-def my_product(a1,a2):
-    '''\
-    if valid :a = a1 * a2; else return a = "NAN"\
-    '''
+
+
+def my_product(a1, a2):
+    '''if valid :a = a1 * a2; else return a = "NAN"'''
     try:
         a = a1 * a2
     except TypeError:
         a = 'NAN'
     return a
-def my_divide(a1,a2):
-    '''\
-    if valid :a = a1 / a2; else return a = "NAN"\
-    '''
+
+
+def my_divide(a1, a2):
+    '''if valid :a = a1 / a2; else return a = "NAN"'''
     try:
         a = a1 / a2
     except TypeError:
         a = 'NAN'
     return a
-def my_vect_plus(vect1,vect2):
-    '''\
-    calculate vector addition\
-    '''
-    return [i[0]+i[1] for i in zip(vect1,vect2)]
-def my_vect_substract(vect1,vect2):
-    '''\
-    calculate vector substraction\
-    '''
-    return [i[0]-i[1] for i in zip(vect1,vect2)]
-def my_vect_product(vector,scale):
-    '''\
-    multiple vector by scale\
-    '''
+
+
+def my_vect_plus(vect1, vect2):
+    '''calculate vector addition'''
+    return [i[0]+i[1] for i in zip(vect1, vect2)]
+
+
+def my_vect_substract(vect1, vect2):
+    '''calculate vector substraction'''
+    return [i[0]-i[1] for i in zip(vect1, vect2)]
+
+
+def my_vect_product(vector, scale):
+    '''multiple vector by scale'''
     return [i*scale for i in vector]
-def my_cross(vect1,vect2):
-    '''\
-    calculate cross product\
-    '''
-    if len(vect1) !=3 or len(vect2) !=3:
+
+
+def my_cross(vect1, vect2):
+    '''calculate cross product'''
+    if len(vect1) != 3 or len(vect2) != 3:
         return 'NAN'
-    NormVect=[0.0]*3
+    NormVect = [0.0]*3
     try:
         NormVect[0] = vect1[1]*vect2[2]-vect1[2]*vect2[1]
         NormVect[1] = vect1[0]*vect2[2]-vect1[2]*vect2[0]
         NormVect[2] = vect1[0]*vect2[1]-vect1[1]*vect2[0]
-    except:
+    except IndexError or TypeError:
         NormVect = ['NAN']*3
     return NormVect
-def my_dot(vect1,vect2):
-    '''\
-    calculate dot product\
-    '''
-    return sum(i[0]+i[1] for i in zip(vect1,vect2))
-def my_bond(atom1,atom2):
-    '''\
-    Calculate bond distance\
-    '''
+
+
+def my_dot(vect1, vect2):
+    '''calculate dot product'''
+    return sum(i[0]+i[1] for i in zip(vect1, vect2))
+
+
+def my_bond(atom1, atom2):
+    '''Calculate bond distance'''
     from math import sqrt
-    if len(atom1) !=3 or len(atom2) !=3:
+    if len(atom1) != 3 or len(atom2) != 3:
         return 'NAN'
     Vect1 = [0.0]*3
     for i in range(3):
         try:
             Vect1[i] = atom1[i] - atom2[i]
-        except:
+        except TypeError:
             return 'NAN'
-    bond = sqrt(my_dot(Vect1,Vect1))
+    bond = sqrt(my_dot(Vect1, Vect1))
     return bond
-def my_angle(atom1,atom2,atom3):
-    '''\
-    calculate the angle of 1-2-3, and return the angle in "degree"\
-    '''
+
+
+def my_angle(atom1, atom2, atom3):
+    '''calculate the angle of 1-2-3, and return the angle in "degree"'''
     from math import sqrt
     from math import acos
     from math import pi
-    if len(atom1) !=3 or len(atom2) !=3 or len(atom3) !=3:
+    if len(atom1) != 3 or len(atom2) != 3 or len(atom3) != 3:
         return 'NAN'
     Vect1 = [0.0]*3
     Vect2 = [0.0]*3
@@ -682,26 +692,28 @@ def my_angle(atom1,atom2,atom3):
     for i in range(3):
         try:
             Vect1[i] = atom1[i]-atom2[i]
-        except:
+        except ValueError or TypeError or IndexError:
             return 'NAN'
         try:
             Vect2[i] = atom3[i]-atom2[i]
-        except:
+        except ValueError or TypeError or IndexError:
             return 'NAN'
-    Dist1 = sqrt(my_dot(Vect1,Vect1))
-    Dist2 = sqrt(my_dot(Vect2,Vect2))
-    CosAng = my_dot(Vect1,Vect2)/(Dist1*Dist2)
+    Dist1 = sqrt(my_dot(Vect1, Vect1))
+    Dist2 = sqrt(my_dot(Vect2, Vect2))
+    CosAng = my_dot(Vect1, Vect2)/(Dist1*Dist2)
     Angl = acos(CosAng)/pi*180.0
     return Angl
-def my_dihedral(atom1,atom2,atom3,atom4):
-    '''\
-    calculate the angle of 1-2-3-4, and return the dihedral in "degree"\
-    '''
+
+
+def my_dihedral(atom1, atom2, atom3, atom4):
+    '''calculate the angle of 1-2-3-4, and return the dihedral in "degree"'''
     from math import sqrt
     from math import acos
     from math import pi
-    if len(atom1) !=3 or len(atom2) !=3\
-    or len(atom3) !=3 or len(atom4) !=3:
+    if len(atom1) != 3 \
+            or len(atom2) != 3 \
+            or len(atom3) != 3 \
+            or len(atom4) != 3:
         return 'NAN'
     Vect1 = [0.0]*3
     Vect2 = [0.0]*3
@@ -715,27 +727,29 @@ def my_dihedral(atom1,atom2,atom3,atom4):
     for i in range(3):
         try:
             Vect1[i] = atom1[i]-atom2[i]
-        except:
+        except TypeError or ValueError:
             return 'NAN'
         try:
             Vect2[i] = atom3[i]-atom2[i]
-        except:
+        except TypeError or ValueError:
             return 'NAN'
         try:
             Vect3[i] = atom4[i]-atom3[i]
-        except:
+        except TypeError or ValueError:
             return 'NAN'
-    NormVect1 = my_cross(Vect1,Vect2)
-    NormVect2 = my_cross(Vect3,Vect2)
-    Dist1 = sqrt(my_dot(NormVect1,NormVect1))
-    Dist2 = sqrt(my_dot(NormVect2,NormVect2))
-    CosAng = my_dot(NormVect1,NormVect2)/(Dist1*Dist2)
-    if my_dot(my_cross(NormVect1,NormVect2),Vect2)<=0:
+    NormVect1 = my_cross(Vect1, Vect2)
+    NormVect2 = my_cross(Vect3, Vect2)
+    Dist1 = sqrt(my_dot(NormVect1, NormVect1))
+    Dist2 = sqrt(my_dot(NormVect2, NormVect2))
+    CosAng = my_dot(NormVect1, NormVect2)/(Dist1*Dist2)
+    if my_dot(my_cross(NormVect1, NormVect2), Vect2) <= 0:
         Scale = 1.0
     else:
         Scale = -1.0
     Dihe = Scale * acos(CosAng)/pi*180.0
     return Dihe
+
+
 def my_permute(items, n=None):
         '''Build permutation iteration'''
         if n is None:
@@ -749,7 +763,8 @@ def my_permute(items, n=None):
                 for p in my_permute(rest, n-1):
                     yield v + p
 
-def my_combinate(item, n=None):
+
+def my_combinate(items, n=None):
         '''build combination iteration'''
         if n is None:
             n = len(items)
@@ -765,321 +780,143 @@ def my_combinate(item, n=None):
 
 class ConfigIO:
     '''Control the project IO based on well-define configuration file'''
-    ResuDict = {'energy' : [],
-                   'polar'  : [],
-                   'nmr'    : [],
-                   'geom'   : [],
-                   'pt21'   : [],
-                   'pt22'   : [],
-                   'xyg3'   : [],
-                   'xmp2'   : [],
-                  }
-    AlphDict = { 0:'A', 1:'B', 2:'C', 3:'D', 4:'E', 5:'F',
-                           6:'G', 7:'H', 8:'I', 9:'J',10:'K',
-                          11:'L',12:'M',13:'N',14:'O',15:'P',
-                          16:'Q',17:'R',18:'S',19:'T',20:'U',
-                          21:'V',22:'W',23:'X',24:'Y',25:'Z'
-                   }
-    def __init__(self,iout,fn=None,bugctrl=0):
-        '''\
-        Open configure file, and set default parameters\
-        '''
+    ResuDict = {'energy': [],
+                'polar': [],
+                'nmr': [],
+                'geom': [],
+                'pt21': [],
+                'pt22': [],
+                'xyg3': [],
+                'xmp2': [],
+                }
+    AlphDict = {0: 'A', 1: 'B', 2: 'C', 3: 'D', 4: 'E', 5: 'F',
+                6: 'G', 7: 'H', 8: 'I', 9: 'J', 10: 'K',
+                11: 'L', 12: 'M', 13: 'N', 14: 'O', 15: 'P',
+                16: 'Q', 17: 'R', 18: 'S', 19: 'T', 20: 'U',
+                21: 'V', 22: 'W', 23: 'X', 24: 'Y', 25: 'Z'
+                }
+
+    def __init__(self, iout, fn=None, bugctrl=0):
+        '''Open configure file, and set default parameters'''
         from os.path import abspath
 
         self.IOut = iout
         self.FileName = fn
         self.IPrint = bugctrl
-        if fn==None:
+        if fn is None:
             pass
         else:
             try:
-                self.f = open(self.FileName,'r')
+                self.f = open(self.FileName, 'r')
             except IOError:
-                print_Error(self.IOut,
-                    'Error in open config file')
+                print_Error(self.IOut, 'Error in open config file')
 
-        self.WorkDir = abspath('./')                      # Current work direction
-        self.ProjDir = ''                                 # Dir. for project results
-        self.ProjCtrl = 0                                  # Manner to batch jobs
-                                                                 # 0: calculate all jobs
-                                                                 # 1: collect results from
-                                                                 #    exists log and chk files
-                                                                 # 2: combination of 0 and 1
-                                                                 #    0). calc. job. if not
-                                                                 #        log and chk exist
-                                                                 #    1). escape job calc. if
-                                                                 #        log and chk exist
-        self.ProjTool = 'gaussian'                         # gaussian : Using Gau. Pack.
-                                                                 # qchem    : Using QChem Pack.
-                                                                 # aims     : Using FHI-aims Pack.
-                                                                 # xyg3_fit : fit DFT using
-                                                                 #     existing components
-
-        self.PathList = []                                 # Macro-Path environment
-
+        # Current work direction
+        self.WorkDir = abspath('./')
+        # The folder to store the project results
+        self.ProjDir = ''
+        # Different batch modes
+        #   0: calculate all jobs
+        #   1: collect results from
+        #      exists log and chk files
+        #   2: combination of 0 and 1
+        #      0). calc. job. if not
+        #          log and chk exist
+        #      1). escape job calc. if
+        #          log and chk exist
+        self.ProjCtrl = 0
+        # The electronic-structure packages used. Supported packages include:
+        #     gaussian
+        #     qchem
+        #     fhi-aims
+        #     xyg3_fit
+        #     existing components
+        self.ProjTool = 'gaussian'
+        self.PathList = []  # Macro-Path environment
         self.Title = []
 
-                                                                 # Input info. for Gaussian Job
-        self.OptionList = []                                 #  1) Job control keywords
-        self.MachineList = []                                 #  2) Machine statements
-        self.ExOvList = []                                 #  3) Extra overlay statements
+        # Input info. for Gaussian Job
+        self.OptionList = []      # 1) Job control keywords
+        self.MachineList = []     # 2) Machine statements
+        self.ExOvList = []        # 3) Extra overlay statements
 
-                                                                 # Input info. for Qchem Job
-        self.RemList = []                                 #  1) Job control in $rem
-        self.XCFList = []                                 #  2) XC in $xc_functional
-        self.ParaOrSeri = 0                                  # 0 for serial version qchem
-                                                                 # 1 for parallel version qchem
-        self.QchCfg = ''                                 # Relate to the global variable of $QCCFG
+        # Input info. for Qchem Job
+        self.RemList = []         # 1) Job control in $rem
+        self.XCFList = []         # 2) XC in $xc_functional
+        # 0 for serial version qchem
+        # 1 for parallel version qchem
+        self.ParaOrSeri = 0
+        self.QchCfg = ''          # Relate to the global variable of $QCCFG
 
-                                                                 # Input info. for Aims Job
-        self.Procs = 1                                  # CPU numbers to run aims job
-        self.AimsCfg = 'igor'                             # the version of aims package
-        self.add_CMD = []                                 # additional commands for control.in
-        self.Special_Procs = {}                                 #CPU numbers to run aims for special jobs
+        # Input info. for Aims Job
+        self.Procs = 1            # Num. of CPUs to run aims jobs, global set
+        self.Threads = 1          # Num. of threads per task
+        self.NPN = 32             # Num. of tasks per node
+        self.AimsCfg = 'igor'     # Version of the aims excutable used
+        self.add_CMD = []         # Additional commands for control.in
+        self.Special_Procs = {}   # Num. of CPUs to run aims for special jobs
+        self.BatchType = 'series'
+        self.BatchCmd = ''
+        self.BatchScrptName = 'Aims_Environment'
 
-
-        self.NBatc = 0                                  # Number of batch jobs
+        # Number of batch jobs
+        self.NBatc = 0
         self.BatcList = []
 
-
-        self.NComp = 0                                  # Components for DFT Fitting
+        self.NComp = 0            # Components for DFT Fitting
         self.CompDict = {}
 
-        self.InitGuess = []                                 # Initial guess for DFT Fitting
+        self.InitGuess = []       # Initial guess for DFT Fitting
         self.OptAlgo = 'leastsq'
 
-        self.Result = []                                 # Deviations for DFT Fitting
+        self.Result = []          # Deviations for DFT Fitting
 
-        self.NEngy = 0                                  # Number of training energy
-        self.SEngy = 1.0                                # Scale factor
-                                                                 # from
-                                                                 # the unit of calc. energy
-                                                                 # to
-                                                                 # the unit of ref. data
+        # Number of training energy
+        self.NEngy = 0
+        self.SEngy = 1.0          # Scale factor
+
         self.EngyList = []
 
-        self.NPT21 = 0                                  # Number of training PT21
-        self.SPT21 = 1.0                                # Scale factor
+        self.NPT21 = 0            # Number of training PT21
+        self.SPT21 = 1.0          # Scale factor
         self.PT21List = []
 
-        self.NPT22 = 0                                  # Number of training PT22
-        self.SPT22 = 1.0                                # Scale factor
+        self.NPT22 = 0            # Number of training PT22
+        self.SPT22 = 1.0          # Scale factor
         self.PT22List = []
 
-        self.NResp = 0                                  # Number of elec. prop.
-        self.SResp = [1.0,1.0,1.0]                      # Scal factors
-                                                                 # from
-                                                                 # units of calc. dipole,
-                                                                 # polar. and  hyperpolar.
-                                                                 # to
-                                                                 # units of corresponding
-                                                                 # ref. data
+        self.NResp = 0            # Number of elec. prop.
+        self.SResp = [1.0, 1.0, 1.0]  # Scal factors
         self.RespList = []
 
-        self.NNMR = 0                                  # Number of NMR data
-        self.SNMR = 1.0                                # Scale factor
-                                                                 # from
-                                                                 # the unit of calc. nmr
-                                                                 # to
-                                                                 # the unit of ref. data
+        self.NNMR = 0      # Number of NMR data
+        self.SNMR = 1.0    # Scale factor from calc. nmr to ref. data
         self.NMRList = []
 
-        self.NGeom = 0                                  # Number of Geom data
-        self.SGeom = [1.0,1.0,1.0]                      # Scale factor
-                                                                 # from
-                                                                 # the unit of Angstron
-                                                                 # to
-                                                                 # the unit of ref. data
+        self.NGeom = 0                 # Number of Geom data
+        self.SGeom = [1.0, 1.0, 1.0]   # Unit transfer factor from Angstron
         self.GeomList = []
-
-
-        # Several variables for KMC project
-        self.KMC_R = 1.9895E-3                          # Gas constant in "kcal/(K,mol)"
-        self.KMC_task = 'prepare'                          # The specific task to run in KMC
-        self.KMC_temp = 298.0                              # Temperature for KMC in "K"
-        self.KMC_pres = 1.0                                # Pressure for KMC in "atm"
-        self.KMC_pref = 1.0                                # Prefactor for KMC
-        self.KMC_nstep = 666666                             # Max step number for KMC
-        self.KMC_envi_List = [1.0,298.0,1.0,1.0]                # Environment parameter list:
-                                                                 # [pref,temp,pres,R]
-        self.KMC_elem_List = []                                 # Elements participating for KMC
-        self.KMC_elem_Dict\
-     = {'CO':'A',
-                   'A' :'CO',
-                   'CH':'B',
-                   'B' :'CH'
-                    }                                            # Elements index for KMC
-        self.KMC_cove_Dict = {}                                 # Coverage Info. for KMC
-        #KMC_cove_Dict--|-->Elem1--|-->GTYPE1--|-->0(int)
-        #               |          |-->GTYPT2--|-->0(int)
-        #               |          |-->...
-        #               |-->...
-
-        self.KMC_adso_Dict = {}                                 # Adsorption information for KMC
-        #KMC_adso_Dict--|-->GTF1--|-->0(int)--|-->'enter'--|-->0(int)--|-->'elem'(str)
-        # GLF:          |         |           |            |           |-->'type'(list)
-        # grid type flag|         |           |
-        # ELF:          |         |           |-->'outer'--|-->0(int)--|-->'elem'(str)
-        # element flag  |         |           |            |           |-->'type'(list)
-        #               |         |           |            |-->...
-        #               |         |           |
-        #               |         |           |-->'pattern'(int)
-        #               |         |           |-->'dE'(float)
-        #               |         |
-        #               |         |-->...
-        #               |
-        #               |-->...
-
-        self.KMC_deso_Dict = {}                                   # Desorption information for KMC
-        #KMC_deso_Dict--|-->GTF1--|-->0(int)--|-->'enter'--|-->0(int)--|-->'elem'(str)
-        # GLF:          |         |           |            |           |-->'type'(list)
-        # grid type flag|         |           |            |-->...
-        # ELF:          |         |           |
-        # element flag  |         |           |-->'outer'--|-->0(int)--|-->'elem'(str)
-        #               |         |           |            |           |-->'type'(list)
-        #               |         |           |
-        #               |         |           |-->'pattern'(int)
-        #               |         |           |-->'dE'(float)
-        #               |         |
-        #               |         |-->...
-        #               |
-        #               |-->...
-
-        self.KMC_diff_Dict = {}                                  # Diffusion information for KMC
-        #KMC_deso_Dict--|-->GTF1--|-->1(int)--|-->'enter'--|-->0(int)--|-->'elem'(str)
-        # GLF:          |         |           |            |           |-->'type'(list)
-        # grid type flag|         |           |
-        # ELF:          |         |           |-->'outer'--|-->0(int)--|-->'elem'(str)
-        # element flag  |         |           |            |           |-->'type'(list)
-        #               |         |           |
-        #               |         |           |-->'pattern'(int)
-        #               |         |           |-->'dE'(float)
-        #               |         |
-        #               |         |-->...
-        #               |
-        #               |-->...
-
-        self.KMC_reac_Dict = {}                                 # Reaction information for KMC
-        #KMC_deso_Dict--|-->GTF1--|-->0(int)--|-->'enter'--|-->0(int)--|-->'elem'(str)
-        # GLF:          |         |           |            |           |-->'type'(list)
-        # grid type flag|         |           |            |-->...
-        # ELF:          |         |           |
-        # element flag  |         |           |-->'outer'--|-->0(int)--|-->'elem'(str)
-        #               |         |           |            |           |-->'type'(list)
-        #               |         |           |            |-->...
-        #               |         |           |
-        #               |         |           |-->'pattern'(int)
-        #               |         |           |-->'dE'(float)
-        #               |         |
-        #               |         |-->...
-        #               |
-        #               |-->...
-        self.KMC_nadso = 1                                  # Number of adsorptions
-        self.KMC_ndeso = 1                                  # Number of desorptions
-        self.KMC_ndiff = 1                                  # Number of diffusions
-        self.KMC_nreat = 1                                  # Number of reactions
-
-        #Information about the surface model in KMC
-        self.KMC_grid_sketch_Dict\
-         = {'Example':{'type':'top',
-                                  'coor':[0.0,0.0,0.0],
-                                  },
-                       'vec1' :[0.0,0.0,0.0],
-                       'vec2' :[0.0,0.0,0.0],
-                       'svec1':[0.0,0.0,0.0],
-                       'svec2':[0.0,0.0,0.0],
-                       'dime' :[12,12],
-                       'nele' :0
-                        }
-                                                                # Grid information for KMC
-        self.KMC_grid_type_List = []                            # Types of grid, List
-        self.KMC_grid_type_Dict = {}                            # Index of grid types, Dict
-        self.KMC_vector_Mode = 'vector'
-        self.KMC_circle_Radius = 0.0
-        self.KMC_circle_forbid_Radius = 0.0
-        self.KMC_nvector = 0
-        self.KMC_nvector_forbid = 0
-        self.KMC_vect_Dict\
-     = {'top':{
-                          'vector1':{'etyp':'top',
-                                     'vect':[1.000,0.000,0.000]
-                                     },
-                          'vector2':{'etyp':'bridge',
-                                     'vect':[0.000,1.000,0.000]
-                                     }
-                          },
-                   'bridge':{
-                          'vector3':{'etyp':'bridge',
-                                     'vect':[1.000,0.000,0.000]
-                                     },
-                          'vector4':{'etyp':'top',
-                                     'vect':[0.000,1.000,0.000]
-                                     }
-                          }
-                       }
-        self.KMC_vect_forbid_Dict\
-     = {'top':{
-                          'vector1':{'etyp':'top',
-                                     'vect':[1.000,0.000,0.000]
-                                     },
-                          'vector2':{'etyp':'bridge',
-                                     'vect':[0.000,1.000,0.000]
-                                     }
-                          },
-                   'bridge':{
-                          'vector3':{'etyp':'bridge',
-                                     'vect':[1.000,0.000,0.000]
-                                     },
-                          'vector4':{'etyp':'top',
-                                     'vect':[0.000,1.000,0.000]
-                                     }
-                          }
-                       }
-                                                                 # Grid vector information for KMC
-        self.KMC_plot_Dict\
-     ={'top':{
-                         'color' : 'r',
-                         'marker': 'o',
-                         'size'  : 10
-                         }
-                 }
-        # Clean several examples
-        self.KMC_elem_Dict.__delitem__('A')
-        self.KMC_elem_Dict.__delitem__('CO')
-        self.KMC_elem_Dict.__delitem__('B')
-        self.KMC_elem_Dict.__delitem__('CH')
-        self.KMC_grid_sketch_Dict.__delitem__('Example')
-        self.KMC_vect_Dict.__delitem__('top')
-        self.KMC_vect_Dict.__delitem__('bridge')
-        self.KMC_vect_forbid_Dict.__delitem__('top')
-        self.KMC_vect_forbid_Dict.__delitem__('bridge')
-        self.KMC_plot_Dict.__delitem__('top')
         return
-    def __del__(self):
 
-        if self.FileName == None:
+    def __del__(self):
+        if self.FileName is None:
             pass
         else:
             self.f.close()
         return
+
     def get_ProjEnvr(self):
-        '''\
-        1) Obtain project description "Title" by "__title__ ::";\n\
-        2) Obtain project environment "ProjDir", "ProjCtrl" and "ProjTool" by "__project__ ::";\n\
-        3) Obtain macro-path environment "PathList" by "__macro_path__ ::"\
-        '''
-        from re      import compile
-        from os      import rename                                # Rename a file or DIR
-        from os      import mkdir                                 # mkdir
-        from os      import makedirs                              # mkdir -p
-        from os.path import isdir                                 # Check existence of DIR
-        from os.path import abspath
-        from my_io   import print_Error
-        from my_io   import print_List
-        from my_io   import print_String
-        #================================#
-        # Now obtain project description #
-        #================================#
+        '''1) Obtain project description "Title" by "__title__ ";'''
+        '''2) Obtain project environment "ProjDir", "ProjCtrl" and'''
+        '''   "ProjTool" by "__project__ ";'''
+        '''3) Obtain macro-path environment "PathList" by "__macro_path__ "'''
+        from re import compile
+        from os import rename, mkdir, makedirs
+        from os.path import isdir, abspath
+        from my_io import print_Error, print_List, print_String
+        # ================================#
+        #  Now obtain project description #
+        # ================================#
         p1 = compile('__title__ *::')
         self.f.seek(0)
         TmpFile = self.f.read().lower()
@@ -1092,12 +929,11 @@ class ConfigIO:
                 self.Title.append(TmpLine)
                 TmpLine = self.f.readline().strip()
         if len(self.Title) != 0:
-            print_List(self.IOut,self.Title,2,
-                    'This project aims to ::')
+            print_List(self.IOut, self.Title, 2, 'This project aims to ::')
 
-        #================================#
-        # Now obtain project environment #
-        #================================#
+        # ================================#
+        #  Now obtain project environment #
+        # ================================#
         ProjCtrlInfo = ['to run all the jobs',
                         'to fetch results from existed file',
                         'to run the job, if no log and chk exist']
@@ -1107,20 +943,21 @@ class ConfigIO:
         if p1.search(TmpFile):
             LocPos = p1.search(TmpFile).end()
             self.f.seek(LocPos)
-            TmpList = self.f.readline().split('#')[0].split()        # To ignore annotation
+            # Split the keywords by ignoring the possible annotation
+            TmpList = self.f.readline().split('#')[0].split()
             if len(TmpList) == 0:
                 self.ProjDir = ''
                 self.ProjCtrl = 0
                 self.ProjTool = 'gaussian'
-            elif len(TmpList)==1:
+            elif len(TmpList) == 1:
                 try:
                     self.ProjDir = ''
                     self.ProjCtrl = int(TmpList[1])
                     self.ProjTool = 'gaussian'
                 except ValueError:
-                    if TmpList[1].lower()=='gaussian' or\
-                        TmpList[1].lower()=='qchem' or\
-                        TmpList[1].lower()=='aims':
+                    if TmpList[1].lower() == 'gaussian' \
+                            or TmpList[1].lower() == 'qchem' \
+                            or TmpList[1].lower() == 'aims':
                         self.ProjDir = ''
                         self.ProjCtrl = 0
                         self.ProjTool = TmpList[1].lower()
@@ -1129,17 +966,16 @@ class ConfigIO:
                         self.ProjCtrl = 0
                         self.ProjTool = 'gaussian'
             elif len(TmpList) == 2:
-                if TmpList[1].lower()=='gaussian' or\
-                    TmpList[1].lower()=='qchem' or\
-                    TmpList[1].lower()=='aims':
+                if TmpList[1].lower() == 'gaussian' or\
+                        TmpList[1].lower() == 'qchem' or\
+                        TmpList[1].lower() == 'aims':
                     self.ProjDir = ''
                     self.ProjCtrl = int(TmpList[0])
                     self.ProjTool = TmpList[1].lower()
-                elif TmpList[0].lower()=='gaussian' or\
-                    TmpList[0].lower()=='qchem' or\
-                    TmpList[0].lower()=='aims':
-                        print_Error(self.IOut,
-                            'Error "__project__" statement (2)')
+                elif TmpList[0].lower() == 'gaussian' or\
+                        TmpList[0].lower() == 'qchem' or\
+                        TmpList[0].lower() == 'aims':
+                    print_Error(self.IOut, 'Error "__project__" statement (2)')
                 else:
                     self.ProjDir = TmpList[0]
                     self.ProjCtrl = int(TmpList[1])
@@ -1150,27 +986,23 @@ class ConfigIO:
                     self.ProjCtrl = int(TmpList[1])
                     self.ProjTool = TmpList[2].lower()
                 except ValueError:
-                    print_Error(self.IOut,
-                        'Error "__project__" statement (3)')
+                    print_Error(self.IOut, 'Error "__project__" statement (3)')
         else:
             self.ProjDir = ''
             self.ProjCtrl = 0
             self.ProjTool = 'gaussian'
-        if self.ProjDir != '':                                       # set absolute path for ProjDir
+        if self.ProjDir != '':        # set absolute path for ProjDir
             self.ProjDir = abspath(self.ProjDir)
-        print_String(self.IOut,
-            '1) Project pool is "%s"' %self.ProjDir,1)
-        print_String(self.IOut,
-            '2) Project batch type is "%d" '
-            % self.ProjCtrl +\
-            'which %s' % ProjCtrlInfo[self.ProjCtrl],1)
-        print_String(self.IOut,
-            '3) QC package employed is "%s"'
-            %self.ProjTool,1)
-        if len(self.ProjDir)>0:
+        print_String(self.IOut, '1) Project pool is "%s"' % self.ProjDir, 1)
+        print_String(self.IOut, '2) Project batch type is "%d" '
+                     % self.ProjCtrl +
+                     'which %s' % ProjCtrlInfo[self.ProjCtrl], 1)
+        print_String(self.IOut, '3) QC package employed is "%s"'
+                     % self.ProjTool, 1)
+        if len(self.ProjDir) > 0:
             if self.ProjCtrl == 0:
                 if isdir(self.ProjDir):
-                    rename(self.ProjDir, '%s_BackUp' %self.ProjDir)
+                    rename(self.ProjDir, '%s_BackUp' % self.ProjDir)
                     mkdir(self.ProjDir)
                 else:
                     makedirs(self.ProjDir)
@@ -1179,17 +1011,17 @@ class ConfigIO:
                     pass
                 else:
                     print_Error(self.IOut,
-                        'DIR \"%s\" doesn\'t exists for ProjCtrl=1'
-                        % self.ProjDir)
+                                'DIR \"%s\" doesn\'t exists for ProjCtrl=1'
+                                % self.ProjDir)
             elif self.ProjCtrl == 2:
                 if isdir(self.ProjDir):
                     pass
                 else:
                     makedirs(self.ProjDir)
 
-        #===================================#
-        # Now obtain <MacroPath> environment#
-        #===================================#
+        # ===================================#
+        #  Now obtain <MacroPath> environment#
+        # ===================================#
         p1 = compile('__macro_path__ *::')
         self.f.seek(0)
         TmpFile = self.f.read().lower()
@@ -1198,46 +1030,43 @@ class ConfigIO:
             self.f.seek(LocPos)
             self.f.readline().strip()
             TmpString = self.f.readline().strip()
-            while TmpString[0]=='#':
+            while TmpString[0] == '#':
                 TmpString = self.f.readline().strip()
-            TmpLine = tuple([x.strip() for x in \
-                TmpString.\
-                replace(',','  ').replace('=','  ').\
-                replace('\'','  ').replace('"','  ').\
-                split()])
+            TmpLine = \
+                tuple([x.strip() for x in
+                      TmpString.replace(',', '  ').replace('=', '  ').
+                      replace('\'', '  ').replace('"', '  ').
+                      split()])
             while len(TmpLine) == 2:
                 self.PathList.append(TmpLine)
                 TmpString = self.f.readline().strip()
-                while len(TmpString) != 0 and TmpString[0]=='#':
+                while len(TmpString) != 0 and TmpString[0] == '#':
                     TmpString = self.f.readline().strip()
-                TmpLine = tuple([x.strip() for x in \
-                    TmpString.\
-                    replace(',','  ').replace('=','  ').\
-                    replace('\'','  ').replace('"','  ').\
-                    split()])
+                TmpLine = \
+                    tuple([x.strip() for x in
+                          TmpString.replace(',', '  ').replace('=', '  ').
+                          replace('\'', '  ').replace('"', '  ').split()])
         if len(self.PathList) != 0:
-            print_String(self.IOut,
-                    'There are %d <Macro-Path>s specified in %s :'
-                    % (len(self.PathList),self.FileName),1)
+            tmpString = 'There are %d <Macro-Path>s specified in %s :' \
+                % (len(self.PathList), self.FileName)
+            print_String(self.IOut, tmpString, 1)
             for macro, path in self.PathList:
-                if len(macro) >=9 : macro = macro[:6]+'...'
-                if len(path) >=53 : path = path[:50]+'...'
+                if len(macro) >= 9:
+                    macro = macro[:6]+'...'
+                if len(path) >= 53:
+                    path = path[:50]+'...'
                 len1 = 10 - len(macro)
-                print_String(self.IOut,
-                    'Macro-Path :%s%s = %s'\
-                    % (' '*len1,macro,path),3)
-
+                print_String(self.IOut, 'Macro-Path :%s%s = %s'
+                             % (' '*len1, macro, path), 3)
         return
+
     def get_GauIOCmd(self):
-        '''\
-        Obtain MachineList and OptionList for GausIO class\
-        '''
-        from re              import compile
-        from io              import StringIO
-        from copy            import deepcopy
-        from my_io           import print_Error
-        from my_io           import print_String
-        from my_io           import print_List
+        '''Obtain MachineList and OptionList for GausIO class'''
+        from re import compile
+        from io import StringIO
+        from copy import deepcopy
+        from my_io import print_String
+        from my_io import print_List
         from gaussian_manage import GauIO
         p1 = compile('__gaussian__ *::')
         self.f.seek(0)
@@ -1266,9 +1095,7 @@ class ConfigIO:
         return
 
     def get_QcmIOCmd(self):
-        '''\
-        Obtain RemList for QchemIO class\
-        '''
+        '''Obtain RemList for QchemIO class'''
         from re import compile
         from copy import deepcopy
         from io import StringIO
@@ -1283,7 +1110,7 @@ class ConfigIO:
             tmpList = self.f.readline().split("::")
             if len(tmpList) == 2:
                 tmpList = tmpList[1].split('#')[0].split()
-                if len(tmpList)==1:
+                if len(tmpList) ==1:
                     try:
                         self.ParaOrSeri = int(tmpList[0])
                         self.QchCfg = 'rmp2'
@@ -1303,7 +1130,7 @@ class ConfigIO:
                     print_String(self.IOut,
                         'This batch run series qchem',1)
             LocPos = self.f.tell()
-            p2 = compile('\$end')
+            p2 = compile('$end')
             EndPos = 0
             for iterm in p2.finditer(self.f.read()):
                 tmpPos = iterm.end()
@@ -1418,9 +1245,6 @@ class ConfigIO:
                 except:
                     pass
         p1 = compile('^ *__aims_batch_type__ *::', MULTILINE)
-        self.BatchType = 'series'
-        self.BatchCmd = ''
-        self.BatchScrptName = 'Aims_Environment'
         if p1.search(TmpFile):
             LocPos = p1.search(TmpFile.lower()).start()
             self.f.seek(LocPos)
@@ -1430,18 +1254,24 @@ class ConfigIO:
                 if self.BatchType == 'queue':
                     self.BatchCmd = 'sbatch'
                     self.BatchScrptName = 'aims_runscr'
+                elif self.BatchType == 'series':
+                    self.BatchScrptName = 'Aims_Environment'
             elif len(tmpList) == 3:
                 self.BatchType = tmpList[-2].strip().lower()
                 if self.BatchType == 'queue':
                     self.BatchCmd = tmpList[-1].strip()
                     self.BatchScrptName = 'aims_runscr'
+                elif self.BatchType == 'series':
+                    self.BatchScrptName = tmpList[-1].strip()
             elif len(tmpList) == 4:
                 self.BatchType = tmpList[-3].strip().lower()
                 if self.BatchType == 'queue':
                     self.BatchCmd = tmpList[-2].strip()
                     self.BatchScrptName = tmpList[-1].strip()
-            print_String(self.IOut, 'The Batch type is %s'
-                         % self.sDir, 1)
+                elif self.BatchType == 'series':
+                    self.BatchScrptName = tmpList[-1].strip()
+            print_String(self.IOut, 'The batch type is %s'
+                         % self.BatchType, 1)
         return
 
     def get_CP2IOCmd(self):
@@ -1482,7 +1312,6 @@ class ConfigIO:
         from re import compile, MULTILINE
         from copy import deepcopy
         from my_io import print_Error
-        from my_io import print_String
         from my_io import print_List_free
         p1 = compile('^ *__batch__ *::', MULTILINE)
         self.f.seek(0)
@@ -1566,9 +1395,7 @@ class ConfigIO:
                 'Loaded ConfigIO.BatcList')
         return
     def get_TrainSet(self):
-        '''\
-        Obtain training set from config file\
-        '''
+        '''Obtain training set from config file'''
         from my_io   import print_Error
         from my_io   import print_List
         from my_io   import print_String
@@ -1587,7 +1414,7 @@ class ConfigIO:
             TmpLine = self.f.readline().split('#')[0].strip()    # To ignore annotations
             TmpLine = TmpLine.split('::')[1].strip().\
                 replace(',','   ').replace('=','   ')
-            if len(TmpLine.split())==1:
+            if len(TmpLine.split()) ==1:
                 try:
                     self.NEngy = int(TmpLine.split()[0])
                     self.SEngy = 1.0
@@ -1633,7 +1460,7 @@ class ConfigIO:
                 for l in range(self.EngyList[i][0]):
                     for j in range(self.NBatc):
                         k = l*2 + 1
-                        if self.EngyList[i][k].strip().lower()==\
+                        if self.EngyList[i][k].strip().lower() ==\
                             self.BatcList[j][0].strip().lower():
                             self.EngyList[i][k]=j
                             break
@@ -1709,7 +1536,7 @@ class ConfigIO:
             TmpLine = self.f.readline().split('#')[0].strip()    # To ignore annotations
             TmpLine = TmpLine.split('::')[1].strip().\
                 replace(',','   ').replace('=','   ')
-            if len(TmpLine.split())==1:
+            if len(TmpLine.split()) ==1:
                 try:
                     self.NPT21 = int(TmpLine.split()[0])
                     self.SPT21 = 1.0
@@ -1752,7 +1579,7 @@ class ConfigIO:
                 for l in range(self.PT21List[i][0]):
                     for j in range(self.NBatc):
                         k = l*2 + 1
-                        if self.PT21List[i][k].strip().lower()==\
+                        if self.PT21List[i][k].strip().lower() ==\
                             self.BatcList[j][0].strip().lower():
                             self.PT21List[i][k]=j
                             break
@@ -1828,7 +1655,7 @@ class ConfigIO:
             TmpLine = self.f.readline().split('#')[0].strip()    # To ignore annotations
             TmpLine = TmpLine.split('::')[1].strip().\
                 replace(',','   ').replace('=','   ')
-            if len(TmpLine.split())==1:
+            if len(TmpLine.split()) ==1:
                 try:
                     self.NPT22 = int(TmpLine.split()[0])
                     self.SPT22 = 1.0
@@ -1871,7 +1698,7 @@ class ConfigIO:
                 for l in range(self.PT22List[i][0]):
                     for j in range(self.NBatc):
                         k = l*2 + 1
-                        if self.PT22List[i][k].strip().lower()==\
+                        if self.PT22List[i][k].strip().lower() ==\
                             self.BatcList[j][0].strip().lower():
                             self.PT22List[i][k]=j
                             break
@@ -1953,7 +1780,7 @@ class ConfigIO:
             TmpLine = self.f.readline().split('#')[0].strip()        # To ignore annotations
             TmpLine = TmpLine.split('::')[1].strip().\
                 replace(',','   ').replace('=','   ')
-            if len(TmpLine.split())==1:
+            if len(TmpLine.split()) ==1:
                 try:
                     self.NResp = int(TmpLine.split()[0])
                     self.SResp = [1.0]*3
@@ -2006,7 +1833,7 @@ class ConfigIO:
                         'self.RespList[%d]' %i +\
                         '\"ConfigIO.get_TrainSet\"')
                 for l in range(self.NBatc):
-                    if self.BatcList[l][0].strip().lower()==\
+                    if self.BatcList[l][0].strip().lower() ==\
                         self.RespList[i][1].strip().lower():
                         self.RespList[i][1] = l
                         break
@@ -2152,7 +1979,7 @@ class ConfigIO:
                 TmpLine = TmpLine.split('#')[0].strip()              # To ignore annotations
                 self.GeomList.append(TmpLine.split())
                 for l in range(self.NBatc):
-                    if self.BatcList[l][0].strip().lower()==\
+                    if self.BatcList[l][0].strip().lower() ==\
                         self.GeomList[i][0].strip().lower():
                         self.GeomList[i][0] = l
                         break
@@ -2283,8 +2110,8 @@ class ConfigIO:
                 else:
                     system('cp %s/%s ./' % (job[1],job[2]))
 
-            try: del tmpJob                                          # Reinitialize tmpJob
-            except: pass
+            # try: del tmpJob  # Reinitialize tmpJob
+            # except: pass
             tmpJob =\
                 gaum.GauIO(self.IOut,job[2],self.IPrint)
             tmpJob.get_MachAndOpt()
@@ -2322,7 +2149,7 @@ class ConfigIO:
                     ChkFlag = False
                 if ChkFlag:
                     for item in self.MachineList:
-                        if item.lower().find('chk')==-1:             #   others from config
+                        if item.lower().find('chk') ==-1:             #   others from config
                             TmpMachList.append(item)
                 else:
                     TmpMachList = self.MachineList[:]
@@ -2347,7 +2174,6 @@ class ConfigIO:
                 gaum.DFTD(self.IOut,tmpJob,tmpOpt,self.IPrint)       # Check keyword of DFT+D
             tmpR5DFT =\
                 gaum.R5DFT(self.IOut,tmpJob,tmpOpt,self.IPrint)      # Check keyword of R5DFT
-
 
             if FlagPola:
                 for option in tmpJob.OptionList:                     # Search 'polar' keyword
@@ -2569,16 +2395,12 @@ class ConfigIO:
                 pass
         return
     def run_QcmBatch(self):
-        '''\
-        Batch Q-Chem jobs and collect result based on job flag\
-        '''
+        '''Batch Q-Chem jobs and collect result based on job flag'''
         from os              import chdir
-        from os              import getcwd
         from os              import getpid
         from os              import system
         from os              import listdir
         from os.path         import isfile
-        from copy            import deepcopy
         import qchem_manage     as qchem
         for job in self.BatcList:
             self.IOut.flush()                                        # Flush Output file
@@ -2697,22 +2519,22 @@ class ConfigIO:
             strf = job[3].strip().lower()
             # To collect energy result
             FlagSCF = strf.find('energy') != -1 or strf.find('scf') != -1
-            FlagRPA = strf.find('rpa') != -1                       # To collect RPA results
-            # FlagDHD = strf.find('dhd') != -1                       # To collect DHDFA results
-            FlagSOX = strf.find('sosex') != -1                     # To collect SOSEX-related results
-            FlagMP2 = strf.find('mp2') != -1                       # To collect MP2 results
-            FlagCMP2 = strf.find('cmp2') != -1                      # To collect coupled MP2 results
-            FlagSCPT2 = strf.find('scpt2') != -1                     # To collect coupled MP2 results
-            FlagDHDF = strf.find('dhdf') != -1                      # To collect DHDFT results
-            FlagCDHDF = strf.find('cdhdf') != -1                     # To collect coupled DHDFT results
-            FlagWRPA = strf.find('wrpa') != -1                      # To collect RPA potentials along AC path
-            # FlagHLG = strf.find('hlg') != -1                       # To collect HOMO and LUMO gap
-            FlagCI = strf.find('ci') != -1                        # To collect truncated CI results
-            FlagVDW = strf.find('vdw') != -1                       # To collect TS vdw correction
-            FlagMGGA = strf.find('meta') != -1                      # To collect meta-GGA total energies
-            FlagZRPS = strf.find('zrps') != -1                      # To collect ZRPS-type total energies
-            FlagXYG3 = strf.find('xyg3') != -1                      # To collect XYG3-type total energies
-            FlagOSRPA = strf.find('osrpa') != -1                     # To collect OS-RPA total energies
+            FlagRPA = strf.find('rpa') != -1
+            # FlagDHD = strf.find('dhd') != -1
+            FlagSOX = strf.find('sosex') != -1
+            FlagMP2 = strf.find('mp2') != -1
+            FlagCMP2 = strf.find('cmp2') != -1
+            FlagSCPT2 = strf.find('scpt2') != -1
+            FlagDHDF = strf.find('dhdf') != -1
+            FlagCDHDF = strf.find('cdhdf') != -1
+            FlagWRPA = strf.find('wrpa') != -1
+            # FlagHLG = strf.find('hlg') != -1
+            FlagCI = strf.find('ci') != -1
+            FlagVDW = strf.find('vdw') != -1
+            FlagMGGA = strf.find('meta') != -1
+            FlagZRPS = strf.find('zrps') != -1
+            FlagXYG3 = strf.find('xyg3') != -1
+            FlagOSRPA = strf.find('osrpa') != -1
             if FlagSCPT2:
                 FlagCMP2 = False
                 FlagMP2 = False
@@ -2761,10 +2583,15 @@ class ConfigIO:
                         tmpJob.run_Job_v02(job_special_procs,
                                            self.Threads,
                                            self.NPN,
-                                           self.AimsCfg
+                                           self.AimsCfg,
+                                           self.BatchScriptName,
+                                           self.BatchCmd
                                            )
                 elif self.BatchType == 'series':
-                    FlagLog = tmpJob.run_Job(job_special_procs, self.AimsCfg)
+                    FlagLog = \
+                        tmpJob.run_Job(job_special_procs,
+                                       self.AimsCfg,
+                                       self.BatchScriptName)
             elif self.ProjCtrl == 1:
                 pass
             elif self.ProjCtrl == 2:
@@ -2834,7 +2661,7 @@ class ConfigIO:
                     print_String(self.IOut,
                                  'Optimized SCPT2             : %16.8f'
                                  % job[4]['energy'][0], 1)
-                except:
+                except ValueError:
                     job[4]['energy'] = ['NAN']
                     print_String(self.IOut,
                                  'Optimized SCPT2             : %16s'
@@ -2905,19 +2732,19 @@ class ConfigIO:
             elif len(tmpScratch)>1:
                 print_String(self.IOut,
                     'More than one scratchs in current path',1)
-            elif len(tmpScratch)==1 and\
+            elif len(tmpScratch) ==1 and\
                 tmpScratch[0]!='.script%s' %getpid():
                 print_String(self.IOut,
                     'The last scratch is found. Move it to current'
                     ,1)
                 system('mv %s .script%s' %(tmpScratch[0],getpid()))
-            elif len(tmpScratch)==1 and\
+            elif len(tmpScratch) == 1 and\
                 tmpScratch[0]=='.script%s' %getpid():
                 print_String(self.IOut,
                     'The current scratch is found.',1)
 
-            try: del tmpJob                                          # Reinitialize tmpJob
-            except: pass
+            # try: del tmpJob     # Reinitialize tmpJob
+            # except: pass
             tmpJob =\
                 cp2k.CP2KIO(self.IOut,job[2],self.IPrint)
             tmpJob.get_Input()
@@ -2932,7 +2759,7 @@ class ConfigIO:
             tmpInpuDict = deepcopy(self.InpuDict)
             for x in sorted(update):                                 # update self.InpuDict based on "update"
                 if update[x]!='all':
-                    if tmpJob.InpuDict.has_key(x) and self.InpuDict.has_key(x):
+                    if x in tmpJob.InpuDict and x in self.InpuDict:
                         for line in tmpInpuDict[x]['content']:
                             tmplist = line.lower().strip().split()
                             for xx in update[x]:
@@ -2942,10 +2769,10 @@ class ConfigIO:
                         for line in tmpJob.InpuDict[x]['content']:
                             tmplist = line.lower().strip().split()
                             for xx in update[x]:
-                                if tmplist[0]==xx:
+                                if tmplist[0] == xx:
                                     tmpInpuDict[x]['content'].append(line)
                                     break
-                    if tmpJob.InpuDict.has_key(x) and not self.InpuDict.has_key(x):
+                    if x in tmpJob.InpuDict and x not in self.InpuDict:
                         tmpInpuDict[x] = deepcopy(tmpJob.InpuDict[x])
                     else:
                         pass
@@ -3541,8 +3368,8 @@ class ConfigIO:
                 tmpCode = tf.readlines()
                 tf.close()
             else:
-                tmpString = 'Error in accessing to the line number of'+\
-                    'opt_func or the existing module name'+\
+                tmpString = 'Error in accessing to the line number of' +\
+                    'opt_func or the existing module name' +\
                     ' \"ConfigIO.get_OptFunc\"'
                 print_Error(self.IOut, tmpString)
 
