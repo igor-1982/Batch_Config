@@ -1251,21 +1251,21 @@ class ConfigIO:
             tmpList = self.f.readline().split("#")[0].split("::")
             if len(tmpList) == 2:
                 tmpList = tmpList[1].split('#')[0].split()
-                if len(tmpList) == 2:
+                if len(tmpList) == 1:
                     self.BatchType = tmpList[-1].strip().lower()
                     if self.BatchType == 'queue':
                         self.BatchCmd = 'sbatch'
                         self.BatchScriptName = 'aims_runscr'
                     elif self.BatchType == 'series':
                         self.BatchScriptName = 'Aims_Environment'
-                elif len(tmpList) == 3:
+                elif len(tmpList) == 2:
                     self.BatchType = tmpList[-2].strip().lower()
                     if self.BatchType == 'queue':
                         self.BatchCmd = tmpList[-1].strip()
                         self.BatchScriptName = 'aims_runscr'
                     elif self.BatchType == 'series':
                         self.BatchScriptName = tmpList[-1].strip()
-                elif len(tmpList) == 4:
+                elif len(tmpList) == 3:
                     self.BatchType = tmpList[-3].strip().lower()
                     if self.BatchType == 'queue':
                         self.BatchCmd = tmpList[-2].strip()
