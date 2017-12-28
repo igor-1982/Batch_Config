@@ -9,7 +9,7 @@
 # Queue (Partition):
 # Number of nodes and MPI tasks per node:
 #SBATCH --nodes=<nodes>
-#SBATCH --ntasks-per-node=32
+#SBATCH --ntasks-per-node=<ntaskspernode>
 #
 ##SBATCH --mail-type=none
 ##SBATCH --mail-user=<userid>@rzg.mpg.de
@@ -19,7 +19,7 @@
 
 # Run the program:
 
-OMP_NUM_THREADS=1; export OMP_NUM_THREADS
+OMP_NUM_THREADS=<nthread>; export OMP_NUM_THREADS
 LD_LIBRARY_PATH=$MKL_HOME/lib/intel64_lin:$LD_LIBRARY_PATH; export LD_LIBRARY_PATH
 
 AIMS=/eos/u/igor1982/export/bin

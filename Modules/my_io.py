@@ -2602,11 +2602,20 @@ class ConfigIO:
                                      % tmpJob.Proj, 1)
                     pass
                 else:
-                    FlagLog = \
-                        tmpJob.run_Job_v02(job_special_procs, self.Threads,
-                                           self.NPN, self.AimsCfg)
-                    # FlagLog = tmpJob.run_Job(job_special_procs,
-                    #         self.AimsCfg)
+                    if self.BatchType == 'queue':
+                        FlagLog = \
+                            tmpJob.run_Job_v02(job_special_procs,
+                                               self.Threads,
+                                               self.NPN,
+                                               self.AimsCfg,
+                                               self.BatchScriptName,
+                                               self.BatchCmd
+                                               )
+                    elif self.BatchType == 'series':
+                        FlagLog = \
+                            tmpJob.run_Job(job_special_procs,
+                                           self.AimsCfg,
+                                           self.BatchScriptName)
             if not FlagLog:
                 continue
             if FlagSCF:

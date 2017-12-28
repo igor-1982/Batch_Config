@@ -394,7 +394,7 @@ class AimsIO:
             iFile1 = iFile2.replace('<version>', cfg)
             iFile2 = iFile1.replace('<joblog>', '%s.log' % self.Proj)
             iFile1 = iFile2.replace('<nodes>', '%i' % nnode)
-            iFile2 = iFile1.replace('<ntaskpernode>', '%i' % ntaskpernode)
+            iFile2 = iFile1.replace('<ntaskspernode>', '%i' % ntaskpernode)
             iFile1 = iFile2.replace('<nproc>', '%i' % nproc)
             iFile2 = iFile1.replace('<nthread>', '%i' % nthread)
             iFile1 = iFile2.replace('<ntasks>', '%i' % ntasks)
