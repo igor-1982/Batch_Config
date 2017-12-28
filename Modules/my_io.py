@@ -2908,7 +2908,7 @@ class ConfigIO:
                 k = j*2 + 1
                 try:
                     en = self.BatcList[self.EngyList[i][k]][4]['energy'][0]
-                except ValueError:
+                except IndexError:
                     en = 'NaN'
                 ind = self.EngyList[i][k+1]
                 TmpCalc = my_plus(TmpCalc, my_product(en, ind))

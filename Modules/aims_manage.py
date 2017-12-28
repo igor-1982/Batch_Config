@@ -380,6 +380,13 @@ class AimsIO:
             chdir(self.WorkDir)
             return True
         else:
+            if not isfile('%s/%s' % (self.ModuDir, script)):
+                tmpString =  'To submit the jobs to the %s, ' % cmd +\
+						'you need the script file named \"%s\" in the module folder of %s' \
+					    % (script, self.ModuDir) + ', which does not exist\n' + \
+						'Please check if the file name (%s) is correct' % (script) +\
+						' or it is simply missing'
+                print_Error(self.IOut, tmpString)
             iof = open('%s/%s' % (self.ModuDir, script), 'r')
             iFile1 = iof.read()
             iof.close()
