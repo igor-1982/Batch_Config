@@ -802,6 +802,11 @@ class AimsIO:
             if len(p16p)!=0:
                 self.Energy['vdw'] = float(p16p[-1])
                 print_String(self.IOut,'TS vdw correction           : %16.8f' %self.Energy['vdw'],1)
+            p16 = re.compile('MBD@rsSCS energy *:\s*(?P<iters>-?\d+.\d+) Ha')  #to find TS vdw correction
+            p16p = p16.findall(lfs)
+            if len(p16p)!=0:
+                self.Energy['vdw'] = float(p16p[-1])
+                print_String(self.IOut,'MBD@rsSCS vdw correction    : %16.8f' %self.Energy['vdw'],1)
         elif iop==11: # for meta-GGA total energy
             p16 = re.compile('Meta-gga total energy \s*(?P<iters>-?\d+.\d+) Ha')  #to meta-GGA total energy
             p16p = p16.findall(lfs)
