@@ -4,8 +4,7 @@
 # Purpose    :: 1) Analysis the input file of aims package;
 #            :: 2) Generate the input file of aims package;
 #            :: 3) Collect results from Aims package;
-#            :: All in all, a well-defined private interface with aims package
-#               package
+#            :: All in all, a well-defined private interface with FHI-aims
 # Version    :: 0.1(20120521)
 # Revise     :: 2012-05-21
 # History    :: 0.1(20120521) Completes basic functions for QChem IO.
@@ -145,8 +144,7 @@ class AimsIO:
 
     def form_Control(self):
         import os
-        from my_io import print_String
-        from my_io import print_Error
+        from my_io import print_String, print_Error
         #
         # check several files required
         #
@@ -774,255 +772,364 @@ class AimsIO:
             p14p = p14.search(lfs)
             if p14p:
                 self.Energy['CPT2ss'] = float(p14p.group('iters'))
-                print_String(self.IOut,'C Energy CPT2ss             : %16.8f' %self.Energy['CPT2ss'],1)
+                print_String(self.IOut,
+                             'C Energy CPT2ss             : %16.8f'
+                             % self.Energy['CPT2ss'], 1)
             else:
-                print_String(self.IOut,'Error :: SCPT2ss correlation was not found in %s' %self.Proj,1)
+                print_String(self.IOut,
+                             'Error :: SCPT2ss correlation was not found in %s'
+                             % self.Proj, 1)
                 self.Energy['CPT2ss'] = 'NAN'
-                print_String(self.IOut,'C Energy CPT2ss             : %16s' %self.Energy['CPT2ss'],1)
-            p14  = re.compile('SCPT2 contribution \(os\) *:\s*(?P<iters>-?\d+.\d+) Ha')  #to find coupled MP2 in CMP2 energy
+                print_String(self.IOut, 'C Energy CPT2ss             : %16s'
+                             % self.Energy['CPT2ss'], 1)
+            p14 = re.compile(
+                'SCPT2 contribution \(os\) *:\s*(?P<iters>-?\d+.\d+) Ha')
             p14p = p14.search(lfs)
             if p14p:
                 self.Energy['CPT2os'] = float(p14p.group('iters'))
-                print_String(self.IOut,'C Energy CPT2os             : %16.8f' %self.Energy['CPT2os'],1)
+                print_String(self.IOut,
+                             'C Energy CPT2os             : %16.8f'
+                             % self.Energy['CPT2os'], 1)
             else:
-                print_String(self.IOut,'Error :: SCPT2os correlation was not found in %s' %self.Proj,1)
+                print_String(self.IOut,
+                             'Error :: SCPT2os correlation was not found in %s'
+                             % self.Proj, 1)
                 self.Energy['CPT2os'] = 'NAN'
-                print_String(self.IOut,'C Energy CPT2os             : %16s' %self.Energy['CPT2os'],1)
-            p12  = re.compile('Exact Echange Energy *:\s*(?P<iters>-?\d+.\d+) Ha')  #to find HF energy
+                print_String(self.IOut, 'C Energy CPT2os             : %16s'
+                             % self.Energy['CPT2os'], 1)
+            p12 = re.compile(
+                'Exact Echange Energy *:\s*(?P<iters>-?\d+.\d+) Ha')
             p12p = p12.search(lfs)
             if p12p:
                 self.Energy['ExHF'] = float(p12p.group('iters'))
-                print_String(self.IOut,'X Energy HF                 : %16.8f' %self.Energy['ExHF'],1)
+                print_String(self.IOut, 'X Energy HF                 : %16.8f'
+                             % self.Energy['ExHF'], 1)
             else:
-                print_String(self.IOut,'Error :: Exact exchange was not found in %s' %self.Proj,1)
+                print_String(self.IOut,
+                             'Error :: Exact exchange was not found in %s'
+                             % self.Proj, 1)
                 self.Energy['ExHF'] = 'NAN'
-                print_String(self.IOut,'X Energy HF                 : %16s' %self.Energy['ExHF'],1)
-            p15  = re.compile('DFT Energy *:\s*(?P<iters>-?\d+.\d+) Ha')  #to find DFT energy
+                print_String(self.IOut, 'X Energy HF                 : %16s'
+                             % self.Energy['ExHF'], 1)
+            p15  = re.compile('DFT Energy *:\s*(?P<iters>-?\d+.\d+) Ha')
             p15p = p15.search(lfs)
             if p15p:
                 self.Energy['DFT'] = float(p15p.group('iters'))
-                print_String(self.IOut,'DFT Energy                  : %16.8f' %self.Energy['DFT'],1)
+                print_String(self.IOut, 'DFT Energy                  : %16.8f'
+                             % self.Energy['DFT'], 1)
             else:
-                print_String(self.IOut,'Error :: Exact exchange was not found in %s' %self.Proj,1)
+                print_String(self.IOut,
+                             'Error :: Exact exchange was not found in %s'
+                             % self.Proj, 1)
                 self.Energy['DFT'] = 'NAN'
-                print_String(self.IOut,'Exact Exchange Energy       : %16s' %self.Energy['DFT'],1)
-            p16  = re.compile('X Energy *:\s*(?P<iters>-?\d+.\d+) Ha')  #to find ExDFT energy
+                print_String(self.IOut, 'Exact Exchange Energy       : %16s'
+                             % self.Energy['DFT'], 1)
+            p16  = re.compile('X Energy *:\s*(?P<iters>-?\d+.\d+) Ha')
             p16p = p16.search(lfs)
             if p16p:
                 self.Energy['ExDFT'] = float(p16p.group('iters'))
-                print_String(self.IOut,'X Energy DFT                : %16.8f' %self.Energy['ExDFT'],1)
+                print_String(self.IOut,
+                             'X Energy DFT                : %16.8f'
+                             % self.Energy['ExDFT'], 1)
             else:
-                print_String(self.IOut,'Error :: Exact exchange was not found in %s' %self.Proj,1)
+                print_String(self.IOut,
+                             'Error :: Exact exchange was not found in %s'
+                             % self.Proj, 1)
                 self.Energy['ExDFT'] = 'NAN'
-                print_String(self.IOut,'X Energy DFT                : %16s' %self.Energy['ExDFT'],1)
-            p17  = re.compile('C Energy GGA *:\s*(?P<iters>-?\d+.\d+) Ha')  #to find EcDFT energy
+                print_String(self.IOut, 'X Energy DFT                : %16s'
+                             % self.Energy['ExDFT'], 1)
+            p17  = re.compile('C Energy GGA *:\s*(?P<iters>-?\d+.\d+) Ha')
             p17p = p17.search(lfs)
             if p17p:
                 self.Energy['EcDFT'] = float(p17p.group('iters'))
-                print_String(self.IOut,'C Energy GGA                : %16.8f' %self.Energy['EcDFT'],1)
+                print_String(self.IOut,
+                             'C Energy GGA                : %16.8f'
+                             % self.Energy['EcDFT'], 1)
             else:
-                print_String(self.IOut,'Error :: DFT correlation was not found in %s' %self.Proj,1)
+                print_String(self.IOut,
+                             'Error :: DFT correlation was not found in %s'
+                             % self.Proj, 1)
                 self.Energy['EcDFT'] = 'NAN'
-                print_String(self.IOut,'C Energy GGA                : %16s' %self.Energy['EcDFT'],1)
-            p18  = re.compile('X Energy LDA *:\s*(?P<iters>-?\d+.\d+) Ha')  #to find ExLDA energy
+                print_String(self.IOut, 'C Energy GGA                : %16s'
+                             % self.Energy['EcDFT'], 1)
+            p18  = re.compile('X Energy LDA *:\s*(?P<iters>-?\d+.\d+) Ha')
             p18p = p18.search(lfs)
             if p18p:
                 self.Energy['ExLDA'] = float(p18p.group('iters'))
-                print_String(self.IOut,'X Energy LDA                : %16.8f' %self.Energy['ExLDA'],1)
+                print_String(self.IOut, 'X Energy LDA                : %16.8f'
+                             % self.Energy['ExLDA'], 1)
             else:
-                print_String(self.IOut,'Error :: LDA exchange was not found in %s' %self.Proj,1)
+                print_String(self.IOut,
+                             'Error :: LDA exchange was not found in %s'
+                             %self.Proj, 1)
                 self.Energy['ExLDA'] = 'NAN'
-                print_String(self.IOut,'X Energy LDA                : %16s' %self.Energy['ExLDA'],1)
-            p19  = re.compile('C Energy LDA *:\s*(?P<iters>-?\d+.\d+) Ha')  #to find EcLDA energy
+                print_String(self.IOut, 'X Energy LDA                : %16s'
+                             % self.Energy['ExLDA'], 1)
+            p19  = re.compile('C Energy LDA *:\s*(?P<iters>-?\d+.\d+) Ha')
             p19p = p19.search(lfs)
             if p19p:
                 self.Energy['EcLDA'] = float(p19p.group('iters'))
-                print_String(self.IOut,'C Energy LDA                : %16.8f' %self.Energy['EcLDA'],1)
+                print_String(self.IOut,
+                             'C Energy LDA                : %16.8f'
+                             % self.Energy['EcLDA'], 1)
             else:
-                print_String(self.IOut,'Error :: LDA correlation was not found in %s' %self.Proj,1)
+                print_String(self.IOut,
+                             'Error :: LDA correlation was not found in %s'
+                             % self.Proj, 1)
                 self.Energy['EcLDA'] = 'NAN'
-                print_String(self.IOut,'C Energy LDA                : %16s' %self.Energy['EcLDA'],1)
-            p20  = re.compile('MP2 correction *:\s*(?P<iters>-?\d+.\d+) Ha')  #to find EcPT2 energy
+                print_String(self.IOut, 'C Energy LDA                : %16s'
+                             % self.Energy['EcLDA'], 1)
+            p20  = re.compile('MP2 correction *:\s*(?P<iters>-?\d+.\d+) Ha')
             p20p = p20.search(lfs)
             if p20p:
                 self.Energy['EcPT2'] = float(p20p.group('iters'))
-                print_String(self.IOut,'C Energy PT2                : %16.8f' %self.Energy['EcPT2'],1)
+                print_String(self.IOut,
+                             'C Energy PT2                : %16.8f'
+                             % self.Energy['EcPT2'], 1)
             else:
-                print_String(self.IOut,'Error :: MP2 correlation was not found in %s' %self.Proj,1)
+                print_String(self.IOut,
+                             'Error :: MP2 correlation was not found in %s'
+                             % self.Proj, 1)
                 self.Energy['EcPT2'] = 'NAN'
-                print_String(self.IOut,'C Energy PT2                : %16s' %self.Energy['EcPT2'],1)
-            p20  = re.compile('MP2 correction \(ss\) *:\s*(?P<iters>-?\d+.\d+) Ha')  #to find EcPT2ss energy
+                print_String(self.IOut, 'C Energy PT2                : %16s'
+                             % self.Energy['EcPT2'], 1)
+            p20  = re.compile(
+                'MP2 correction \(ss\) *:\s*(?P<iters>-?\d+.\d+) Ha')
             p20p = p20.search(lfs)
             if p20p:
                 self.Energy['EcPT2ss'] = float(p20p.group('iters'))
-                print_String(self.IOut,'C Energy PT2ss              : %16.8f' %self.Energy['EcPT2ss'],1)
+                print_String(self.IOut,
+                             'C Energy PT2ss              : %16.8f'
+                             % self.Energy['EcPT2ss'], 1)
             else:
-                print_String(self.IOut,'Error :: PT2ss correlation was not found in %s' %self.Proj,1)
+                print_String(self.IOut,
+                             'Error :: PT2ss correlation was not found in %s'
+                             % self.Proj, 1)
                 self.Energy['EcPT2ss'] = 'NAN'
-                print_String(self.IOut,'C Energy PT2ss              : %16s' %self.Energy['EcPT2ss'],1)
-            p20  = re.compile('MP2 correction \(os\) *:\s*(?P<iters>-?\d+.\d+) Ha')  #to find EcPT2ss energy
+                print_String(self.IOut, 'C Energy PT2ss              : %16s'
+                             % self.Energy['EcPT2ss'], 1)
+            p20  = re.compile(
+                'MP2 correction \(os\) *:\s*(?P<iters>-?\d+.\d+) Ha')
             p20p = p20.search(lfs)
             if p20p:
                 self.Energy['EcPT2os'] = float(p20p.group('iters'))
-                print_String(self.IOut,'C Energy PT2os              : %16.8f' %self.Energy['EcPT2os'],1)
+                print_String(self.IOut, 'C Energy PT2os              : %16.8f'
+                             % self.Energy['EcPT2os'], 1)
             else:
-                print_String(self.IOut,'Error :: PT2os correlation was not found in %s' %self.Proj,1)
+                print_String(self.IOut,
+                             'Error :: PT2os correlation was not found in %s'
+                             % self.Proj, 1)
                 self.Energy['EcPT2os'] = 'NAN'
-                print_String(self.IOut,'C Energy PT2ss              : %16s' %self.Energy['EcPT2os'],1)
-            p13  = re.compile('XC contributuion for \s*(?P<iters>\w+)')  #to find XC contributions for various DFTs
+                print_String(self.IOut, 'C Energy PT2ss              : %16s'
+                             %self.Energy['EcPT2os'], 1)
+            p13  = re.compile('XC contributuion for \s*(?P<iters>\w+)')
             p13p = p13.findall(lfs)
             if p13p:
                 for x in p13p:
                     xlenght = len(x)
-                    p14 = re.compile('X %s *:\s*(?P<iters>-?\d+.\d+) Ha' %x)
+                    p14 = re.compile('X %s *:\s*(?P<iters>-?\d+.\d+) Ha' % x)
                     p14p = p14.search(lfs)
                     if p14p:
                         tmpv = float(p14p.group('iters'))
-                        print_String(self.IOut,'X %s%s: %16.8f' %(x,' '*(26-xlenght),tmpv),1)
-                    p14 = re.compile('C %s *:\s*(?P<iters>-?\d+.\d+) Ha' %x)
+                        print_String(self.IOut, 'X %s%s: %16.8f'
+                                     % (x, ' '*(26-xlenght), tmpv), 1)
+                    p14 = re.compile('C %s *:\s*(?P<iters>-?\d+.\d+) Ha' % x)
                     p14p = p14.search(lfs)
                     if p14p:
                         tmpv = float(p14p.group('iters'))
-                        print_String(self.IOut,'C %s%s: %16.8f' %(x,' '*(26-xlenght),tmpv),1)
-        elif iop==6: #for CMP2 related energy
-            p13  = re.compile('Total coupled DHDF energy *:\s*(?P<iters>-?\d+.\d+) Ha')  #to find CDHDF energy
+                        print_String(self.IOut, 'C %s%s: %16.8f'
+                                     % (x, ' '*(26-xlenght), tmpv), 1)
+        elif iop == 6:          # for CMP2 related energy
+            p13 = re.compile(
+                'Total coupled DHDF energy *:\s*(?P<iters>-?\d+.\d+) Ha')
             p13p = p13.search(lfs)
             if p13p:
                 self.Energy['CDHDF'] = float(p13p.group('iters'))
-                print_String(self.IOut,'Coupled DHDF total energy   : %16.8f' %self.Energy['CDHDF'],1)
+                print_String(self.IOut, 'Coupled DHDF total energy   : %16.8f'
+                             % self.Energy['CDHDF'], 1)
             else:
-                print_String(self.IOut,'Error :: Coupled DHDF result was not found in %s' %self.Proj,1)
+                print_String(self.IOut,
+                             'Error :: Coupled DHDF result was not found in %s'
+                             % self.Proj, 1)
                 self.Energy['CDHDF'] = 'NAN'
-                print_String(self.IOut,'Coupled DHDF total energy   : %16s' %self.Energy['CDHDF'],1)
-            p14  = re.compile('Coupled PT2 contribution *:\s*(?P<iters>-?\d+.\d+) Ha')  #to find Coupled PT2 in DHDF energy
+                print_String(self.IOut, 'Coupled DHDF total energy   : %16s'
+                             % self.Energy['CDHDF'], 1)
+            p14 = re.compile(
+                'Coupled PT2 contribution *:\s*(?P<iters>-?\d+.\d+) Ha')
             p14p = p14.search(lfs)
             if p14p:
                 self.Energy['CPT2'] = float(p14p.group('iters'))
-                print_String(self.IOut,'Coupled PT2 in DHDF         : %16.8f' %self.Energy['CPT2'],1)
+                print_String(self.IOut, 'Coupled PT2 in DHDF         : %16.8f'
+                             % self.Energy['CPT2'], 1)
             else:
-                print_String(self.IOut,'Error :: Coupled PT2 in DHDF result was not found in %s' %self.Proj,1)
-                print_String(self.IOut,'Coupled PT2 in DHDF         : %16s' %self.Energy['CPT2'],1)
-            p15  = re.compile('DHDF\/DFT Energy *:\s*(?P<iters>-?\d+.\d+) Ha')  #to find DFT in DHDF energy
+                print_String(self.IOut, 'Error :: Coupled PT2 in DHDF' +
+                             ' result was not found in %s' % self.Proj, 1)
+                print_String(self.IOut, 'Coupled PT2 in DHDF         : %16s'
+                             % self.Energy['CPT2'], 1)
+            p15  = re.compile('DHDF\/DFT Energy *:\s*(?P<iters>-?\d+.\d+) Ha')
             p15p = p15.search(lfs)
             if p15p:
                 self.Energy['DFT'] = float(p15p.group('iters'))
-                print_String(self.IOut,'DFT in DHDF                 : %16.8f' %self.Energy['DFT'],1)
+                print_String(self.IOut,
+                             'DFT in DHDF                 : %16.8f'
+                             % self.Energy['DFT'], 1)
             else:
-                print_String(self.IOut,'Error :: DFT in DHDF result was not found in %s' %self.Proj,1)
-                print_String(self.IOut,'DFT in DHDF                 : %16s' %self.Energy['DFT'],1)
-            p13  = re.compile('XC contributuion for \s*(?P<iters>\w+)')  #to find XC contributions for various DFTs
+                print_String(self.IOut,
+                             'Error :: DFT in DHDF result was not found in %s'
+                             % self.Proj, 1)
+                print_String(self.IOut, 'DFT in DHDF                 : %16s'
+                             % self.Energy['DFT'], 1)
+            p13  = re.compile('XC contributuion for \s*(?P<iters>\w+)')
             p13p = p13.findall(lfs)
             if p13p:
                 for x in p13p:
                     xlenght = len(x)
-                    p14 = re.compile('X %s *:\s*(?P<iters>-?\d+.\d+) Ha' %x)
+                    p14 = re.compile('X %s *:\s*(?P<iters>-?\d+.\d+) Ha' % x)
                     p14p = p14.search(lfs)
                     if p14p:
                         tmpv = float(p14p.group('iters'))
-                        print_String(self.IOut,'X %s%s: %16.8f' %(x,' '*(26-xlenght),tmpv),1)
-                    p14 = re.compile('C %s *:\s*(?P<iters>-?\d+.\d+) Ha' %x)
+                        print_String(self.IOut, 'X %s%s: %16.8f'
+                                     % (x, ' '*(26-xlenght), tmpv), 1)
+                    p14 = re.compile('C %s *:\s*(?P<iters>-?\d+.\d+) Ha' % x)
                     p14p = p14.search(lfs)
                     if p14p:
                         tmpv = float(p14p.group('iters'))
-                        print_String(self.IOut,'C %s%s: %16.8f' %(x,' '*(26-xlenght),tmpv),1)
-        elif iop==7: #for RPA potentials along AC path
-            p16 = re.compile('Lambda, RPA potential :\s*(?P<iters1>\d+.\d+),\s*(?P<iters2>-?\d+.\d+)')
+                        print_String(self.IOut, 'C %s%s: %16.8f'
+                                     % (x, ' '*(26-xlenght), tmpv), 1)
+        elif iop == 7:  # for RPA potentials along AC path
+            p16 = re.compile(
+                'Lambda, RPA potential :\s*(?P<iters1>\d+.\d+)' +
+                ',\s*(?P<iters2>-?\d+.\d+)')
             p16p = p16.findall(lfs)
-            if len(p16p)!=0:
-                p16p = [(float(x[0]),float(x[1])) for x in p16p]
+            if len(p16p) != 0:
+                p16p = [(float(x[0]), float(x[1])) for x in p16p]
                 self.Energy['WRPA'] = p16p[:]
                 for x in range(len(p16p)):
-                    print_String(self.IOut,'P Energy RPA                : %16.8f,%16.8f' %self.Energy['WRPA'][x],1)
-        elif iop==8: #for HOMO-LUMO gap
-            p17  = re.compile('Overall HOMO-LUMO gap:\s*(?P<iters>\d+.\d+) eV')
+                    print_String(self.IOut,
+                                 'P Energy RPA                : %16.8f,%16.8f'
+                                 % self.Energy['WRPA'][x], 1)
+        elif iop == 8:   # for HOMO-LUMO gap
+            p17 = re.compile('Overall HOMO-LUMO gap:\s*(?P<iters>\d+.\d+) eV')
             p17p = p17.findall(lfs)
             if p17p:
                 self.Energy['HLG'] = float(p17p[-1])
-                print_String(self.IOut,'Overall HOMO-LUMO gap       : %16.8f' %self.Energy['HLG'],1)
-        elif iop==9: #for truncated CI results
-            p16 = re.compile('E\[CI\] = :\s*(?P<iters1>\d+.\d+),\s*(?P<iters2>-?\d+.\d+)')
+                print_String(self.IOut,
+                             'Overall HOMO-LUMO gap       : %16.8f'
+                             % self.Energy['HLG'], 1)
+        elif iop == 9:   # for truncated CI results
+            p16 = re.compile(
+                'E\[CI\] = :\s*(?P<iters1>\d+.\d+),\s*(?P<iters2>-?\d+.\d+)')
             p16p = p16.findall(lfs)
-            if len(p16p)!=0:
-                #p16p = [(float(x[0]),float(x[1])) for x in p16p]
+            if len(p16p) != 0:
                 self.Energy['CI'] = float(p16p[-1])
-                print_String(self.IOut,'CI Energy                   : %16.8f' %self.Energy['CI'][x],1)
-        elif iop==10: #for TS vdw correction
-            p16 = re.compile('vdW energy correction         :\s*(?P<iters>-?\d+.\d+) Ha')  #to find TS vdw correction
+                print_String(self.IOut, 'CI Energy                   : %16.8f'
+                             % self.Energy['CI'], 1)
+        elif iop == 10:    # for TS vdw correction
+            p16 = re.compile(
+                'vdW energy correction *:\s*(?P<iters>-?\d+.\d+) Ha')
             p16p = p16.findall(lfs)
-            if len(p16p)!=0:
+            if len(p16p) != 0:
                 self.Energy['vdw'] = float(p16p[-1])
-                print_String(self.IOut,'TS vdw correction           : %16.8f' %self.Energy['vdw'],1)
-            p16 = re.compile('MBD@rsSCS energy *:\s*(?P<iters>-?\d+.\d+) Ha')  #to find TS vdw correction
+                print_String(self.IOut, 'TS vdw correction           : %16.8f'
+                             % self.Energy['vdw'], 1)
+            p16 = re.compile('MBD@rsSCS energy *:\s*(?P<iters>-?\d+.\d+) Ha')
             p16p = p16.findall(lfs)
-            if len(p16p)!=0:
+            if len(p16p) != 0:
                 self.Energy['vdw'] = float(p16p[-1])
-                print_String(self.IOut,'MBD@rsSCS vdw correction    : %16.8f' %self.Energy['vdw'],1)
-        elif iop==11: # for meta-GGA total energy
-            p16 = re.compile('Meta-gga total energy \s*(?P<iters>-?\d+.\d+) Ha')  #to meta-GGA total energy
+                print_String(self.IOut,
+                             'MBD@rsSCS vdw correction    : %16.8f'
+                             % self.Energy['vdw'], 1)
+        elif iop == 11:   # for meta-GGA total energy
+            p16 = re.compile(
+                'Meta-gga total energy \s*(?P<iters>-?\d+.\d+) Ha')
             p16p = p16.findall(lfs)
-            if len(p16p)!=0:
+            if len(p16p) != 0:
                 self.Energy['metaGGA'] = float(p16p[-1])
-                print_String(self.IOut,'Meta-GGA total energy       : %16.8f' %self.Energy['metaGGA'],1)
-        elif iop==12: # for ZRPS energy
-            p16 = re.compile('Total ZRPS\(DH\) energy *:\s*(?P<iters>-?\d+.\d+) Ha')  #to ZRPS(DH) total energy
+                print_String(self.IOut, 'Meta-GGA total energy       : %16.8f'
+                             % self.Energy['metaGGA'], 1)
+        elif iop == 12:     # for ZRPS energy
+            p16 = re.compile(
+                'Total ZRPS\(DH\) energy *:\s*(?P<iters>-?\d+.\d+) Ha')
             p16p = p16.findall(lfs)
-            if len(p16p)!=0:
+            if len(p16p) != 0:
                 tmpValue = float(p16p[-1])
-                print_String(self.IOut,'ZRPS(DH) total energy       : %16.8f' %tmpValue,1)
-            p16 = re.compile('Total ZRPS energy              :\s*(?P<iters>-?\d+.\d+) Ha')  #to ZRPS total energy
+                print_String(self.IOut, 'ZRPS(DH) total energy       : %16.8f'
+                             % tmpValue, 1)
+            p16 = re.compile(
+                'Total ZRPS energy              :\s*(?P<iters>-?\d+.\d+) Ha')
             p16p = p16.findall(lfs)
-            if len(p16p)!=0:
+            if len(p16p) != 0:
                 self.Energy['ZRPS'] = float(p16p[-1])
-                print_String(self.IOut,'ZRPS total energy           : %16.8f' %self.Energy['ZRPS'],1)
-        elif iop==16: # for XYG3 energy
-            p16 = re.compile('Total XYG3 energy *:\s*(?P<iters>-?\d+.\d+) Ha')  #to XYG3 total energy
+                print_String(self.IOut,
+                             'ZRPS total energy           : %16.8f'
+                             % self.Energy['ZRPS'], 1)
+        elif iop == 16:   # for XYG3 energy
+            p16 = re.compile('Total XYG3 energy *:\s*(?P<iters>-?\d+.\d+) Ha')
             p16p = p16.findall(lfs)
-            if len(p16p)!=0:
+            if len(p16p) != 0:
                 self.Energy['XYG3'] = float(p16p[-1])
-                print_String(self.IOut,'XYG3 total energy           : %16.8f' %self.Energy['XYG3'],1)
-            p16 = re.compile('Total XYGJOS energy *:\s*(?P<iters>-?\d+.\d+) Ha')  #to XYGJOS total energy
+                print_String(self.IOut,
+                             'XYG3 total energy           : %16.8f'
+                             % self.Energy['XYG3'], 1)
+            p16 = re.compile(
+                'Total XYGJOS energy *:\s*(?P<iters>-?\d+.\d+) Ha')
             p16p = p16.findall(lfs)
-            if len(p16p)!=0:
+            if len(p16p) != 0:
                 self.Energy['XYG3'] = float(p16p[-1])
-                print_String(self.IOut,'XYGJOS total energy         : %16.8f' %self.Energy['XYG3'],1)
-        elif iop==17: # for osRPA
-            p16 = re.compile('osRPA total energy *:\s*(?P<iters>-?\d+.\d+) Ha')  #osRPA total energy
+                print_String(self.IOut,
+                             'XYGJOS total energy         : %16.8f'
+                             % self.Energy['XYG3'], 1)
+        elif iop == 17:    # for osRPA
+            p16 = re.compile('osRPA total energy *:\s*(?P<iters>-?\d+.\d+) Ha')
             p16p = p16.findall(lfs)
-            if len(p16p)!=0:
+            if len(p16p) != 0:
                 self.Energy['osrpa'] = float(p16p[-1])
-                print_String(self.IOut,'osRPA total energy          : %16.8f' %self.Energy['osrpa'],1)
-            p16 = re.compile('OS-RPA correlation energy *:\s*(?P<iters>-?\d+.\d+)  Ha')  #osRPA correlation
+                print_String(self.IOut,
+                             'osRPA total energy          : %16.8f'
+                             % self.Energy['osrpa'], 1)
+            tmpString =\
+                'OS-RPA correlation energy *:\s*(?P<iters>-?\d+.\d+)  Ha'
+            p16 = re.compile(tmpString)
             p16p = p16.findall(lfs)
-            if len(p16p)!=0:
+            if len(p16p) != 0:
                 self.Energy['EcosRPA'] = float(p16p[-1])
-                print_String(self.IOut,'osRPA correlation energy    : %16.8f' %self.Energy['EcosRPA'],1)
-            p16 = re.compile('OS-MP2 correlation energy *:\s*(?P<iters>-?\d+.\d+)  Ha')  #osPT2 correlation
+                print_String(self.IOut,
+                             'osRPA correlation energy    : %16.8f'
+                             % self.Energy['EcosRPA'], 1)
+            tmpString =\
+                'OS-MP2 correlation energy *:\s*(?P<iters>-?\d+.\d+)  Ha'
+            p16 = re.compile(tmpString)
             p16p = p16.findall(lfs)
-            if len(p16p)!=0:
+            if len(p16p) != 0:
                 self.Energy['EcosMP2'] = float(p16p[-1])
-                print_String(self.IOut,'osMP2 correlation energy    : %16.8f' %self.Energy['EcosMP2'],1)
-            p16 = re.compile('Exact exchange energy *:\s*(?P<iters>-?\d+.\d+) Ha')  #Exx energy
+                print_String(self.IOut,
+                             'osMP2 correlation energy    : %16.8f'
+                             % self.Energy['EcosMP2'], 1)
+            tmpString =\
+                'Exact exchange energy *:\s*(?P<iters>-?\d+.\d+) Ha'
+            p16 = re.compile(tmpString)
             p16p = p16.findall(lfs)
-            if len(p16p)!=0:
+            if len(p16p) != 0:
                 self.Energy['Exx'] = float(p16p[-1])
-                print_String(self.IOut,'Exact exchange energy       : %16.8f' %self.Energy['Exx'],1)
-            p13  = re.compile('XC contributuion for \s*(?P<iters>\w+)')  #to find XC contributions for various DFTs
+                print_String(self.IOut,
+                             'Exact exchange energy       : %16.8f'
+                             % self.Energy['Exx'], 1)
+            p13 = re.compile('XC contributuion for \s*(?P<iters>\w+)')
             p13p = p13.findall(lfs)
             if p13p:
                 for x in p13p[-4:]:
                     xlenght = len(x)
-                    p14 = re.compile('X %s *:\s*(?P<iters>-?\d+.\d+) Ha' %x)
-                    #p14p = p14.search(lfs)
+                    p14 = re.compile('X %s *:\s*(?P<iters>-?\d+.\d+) Ha' % x)
+                    # p14p = p14.search(lfs)
                     p14p = p14.findall(lfs)
                     if p14p:
-                        #tmpv = float(p14p.group('iters'))
+                        # tmpv = float(p14p.group('iters'))
                         tmpv = float(p14p[-1])
-                        print_String(self.IOut,'X %s%s: %16.8f' %(x,' '*(26-xlenght),tmpv),1)
-                    p14 = re.compile('C %s *:\s*(?P<iters>-?\d+.\d+) Ha' %x)
-                    #p14p = p14.search(lfs)
+                        print_String(self.IOut, 'X %s%s: %16.8f'
+                                     % (x, ' '*(26-xlenght), tmpv), 1)
+                    p14 = re.compile('C %s *:\s*(?P<iters>-?\d+.\d+) Ha' % x)
                     p14p = p14.findall(lfs)
                     if p14p:
-                        #tmpv = float(p14p.group('iters'))
                         tmpv = float(p14p[-1])
                         print_String(self.IOut, 'C %s%s: %16.8f'
                                      % (x, ' '*(26-xlenght), tmpv), 1)
