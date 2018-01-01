@@ -381,11 +381,12 @@ class AimsIO:
             return True
         else:
             if not isfile('%s/%s' % (self.ModuDir, script)):
-                tmpString =  'To submit the jobs to the %s, ' % cmd +\
-						'you need the script file named \"%s\" in the module folder of %s' \
-					    % (script, self.ModuDir) + ', which does not exist\n' + \
-						'Please check if the file name (%s) is correct' % (script) +\
-						' or it is simply missing'
+                tmpString = 'To submit the jobs to the %s, ' % cmd
+                tmpString += 'you need the script file named ' +\
+                    '\"%s\" in the module folder of %s' \
+                    % (script, self.ModuDir) + ', which does not exist\n' + \
+                    'Please check if the file name (%s) is correct' \
+                    % (script) + ' or it is simply missing'
                 print_Error(self.IOut, tmpString)
             iof = open('%s/%s' % (self.ModuDir, script), 'r')
             iFile1 = iof.read()
@@ -418,209 +419,358 @@ class AimsIO:
         '''Collect results'''
         import re
         import os
-        from my_io   import my_plus
-        from my_io   import print_String
-        from my_io   import print_Error
+        from my_io import print_String, print_Error
 
-        if os.path.isfile('%s.log' %self.Proj):
-            lf = open('%s.log' %self.Proj,'r')
+        if os.path.isfile('%s.log' % self.Proj):
+            lf = open('%s.log' % self.Proj, 'r')
             lfs = lf.read()
         else:
-            print_Error(self.IOut,'Error :: No %s.log in current direction' %self.Proj)
+            print_Error(self.IOut,
+                        'Error :: No %s.log in current direction' % self.Proj)
 
-        if iop==0:    #for scf energy
-            p0 = re.compile('Self-consistency cycle converged.')                          #check whether SCF sucesses
+        if iop == 0:    # for scf energy
+            # At first, check whether the SCF is converged
+            p0 = re.compile('Self-consistency cycle converged.')
             p0p = p0.search(lfs)
             if not p0p:
-                print_String(self.IOut,'Error :: SCF doesn\'t sucess in %s' %self.Proj,1)
-                print_String(self.IOut,'SCF energy                  : %16s' %'NAN',1)
+                print_String(self.IOut, 'Error :: SCF doesn\'t sucess in %s'
+                             % self.Proj, 1)
+                print_String(self.IOut, 'SCF energy                  : %16s'
+                             % 'NAN', 1)
                 self.Energy['SCF'] = 'NAN'
-                print('Error :: SCF doesn\'t sucess in %s' %self.Proj)
+                print('Error :: SCF doesn\'t sucess in %s' % self.Proj)
             else:
-                p1 = re.compile('Total energy                  :\s*(?P<iters>-?\d+.\d+) Ha')  #to find the SCF energy with fractional occupation
-                p2 = re.compile('Total energy, T -> 0          :\s*(?P<iters>-?\d+.\d+) Ha')  #to find the SCF energy with interger occupation
+                # to find the SCF energy with fractional occupation
+                tmpString = \
+                    'Total energy *: *(?P<iters>-?\d+.\d+) Ha'
+                p1 = re.compile(tmpString)
+                # to find the SCF energy with interger occupation
+                # tmpString = \
+                #     'Total energy, T -> 0  *:\s*(?P<iters>-?\d+.\d+) Ha'
+                # p2 = re.compile(tmpString)
                 p1p = p1.findall(lfs)
-                if len(p1p)!=0:
+                if len(p1p) != 0:
                     self.Energy['SCF'] = float(p1p[-1])
-                    print_String(self.IOut,'SCF energy                  : %16.8f' %self.Energy['SCF'],1)
+                    print_String(self.IOut,
+                                 'SCF energy                  : %16.8f'
+                                 % self.Energy['SCF'], 1)
                 else:
-                    print_String(self.IOut,'Error :: SCF result was not found in %s' %self.Proj,1)
-                    print_String(self.IOut,'SCF energy                  : %16s' %'NAN',1)
+                    print_String(self.IOut,
+                                 'Error :: SCF result was not found in %s'
+                                 % self.Proj, 1)
+                    print_String(self.IOut,
+                                 'SCF energy                  : %16s'
+                                 % 'NAN', 1)
                     self.Energy['SCF'] = 'NAN'
-        elif iop==1: #for RPA energy
-            p0 = re.compile('RPA correlation energy :\s*(?P<iters>-?\d+.\d+)  Ha')  #to find the RPA correlation energy
+        elif iop == 1:  # for RPA energy
+            # to find the RPA correlation energy
+            p0 = re.compile(
+                'RPA correlation energy :\s*(?P<iters>-?\d+.\d+)  Ha')
             p0p = p0.search(lfs)
             if p0p:
                 self.Energy['EcRPA'] = float(p0p.group('iters'))
-                print_String(self.IOut,'RPA correlation energy      : %16.8f' %self.Energy['EcRPA'],1)
+                print_String(self.IOut,
+                             'RPA correlation energy      : %16.8f'
+                             % self.Energy['EcRPA'], 1)
             else:
-                print_String(self.IOut,'Error :: EcRPA result was not found in %s' %self.Proj,1)
-                print_String(self.IOut,'RPA correlation energy      : %16s' %'NAN',1)
+                print_String(self.IOut,
+                             'Error :: EcRPA result was not found in %s'
+                             % self.Proj, 1)
+                print_String(self.IOut,
+                             'RPA correlation energy      : %16s'
+                             % 'NAN', 1)
                 self.Energy['EcRPA'] = 'NAN'
-
-            p1 = re.compile('RPA total energy                  :\s*(?P<iters>-?\d+.\d+) Ha')  #to find the RPA total energy
+            # to find the RPA total energy
+            tmpString = \
+                'RPA total energy                  :\s*(?P<iters>-?\d+.\d+) Ha'
+            p1 = re.compile(tmpString)
             p1p = p1.search(lfs)
             if p1p:
                 self.Energy['RPA'] = float(p1p.group('iters'))
-                print_String(self.IOut,'RPA total energy            : %16.8f' %self.Energy['RPA'],1)
+                print_String(self.IOut,
+                             'RPA total energy            : %16.8f'
+                             % self.Energy['RPA'], 1)
             else:
-                print_String(self.IOut,'Error :: RPA result was not found in %s' %self.Proj,1)
+                print_String(self.IOut,
+                             'Error :: RPA result was not found in %s'
+                             % self.Proj, 1)
                 self.Energy['RPA'] = 'NAN'
-                print_String(self.IOut,'RPA correlation energy      : %16s' %self.Energy['RPA'],1)
-
-            p2 = re.compile('RPA\+SE total energy               :\s*(?P<iters>-?\d+.\d+) Ha')  #to find the RPA+SE total energy
+                print_String(self.IOut,
+                             'RPA correlation energy      : %16s'
+                             % self.Energy['RPA'], 1)
+            tmpString = \
+                'RPA\+SE total energy *:\s*(?P<iters>-?\d+.\d+) Ha'
+            p2 = re.compile(tmpString)  # to find the RPA+SE total energy
             p2p = p2.search(lfs)
             if p2p:
                 self.Energy['RPA+SE'] = float(p2p.group('iters'))
-                print_String(self.IOut,'RPA+SE total energy         : %16.8f' %self.Energy['RPA+SE'],1)
+                print_String(self.IOut,
+                             'RPA+SE total energy         : %16.8f'
+                             % self.Energy['RPA+SE'], 1)
             else:
-                print_String(self.IOut,'Error :: RPA+SE result was not found in %s' %self.Proj,1)
+                print_String(self.IOut,
+                             'Error :: RPA+SE result was not found in %s'
+                             % self.Proj, 1)
                 self.Energy['RPA+SE'] = 'NAN'
-                print_String(self.IOut,'RPA+SE total energy         : %16s' %self.Energy['RPA+SE'],1)
-
-            p3 = re.compile('RPA\+rSE \(diag\) total energy       :\s*(?P<iters>-?\d+.\d+) Ha')  #to find the RPA+rSE (diag) total energy
+                print_String(self.IOut,
+                             'RPA+SE total energy         : %16s'
+                             % self.Energy['RPA+SE'], 1)
+            # to find the RPA+rSE (diag) total energy
+            tmpString = \
+                'RPA\+rSE \(diag\) total energy *:\s*(?P<iters>-?\d+.\d+) Ha'
+            p3 = re.compile(tmpString)
             p3p = p3.search(lfs)
             if p3p:
                 self.Energy['RPA+rSEd'] = float(p3p.group('iters'))
-                print_String(self.IOut,'RPA+rSE (diag) total energy : %16.8f' %self.Energy['RPA+rSEd'],1)
+                print_String(self.IOut,
+                             'RPA+rSE (diag) total energy : %16.8f'
+                             % self.Energy['RPA+rSEd'], 1)
             else:
-                print_String(self.IOut,'Error :: RPA+rSEd result was not found in %s' %self.Proj,1)
+                print_String(self.IOut,
+                             'Error :: RPA+rSEd result was not found in %s'
+                             % self.Proj, 1)
                 self.Energy['RPA+rSEd'] = 'NAN'
-                print_String(self.IOut,'RPA+rSE (diag) total energy : %16s' %self.Energy['RPA+rSEd'],1)
-
-            p4 = re.compile('RPA\+rSE \(full\) total energy       :\s*(?P<iters>-?\d+.\d+) Ha')  #to find the RPA+rSE (full) total energy
+                print_String(self.IOut,
+                             'RPA+rSE (diag) total energy : %16s'
+                             % self.Energy['RPA+rSEd'], 1)
+            # to find the RPA+rSE (full) total energy
+            tmpString =\
+                'RPA\+rSE \(full\) total energy &:\s*(?P<iters>-?\d+.\d+) Ha'
+            p4 = re.compile(tmpString)
             p4p = p4.search(lfs)
             if p4p:
                 self.Energy['RPA+rSEf'] = float(p4p.group('iters'))
-                print_String(self.IOut,'RPA+rSE (full) total energy : %16.8f' %self.Energy['RPA+rSEf'],1)
+                print_String(self.IOut,
+                             'RPA+rSE (full) total energy : %16.8f'
+                             % self.Energy['RPA+rSEf'], 1)
             else:
-                print_String(self.IOut,'Error :: RPA+rSEf result was not found in %s' %self.Proj,1)
+                print_String(self.IOut,
+                             'Error :: RPA+rSEf result was not found in %s'
+                             % self.Proj, 1)
                 self.Energy['RPA+rSEf'] = 'NAN'
-                print_String(self.IOut,'RPA+rSE (diag) total energy : %16s' %self.Energy['RPA+rSEf'],1)
+                print_String(self.IOut,
+                             'RPA+rSE (diag) total energy : %16s'
+                             % self.Energy['RPA+rSEf'], 1)
 
-            p5 = re.compile('RPA\+ total energy                 :\s*(?P<iters>-?\d+.\d+) Ha')  #to find the RPA+ total energy
+            tmpString =\
+                'RPA\+ total energy *:\s*(?P<iters>-?\d+.\d+) Ha'
+            p5 = re.compile(tmpString)
             p5p = p5.search(lfs)
             if p5p:
                 self.Energy['RPA+'] = float(p5p.group('iters'))
-                print_String(self.IOut,'RPA+ total energy           : %16.8f' %self.Energy['RPA+'],1)
+                print_String(self.IOut,
+                             'RPA+ total energy           : %16.8f'
+                             % self.Energy['RPA+'], 1)
             else:
-                print_String(self.IOut,'Error :: RPA+ result was not found in %s' %self.Proj,1)
+                print_String(self.IOut,
+                             'Error :: RPA+ result was not found in %s'
+                             % self.Proj, 1)
                 self.Energy['RPA+'] = 'NAN'
-                print_String(self.IOut,'RPA+ total energy           : %16s' %self.Energy['RPA+'],1)
+                print_String(self.IOut,
+                             'RPA+ total energy           : %16s'
+                             % self.Energy['RPA+'], 1)
 
-            p6 = re.compile('Exact exchange energy             :\s*(?P<iters>-?\d+.\d+) Ha')  #to find the exact exchange energy
+            tmpString =\
+                'Exact exchange energy *:\s*(?P<iters>-?\d+.\d+) Ha'
+            p6 = re.compile(tmpString)
             p6p = p6.search(lfs)
             if p6p:
                 self.Energy['ExHF'] = float(p6p.group('iters'))
-                print_String(self.IOut,'Exact exchange energy       : %16.8f' %self.Energy['ExHF'],1)
+                print_String(self.IOut,
+                             'Exact exchange energy       : %16.8f'
+                             % self.Energy['ExHF'], 1)
             else:
-                print_String(self.IOut,'Error :: ExHF result was not found in %s' %self.Proj,1)
+                print_String(self.IOut,
+                             'Error :: ExHF result was not found in %s'
+                             % self.Proj, 1)
                 self.Energy['ExHF'] = 'NAN'
-                print_String(self.IOut,'Exact exchange energy       : %16s' %self.Energy['ExHF'],1)
+                print_String(self.IOut,
+                             'Exact exchange energy       : %16s'
+                             % self.Energy['ExHF'], 1)
 
-        elif iop==2: #for SOSEX related energy
-            p7 = re.compile('RPA\+2OX total energy              :\s*(?P<iters>-?\d+.\d+) Ha')  #to find RPA+2OX energy
+        elif iop == 2:   # for SOSEX related energy
+            tmpString =\
+                'RPA\+2OX total energy *:\s*(?P<iters>-?\d+.\d+) Ha'
+            p7 = re.compile(tmpString)
             p7p = p7.search(lfs)
             if p7p:
                 self.Energy['RPA+2OX'] = float(p7p.group('iters'))
-                print_String(self.IOut,'RPA+2OX total energy        : %16.8f' %self.Energy['RPA+2OX'],1)
+                print_String(self.IOut,
+                             'RPA+2OX total energy        : %16.8f'
+                             % self.Energy['RPA+2OX'], 1)
             else:
-                print_String(self.IOut,'Error :: PRA+2OX result was not found in %s' %self.Proj,1)
+                print_String(self.IOut,
+                             'Error :: PRA+2OX result was not found in %s'
+                             % self.Proj, 1)
                 self.Energy['RPA+2OX'] = 'NAN'
-                print_String(self.IOut,'RPA+2OX total energy        : %16s' %self.Energy['RPA+2OX'],1)
+                print_String(self.IOut,
+                             'RPA+2OX total energy        : %16s'
+                             % self.Energy['RPA+2OX'], 1)
 
-            p8 = re.compile('RPA\+SOSEX total energy            :\s*(?P<iters>-?\d+.\d+) Ha')  #to find RPA+SOSEX energy
+            tmpString =\
+                'RPA\+SOSEX total energy *:\s*(?P<iters>-?\d+.\d+) Ha'
+            p8 = re.compile(tmpString)
             p8p = p8.search(lfs)
             if p8p:
                 self.Energy['RPA+SOSEX'] = float(p8p.group('iters'))
-                print_String(self.IOut,'RPA+SOSEX total energy      : %16.8f' %self.Energy['RPA+SOSEX'],1)
+                print_String(self.IOut,
+                             'RPA+SOSEX total energy      : %16.8f'
+                             % self.Energy['RPA+SOSEX'], 1)
             else:
-                print_String(self.IOut,'Error :: PRA+SOSEX result was not found in %s' %self.Proj,1)
+                print_String(self.IOut,
+                             'Error :: PRA+SOSEX result was not found in %s'
+                             % self.Proj, 1)
                 self.Energy['RPA+SOSEX'] = 'NAN'
-                print_String(self.IOut,'RPA+SOSEX total energy      : %16s' %self.Energy['RPA+SOSEX'],1)
+                print_String(self.IOut,
+                             'RPA+SOSEX total energy      : %16s'
+                             % self.Energy['RPA+SOSEX'], 1)
 
-            p9 = re.compile('rPT2\(=RPA\+SOSEX\+rSE\) total energy :\s*(?P<iters>-?\d+.\d+) Ha')  #to find RPA+SOSEX+rSE energy
+            tmpString =\
+                'rPT2\(=RPA\+SOSEX\+rSE\) total energy ' +\
+                ': *(?P<iters>-?\d+.\d+) Ha'
+            p9 = re.compile(tmpString)
             p9p = p9.search(lfs)
             if p9p:
                 self.Energy['RPA+SOSEX+rSE'] = float(p9p.group('iters'))
-                print_String(self.IOut,'rPT2 total energy           : %16.8f' %self.Energy['RPA+SOSEX+rSE'],1)
+                print_String(self.IOut,
+                             'rPT2 total energy           : %16.8f'
+                             % self.Energy['RPA+SOSEX+rSE'], 1)
             else:
-                print_String(self.IOut,'Error :: PRA+SOSEX+rSE result was not found in %s' %self.Proj,1)
+                print_String(self.IOut, 'Error :: PRA+SOSEX+rSE result ' +
+                             'was not found in %s' % self.Proj, 1)
                 self.Energy['RPA+SOSEX+rSE'] = 'NAN'
-                print_String(self.IOut,'rPT2 total energy           : %16s' %self.Energy['RPA+SOSEX+rSE'],1)
-        elif iop==3: #for MP2 related energy
-            p10  = re.compile('Total Energy \+ MP2 correction  :\s*(?P<iters>-?\d+.\d+) Ha')  #to find MP2 energy
+                print_String(self.IOut,
+                             'rPT2 total energy           : %16s'
+                             % self.Energy['RPA+SOSEX+rSE'], 1)
+        elif iop == 3:   # for MP2 related energy
+            tmpString =\
+                'Total Energy \+ MP2 correction  :\s*(?P<iters>-?\d+.\d+) Ha'
+            p10 = re.compile(tmpString)
             p10p = p10.search(lfs)
             if p10p:
                 print p10p.group('iters')
                 self.Energy['MP2'] = float(p10p.group('iters'))
-                print_String(self.IOut,'MP2 total energy            : %16.8f' %self.Energy['MP2'],1)
+                print_String(self.IOut,
+                             'MP2 total energy            : %16.8f'
+                             % self.Energy['MP2'], 1)
             else:
-                print_String(self.IOut,'Error :: MP2 result was not found in %s' %self.Proj,1)
+                print_String(self.IOut,
+                             'Error :: MP2 result was not found in %s'
+                             % self.Proj, 1)
                 self.Energy['MP2'] = 'NAN'
-                print_String(self.IOut,'MP2 total energy            : %16s' %self.Energy['MP2'],1)
-            p11  = re.compile('MP2 correction                 :\s*(?P<iters>-?\d+.\d+) Ha')  #to find MP2 correlation energy
+                print_String(self.IOut,
+                             'MP2 total energy            : %16s'
+                             % self.Energy['MP2'], 1)
+            tmpString =\
+                'MP2 correction                 :\s*(?P<iters>-?\d+.\d+) Ha'
+            p11 = re.compile(tmpString)
             p11p = p11.search(lfs)
             if p11p:
                 self.Energy['MP2c'] = float(p11p.group('iters'))
-                print_String(self.IOut,'MP2 correlation             : %16.8f' %self.Energy['MP2c'],1)
+                print_String(self.IOut,
+                             'MP2 correlation             : %16.8f'
+                             % self.Energy['MP2c'], 1)
             else:
-                print_String(self.IOut,'Error :: MP2 result was not found in %s' %self.Proj,1)
+                print_String(self.IOut,
+                             'Error :: MP2 result was not found in %s'
+                             % self.Proj, 1)
                 self.Energy['MP2c'] = 'NAN'
-                print_String(self.IOut,'MP2 correlation             : %16s' %self.Energy['MP2c'],1)
-            p12  = re.compile('HF Energy                      :\s*(?P<iters>-?\d+.\d+) Ha')  #to find HF energy
+                print_String(self.IOut,
+                             'MP2 correlation             : %16s'
+                             % self.Energy['MP2c'], 1)
+            tmpString =\
+                'HF Energy                      :\s*(?P<iters>-?\d+.\d+) Ha'
+            p12 = re.compile(tmpString)
             p12p = p12.search(lfs)
             if p12p:
                 self.Energy['HF'] = float(p12p.group('iters'))
-                print_String(self.IOut,'HF Energy                   : %16.8f' %self.Energy['HF'],1)
+                print_String(self.IOut,
+                             'HF Energy                   : %16.8f'
+                             % self.Energy['HF'], 1)
             else:
-                print_String(self.IOut,'Error :: MP2 result was not found in %s' %self.Proj,1)
+                print_String(self.IOut,
+                             'Error :: MP2 result was not found in %s'
+                             % self.Proj, 1)
                 self.Energy['HF'] = 'NAN'
-                print_String(self.IOut,'HF energy                   : %16s' %self.Energy['HF'],1)
-        elif iop==4: #for DHDFT related energy
-            p13  = re.compile('Total DHDF energy *:\s*(?P<iters>-?\d+.\d+) Ha')  #to find DHDF energy
+                print_String(self.IOut,
+                             'HF energy                   : %16s'
+                             % self.Energy['HF'], 1)
+        elif iop == 4:   # for DHDFT related energy
+            p13 = re.compile('Total DHDF energy *:\s*(?P<iters>-?\d+.\d+) Ha')
             p13p = p13.search(lfs)
             if p13p:
                 self.Energy['DHDF'] = float(p13p.group('iters'))
-                print_String(self.IOut,'DHDF total energy            : %16.8f' %self.Energy['DHDF'],1)
+                print_String(self.IOut,
+                             'DHDF total energy            : %16.8f'
+                             % self.Energy['DHDF'], 1)
             else:
-                print_String(self.IOut,'Error :: DHDF result was not found in %s' %self.Proj,1)
+                print_String(self.IOut,
+                             'Error :: DHDF result was not found in %s'
+                             % self.Proj, 1)
                 self.Energy['DHDF'] = 'NAN'
-                print_String(self.IOut,'DHDF total energy            : %16s' %self.Energy['DHDF'],1)
-            p14  = re.compile('PT2 contribution *:\s*(?P<iters>-?\d+.\d+) Ha')  #to find PT2 in DHDF energy
+                print_String(self.IOut,
+                             'DHDF total energy            : %16s'
+                             % self.Energy['DHDF'], 1)
+            p14 = re.compile('PT2 contribution *:\s*(?P<iters>-?\d+.\d+) Ha')
             p14p = p14.search(lfs)
             if p14p:
-                print_String(self.IOut,'PT2 in DHDF                  : %16.8f' %self.Energy['DHDF'],1)
+                print_String(self.IOut,
+                             'PT2 in DHDF                  : %16.8f'
+                             % self.Energy['DHDF'], 1)
             else:
-                print_String(self.IOut,'Error :: PT2 in DHDF result was not found in %s' %self.Proj,1)
-                print_String(self.IOut,'PT2 in DHDF                  : %16s' %self.Energy['DHDF'],1)
-            p15  = re.compile('DHDF\/DFT Energy *:\s*(?P<iters>-?\d+.\d+) Ha')  #to find DFT in DHDF energy
+                print_String(self.IOut,
+                             'Error :: PT2 in DHDF result was not found in %s'
+                             % self.Proj, 1)
+                print_String(self.IOut,
+                             'PT2 in DHDF                  : %16s'
+                             % self.Energy['DHDF'], 1)
+            p15 = re.compile('DHDF/DFT Energy *:\s*(?P<iters>-?\d+.\d+) Ha')
             p15p = p15.search(lfs)
             if p15p:
-                print_String(self.IOut,'DFT in DHDF                  : %16.8f' %self.Energy['DHDF'],1)
+                print_String(self.IOut,
+                             'DFT in DHDF                  : %16.8f'
+                             % self.Energy['DHDF'], 1)
             else:
-                print_String(self.IOut,'Error :: PT2 in DHDF result was not found in %s' %self.Proj,1)
-                print_String(self.IOut,'DFT in DHDF                  : %16s' %self.Energy['DHDF'],1)
-        elif iop==5: #for CMP2 related energy
-            p13  = re.compile('Total SCPT2 energy *:\s*(?P<iters>-?\d+.\d+) Ha')  #to find CMP2 energy
+                print_String(self.IOut,
+                             'Error :: PT2 in DHDF result was not found in %s'
+                             % self.Proj, 1)
+                print_String(self.IOut,
+                             'DFT in DHDF                  : %16s'
+                             % self.Energy['DHDF'], 1)
+        elif iop == 5:   # for CMP2 related energy
+            p13 = re.compile('Total SCPT2 energy *:\s*(?P<iters>-?\d+.\d+) Ha')
             p13p = p13.search(lfs)
             if p13p:
                 self.Energy['CMP2'] = float(p13p.group('iters'))
-                print_String(self.IOut,'Total SCPT2 energy          : %16.8f' %self.Energy['CMP2'],1)
+                print_String(self.IOut,
+                             'Total SCPT2 energy          : %16.8f'
+                             % self.Energy['CMP2'], 1)
             else:
-                print_String(self.IOut,'Error :: SCPT2 result was not found in %s' %self.Proj,1)
+                print_String(self.IOut,
+                             'Error :: SCPT2 result was not found in %s'
+                             % self.Proj, 1)
                 self.Energy['CMP2'] = 'NAN'
-                print_String(self.IOut,'Total SCPT2 energy          : %16s' %self.Energy['CMP2'],1)
-            p14  = re.compile('SCPT2 contribution *:\s*(?P<iters>-?\d+.\d+) Ha')  #to find coupled MP2 in CMP2 energy
+                print_String(self.IOut,
+                             'Total SCPT2 energy          : %16s'
+                             % self.Energy['CMP2'], 1)
+            p14 = re.compile('SCPT2 contribution *:\s*(?P<iters>-?\d+.\d+) Ha')
             p14p = p14.search(lfs)
             if p14p:
                 self.Energy['CPT2'] = float(p14p.group('iters'))
-                print_String(self.IOut,'C Energy CPT2               : %16.8f' %self.Energy['CPT2'],1)
+                print_String(self.IOut,
+                             'C Energy CPT2               : %16.8f'
+                             % self.Energy['CPT2'], 1)
             else:
-                print_String(self.IOut,'Error :: SCPT2 correlation was not found in %s' %self.Proj,1)
+                print_String(self.IOut,
+                             'Error :: SCPT2 correlation was not found in %s'
+                             % self.Proj, 1)
                 self.Energy['CPT2'] = 'NAN'
-                print_String(self.IOut,'C Energy CPT2               : %16s' %self.Energy['CPT2'],1)
-            p14  = re.compile('SCPT2 contribution \(ss\) *:\s*(?P<iters>-?\d+.\d+) Ha')  #to find coupled MP2 in CMP2 energy
+                print_String(self.IOut,
+                             'C Energy CPT2               : %16s'
+                             % self.Energy['CPT2'], 1)
+            tmpString =\
+                'SCPT2 contribution \(ss\) *:\s*(?P<iters>-?\d+.\d+) Ha'
+            p14 = re.compile(tmpString)
             p14p = p14.search(lfs)
             if p14p:
                 self.Energy['CPT2ss'] = float(p14p.group('iters'))
@@ -874,39 +1024,41 @@ class AimsIO:
                     if p14p:
                         #tmpv = float(p14p.group('iters'))
                         tmpv = float(p14p[-1])
-                        print_String(self.IOut,'C %s%s: %16.8f' %(x,' '*(26-xlenght),tmpv),1)
+                        print_String(self.IOut, 'C %s%s: %16.8f'
+                                     % (x, ' '*(26-xlenght), tmpv), 1)
         return
+
     def parse_Control(self):
         '''parse control.in'''
-        import os,sys,re
+        import os
         # open elec_state
-        if os.path.isfile("%s/elec_state" %self.Proj):
-            sff = open("%s/elec_state" %self.Proj,'a')
+        if os.path.isfile("%s/elec_state" % self.Proj):
+            sff = open("%s/elec_state" % self.Proj, 'a')
         else:
-            sff = open("%s/elec_state" %self.Proj,'w')
+            sff = open("%s/elec_state" % self.Proj, 'w')
         # open control.in
-        if os.path.isfile("%s/control.in" %self.Proj):
-            wff = open("%s/control.in" %self.Proj,'r')
+        if os.path.isfile("%s/control.in" % self.Proj):
+            wff = open("%s/control.in" % self.Proj, 'r')
         else:
             print("No control.in")
 
         sff.close()
         wff.close()
         return
+
     def parse_Geometry(self):
         '''parse geometry.in'''
-        import os,sys,re
+        import os
         # open elec_state
-        if os.path.isfile("%s/elec_state" %self.Proj):
-            sff = open("%s/elec_state" %self.Proj,'a')
+        if os.path.isfile("%s/elec_state" % self.Proj):
+            sff = open("%s/elec_state" % self.Proj, 'a')
         else:
-            sff = open("%s/elec_state" %self.Proj,'w')
+            sff = open("%s/elec_state" % self.Proj, 'w')
         # open geometry.in
-        if os.path.isfile("%s/geometry.in" %self.Proj):
-            sff = open("%s/geometry.in" %self.Proj,'r')
+        if os.path.isfile("%s/geometry.in" % self.Proj):
+            sff = open("%s/geometry.in" % self.Proj, 'r')
         else:
             print("No geometry.in")
 
         sff.close()
-        wff.close()
         return
