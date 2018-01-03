@@ -1,0 +1,116 @@
+################################################################################
+#
+#  FHI-aims code project
+#  VB, Fritz-Haber Institut, 2007
+#
+#  Suggested "safe" defaults for Br atom (to be pasted into control.in file)
+#
+#  2015/11/12 : g function from tier2 added to default basis set choice.
+#               This gives a slightly more converged band gap. HOWEVER:
+#               Note that this g function may prove to be of relatively
+#               minor relevance; testing whether it should be omitted is a 
+#               good idea especially for the very expensive case of hybrid
+#               functional calculations. The gain in accuracy may not be 
+#               worth that cost.
+#
+################################################################################
+  species        Br
+#     global species definitions
+    nucleus             35
+    mass                79.904
+#
+    l_hartree           8
+#
+    cut_pot             4.0          2.0  1.0
+    basis_dep_cutoff    0.d0
+#
+    radial_base         56 7.0
+    radial_multiplier   6
+    angular_grids       specified
+      division   0.0871  110
+      division   0.1400  194
+      division   0.7896  302
+      division   0.8837  434
+      division   0.9869  590
+#      division   1.0613  770
+#      division   2.6835  974
+#      outer_grid  974
+      outer_grid  590
+################################################################################
+#
+#  Definition of "minimal" basis
+#
+################################################################################
+#     valence basis states
+    valence      4  s   2.
+    valence      4  p   5.
+    valence      3  d  10.
+#     ion occupancy
+    ion_occ      4  s   1.
+    ion_occ      4  p   4.
+    ion_occ      3  d  10.
+
+    include_min_basis   .false.
+    pure_gauss          .true.
+ gaussian 0 11
+  10629044.2640000            0.0000059  
+   1591918.2739000            0.0000461  
+    362333.9843700            0.0002424  
+    102643.1114100            0.0010231  
+     33489.8466680            0.0037122  
+     12091.2471900            0.0119781  
+      4716.1908789            0.0346827  
+      1956.1598080            0.0890683  
+       853.0859585            0.1933012  
+       387.9663367            0.3207114  
+       182.8515661            0.3299680  
+ gaussian 0 4
+      3240.4086421            0.0065905  
+      1000.4631935            0.0684396  
+       383.3730168            0.3449548  
+       166.0392970            0.8231554  
+ gaussian 0 1 87.919906994
+ gaussian 0 1 35.675840068
+ gaussian 0 1 17.543657842
+ gaussian 0 1 8.4473660433
+ gaussian 0 1 3.9666180616
+ gaussian 0 1 1.8356815987
+ gaussian 0 1 0.59084778776
+ gaussian 0 1 0.28863218421
+ gaussian 0 1 0.12153380537
+ gaussian 1 10
+     26566.4765790            0.0000621  
+      6290.5088566            0.0005513  
+      2043.3178410            0.0031680  
+       781.6722101            0.0138166  
+       331.5107895            0.0480185  
+       151.0919867            0.1316202  
+        72.3952782            0.2686005  
+        35.8695108            0.3682739  
+        18.1399062            0.2710861  
+         9.0466689            0.0762153  
+ gaussian 1 5
+       253.7182215           -0.0013729  
+        97.2508181           -0.0103938  
+        42.0348980           -0.0322042  
+         9.9685674            0.2422477  
+         4.9395855            0.5355787  
+ gaussian 1 1 2.4382845475
+ gaussian 1 1 1.1800000000
+ gaussian 1 1 0.51047564965
+ gaussian 1 1 0.21215851928
+ gaussian 1 1 0.83943604990E-01
+ gaussian 2 7
+       601.4443448            0.0006278  
+       180.8571864            0.0057205  
+        69.9868063            0.0290025  
+        30.3247103            0.0964470  
+        14.0279092            0.2206583  
+         6.6511702            0.3365764  
+         3.1354168            0.3487204  
+ gaussian 2 1 1.4393591843
+ gaussian 2 1 0.59350441438
+ gaussian 2 1 0.2300000
+ gaussian 3 1 0.34070000000
+ gaussian 3 1 0.82570000000
+ gaussian 4 1 0.64910000000

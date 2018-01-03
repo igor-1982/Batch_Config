@@ -1,0 +1,70 @@
+################################################################################
+#
+#  FHI-aims code project
+# Igor Ying Zhang, Fritz Haber Institute Berlin, 2014
+#
+#  Suggested "NAO-VCC-4Z" defaults for Ni atom (to be pasted into control.in file)
+#
+#  Please cite:
+#
+#  Igor Ying Zhang, Xinguo Ren, Patrick Rinke, Volker Blum, and Matthias Scheffler,
+#  "Numeric atom-centered-orbital basis sets with valence-correlation consistency from H to Ar"
+#  New Journal of Physics 15, 123033 (2013).
+#  http://dx.doi.org/10.1088/1367-2630/15/12/123033
+#
+################################################################################
+  species        Ni
+#     set basis set reference for FHI-aims output
+    cite_reference NAO-VCC-2013
+#     global species definitions
+    nucleus             28
+    mass                58.6934
+#
+    l_hartree           6
+#
+    cut_pot             4.0  2.0  1.0
+    basis_dep_cutoff    0e-4
+#
+    radial_base         52 7.0
+    radial_multiplier   2
+    angular_grids       specified
+      division   0.2935   50
+      division   0.6132  110
+      division   0.9287  194
+      division   1.1299  302
+      division   1.3700  434
+      division   1.5675  590
+#      division   1.7612  770
+#      division   1.9438  974
+#      division   2.5441 1202
+      outer_grid  770
+################################################################################
+#
+#  Definition of "minimal" basis
+#
+################################################################################
+#     valence basis states
+    valence      4  s   2.
+    valence      3  p   6.
+    valence      3  d   8.
+#     ion occupancy
+    ion_occ      4  s   1.
+    ion_occ      3  p   6.
+    ion_occ      3  d   7.
+#=======================================
+# Optimized in  Ni  for NAO-VCC-4Z
+#=======================================
+# (sp) correlation set
+ hydro     1     s      2.66821735
+ hydro     1     s      4.14239595
+ hydro     1     s      6.43105186
+ hydro     2     p      2.27665115
+ hydro     2     p      5.50790993
+ hydro     2     p     13.32530537
+# polarization set
+ hydro     3     d     10.62452393
+ hydro     3     d     17.16958345
+ hydro     3     d     27.74661694
+ hydro     4     f     11.26746775
+ hydro     4     f     16.31394649
+ hydro     5     g     23.45644381

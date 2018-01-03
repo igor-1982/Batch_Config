@@ -1,0 +1,106 @@
+################################################################################
+#
+#  FHI-aims code project
+# Volker Blum, Fritz Haber Institute Berlin, 2009
+#
+#  Suggested "tight" defaults for Bi atom (to be pasted into control.in file)
+#
+################################################################################
+  species        Bi
+#     global species definitions
+    nucleus             83
+    mass                208.98040
+#
+    l_hartree           6
+#
+    cut_pot             4.0  2.0  1.0
+    basis_dep_cutoff    1e-4
+#
+    radial_base         74 7.0
+    radial_multiplier   6
+    angular_grids specified
+#      division   0.1064  110
+      division   0.1579  194
+      division   0.2150  302
+#      division   1.0164  434
+#      division   1.1133  590
+#      division   1.1970  770
+#      division   7.7779  974
+      outer_grid  974
+#      outer_grid  434
+ ################################################################################
+#
+#  Definition of "minimal" basis
+#
+################################################################################
+#     valence basis states
+    valence      6  s   2.
+    valence      6  p   3.
+    valence      5  d  10.
+    valence      4  f  14.
+#     ion occupancy
+    ion_occ     6  s    1.
+    ion_occ     6  p    2.
+    ion_occ     5  d   10.
+    ion_occ     4  f   14.
+################################################################################
+#
+##   For exact comparison with all GTO-based codes, one or more of
+##   the following flags are needed:
+##
+    include_min_basis   .false.
+        pure_gauss          .true.
+#
+
+# Bi def2-QZVP
+ gaussian 0 9
+      8131.0900000            0.0000290  
+      1225.7700000            0.0002000  
+       274.6720000            0.0006840  
+        37.6164000            0.0202180  
+        23.4804000           -0.1593260  
+        14.1065000            0.6117260  
+         8.8130500           -0.5446530  
+         5.5077800           -0.6368840  
+         2.0397700            0.7716980  
+ gaussian 0 3
+        13.6142845            0.1580079  
+        11.0108818           -0.2716496  
+         2.2630090            0.5246933  
+ gaussian 0 1 1.0975227257
+ gaussian 0 1 0.52344449532
+ gaussian 0 1 0.26734409206
+ gaussian 0 1 0.12836608814
+ gaussian 0 1 0.60097735551E-01
+ gaussian 1 7
+        99.5914000            0.0003460  
+        19.8964000           -0.0199760  
+        12.4376000            0.1754460  
+         7.7740000           -0.3795560  
+         4.8399500           -0.0552620  
+         2.2547800            0.5288840  
+         1.1804900            0.5213240  
+ gaussian 1 3
+         9.6213215           -0.0529204  
+         4.1321351            0.2670518  
+         1.2785828            0.7282469  
+ gaussian 1 1 0.59423596262
+ gaussian 1 1 0.25794168858
+ gaussian 1 1 0.11273595358
+ gaussian 1 1 0.47791974731E-01
+ gaussian 2 7
+        69.6327992            0.0003506  
+        14.8886150            0.0081592  
+         6.5949629           -0.0839053  
+         4.1796108            0.0280342  
+         2.5697950            0.2020231  
+         1.5601365            0.3362125  
+         0.8921053            0.3462902  
+ gaussian 2 1 0.48093728228
+ gaussian 2 1 0.24233621968
+ gaussian 2 1 0.10440000000
+ gaussian 3 1 0.480300000
+ gaussian 3 1 0.200600000
+ gaussian 3 1 1.2625600000
+ gaussian 3 1 2.7210175470
+ gaussian 4 1 0.420300000 
