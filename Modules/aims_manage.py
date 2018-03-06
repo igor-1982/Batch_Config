@@ -355,7 +355,7 @@ class AimsIO:
 
     def run_Job_v02(self,
                     nproc=1, nthread=1, ntaskpernode=1,
-                    cfg=None, script=None, cmd=None):
+                    cfg=None, script=None, cmd=None, qname=None):
         '''run aims through a specified csh named "Aims_Environment"'''
         from os import system, chdir
         from os.path import exists, isfile
@@ -367,6 +367,10 @@ class AimsIO:
             script = 'aims_runscr'
         if cmd is None:
             cmd = 'sbatch'
+        elif cmd == 'bsub':
+            cmd = 'bsub <'
+        if qname is None:
+            qname = 'default'
         if not exists('%s' % self.Proj):
             print_Error(self.IOut,
                         "Error :: No %s direction" % (self.Proj))

@@ -1256,6 +1256,7 @@ class ConfigIO:
                     if self.BatchType == 'queue':
                         self.BatchCmd = 'sbatch'
                         self.BatchScriptName = 'aims_runscr'
+                        self.BatchQueueName = 'default'
                     elif self.BatchType == 'series':
                         self.BatchScriptName = 'Aims_Environment'
                 elif len(tmpList) == 2:
@@ -1263,6 +1264,7 @@ class ConfigIO:
                     if self.BatchType == 'queue':
                         self.BatchCmd = tmpList[-1].strip()
                         self.BatchScriptName = 'aims_runscr'
+                        self.BatchQueueName = 'default'
                     elif self.BatchType == 'series':
                         self.BatchScriptName = tmpList[-1].strip()
                 elif len(tmpList) == 3:
@@ -1270,6 +1272,15 @@ class ConfigIO:
                     if self.BatchType == 'queue':
                         self.BatchCmd = tmpList[-2].strip()
                         self.BatchScriptName = tmpList[-1].strip()
+                        self.BatchQueueName = 'default'
+                    elif self.BatchType == 'series':
+                        self.BatchScriptName = tmpList[-1].strip()
+                elif len(tmpList) == 4:
+                    self.BatchType = tmpList[-4].strip().lower()
+                    if self.BatchType == 'queue':
+                        self.BatchCmd = tmpList[-3].strip()
+                        self.BatchScriptName = tmpList[-2].strip()
+                        self.BatchQueueName = tmpList[-1].strip()
                     elif self.BatchType == 'series':
                         self.BatchScriptName = tmpList[-1].strip()
                 else:
@@ -2593,7 +2604,8 @@ class ConfigIO:
                                            self.NPN,
                                            self.AimsCfg,
                                            self.BatchScriptName,
-                                           self.BatchCmd
+                                           self.BatchCmd,
+                                           self.BatchQueueName
                                            )
                 elif self.BatchType == 'series':
                     FlagLog = \

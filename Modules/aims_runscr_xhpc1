@@ -1,0 +1,16 @@
+#BSUB -J <jobname>
+#BSUB -n <ntasks>
+#BSUB -R span[ptile=<ntaskspernode>]
+#BSUB -q <qname>
+
+#BSUB -o <jobname>-%J.out
+OMP_NUM_THREADS=<nthread>; export OMP_NUM_THREADS
+LD_LIBRARY_PATH=$MKL_HOME/lib/intel64_lin:$LD_LIBRARY_PATH; export LD_LIBRARY_PATH
+
+AIMS=/share/home/wenxinzy/export/bin
+
+aimsx="$AIMS/aims.<version>.x"
+
+mpirun -n <ntasks> $aimsx > <joblog>
+
+rm RUNNING
