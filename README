@@ -29,7 +29,7 @@ Groups         Keywords                   Arguments
 
  Aim_1)        "__aims__   ::"            "Procs" "Threads" "NPN" "AimsCFG"
  Aim_2)        "__aims_basis__ ::"        "BasisDir"
- Aim_2)        "__aims_batch_type__ ::"   "BatchType" "BatchCmd" "BatchScriptName"
+ Aim_3)        "__aims_batch_type__ ::"   "BatchType" "BatchCmd" "BatchScriptName" "BatchQueueName"
 
 NOTE :
        A)   Annotation is allowed, starting with '#'.
