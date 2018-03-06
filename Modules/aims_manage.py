@@ -408,7 +408,7 @@ class AimsIO:
             iFile1 = iFile2.replace('<nproc>', '%i' % nproc)
             iFile2 = iFile1.replace('<nthread>', '%i' % nthread)
             iFile1 = iFile2.replace('<ntasks>', '%i' % ntasks)
-            iFile2 = iFile1.replace('<qname>', '%i' % qname)
+            iFile2 = iFile1.replace('<qname>', '%s' % qname)
             iFile1 = iFile2
             iof = open('runscr', 'w')
             iof.write(iFile1)
