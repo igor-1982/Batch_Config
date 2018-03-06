@@ -1254,7 +1254,7 @@ class ConfigIO:
                 if len(tmpList) == 1:
                     self.BatchType = tmpList[-1].strip().lower()
                     if self.BatchType == 'queue':
-                        self.BatchCmd = 'sbatch'
+                        self.BatchCmd = 'brun'
                         self.BatchScriptName = 'aims_runscr'
                         self.BatchQueueName = 'default'
                     elif self.BatchType == 'series':
@@ -2629,7 +2629,8 @@ class ConfigIO:
                                                self.NPN,
                                                self.AimsCfg,
                                                self.BatchScriptName,
-                                               self.BatchCmd
+                                               self.BatchCmd,
+                                               self.BatchQueueName
                                                )
                     elif self.BatchType == 'series':
                         FlagLog = \
