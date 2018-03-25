@@ -15,6 +15,7 @@ def check_result(dirpath,check_dir):
     P2 = re.compile('caused collective abort of all ranks')
     P3 = re.compile('\| Occupation number: *(\d+.\d+)')
     P4 = re.compile('WARNING! SELF-CONSISTENCY CYCLE DID NOT CONVERGE')
+    P5 = re.compile('          Have a nice day.')
     for xfile in os.listdir(dirpath):
         name, pre = os.path.splitext(xfile)
         flagRemove = False
@@ -30,6 +31,10 @@ def check_result(dirpath,check_dir):
                 print("Uncertain errors, maybe is a parallel problem in %s" %xfile)
                 # os.rename('%s/%s' %(dirpath,xfile),'%s/%s' %(check_store_path,xfile))
                 flagRemove = True
+            elif not P5.search(fs):
+                print("Uncertain errors, maybe is a parallel problem in %s" %xfile)
+                # os.rename('%s/%s' %(dirpath,xfile),'%s/%s' %(check_store_path,xfile))
+                flagRemove = True
             else:
                 tmplist = [float(occ_num) for occ_num in P3.findall(fs)]
                 if tmplist[-1]!=0.0 and (tmplist[-2]!=2.0 or tmplist[-2]!=1.0):
@@ -42,7 +47,7 @@ def check_result(dirpath,check_dir):
                 #     print("Occupation number for CBM : %8.6f" %tmplist[-1])
             if P4.search(fs):
                 print("The SCF procedure is not complete in %s" %xfile)
-				flagRemove = True
+		flagRemove = True
                 # os.rename('%s/%s' %(dirpath,xfile),'%s/%s' %(check_store_path,xfile))
             if flagRemove:
                 os.rename('%s/%s' %(dirpath,xfile),'%s/%s' %(check_store_path,xfile))
