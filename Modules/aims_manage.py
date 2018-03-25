@@ -1102,6 +1102,15 @@ class AimsIO:
                              'osRPA correlation energy    : %16.8f'
                              % self.Energy['EcosRPA'], 1)
             tmpString =\
+                ' RPA correlation energy *:\s*(?P<iters>-?\d+.\d+)  Ha'
+            p16 = re.compile(tmpString)
+            p16p = p16.findall(lfs)
+            if len(p16p) != 0:
+                self.Energy['EcRPA'] = float(p16p[-1])
+                print_String(self.IOut,
+                             'RPA correlation energy      : %16.8f'
+                             % self.Energy['EcRPA'], 1)
+            tmpString =\
                 'OS-MP2 correlation energy *:\s*(?P<iters>-?\d+.\d+)  Ha'
             p16 = re.compile(tmpString)
             p16p = p16.findall(lfs)
