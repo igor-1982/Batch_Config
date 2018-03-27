@@ -6,7 +6,7 @@
 #       "ProjTool" = "Gaussian" : to run jobs using Gaussian package (default)
 #                  = "QChem"    : to run jobs using Q-Chem package
 #                "ProjDir"       "ProjCtrl"      "ProjTool"
-__project__ ::   ./3dAEE7           2             Aims
+__project__ ::   ./3DAEE7           2             Aims
 
 # The project description
 __title__ ::
@@ -15,9 +15,9 @@ __title__ ::
 "           multi-reference character                                       "
 
 # several global statements of control.in for aims Package
-__aims_basis__ :: /share/home/wenxinzy/export/BasisSet/Mixed-nZ/Basis-4Z
-__aims_batch_type__ :: queue bsub aims_runscr_xhpc1 xppn
-__aims__ ::  24 1 24 180319.scalapack.mpi
+__aims_basis__ :: /share/home/wenxinzy/export/Batch_Config/Data/Aims/MR-All/BasisSet/Basis-4Z
+__aims_batch_type__ :: queue bsub aims_runscr_xhpc1 debug
+__aims__ ::  4 1 4 180319.scalapack.mpi
 xc                       pbe0
 occupation_type          integer 0.0001
 restart                  restart
@@ -48,11 +48,11 @@ end aims
 
 # Specify <MacroPath> to be used in the batch
 __macro_path__  ::
-<PATH1> = '/draco/u/igor1982/export/Batch_Config/Data/Aims/MR-All'
+<PATH1> = '/share/home/wenxinzy/export/Batch_Config/Data/Aims/MR-All'
 
 # The molecular set to batch: 
-#               6 is the total number of jobs in this batch list
-__batch__ :: 6
+#               14 is the total number of jobs in this batch list
+__batch__ :: 14
 #"Flag"         "DIR"                   "InpName"                 "JobType"
   # 7 ground states
   Sc_G           <PATH1>/3dAEE7            Sc_G                   energy|osrpa
