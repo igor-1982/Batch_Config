@@ -19,9 +19,9 @@
     radial_base         53 7.0
     radial_multiplier   6
     angular_grids       specified
-      division   0.4348   50
-      division   0.7981  110
-      division   1.1328  194
+#      division   0.4348   50
+#      division   0.7981  110
+#      division   1.1328  194
       division   1.3947  302
       division   1.6856  434
       division   1.8921  590
@@ -38,7 +38,8 @@
 #     valence basis states
     valence      4  s   2.
     valence      3  p   6.
-    valence      3  d  10.
+    valence      3  d   9.9999
+    valence      4  p   0.0001
 #     ion occupancy
     ion_occ      4  s   1.
     ion_occ      3  p   6.
