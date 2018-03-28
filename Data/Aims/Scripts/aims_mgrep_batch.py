@@ -18,7 +18,8 @@ dhpbe0_flag_list = ['SCF energy', 'Exact exchange energy', 'X PBE', 'C PBE',
 # osrpa_flag_list = ['SCF energy', 'Exact exchange energy', 'X PBE', 'C PBE',
 #                    'osRPA correlation energy']
 osrpa_flag_list = ['SCF energy', 'Exact exchange energy', 'X PBE', 'C PBE',
-                   'X SCAN', 'C SCAN', 'osRPA correlation energy']
+                   'X SCAN', 'C SCAN', 'osRPA correlation energy',
+                   ' RPA correlation energy']
 
 
 def prepare_pattern(flag_list, flag):
