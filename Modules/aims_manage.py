@@ -359,7 +359,7 @@ class AimsIO:
         '''run aims through a specified csh named "Aims_Environment"'''
         from os import system, chdir
         from os.path import exists, isfile
-        from my_io import print_Error
+        from my_io import print_Error, print_String
 
         if cfg is None:
             cfg = 'scalapack.mpi'
@@ -428,7 +428,7 @@ class AimsIO:
             Cmd1 = Cmd2.replace('<ntasks>', '%i' % ntasks)
             Cmd2 = Cmd1.replace('<qname>', '%s' % qname)
             Cmd1 = Cmd2
-            jobId = system('%s runscr' % cmd)
+            jobId = system('%s runscr' % Cmd1)
             system('echo %s > %s' % (jobId, 'RUNNING'))
             chdir(self.WorkDir)
             return False
