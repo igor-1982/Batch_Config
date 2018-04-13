@@ -1,0 +1,13 @@
+#!/bin/bash -x
+
+OMP_NUM_THREADS=<nthread>; export OMP_NUM_THREADS
+
+AIMS=$HOME/export/bin
+aimsx="$AIMS/aims.<version>.x"
+
+cd $PBS_O_WORKDIR
+NCPU=`wc -l < $PBS_NODEFILE`
+
+/usr/mpi/intel/openmpi-1.8.1-qlc/bin/mpirun --mca btl openib,self,sm -np <ntasks> -hostfile $PBS_NODEFILE $aimsx > <joblog> 2>&1
+
+rm RUNNING
