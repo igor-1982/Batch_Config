@@ -369,6 +369,9 @@ class AimsIO:
             cmd = 'sbatch'
         elif cmd == 'bsub':
             cmd = 'bsub <'
+        elif cmd == 'qsub_langchao':
+            cmd = 'qsub -l nodes=<nodes>:ppn=<ntaskspernode>' +\
+                ' -q <qname> -N <jobname>'
         if qname is None:
             qname = 'default'
         if not exists('%s' % self.Proj):
@@ -396,7 +399,7 @@ class AimsIO:
             ntasks = nproc/nthread
             if not ntasks*nthread == nproc:
                 ntasks = ntasks+1
-            # evaluate how many nodes needed
+            # evaluate how many nodes needed for scripts
             nnode = ntasks/ntaskpernode
             if not nnode*ntaskpernode == ntasks:
                 nnode = nnode+1
@@ -413,6 +416,18 @@ class AimsIO:
             iof = open('runscr', 'w')
             iof.write(iFile1)
             iof.close()
+            # evaluate how many nodes needed for cmd
+            Cmd1 = cmd
+            Cmd2 = Cmd1.replace('<jobname>', 'job-%s' % self.Proj)
+            Cmd1 = Cmd2.replace('<version>', cfg)
+            Cmd2 = Cmd1.replace('<joblog>', '%s.log' % self.Proj)
+            Cmd1 = Cmd2.replace('<nodes>', '%i' % nnode)
+            Cmd2 = Cmd1.replace('<ntaskspernode>', '%i' % ntaskpernode)
+            Cmd1 = Cmd2.replace('<nproc>', '%i' % nproc)
+            Cmd2 = Cmd1.replace('<nthread>', '%i' % nthread)
+            Cmd1 = Cmd2.replace('<ntasks>', '%i' % ntasks)
+            Cmd2 = Cmd1.replace('<qname>', '%s' % qname)
+            Cmd1 = Cmd2
             jobId = system('%s runscr' % cmd)
             system('echo %s > %s' % (jobId, 'RUNNING'))
             chdir(self.WorkDir)
