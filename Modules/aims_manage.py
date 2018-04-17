@@ -1069,6 +1069,15 @@ class AimsIO:
                              % self.Energy['metaGGA'], 1)
         elif iop == 12:     # for ZRPS energy
             p16 = re.compile(
+                'sBGE2 *:\s*(?P<iters>-?\d+.\d+) Ha')
+            p16p = p16.findall(lfs)
+            if len(p16p) != 0:
+                tmpValue = float(p16p[-1])
+                print_String(self.IOut, 'sBGE2 correlation energy    : %16.8f'
+                             % tmpValue, 1)
+            p16 = re.compile(
+                'Total ZRPS energy              :\s*(?P<iters>-?\d+.\d+) Ha')
+            p16 = re.compile(
                 'Total ZRPS\(DH\) energy *:\s*(?P<iters>-?\d+.\d+) Ha')
             p16p = p16.findall(lfs)
             if len(p16p) != 0:
