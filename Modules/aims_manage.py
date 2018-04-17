@@ -1069,7 +1069,7 @@ class AimsIO:
                              % self.Energy['metaGGA'], 1)
         elif iop == 12:     # for ZRPS energy
             p16 = re.compile(
-                'sBGE2 *:\s*(?P<iters>-?\d+.\d+) Ha')
+                'sBGE2 contribution *:\s*(?P<iters>-?\d+.\d+) Ha')
             p16p = p16.findall(lfs)
             if len(p16p) != 0:
                 tmpValue = float(p16p[-1])
