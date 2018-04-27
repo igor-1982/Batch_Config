@@ -1257,7 +1257,7 @@ class ConfigIO:
                         self.BatchCmd = 'brun'
                         self.BatchScriptName = 'aims_runscr'
                         self.BatchQueueName = 'default'
-                    elif self.BatchType == 'series':
+                    elif self.BatchType == 'serial':
                         self.BatchScriptName = 'Aims_Environment'
                 elif len(tmpList) == 2:
                     self.BatchType = tmpList[-2].strip().lower()
@@ -1265,24 +1265,33 @@ class ConfigIO:
                         self.BatchCmd = tmpList[-1].strip()
                         self.BatchScriptName = 'aims_runscr'
                         self.BatchQueueName = 'default'
-                    elif self.BatchType == 'series':
+                    elif self.BatchType == 'serial':
                         self.BatchScriptName = tmpList[-1].strip()
+                    else:
+                        print_Error(self.IOut, 
+                                    'Error :: Unknown BathType for aims_batch_type')
                 elif len(tmpList) == 3:
                     self.BatchType = tmpList[-3].strip().lower()
                     if self.BatchType == 'queue':
                         self.BatchCmd = tmpList[-2].strip()
                         self.BatchScriptName = tmpList[-1].strip()
                         self.BatchQueueName = 'default'
-                    elif self.BatchType == 'series':
+                    elif self.BatchType == 'serial':
                         self.BatchScriptName = tmpList[-1].strip()
+                    else:
+                        print_Error(self.IOut, 
+                                    'Error :: Unknown BathType for aims_batch_type')
                 elif len(tmpList) == 4:
                     self.BatchType = tmpList[-4].strip().lower()
                     if self.BatchType == 'queue':
                         self.BatchCmd = tmpList[-3].strip()
                         self.BatchScriptName = tmpList[-2].strip()
                         self.BatchQueueName = tmpList[-1].strip()
-                    elif self.BatchType == 'series':
+                    elif self.BatchType == 'serial':
                         self.BatchScriptName = tmpList[-1].strip()
+                    else:
+                        print_Error(self.IOut, 
+                                    'Error :: Unknown BathType for aims_batch_type')
                 else:
                     print_Error(self.IOut,
                                 'Error :: Unknown input for aims_batch_type')
@@ -2547,7 +2556,7 @@ class ConfigIO:
             FlagDHDF = strf.find('dhdf') != -1
             FlagCDHDF = strf.find('cdhdf') != -1
             FlagWRPA = strf.find('wrpa') != -1
-            # FlagHLG = strf.find('hlg') != -1
+            FlagHLG = strf.find('hlg') != -1
             FlagCI = strf.find('ci') != -1
             FlagVDW = strf.find('vdw') != -1
             FlagMGGA = strf.find('meta') != -1
@@ -2607,7 +2616,7 @@ class ConfigIO:
                                            self.BatchCmd,
                                            self.BatchQueueName
                                            )
-                elif self.BatchType == 'series':
+                elif self.BatchType == 'serial':
                     FlagLog = \
                         tmpJob.run_Job(job_special_procs,
                                        self.AimsCfg,
@@ -2632,7 +2641,7 @@ class ConfigIO:
                                                self.BatchCmd,
                                                self.BatchQueueName
                                                )
-                    elif self.BatchType == 'series':
+                    elif self.BatchType == 'serial':
                         FlagLog = \
                             tmpJob.run_Job(job_special_procs,
                                            self.AimsCfg,
@@ -2698,9 +2707,9 @@ class ConfigIO:
                                  % job[4]['energy'][0], 1)
             if FlagWRPA:
                 tmpJob.get_Result(7)
-            # if FlagHLG:
-            #     tmpJob.get_Result(8)
-            #     job[4]['hlg']=[tmpJob.Energy['HLG']]
+            if FlagHLG:
+                tmpJob.get_Result(8)
+                job[4]['hlg']=[tmpJob.Energy['HLG']]
             if FlagCI:
                 tmpJob.get_Result(9)
             if FlagVDW:

@@ -330,12 +330,14 @@ class AimsIO:
         nff.close()
         return
 
-    def run_Job(self, nproc=1, cfg=None, script=None):
+    def run_Job(self, nproc=None, cfg=None, script=None):
         '''run aims through a specified csh named "Aims_Environment"'''
         from os import system, chdir
         from os.path import exists
         from my_io import print_Error
 
+        if nproc is None:
+            nproc = 1
         if cfg is None:
             cfg = 'scalapack.mpi'
         if script is None:
@@ -344,9 +346,9 @@ class AimsIO:
             print_Error(self.IOut,
                         "Error :: No %s direction" % (self.Proj))
         chdir(self.Proj)
-        system('mv %s.log ../%s.log' % (self.Proj, self.Proj))
         system('%s/%s %s %s %s.log'
                % (self.ModuDir, script, nproc, cfg, self.Proj))
+        system('mv %s.log ../%s.log' % (self.Proj, self.Proj))
         # if self.IPrint<=1:
         #     remove('%s/Job_%s.in' % (CurrScr, self.JobName))
         #     removedirs('%s' %CurrScr)

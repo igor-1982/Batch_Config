@@ -6,11 +6,11 @@
 #Usage:     Aims_Environment Aims_Input
 
  setenv OMP_NUM_THREADS 1
- setenv AIMS /home/zhang/Documents/Package-Pool/aims/bin
-# setenv MPI  /home/zhang/export/openmpi/bin
+ setenv AIMS /home/igor/Documents/Package-Pool/aims/bin
+# setenv MPI  /home/igor/export/openmpi/bin
+ setenv I_MPI_SHM_LMT shm
 
  set aimsx="$AIMS/aims.$2.x"
 
-$aimsx > $3
-
+mpirun -n $1 $aimsx > $3
 
