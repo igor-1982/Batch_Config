@@ -18,8 +18,11 @@ dhpbe0_flag_list = ['SCF energy', 'Exact exchange energy', 'X PBE', 'C PBE',
 # osrpa_flag_list = ['SCF energy', 'Exact exchange energy', 'X PBE', 'C PBE',
 #                    'osRPA correlation energy']
 osrpa_flag_list = ['SCF energy', 'Exact exchange energy', 'X PBE', 'C PBE',
-                   'X SCAN', 'C SCAN', 'osRPA correlation energy',
-                   ' RPA correlation energy']
+                   'X SCAN', 'C SCAN', 'osRPA correlation energy']
+
+# rpa_type_flag
+rpa_flag_list = ['SCF energy', 'Exact exchange energy', 'X PBE', 'C PBE',
+                   'X SCAN', 'C SCAN', 'RPA correlation energy']
 
 
 def prepare_pattern(flag_list, flag):
@@ -108,6 +111,8 @@ elif flag.lower() == 'dhpbe0':
     flag_list = dhpbe0_flag_list
 elif flag.lower() == 'osrpa':
     flag_list = osrpa_flag_list
+elif flag.lower() == 'rpa':
+    flag_list = rpa_flag_list
 else:
     raise Exception("Unknown flag %s for collecting" % flag)
 

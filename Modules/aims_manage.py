@@ -1164,19 +1164,20 @@ class AimsIO:
                 self.Energy['SR'][0] = float(p16p[-1])
                 self.Energy['SR'][1] = float(p16p[-1])
             tmpString =\
-                'Special radius of non-interacting response matrix in ' +\
-                'the a-spin channel <|>=? 1|0.0|8 *\((?P<iters>\d+.\d+)\).'
+                "Special radius of non-interacting response matrix in " +\
+                "the a-spin channel [<>]=? \d.\d *\( *(?P<iters>\d+.\d+)\)."
             p16 = re.compile(tmpString)
             p16p = p16.findall(lfs)
             if len(p16p) != 0:
-                self.Energy['SR'][0] = float(p16p[-1])
+                self.Energy['SR'][0] = float(p16p[0])
             tmpString =\
                 'Special radius of non-interacting response matrix in ' +\
-                'the b-spin channel <|>=? 1|0.0|8 *\((?P<iters>\d+.\d+)\).'
+                'the b-spin channel [<>]=? \d.\d *\( *(?P<iters>\d+.\d+)\).'
             p16 = re.compile(tmpString)
             p16p = p16.findall(lfs)
             if len(p16p) != 0:
-                self.Energy['SR'][1] = float(p16p[-1])
+                #print('b-spin',p16p[0],p16p)
+                self.Energy['SR'][1] = float(p16p[0])
             if self.Energy['SR'][0]!=0 and self.Energy['SR'][1]!=0:
                 print_String(self.IOut,
                     'Special radius of X0        : %16.8f%16.8f'
