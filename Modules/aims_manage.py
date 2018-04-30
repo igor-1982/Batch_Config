@@ -1157,7 +1157,7 @@ class AimsIO:
             self.Energy['SR'] = (0,0)
             tmpString =\
                 'Special radius of non-interacting response matrix in ' +\
-                'each channel = *(?P<iters>\d+.\d+).'
+                'each spin channel = *(?P<iters>\d+.\d+).'
             p16 = re.compile(tmpString)
             p16p = p16.findall(lfs)
             if len(p16p) != 0:
