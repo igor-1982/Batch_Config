@@ -1165,21 +1165,21 @@ class AimsIO:
                 self.Energy['SR'][1] = float(p16p[-1])
             tmpString =\
                 'Special radius of non-interacting response matrix in ' +\
-                'the a-spin channel [<|>]=* [1|0].[0|8] *\((?P<iters>\d+.\d+)\).'
+                'the a-spin channel <|>=? 1|0.0|8 *\((?P<iters>\d+.\d+)\).'
             p16 = re.compile(tmpString)
             p16p = p16.findall(lfs)
             if len(p16p) != 0:
                 self.Energy['SR'][0] = float(p16p[-1])
             tmpString =\
                 'Special radius of non-interacting response matrix in ' +\
-                'the b-spin channel [<|>]=* [1|0].[0|8] *\((?P<iters>\d+.\d+)\).'
+                'the b-spin channel <|>=? 1|0.0|8 *\((?P<iters>\d+.\d+)\).'
             p16 = re.compile(tmpString)
             p16p = p16.findall(lfs)
             if len(p16p) != 0:
                 self.Energy['SR'][1] = float(p16p[-1])
             if self.Energy['SR'][0]!=0 and self.Energy['SR'][1]!=0:
                 print_String(self.IOut,
-                    'Special radius of X0 : %16.8f%16.8f'
+                    'Special radius of X0        : %16.8f%16.8f'
                     % tuple(self.Energy['SR']), 1)
             p13 = re.compile('XC contributuion for \s*(?P<iters>\w+)')
             p13p = p13.findall(lfs)
