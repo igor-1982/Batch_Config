@@ -1154,7 +1154,7 @@ class AimsIO:
                 print_String(self.IOut,
                              'Exact exchange energy       : %16.8f'
                              % self.Energy['Exx'], 1)
-            self.Energy['SR'] = (0,0)
+            self.Energy['SR'] = [0,0]
             tmpString =\
                 'Special radius of non-interacting response matrix in ' +\
                 'each spin channel = *(?P<iters>\d+.\d+).'
