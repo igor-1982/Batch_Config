@@ -2563,6 +2563,7 @@ class ConfigIO:
             FlagZRPS = strf.find('zrps') != -1
             FlagXYG3 = strf.find('xyg3') != -1
             FlagOSRPA = strf.find('osrpa') != -1
+            FlagSCSRPA = strf.find('scsrpa') != -1
             if FlagSCPT2:
                 FlagCMP2 = False
                 FlagMP2 = False
@@ -2572,6 +2573,8 @@ class ConfigIO:
             if FlagCDHDF:
                 FlagDHDF = False
             if FlagOSRPA:
+                FlagRPA = False
+            if FlagSCSRPA:
                 FlagRPA = False
 
             if len(self.ProjDir) == 0:   # Enter project workdir
@@ -2732,6 +2735,12 @@ class ConfigIO:
                 tmpJob.get_Result(17)
                 try:
                     job[4]['energy'] = [tmpJob.Energy['osrpa']]
+                except:
+                    job[4]['energy'] = ['NAN']
+            if FlagSCSRPA:
+                tmpJob.get_Result(18)
+                try:
+                    job[4]['energy'] = [tmpJob.Energy['scsrpa']]
                 except:
                     job[4]['energy'] = ['NAN']
         return
@@ -3407,7 +3416,7 @@ class ConfigIO:
                 tmpCode = tf.readlines()
                 tf.close()
             else:
-                tmpString = 'Error in accessing to the line number of' +\
+                tmpString = 'Error in accessing to the line number of ' +\
                     'opt_func or the existing module name' +\
                     ' \"ConfigIO.get_OptFunc\"'
                 print_Error(self.IOut, tmpString)
@@ -3433,6 +3442,13 @@ class ConfigIO:
         elif self.OptJob == 'scpt2':
             try:
                 from opt_func import update_aims_scpt2
+            except:
+                print_Error(self.IOut, 'Error in importing ' +
+                            '\"update_aims_scpt2\"' +
+                            ' \"ConfigIO.get_OptFunc\"')
+        elif self.OptJob == 'scsrpa':
+            try:
+                from opt_func import update_aims_scsrpa
             except:
                 print_Error(self.IOut, 'Error in importing ' +
                             '\"update_aims_scpt2\"' +
