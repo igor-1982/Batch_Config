@@ -912,7 +912,7 @@ class ConfigIO:
         '''3) Obtain macro-path environment "PathList" by "__macro_path__ "'''
         from re import compile
         from os import rename, mkdir, makedirs, listdir, remove
-        from os.path import isdir, abspath
+        from os.path import isdir, abspath, isfile
         from my_io import print_Error, print_List, print_String
         # ================================#
         #  Now obtain project description #
