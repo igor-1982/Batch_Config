@@ -353,7 +353,7 @@ class AimsIO:
         #     remove('%s/Job_%s.in' % (CurrScr, self.JobName))
         #     removedirs('%s' %CurrScr)
         chdir(self.WorkDir)
-        return
+        return True
 
     def run_Job_v02(self,
                     nproc=1, nthread=1, ntaskpernode=1,
@@ -846,7 +846,7 @@ class AimsIO:
                 self.Energy['DFT'] = 'NAN'
                 print_String(self.IOut, 'Exact Exchange Energy       : %16s'
                              % self.Energy['DFT'], 1)
-            p16  = re.compile('X Energy *:\s*(?P<iters>-?\d+.\d+) Ha')
+            p16  = re.compile('X Energy\s*:\s*(?P<iters>-?\d+.\d+) Ha')
             p16p = p16.search(lfs)
             if p16p:
                 self.Energy['ExDFT'] = float(p16p.group('iters'))
@@ -860,7 +860,7 @@ class AimsIO:
                 self.Energy['ExDFT'] = 'NAN'
                 print_String(self.IOut, 'X Energy DFT                : %16s'
                              % self.Energy['ExDFT'], 1)
-            p17  = re.compile('C Energy GGA *:\s*(?P<iters>-?\d+.\d+) Ha')
+            p17  = re.compile('C Energy *:\s*(?P<iters>-?\d+.\d+) Ha')
             p17p = p17.search(lfs)
             if p17p:
                 self.Energy['EcDFT'] = float(p17p.group('iters'))
@@ -1210,6 +1210,14 @@ class AimsIO:
                         tmpv = float(p14p[-1])
                         print_String(self.IOut, 'C %s%s: %16.8f'
                                      % (x, ' '*(26-xlenght), tmpv), 1)
+        elif iop == 18:    # for scsRPA
+            p16 = re.compile('scsRPA total energy *:\s*(?P<iters>-?\d+.\d+) Ha')
+            p16p = p16.findall(lfs)
+            if len(p16p) != 0:
+                self.Energy['scsrpa'] = float(p16p[-1])
+                print_String(self.IOut,
+                             'scsRPA total energy          : %16.8f'
+                             % self.Energy['scsrpa'], 1)
         return
 
     def parse_Control(self):
