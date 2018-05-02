@@ -1,0 +1,17 @@
+#!/bin/bash -f
+#filename : Aims_Environment
+#Author:    Igor Ying Zhang
+#Purpose:   Setting aims running environment and run aims
+#
+#Usage:     Aims_Environment Aims_Input
+
+OMP_NUM_THREADS=1; export OMP_NUM_THREADS
+LD_LIBRARY_PATH=$MKL_HOME/lib/intel64_lin:$LD_LIBRARY_PATH; export LD_LIBRARY_PATH
+
+AIMS=/share/home/wenxinzy/export/bin
+
+aimsx="$AIMS/aims.$2.x"
+
+mpirun -n $1 $aimsx > $3 
+
+

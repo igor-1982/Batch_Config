@@ -1,0 +1,70 @@
+Optimization terminated successfully.
+         Current function value: 0.051469
+         Iterations: 220
+         Function evaluations: 361
+Optimization terminated successfully.
+         Current function value: 0.051019
+         Iterations: 447
+         Function evaluations: 673
+Traceback (most recent call last):
+  File "/home/zhang/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 297, in <module>
+    main()
+  File "/home/zhang/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 258, in main
+    run_optimization(MainFit)                               #  Run optimization based on MainFit
+  File "/home/zhang/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 189, in run_optimization
+    args=tuple([FitClass]))
+  File "/usr/lib/python2.7/dist-packages/scipy/optimize/optimize.py", line 373, in fmin
+    res = _minimize_neldermead(func, x0, args, callback=callback, **opts)
+  File "/usr/lib/python2.7/dist-packages/scipy/optimize/optimize.py", line 438, in _minimize_neldermead
+    fsim[0] = func(x0)
+  File "/usr/lib/python2.7/dist-packages/scipy/optimize/optimize.py", line 281, in function_wrapper
+    return function(*(wrapper_args + args))
+  File "/home/zhang/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 43, in calc_statistic
+    return calc_statistic_xyg3(C,FitClass)
+  File "/home/zhang/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 62, in calc_statistic_xyg3
+    FitClass.run_OptCalc(opt_func,C)
+  File "/home/zhang/Dropbox/SourceCode-Pool/DFT_Fitting/modules/my_io.py", line 3572, in run_OptCalc
+    TmpResult   = func(C,self.CompDict[index])
+  File "/home/zhang/Dropbox/SourceCode-Pool/DFT_Fitting/Data/rsXYG3/B3LYP/omega=200/def2-QZVP/opt_func.py", line 5, in opt_func
+    a1, a3, a4, a5, a7, a8, a10, a11 = C
+ValueError: need more than 6 values to unpack
+Optimization terminated successfully.
+         Current function value: 0.051808
+         Iterations: 255
+         Function evaluations: 407
+Optimization terminated successfully.
+         Current function value: 0.051197
+         Iterations: 126
+         Function evaluations: 224
+Optimization terminated successfully.
+         Current function value: 0.051649
+         Iterations: 149
+         Function evaluations: 239
+Optimization terminated successfully.
+         Current function value: 0.076325
+         Iterations: 732
+         Function evaluations: 1138
+Traceback (most recent call last):
+  File "/home/zhang/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 297, in <module>
+    main()
+  File "/home/zhang/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 253, in main
+    MainFit.get_OptInit()
+  File "/home/zhang/Dropbox/SourceCode-Pool/DFT_Fitting/modules/my_io.py", line 3432, in get_OptInit
+    while TmpLine[0]=='#':
+IndexError: string index out of range
+Error in importing "opt_func" "ConfigIO.get_OptFunc"
+Optimization terminated successfully.
+         Current function value: 0.072569
+         Iterations: 381
+         Function evaluations: 596
+Optimization terminated successfully.
+         Current function value: 0.070098
+         Iterations: 159
+         Function evaluations: 275
+Error in importing "opt_func" "ConfigIO.get_OptFunc"
+Error in importing "opt_func" "ConfigIO.get_OptFunc"
+Error in importing "opt_func" "ConfigIO.get_OptFunc"
+Optimization terminated successfully.
+         Current function value: 0.054493
+         Iterations: 290
+         Function evaluations: 464

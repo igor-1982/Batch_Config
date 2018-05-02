@@ -1,0 +1,74 @@
+forrtl: error (69): process interrupted (SIGINT)
+Image              PC                Routine            Line        Source             
+aims.180424.scala  0000000006A9BDAE  Unknown               Unknown  Unknown
+libpthread-2.27.s  00007F14E836CB90  Unknown               Unknown  Unknown
+aims.180424.scala  00000000008E4934  get_free_superpos         577  get_free_superpos_energy_p1.f90
+aims.180424.scala  000000000041A939  initialize_scf_           993  initialize_scf.f90
+aims.180424.scala  0000000000409D78  aims_                     207  main.f90
+aims.180424.scala  0000000000408E8D  MAIN__                     45  aims.f90
+aims.180424.scala  0000000000408BDE  Unknown               Unknown  Unknown
+libc-2.27.so       00007F14E67F39A7  __libc_start_main     Unknown  Unknown
+aims.180424.scala  0000000000408AEA  Unknown               Unknown  Unknown
+forrtl: error (69): process interrupted (SIGINT)
+Image              PC                Routine            Line        Source             
+aims.180424.scala  0000000006A9BDAE  Unknown               Unknown  Unknown
+libpthread-2.27.s  00007F5440E08B90  Unknown               Unknown  Unknown
+aims.180424.scala  0000000000E72BFE  evaluate_xc_energ          84  evaluate_xc_energy_shell.f90
+aims.180424.scala  00000000008E9DAD  get_free_superpos         698  get_free_superpos_energy_p1.f90
+aims.180424.scala  000000000041A939  initialize_scf_           993  initialize_scf.f90
+aims.180424.scala  0000000000409D78  aims_                     207  main.f90
+aims.180424.scala  0000000000408E8D  MAIN__                     45  aims.f90
+aims.180424.scala  0000000000408BDE  Unknown               Unknown  Unknown
+libc-2.27.so       00007F543F28F9A7  __libc_start_main     Unknown  Unknown
+aims.180424.scala  0000000000408AEA  Unknown               Unknown  Unknown
+forrtl: error (69): process interrupted (SIGINT)
+Image              PC                Routine            Line        Source             
+aims.180424.scala  0000000006A9BDAE  Unknown               Unknown  Unknown
+libpthread-2.27.s  00007FE6076A7B90  Unknown               Unknown  Unknown
+aims.180424.scala  0000000006A73E37  Unknown               Unknown  Unknown
+aims.180424.scala  00000000063297A5  gcor2_                    513  pbe.f
+aims.180424.scala  000000000612389E  corpbe_derivs_            679  pbe_partial_derivs.f
+aims.180424.scala  0000000003EE5394  xc_mp_xc_partials         786  xc.f90
+aims.180424.scala  000000000087FC4F  evaluate_xc_              121  evaluate_xc.f90
+aims.180424.scala  00000000008E9C06  get_free_superpos         673  get_free_superpos_energy_p1.f90
+aims.180424.scala  000000000041A939  initialize_scf_           993  initialize_scf.f90
+aims.180424.scala  0000000000409D78  aims_                     207  main.f90
+aims.180424.scala  0000000000408E8D  MAIN__                     45  aims.f90
+aims.180424.scala  0000000000408BDE  Unknown               Unknown  Unknown
+libc-2.27.so       00007FE605B2E9A7  __libc_start_main     Unknown  Unknown
+aims.180424.scala  0000000000408AEA  Unknown               Unknown  Unknown
+forrtl: error (69): process interrupted (SIGINT)
+Image              PC                Routine            Line        Source             
+aims.180424.scala  0000000006A9BDAE  Unknown               Unknown  Unknown
+libpthread-2.27.s  00007F2700EEBB90  Unknown               Unknown  Unknown
+aims.180424.scala  0000000006A739F5  Unknown               Unknown  Unknown
+aims.180424.scala  00000000061237DB  corpbe_derivs_            668  pbe_partial_derivs.f
+aims.180424.scala  0000000003EE5394  xc_mp_xc_partials         786  xc.f90
+aims.180424.scala  000000000087FC4F  evaluate_xc_              121  evaluate_xc.f90
+aims.180424.scala  00000000008E9C06  get_free_superpos         673  get_free_superpos_energy_p1.f90
+aims.180424.scala  000000000041A939  initialize_scf_           993  initialize_scf.f90
+aims.180424.scala  0000000000409D78  aims_                     207  main.f90
+aims.180424.scala  0000000000408E8D  MAIN__                     45  aims.f90
+aims.180424.scala  0000000000408BDE  Unknown               Unknown  Unknown
+libc-2.27.so       00007F26FF3729A7  __libc_start_main     Unknown  Unknown
+aims.180424.scala  0000000000408AEA  Unknown               Unknown  Unknown
+Traceback (most recent call last):
+  File "/home/igor/Documents/Package-Pool/DFT_Fitting/DFT_Fit.py", line 297, in <module>
+    main()
+  File "/home/igor/Documents/Package-Pool/DFT_Fitting/DFT_Fit.py", line 282, in main
+    run_optimization(MainFit)                               #  Run optimization based on MainFit
+  File "/home/igor/Documents/Package-Pool/DFT_Fitting/DFT_Fit.py", line 189, in run_optimization
+    args=tuple([FitClass]))
+  File "/usr/lib/python2.7/site-packages/scipy/optimize/optimize.py", line 408, in fmin
+    res = _minimize_neldermead(func, x0, args, callback=callback, **opts)
+  File "/usr/lib/python2.7/site-packages/scipy/optimize/optimize.py", line 590, in _minimize_neldermead
+    fsim[j] = func(sim[j])
+  File "/usr/lib/python2.7/site-packages/scipy/optimize/optimize.py", line 292, in function_wrapper
+    return function(*(wrapper_args + args))
+  File "/home/igor/Documents/Package-Pool/DFT_Fitting/DFT_Fit.py", line 47, in calc_statistic
+    return calc_statistic_scpt2(C,FitClass)
+  File "/home/igor/Documents/Package-Pool/DFT_Fitting/DFT_Fit.py", line 132, in calc_statistic_scpt2
+    FitClass.run_AimBatch()
+  File "/home/igor/Documents/Package-Pool/DFT_Fitting/modules/my_io.py", line 2690, in run_AimBatch
+    job[4]['ExHF'][0]*0.25)/0.75]
+TypeError: can't multiply sequence by non-int of type 'float'

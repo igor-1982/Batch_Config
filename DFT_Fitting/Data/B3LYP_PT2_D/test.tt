@@ -1,0 +1,740 @@
+extra/gvim 7.2-1 [installed]
+    Vi Improved, a highly configurable, improved version of the vi text editor (with advanced features, such as a GUI)
+extra/vim 7.2-1
+    Vi Improved, a highly configurable, improved version of the vi text editor
+extra/vim-a 2.18-5 [installed] (vim-plugins)
+    alternate files in vim quickly (.c -> .h etc)
+extra/vim-bufexplorer 7.2.6-4 [installed] (vim-plugins)
+    A simple buffer list/switcher for vim
+extra/vim-buftabs 0.15-1 [installed] (vim-plugins)
+    Minimalistic buffer tabs saving screen space
+extra/vim-colorsamplerpack 8.03-1 [installed] (vim-plugins)
+    Different colorschemes for vim
+extra/vim-doxygentoolkit 0.2.7-1 [installed] (vim-plugins)
+    This script simplify doxygen documentation in C/C++
+extra/vim-guicolorscheme 1.2-2 [installed] (vim-plugins)
+    auto convert gui-only colorschemes to 88/256 color terminal schemes
+extra/vim-matchit 1.13.2-4 [installed] (vim-plugins)
+    Extended % matching for vim
+extra/vim-minibufexpl 6.3.2-6 [installed] (vim-plugins)
+    An elegant buffer explorer for vim
+extra/vim-omnicppcomplete 0.4.1-5 [installed] (vim-plugins)
+    vim c++ completion omnifunc with a ctags database
+extra/vim-project 1.4.1-5 [installed] (vim-plugins)
+    Organize and navigate projects of files (like an ide/buffer explorer)
+extra/vim-runtime 7.2-1 [installed]
+    Runtime for vim and gvim
+extra/vim-taglist 45-4 [installed] (vim-plugins)
+    A source code browser plugin for vim
+extra/vim-vcscommand 1.99.40-1 [installed] (vim-plugins)
+    vim cvs/svn integration plugin
+extra/vim-workspace 1.0b1-5 [installed] (vim-plugins)
+    vim workspace manager plugin for managing groups of files
+community/apvlv 0.0.9.7-1 [installed]
+    A PDF Viewer which behaves like Vim
+community/clewn 1.15-1
+    gdb support for vim
+community/vim-pastie 2.0-3
+    A Vim plugin that lets you read and create pastes at http://pastie.org/
+community/vim-rails 4.2-1
+    A Vim plugin for enhanced Ruby on Rails application development
+community/vim-supertab 1.0-1
+    A Vim plugin that allows you to use the tab key to do all insert completion
+community/vim-surround 1.90-1
+    A Vim plugin that provides mappings to easily delete, change, and add paired "surroundings"
+community/vim-timestamp 1.21-1
+    A Vim plugin for automated time stamping
+community/vimpager 1.3-1
+    A vim-based script to use as a PAGER.
+aur/apvlv-svn 320-1 (19)
+    A pdf viewer which behaves like Vim.
+aur/bashstyle 7.10-1 (57)
+    A PyGTK client for managing bash, readline, vim, and nano settings
+aur/cfdg-vim 0.2-2 (Out of Date) (3)
+    Vim syntax files for CFDG design grammars.
+aur/colemak-vim 20080421-1 (Out of Date) (7)
+    Colemak keyboard layout for vim
+aur/cream 0.42-1 (171)
+    Modern easy-to-use configuration of the Vim text editor
+aur/cream-browser 20100519-1 (21)
+    A vim-like lightweight web browser based on WebKit and the GTK+ library
+aur/e4r-git 20091009-1 (0)
+    A script to cripple vim and make it more like nano.
+aur/eclim 1.5.8-1 (75)
+    Brings Eclipse functionality to Vim
+aur/eclim-git 20100218-1 (3)
+    Brings Eclipse functionality to Vim
+aur/eclipse-vrapper 0.14.0-1 (8)
+    Vim-like editing plugin for Eclipse
+aur/edumagnet 0.11-1 (3)
+    Video player for searching and downloading educational videos from youtube, vimeo, public tv sites, RSS feeds, ...
+aur/evince-gtk-synctex 2.26.2-3 (Out of Date) (21)
+    The Evince documentviewer patched to have no gnome deps + inverse and forward search with SyncTex, options to sync to emacs, gvim or kile (edit 
+    PKGBUILD to choose editor) 
+aur/fcitx4vim 3.6.1-5 (Out of Date) (8)
+    Fcitx for vim, auto change ime state when vim mode(normal/input) change
+aur/git-vim 20090924-1 (25)
+    Provides Git plugins for Vim and syntax files for Git displays.
+aur/muttator 0.6a1pre-4 (17)
+    Make Thunderbird look and behave like Vim
+aur/muttator-hg 4326-1 (5)
+    Make Thunderbird look and behave like Vim; built from HEAD of branch default
+aur/perl-text-vimcolor 0.11-1 (2)
+    Syntax color text in HTML or XML using Vim
+aur/pyclewn 0.6-1 (Out of Date) (16)
+    A python version of gdb support for vim
+aur/qavimator-svn 272-2 (2)
+    Qt port of Vince Invincible's avimator, bvh 3D animation editor for SecondLife
+aur/ranger 1.1.2-2 (19)
+    A simple, vim-like file manager
+aur/ranger-git 20100618-3 (73)
+    A simple, vim-like file manager.
+aur/ropemode 0.1-1 (3)
+    Plugin for performing python refactorings in vim
+aur/ropevim 0.3-1 (30)
+    Plugin for performing python refactorings in vim
+aur/scvim-svn 9856-1 (3)
+    supercollider  interaction scripts and syntax highlighting for vim
+aur/tudu 0.6.1-1 (24)
+    ncurses-based hierarchical todo list manager with vim-like keybindings
+aur/vigedit-bzr 74-1 (5)
+    Plugin for Gedit, which provides Vim key bindings to the Gedit editor
+aur/vim-actionscript 0.3-1 (4)
+    ActionScript 3.0 syntax file
+aur/vim-align 35.41-3 (15)
+    Lets you align statements/comments/declaration using regexps
+aur/vim-ansiesc 9-1 (Out of Date) (2)
+    ansi escape sequences concealed, but highlighted as specified (conceal)
+aur/vim-ant_menu 0.5.7.1-2 (13)
+    Vim plugin for ant
+aur/vim-argtextobj 1.1-1 (2)
+    Text-object like motion for arguments
+aur/vim-auctex 2.2.5-1 (24)
+    Macros for latex.
+aur/vim-autoalign 13-1 (2)
+    Automatically align as you type (autoalign): bib c c++ html maple matlab tex vim.
+aur/vim-autoclose 1.4-3 (16)
+    Inserts matching bracket, paren, brace or quote
+aur/vim-autocomplpop 2.14.1-1 (21)
+    Automatically open the popup menu for completion
+aur/vim-bandit r274-1 (3)
+    Colour Scheme
+aur/vim-bash-support 3.1.1-2 (31)
+    BASH-IDE - Write and run BASH-scripts using menus and hotkeys.
+aur/vim-blockcomment 1.1-1 (5)
+    Simple commenting and uncommenting of blocks of code
+aur/vim-blockhl 4-1 (6)
+    highlighting different levels of {} in C
+aur/vim-blogger 1.3-1 (4)
+    The only one vim script which handles Blogger. Powered by Metarw
+aur/vim-blogit 1.4.3-1 (6)
+    VIM plugin to easily access wordpress
+aur/vim-borland 1.0-1 (2)
+    Classic borland IDE like Vim color scheme
+aur/vim-brief 1.0-1 (2)
+    Brief editor key binding emulation in Vim
+aur/vim-brookstream 1.1-1 (4)
+    A dark blue/green colorscheme
+aur/vim-browser 1.1-1 (16)
+    web browser plugin
+aur/vim-bufferlist 1.3-1 (8)
+    Simple, fast, and slick non-disturbing buffer list
+aur/vim-bufkill 1.1-1 (2)
+    Unload/delete/wipe a buffer, keep its window(s), display last accessed buffer(s)
+aur/vim-busybee 1.0.1-2 (15)
+    a dark color scheme (modification of Mustang.vim)
+aur/vim-c 5.11-1 (44)
+    C/C++ IDE --  Write and run programs. Insert statements, idioms, comments etc.
+aur/vim-cabal 1.1-1 (Out of Date) (10)
+    Cabal, haskell's build system syntax coloration
+aur/vim-calendar 2.2-1 (18)
+    This script create calender windows in vim
+aur/vim-caravaggio-git 20100401-2 (5)
+    A Gvim color theme named after the great baroque painter, Michelangelo Merisi da Caravaggio, git version. You can find screenshot at 
+    http://www.flickr.com/photos/10943014@N00/4483378333/ 
+aur/vim-ccase 1.38-1 (2)
+    Script to setup maps/menus to add in using Clearcase
+aur/vim-cctree 0.61-2 (18)
+    C Call-Tree Explorer - Source-code analysis, real-time display of code flow
+aur/vim-changing-colour 3.7-1 (2)
+    Changes highlight colours gradually based on the hour
+aur/vim-clips 1.0-1 (3)
+    Syntax highlighting for CLIPS
+aur/vim-closetag 0.9.1-2 (18)
+    Functions and mappings to close open HTML/XML tags
+aur/vim-cmdalias 2.0-2 (11)
+    Create aliases for Vim commands
+aur/vim-cmdline-complete 1.1.3-2 (14)
+    complete command-line (: / etc.) from the current file
+aur/vim-cocoa 0.1-3 (Out of Date) (12)
+    Plugin for Cocoa/Objective-C development
+aur/vim-code_complete 2.9-2 (27)
+    function parameter complete, code snippets, and much more
+aur/vim-codepad 1.0-1 (Out of Date) (1)
+    Post the contents of your current buffer to the pastebin service at codepad.org
+aur/vim-colors-zenburn 2.13-1 (5)
+    Low-contrast color scheme for Vim
+aur/vim-colorschemes 20100218-1 (87)
+    A collection of color schemes from vim.org
+aur/vim-colorsupport 1.0.2-1 (17)
+    Use colorschemes written for gvim in color terminals
+aur/vim-colortest 0.1-1 (6)
+    xterm 256 color test and visual colors list
+aur/vim-colorzone 0.2-1 (6)
+    Colorscheme Use More Soft Colors
+aur/vim-commentop 1.1.0-1 (Out of Date) (3)
+    commands and operators to comment/uncomment lines in many languages
+aur/vim-comments 2.12-3 (34)
+    Plugin to comment and un-comment lines in different source files in both normal and visual mode.
+aur/vim-compview 1.05-1 (0)
+    Compressed Search View for vim
+aur/vim-conkyrc 20050923-4 (80)
+    Conky conkyrc syntax highlighting
+aur/vim-conque 1.1-2 (8)
+    Conque is a Vim plugin allowing users to execute and interact with programs, typically a shell such as bash, inside a buffer window.
+aur/vim-cpp 1.12-3 (39)
+    Extends C++ syntax highlighting to STL classes and method names
+aur/vim-cream-showinvisibles 3.01-1 (7)
+    Toggle view of invisible tabs, returns, trailing spaces
+aur/vim-cref 1.0.4-2 (16)
+    C-reference manual especially designed for Vim
+aur/vim-csapprox 3.50-4 (25)
+    Make gvim-only colorschemes work transparently in terminal vim
+aur/vim-css 0.7-4 (31)
+    CSS color preview
+aur/vim-csspretty 1.0-1 (2)
+    Pretty-print a css file with VIM
+aur/vim-ctk 0.3-1 (3)
+    Fast compile and run plugin for Vim
+aur/vim-cuteerrormarker 1.3.2-1 (3)
+    Display error marks on line which contain errors after compilation
+aur/vim-cutetodo 1.1-3 (17)
+    Manage to-do lists within vim
+aur/vim-cvs 20091007-1 (3)
+    Vi Improved, a highly configurable, improved version of the vi text editor
+aur/vim-cvsmenu 0.5.7.1-2 (12)
+    CVS(NT) integration plugin
+aur/vim-darkburn 1.2-2 (20)
+    Darkburn: A darker mod of Zenburn
+aur/vim-darkdevel 1.1.2-2 (13)
+    Darkdevel Vim colorscheme.
+aur/vim-darkspectrum 1.8-2 (22)
+    a gvim color scheme based on the oblivion color scheme for gedit
+aur/vim-dbext 10.00-2 (13)
+    http://www.vim.org/scripts/script.php?script_id=356
+aur/vim-debugger 1.0.2-4 (5)
+    A script to provide a debugger interface to the DBGp protocol.
+aur/vim-decho 20-1 (3)
+    Vim script internal debugger (output in separate window, tab, or remote vim)
+aur/vim-dirdiff 1.1.2-1 (6)
+    A plugin to diff and merge two directories recursively
+aur/vim-doc-pl 1.0-1 (0)
+    The VIM Polish document
+aur/vim-doxygen-support 2.0.2-2 (10)
+    Generate Doxygen comments from user defined templates
+aur/vim-dpaste 0.1-2 (0)
+    Vim plugin to paste to dpaste.com
+aur/vim-drawit 10-1 (12)
+    Ascii drawing plugin: lines, ellipses, arrows, fills, and more!
+aur/vim-dual 1.1-1 (3)
+    The Dual colorscheme that you've longing for
+aur/vim-easyhtml 0.5.1-1 (7)
+    Allows to add attributs/values/CSSProperties to HTML tags/attributs very easily
+aur/vim-echofunc 1.19-2 (13)
+    Echo the function declaration in the command line for C/C++
+aur/vim-eclipse 1.0.2-2 (19)
+    while typing a C function, a prototype is shown (man3 based)
+aur/vim-editsrec 00.01.00-1 (2)
+    Vim Global Plugin for Editing .srec Files
+aur/vim-emacs 20010816-2 (5)
+    Emacs like colors
+aur/vim-engspchk 64-3 (15)
+    Spelling checker: On-the-fly spell checking, multi-language, alternate spellings
+aur/vim-enhancedjumps 1.12-2 (2)
+    Enhanced jump list navigation commands
+aur/vim-enhcomm 2.3-7 (12)
+    EnhancedCommentify plugin to comment/un-comment lines in source code files.
+aur/vim-enumtocase r282-1 (2)
+    Convert enumerated lists to case statements
+aur/vim-erlang_detectvariables 1.1-1 (5)
+    detect Erlang variables
+aur/vim-errsign 0.1-2 (12)
+    Vim plugin: display marks on lines with errors
+aur/vim-eruby 2.0-1 (4)
+    Highlight eruby code blocks within html
+aur/vim-ex 8.02b-1 (14)
+    IDE all in vim.
+aur/vim-explorer 0.98-2 (11)
+    A Vim plugin which enables Vim to act as a file manager
+aur/vim-extended-git 20100403-1 (2)
+    Vim with various extensions
+aur/vim-fastiane 0.21-1 (2)
+    a tool to help you quick edit and save abbreviation, snippets .etc
+aur/vim-fastladder 0.9-1 (2)
+    vimscript for fastladder
+aur/vim-favmenu 0.32-1 (2)
+    A new menu, like IE's Favourites, or Netscape's Bookmark
+aur/vim-fencview 4.6-2 (13)
+    Autodetect multiple encodings
+aur/vim-foldutil 3.0-2 (12)
+    Utility for creating folds (using specified match criteria)
+aur/vim-foo 2.1.1-2 (9)
+    Examples of Vim functions (and a few commands, etc.)
+aur/vim-fortran 0.3.1-2 (15)
+    Additional indentation rules for Fortran 95 and Fortran 90
+aur/vim-fugitive 20100313-1 (6)
+    A git wrapper so awesome, it should be illegal. Latest git version
+aur/vim-functionator 1.0-1 (1)
+    Simple script that shows the name of the current function
+aur/vim-fuzzyfinder 2.22.3-2 (18)
+    Fuzzy/Partial pattern explorer for buffer/file/MRU/command/bookmark/tag/etc
+aur/vim-genutils 2.5-1 (30)
+    General utility functions for Vim
+aur/vim-getscript 29-2 (2)
+    Keep your plugins up-to-date! (semi-automatic retrieval)
+aur/vim-gist 2.7.-2 (14)
+    vimscript for gist
+aur/vim-git-branch-info 20100713-1 (12)
+    A Vim script to return info about the Git branches.
+aur/vim-gnupg 2782-3 (42)
+    Plugin for transparent editing of gpg encrypted files
+aur/vim-googlereader 2.1-2 (19)
+    Vimscript for googlereader
+aur/vim-graywh 1-1 (3)
+    My personal colorscheme
+aur/vim-greputils 2.8-2 (10)
+    Interface with grep, find and id-utils (not just another grep wrapper)
+aur/vim-gtk 7.2.330-1 (26)
+    modified from extra/gvim, compiled with gtk2 ui, without deps on vi/vim ,ruby and desktop utils
+aur/vim-haml 0.3-2 (14)
+    Haml syntax highlight
+aur/vim-haskell 1.2.1-1 (18)
+    Updated with for in standalone deriving.
+aur/vim-hexman 0.7.2-1 (9)
+    Simpler Hex viewing and editing
+aur/vim-hg 2177-2 (2)
+    Vi Improved, a highly configurable, improved version of the vi text editor
+aur/vim-hicurline 6-1 (7)
+    Highlights the current line
+aur/vim-hoogle 1.0-1 (Out of Date) (5)
+    Add commands to use Hoogle within vim
+aur/vim-htmlcmd 2.5-1 (4)
+    Rich HTML/XML commands
+aur/vim-htmlhelper 1.0-2 (3)
+    Html macros and mappings
+aur/vim-htmljinja 1.0-1 (1)
+    Adds Jinja highlighting support to Vim
+aur/vim-ifdef 3.0-1 (2)
+aur/vim-impact 0.2-1 (3)
+    Utility to train touch typing skills
+aur/vim-indent-python 0.3-1 (2)
+    vim indent script for python code
+aur/vim-info 1.7-1 (5)
+    GNU info documentation browser
+aur/vim-inkpot 7.0-2 (9)
+    Inkpot, a dark scheme for GUI and 88/256 colour terms
+aur/vim-iptables 1.07-2 (2)
+    iptables-save/restore syntax highlighter
+aur/vim-jad 1.3-2 (11)
+    Automatically decompiles java class files and displays java code
+aur/vim-java-getset 1.10-1 (6)
+    Automatically add getter/setters for Java properties (including array-based)
+aur/vim-java_apidoc 3.1.1-1 (4)
+    a great color scheme
+aur/vim-java_checkstyle 0.5-1 (Out of Date) (5)
+    Integrates Checkstyle with Vim
+aur/vim-javabrowser 2.03-1 (5)
+    Shows java file class, package in a tree as in IDEs. Java source browser
+aur/vim-javacomplete 0.77.1-3 (26)
+    Omni Completion for JAVA
+aur/vim-javascript 0.1patch2-2 (14)
+    This indentation script for OOP javascript (especially for EXTJS)
+aur/vim-javascriptlint 0.2-2 (12)
+    Displays JavaScript Lint warnings in the quickfix error window
+aur/vim-jcommenter 1.3.1-1 (5)
+    A script for automatically generating JavaDoc comments
+aur/vim-jde 2.16.2-4 (16)
+    Vim - Just a Development Envirement (Java/C++)
+aur/vim-jinja 1.1-3 (1)
+    Adds Jinja highlighting support to Vim
+aur/vim-jpythonfold 3.2-6 (15)
+    A better python fold script
+aur/vim-jquery 0.4-2 (19)
+    Syntax file for jQuery
+aur/vim-jsl 1.00.003-1 (4)
+    Compiler plugin for JavaScript Lint
+aur/vim-justify 1.0-1 (4)
+    Simple text justifier inspired by Kartik Murari's format.vim
+aur/vim-kalt 1.1-1 (4)
+    A cold colorscheme.
+aur/vim-kaltex 1.1-1 (4)
+    A colder colorscheme...
+aur/vim-largefile 4-1 (10)
+    Edit large files quickly (keywords: large huge speed)
+aur/vim-latexsuite 20100129-2 (197)
+    vim-latexsuite attempts to provide a comprehensive set of tools to view, edit and compile LaTeX documents in Vim. Together, they provide tools 
+    starting from macros to speed up editing LaTeX documents to functions for forward searching .dvi documents. 
+aur/vim-latexsuite-svn 1050-1 (31)
+    Provides a comprehensive set of tools to view, edit, and compile LaTeX documents within Vim. Also provides macros to speed up the creation of 
+    LaTeX documents. SVN version. 
+aur/vim-liblist 0.1-2 (2)
+    Library of functions to work with lists/arrays
+aur/vim-lighttpd 1.16-1 (3)
+    syntax highlighting for lighttpd config files
+aur/vim-limp 0.3.4-4 (25)
+    Lisp IDE
+aur/vim-lodgeit 0.2-1 (2)
+    pastes code to paste.pocoo.org
+aur/vim-lookupfile 1.8-2 (14)
+    Lookup files using Vim7 ins-completion
+aur/vim-lua-support 1.1-4 (22)
+    Lua-IDE -- Write and run Lua-scripts using menus and hotkeys
+aur/vim-lustyexplorer 1.4.1-3 (20)
+    Dynamic filesystem and buffer explorer.
+aur/vim-mako 0.6.1-2 (10)
+    Some utility functions
+aur/vim-manpageview 4-1 (12)
+    Viewer for manpages, gnu info,  perldoc, and php (unix/linux/cygwin)
+aur/vim-markbrowser 0.9-2 (13)
+    A graphical marks browser
+aur/vim-markdown 9-2 (21)
+    A Vim syntax file for the Markdown formatting syntax.
+aur/vim-mathml 1.1-1 (7)
+    MathML syntax highlighting for VIM
+aur/vim-mines 16-1 (2)
+    Play Mines with vim
+aur/vim-minscm 0.6.0-3 (15)
+    An abstract front-end for Mercurial/Git/Bazaar
+aur/vim-mips 1.0.1-2 (11)
+    Your standard MIPS syntax highlighting
+aur/vim-mrpink 1-1 (4)
+    Dark not black colorscheme
+aur/vim-mru 3.2-1 (3)
+    Plugin to manage Most Recently Used (MRU) files
+aur/vim-multiplesearch 1.3-2 (12)
+    Highlight multiple searches at the same time, each with a different color
+aur/vim-multvals 3.10-1 (12)
+    Array library for Vim
+aur/vim-nature 0.3-1 (Out of Date) (4)
+    folding support for MediaWiki-style syntax
+aur/vim-neocomplcache 4.09-1 (Out of Date) (18)
+    Ultimate auto completion system for Vim
+aur/vim-nerdcommenter 2.2.2-3 (47)
+    A plugin that allows for easy commenting of code for many filetypes
+aur/vim-nerdtree 4.1.0-4 (123)
+    A tree explorer plugin for navigating the filesystem
+aur/vim-netrw 135-2 (7)
+    Network oriented reading, writing, and browsing (keywords: netrw ftp scp)
+aur/vim-nextcs 0.0.1-1 (2)
+    Change your color scheme easily
+aur/vim-nox 7.2-1 (1)
+    a highly configurable, improved version of the vi text editor without X dependency
+aur/vim-nqc 3.1-2 (3)
+    programming support (for the LEGO MINDSTORMS RCX-Controller)
+aur/vim-obviousmode 1.21-1 (3)
+    Indicate current mode visually
+aur/vim-omlet 0.13-1 (15)
+    Much better OCaml indentation, and more
+aur/vim-openssl 3.2-3 (9)
+    Edit OpenSSL encrypted files and turn Vim into a Password Safe
+aur/vim-opsplorer 1.2-1 (2)
+    tree file explorer
+aur/vim-paster 1.2-1 (8)
+    VIM plugin to paste to any pastebin service
+aur/vim-pbasic 1.0-1 (2)
+    PBASIC syntax for those of us vim users
+aur/vim-peaksea 3.3-2 (15)
+    Refined color, contains both gui and cterm256 for dark and light background
+aur/vim-pep8 0.1-2 (5)
+    A PEP 8 Python source file checker for Vim
+aur/vim-perl 0.11-2 (23)
+    improved perl syntax highlighting
+aur/vim-perl-completion 2.4-1 (3)
+    This perl omni completion support basic Moose syntax, variable name (array. hash .. ) completion, class method, object method completion, etc. 
+aur/vim-perl-support 4.8-3 (2)
+    Perl-IDE offers easiest way to do all of the above, saving lot of time and keystrokes.
+aur/vim-perldoc 1.1.1-1 (8)
+    perldoc command from vim
+aur/vim-pf 1.3-1 (3)
+    OpenBSD pf.conf (packet filter configuration)
+aur/vim-php-doc 1.0-1 (9)
+    Provides really comfortable generation of phpDocumentor doc blocks for PHP4 & 5
+aur/vim-phperrormarker 0.0.4-2 (6)
+    Mark syntax errors in php file
+aur/vim-pkgbuild 0.1-2 (34)
+    VIM plugin to help create PKGBUILDs
+aur/vim-plumbing 1.2-1 (Out of Date) (2)
+    Syntax highlighting for Plan 9 plumbing files
+aur/vim-po 1.2-1 (14)
+    ftplugin for easier editing of GNU gettext PO files
+aur/vim-potwiki 1.25-1 (3)
+    Maintain a Wiki of plain text files
+aur/vim-proj 1.2-1 (1)
+    Simple project tool
+aur/vim-protodef 0.9.1-1 (Out of Date) (2)
+    Tool to help create skeleton implementations of c++ function prototypes
+aur/vim-pydiction 1.2-4 (38)
+    Allows you to auto-complete your Python code
+aur/vim-pydoc 1.1.1-3 (20)
+    Search and view python documentation from within vim (uses pydoc)
+aur/vim-pyflakes 2.0-1 (26)
+    Vim plugin which highlights common Python errors like misspelling a variable name on the fly.
+aur/vim-pylint 0.5-1 (18)
+    Compiler plugin for python style checking tool
+aur/vim-python_ifold 2.9-2 (10)
+    Improved version of python_fold. Uses folding expression for python code
+aur/vim-pythonhelper 0.83-1 (26)
+    Displays Python class, method or function the cursor is in on the status line
+aur/vim-qbuf 1.12-2 (12)
+    Very small, clean but quick and powerful buffer manager!
+aur/vim-qt 0.4-1 (4)
+    Tiny tool for the uic used in Qt from Trolltech
+aur/vim-quickfonts 1.29-1 (4)
+    Quickly switch between a list of favorite fonts, manage list of favorite fonts
+aur/vim-r-plugin2 090610-4 (15)
+    Plugin to work with R
+aur/vim-r_omni 0.1-1 (2)
+    Auto completes R identifiers from the current file and the included libraries
+aur/vim-ragtag 2.0-1 (1)
+    A set of mappings for HTML, XML, PHP, ASP, eRuby, JSP, and more (formerly allml.)
+aur/vim-railscasts 1.1-2 (20)
+    railscasts color theme that works in 256color terminals as well as gui
+aur/vim-refactor 1.03-2 (12)
+    C/C++ refactoring tool
+aur/vim-regreplop 1.1-1 (2)
+    operator to replace motion/visual with a register
+aur/vim-rename2 0.1-1 (3)
+    Remake of the origional Rename plugin
+aur/vim-renamer 1.2-5 (34)
+    Use the power of vim to rename groups of files
+aur/vim-repeat 2.0-1 (1)
+    Use the repeat command (.) with supported plugins
+aur/vim-runscript 1.1-1 (7)
+    Plugin for running Python scripts
+aur/vim-scala-svn 18485-1 (8)
+    Vim support files for the Scala programming language
+aur/vim-sco 4.02-5 (27)
+    Browse source code easily with cscope, ctags and marks system
+aur/vim-screen 0.8-1 (6)
+    Start gnu screen w/ your vim session and a split shell + send commands to the sh.
+aur/vim-scripts-haskellmode 20090430-0 (11)
+    Collection of plugins to aid Haskell programming in Vim.
+aur/vim-scripts-mgr 0.2.0-1 (13)
+    vim script manager
+aur/vim-scripts-xmledit 1.84-1 (6)
+    A filetype plugin to help edit XML, HTML, and SGML documents
+aur/vim-scrollcolors 20060719-1 (3)
+    This is colorscheme Scroller/Chooser/Browser. With this plugin, you walk through installed colorschemes using arrow keys.
+aur/vim-securemodelines 20080424-2 (12)
+    Secure, user-configurable modeline support
+aur/vim-selectbuf 4.3-2 (4)
+    A fast and extensible buffer explorer
+aur/vim-set_utf8 1.01-1 (5)
+    Switching to Unicode in an orderly manner
+aur/vim-setget 0.1-1 (3)
+    setter and getter for php
+aur/vim-shell_it 1.0-1 (5)
+    easy shell
+aur/vim-showpairs 2.1-1 (7)
+    Highlights the matching pair surrounding the current cursor location
+aur/vim-signdiff 0.0.2-1 (3)
+    show the diff status at left sidebar
+aur/vim-skittles_dark 1.1-2 (12)
+    Dark, colorful scheme
+aur/vim-slimv 0.5.3.-2 (28)
+    Lisp and Clojure REPL inside Vim with profiling and Hyperspec lookup, like SLIME
+aur/vim-snipmate 0.83-5 (53)
+    TextMate-style snippets for Vim
+aur/vim-sokoban 1.3-1 (3)
+    Sokoban Game for Vim!
+aur/vim-spamassassin 1.8-1 (7)
+    Syntax highlighting for SpamAssassin config files
+aur/vim-spell-bg 20080213-1 (0)
+    Bulgarian Dictionary for Vim spell checking
+aur/vim-spell-cs 20080213-2 (5)
+    Czech dictionary for Vim spell checking.
+aur/vim-spell-de 20091202-1 (52)
+    German Dictionary for Vim spell checking
+aur/vim-spell-fr 20080217-4 (36)
+    French dictionary for Vim spell checking
+aur/vim-spell-hu 20080213-1 (0)
+    Hungarian dictionary for Vim spell checking
+aur/vim-spell-it 20080213-1 (7)
+    Italian Dictionary for Vim spell checking
+aur/vim-spell-nl 20080221-2 (2)
+    Dutch Dictionary for Vim spell checking
+aur/vim-spell-pl 20080213-3 (19)
+    Polish Dictionary for Vim spell checking
+aur/vim-spell-pt 20081204-2 (1)
+    Arquivos para verificação ortográfica no VIM para pt (não pt_BR)
+aur/vim-spell-pt-br 20100109-2 (7)
+    VIM spellchecker files for pt_BR using Vero from BrOffice.org.
+aur/vim-spell-ro 20080213-1 (0)
+    Romanian dictionary for Vim spell checking
+aur/vim-spell-sk 20091216-1 (2)
+    Slovak dictionary for Vim spell checking.
+aur/vim-spell-sl 20100310-1 (0)
+    Slovenian dictionary for Vim spell checking.
+aur/vim-spellchecker 2.2.2-1 (20)
+    Spell check text including LaTeX documents
+aur/vim-spring 1.0-2 (14)
+    Make your VIM bright with colors, and avoid the eyestrain
+aur/vim-sql_iabbr 1.5-2 (6)
+    Makes all your favorite SQL keywords uppercase automatically
+aur/vim-sqlutil 3.00-1 (4)
+    Formatting, generate - columns lists, procedures for databases
+aur/vim-squirrel 0.2-1 (1)
+    Squirrel Language syntax file
+aur/vim-srcexpl 4.2-3 (22)
+    A Source code Explorer based on tags works like context window in Source Insight
+aur/vim-stl 0.1-4 (22)
+    Improved C++ STL syntax highlighting
+aur/vim-stripped 7.2.148-2 (2)
+    A stripped down version of vim, without the extra or language archives
+aur/vim-sudo 2.0-4 (105)
+    Adding the ability to read and write one file with root privileges without running vim as root (:w sudo:/etc/rc.conf)
+aur/vim-sudoedit 0.6-2 (7)
+    Edit Files using sudo or su or any other tool
+aur/vim-supercat 1.0-1 (4)
+    Syntax for supercat configuration files
+aur/vim-svg 1.2-1 (9)
+    SVG syntax file for VIM
+aur/vim-swapit 0.3-1 (4)
+    Extensible keyword swapper (turn yes to no, True to False and more)
+aur/vim-synabbrev 0.1unix-1 (2)
+    Abbreviations that only happen outside comments
+aur/vim-tabbar 0.7-1 (13)
+    Plugin to add tab bar ( derived from miniBufExplorer)
+aur/vim-tagsbase 0.9.2-4 (6)
+    Creates a menu of tags (functions, fields...) keep track of the current function
+aur/vim-tango-desert 1.1.-2 (14)
+    Dark Color scheme based on tango palette and desert
+aur/vim-tango-morning 0.3-1 (4)
+    Light Grey Tango color theme based on Morning
+aur/vim-tasklist 1.0.1-5 (24)
+    Eclipse like task list
+aur/vim-taskpaper 0.4-3 (10)
+    TaskPaper to-do list format support
+aur/vim-tcalc 0.11-2 (10)
+    A small ruby-based RPN-calculator
+aur/vim-tetris 0.52fix-2 (11)
+    A tetris game in pure vim
+aur/vim-tiddlywiki 1-1 (5)
+    TiddlyWiki syntax file
+aur/vim-trac 0.3.5-2 (11)
+    http://www.vim.org/scripts/script.php?script_id=2147
+aur/vim-trinity 1.5-5 (23)
+    Build the trinity of srcexpl, taglist, NERD_tree to be a good IDE
+aur/vim-tskeleton 4.5-2 (3)
+    File Templates and Code Skeletons/Snippets
+aur/vim-ttcoach 1.2-1 (6)
+    Utility to train touch typing skills
+aur/vim-tutticolori 1.0-1 (2)
+    A port of the Tutti Colori theme from the Espresso editor
+aur/vim-tvo 122-6 (6)
+    The Vim Outliner - one of many
+aur/vim-ultisnips 1.1-1 (4)
+    The ultimate snippet solution for python enabled Vim
+aur/vim-up2picasaweb 0.1-1 (8)
+    upload image to picasaweb with vim
+aur/vim-uptime 1.3-2 (13)
+    Display Vim uptimes
+aur/vim-vc 1.0-1 (3)
+    A color scheme resembling the MS Visual C++ IDE
+aur/vim-vcsnursery 4-1 (Out of Date) (10)
+    This package contains additional backends (Mercurial and sccs currently) for vim-vcscommand
+aur/vim-verilog_systemverilog 1.2-2 (11)
+    Extending Verilog syntax highlighting for SystemVerilog
+aur/vim-vibrantink 1.3-2 (16)
+    A Vim port of Justin Palmer's VibrantInk theme for TextMate
+aur/vim-viki 3.13-1 (Out of Date) (10)
+    A personal wiki for Vim
+aur/vim-vilisp 2.3-1 (3)
+    Send Lisp code to a running Lisp interpreter
+aur/vim-vimoutliner 0.3.4-3 (20)
+    Vim Outliner - one of many
+aur/vim-vimwiki 1.0-1 (15)
+    Personal Wiki for Vim
+aur/vim-visincr 19-1 (3)
+    Produce increasing/decreasing columns of numbers, dates, or daynames
+aur/vim-visual_studio 1.2-1 (4)
+    Vim and Microsoft Visual Studio .NET integration
+aur/vim-voof 1.4-1 (4)
+    Vim Outliner Of Folds -- two-pane outliner and related utilities
+aur/vim-vtreeexplorer 1.28-1 (4)
+    Tree based file explorer - the original
+aur/vim-wiki 0.9.5-1 (Out of Date) (1)
+    A personal wiki
+aur/vim-winmanager 2.3-3 (18)
+    A window-manager plugin for Vim 7.2
+aur/vim-wombat 1.0-3 (30)
+    Dark gray color scheme sharing some similarities with Desert
+aur/vim-wp 0.1-1 (7)
+    folding support for MediaWiki-style syntax
+aur/vim-xhtml 1.2-1 (Out of Date) (6)
+    XHTML syntax highlighting for VIM
+aur/vim-xoria256 1.1-2 (13)
+    Finely tuned soft gamma, 256 colors, dark background, gvim == vim
+aur/vim-xpt 0.3.9.93-1 (13)
+    XP's Snippet Template engine for vim
+aur/vim-yankring 10.0-1 (6)
+    Allows to configure the number of yanked, deleted and changed text
+aur/vim-ywvim 1.17-1 (2)
+    Yet another input method(IM) for VIM, supports all modes
+aur/vim-zoomwin 23-2 (11)
+    Zoom in/out  of windows (toggle between one window and multi-window)
+aur/vim73-hg 2412-1 (1)
+    Vi Improved, BETA VERSION
+aur/vimcdoc-svn 192-2 (12)
+    the vim Chinese document
+aur/vimclojure 2.1.2-3 (31)
+    A filetype, syntax and indent plugin for Clojure
+aur/vimcommander 80-1 (28)
+    Totalcommander-like two-panel tree file explorer for vim
+aur/vimeo-uploader 0.1-1 (0)
+    Vimeo Desktop Uploader
+aur/vimgdb 7.2.245-2 (26)
+    Vi Improved, a highly configurable, improved version of the vi text editor, with gdb support
+aur/vimim 0.9.6-1 (6)
+    The VimIM is a Vim plugin designed as an independent IM (Input Method) to support the input of any language
+aur/vimirc 0.9.28-1 (17)
+    An IRC client script
+aur/vimmpc 20070410-2 (2)
+    MPD controller from within Vim
+aur/vimmpc-git 20100319-3 (2)
+    MPD controller from within Vim
+aur/vimpdb 0.beta-2 (2)
+    A vim script for debugging python.
+aur/vimperator 2.3.1-1 (61)
+    Make firefox look and behave like Vim
+aur/vimperator-hg 4207-1 (8)
+    Make firefox look and behave like Vim; built from HEAD of branch default
+aur/vimpress 0.91-1 (21)
+    Manage wordpress blog posts from Vim
+aur/vimpression-git 20090527-1 (Out of Date) (22)
+    An ultralight webkit based browser with vimperator like control(rewrite branch of the webkitbrowser). Alpha release with many planned features 
+    missing 
+aur/vimprobable-git 20100707-1 (64)
+    WWW browser that behaves like the Vimperator plugin available for Mozilla Firefox. It is based on the WebKit engine (using GTK bindings). It is a 
+    fork of the currently abandoned vimpression (former webkitbrowser). 
+aur/vimprobable2-git 20100724-1 (31)
+    WWW browser that behaves like the Vimperator plugin available for Mozilla Firefox. It is based on the WebKit engine (using GTK bindings). It is a 
+    fork of the currently abandoned vimpression (former webkitbrowser). 
+aur/vimrc 1-1 (2)
+    Word Processing in Vim (_vimrc win32)
+aur/vimsh 0.20-2 (5)
+    Terminal/shell buffer script for python enabled [g]vim
+aur/vimshell 7.2-1 (16)
+    Adds support for VimShell patch for VIM and GVIM.
+aur/vimspell 1.100-1 (20)
+    Ispell or aspell based spell checker with fly-spelling
+aur/vimtips 2.2.2-1 (15)
+    Display a helpful tip the first time you start Vim each day
+aur/vitunes 0.93-1 (Out of Date) (4)
+    vitunes is a curses-based playlist manager and media player for *nix operating systems with vim-like keybinds.
+aur/vjde 2.16.2-1 (3)
+    Vim - Just a Development Envirement (Java/C++)
+aur/webkitbrowser-git 20090526-1 (Out of Date) (3)
+    an ultralight webkit based browser with vimperator like control
+aur/yzis 1.0_alpha1-1 (24)
+    A fast, powerful editor inspired by vim

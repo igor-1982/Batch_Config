@@ -1,0 +1,10 @@
+#BSUB -J scsRPA-OPT
+#BSUB -n 24
+#BSUB -R span[ptile=24]
+#BSUB -q debug
+
+#BSUB -o scsRPA-OPT-%J.out
+
+DFT_Fit_PATH=/share/home/wenxinzy/export/DFT_Fitting
+
+$DFT_Fit_PATH/DFT_Fit_xhpc1.sh scsRPA.ctl

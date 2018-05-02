@@ -1,0 +1,42 @@
+/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/modules/my_io.py:3567: FutureWarning: comparison to `None` will result in an elementwise object comparison in the future.
+  if C==None:
+Optimization terminated successfully.
+         Current function value: 0.016285
+         Iterations: 144
+         Function evaluations: 249
+/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/modules/my_io.py:3567: FutureWarning: comparison to `None` will result in an elementwise object comparison in the future.
+  if C==None:
+Optimization terminated successfully.
+         Current function value: 0.035954
+         Iterations: 149
+         Function evaluations: 272
+Traceback (most recent call last):
+  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 297, in <module>
+    main()
+  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 253, in main
+    MainFit.get_OptInit()
+  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/modules/my_io.py", line 3432, in get_OptInit
+    while TmpLine[0]=='#':
+IndexError: string index out of range
+Traceback (most recent call last):
+  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 297, in <module>
+    main()
+  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 253, in main
+    MainFit.get_OptInit()
+  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/modules/my_io.py", line 3432, in get_OptInit
+    while TmpLine[0]=='#':
+IndexError: string index out of range
+Traceback (most recent call last):
+  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 297, in <module>
+    main()
+  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 253, in main
+    MainFit.get_OptInit()
+  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/modules/my_io.py", line 3432, in get_OptInit
+    while TmpLine[0]=='#':
+IndexError: string index out of range
+/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/modules/my_io.py:3567: FutureWarning: comparison to `None` will result in an elementwise object comparison in the future.
+  if C==None:
+Optimization terminated successfully.
+         Current function value: 0.026312
+         Iterations: 361
+         Function evaluations: 622

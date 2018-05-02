@@ -1,0 +1,71 @@
+xc                      pbe0
+total_energy_method     mp2
+frozen_core_postSCF     1
+restart                 restart
+relativistic            none
+occupation_type         gaussian 0.0001
+mixer                   pulay
+n_max_pulay             10
+charge_mix_param        0.6
+sc_accuracy_rho         1E-6
+sc_accuracy_eev         1E-4
+sc_accuracy_etot        1E-6
+sc_iter_limit           200
+override_illconditioning .true.
+charge                  0     
+en_shift                           3
+coupling_pt2_factor      -0.00184462
+coupling_pt2_screen       2.58616175
+coupling_pt2_shift       -0.00300846
+################################################################################
+#
+#  FHI-aims code project
+# Igor Ying Zhang and Xinguo Ren, Fritz Haber Institute Berlin, 2012
+#
+#  Suggested "VCC-NAO-VCC-2Z" defaults for H atom (to be pasted into control.in file)
+#
+################################################################################
+  species        H
+#     global species definitions
+    nucleus             1
+    mass                1.00794
+#
+    l_hartree           6
+#
+    cut_pot             4.0  2.0  1.0
+    basis_dep_cutoff    0e-4
+#     
+    radial_base         24 7.0
+    radial_multiplier   2
+    angular_grids       specified
+      division   0.1930   50
+      division   0.3175  110
+      division   0.4293  194
+      division   0.5066  302
+      division   0.5626  434
+      division   0.5922  590
+#      division   0.6227  974
+#      division   0.6868 1202
+      outer_grid  770
+#      outer_grid  434
+################################################################################
+#
+#  Definition of "minimal" basis
+#
+################################################################################
+#     valence basis states
+    valence      1  s   1.
+#     ion occupancy
+    ion_occ      1  s   0.5
+################################################################################
+
+
+ basis_acc              1e-04
+#============================================
+# Optimization in      H for       NAO-VCC-2Z
+#============================================
+# (sp) correlation set
+ hydro     1     s      1.41783129
+ hydro     2     p      2.95678992
+# (sp) enhanced minimal basis
+ hydro     1     s      1.47748612

@@ -1,0 +1,1982 @@
+=>Fitting start from Sat Mar  3 00:03:47 2012
+=>This project aims to ::
+  "================================ Total(419) ================================"
+  "There are about :                                                           "
+  " 1)  223 HOFs from the G3 set                                               "
+  " 2)   76 Barrier Heights from Trulhar's set                                 "
+  " 3)   31 Non Bonding interactions from NCIE set                             "
+  " 4)   22 Non Bonding interactions from S22  set                             "
+  " 5)    6 n-alkane dimers from ADIM6                                         "
+  " 6)   36 G21IP                                                              "
+  " 7)   25 G21EA                                                              "
+  " NOTE :: "
+  " 1) G3 atomization is generated using freq scale factor 0.9877 and          "
+  "    correct SO contribution                                                 "
+  " 2) G3Large basis set is used here                                          "
+  " 3) BSSE is considered                                                      "
+  " 4) w=400 range-seperate PT2 used                                           "
+=>1) Project pool is 
+  "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/Data/rsXYG3/B3LYP/omega=400/G3Large/B3LYP"
+=>2) Project batch type is "2" which to run the job, if no log and chk exist
+=>3) QC package employed is "qchem"
+=>There are 2 <Macro-Path>s specified in erf400_BSSE_mix_v2.ctl :
+  Macro-Path :   <PATH1> = .
+  Macro-Path :   <PATH2> = .
+=>Loaded ConfigIO.BatcList :
+==----------------------------------------------------------------------------==
+Index        Name                        Direction    JobInput         JobType
+--------------------------------------------------------------------------------
+  0th         H_0                          ./EAtom   XYG3_Comp          energy
+  1th        He_0                          ./EAtom   XYG3_Comp          energy
+  2th        Li_0                          ./EAtom   XYG3_Comp          energy
+  3th        Be_0                          ./EAtom   XYG3_Comp          energy
+  4th         B_0                          ./EAtom   XYG3_Comp          energy
+  5th         C_0                          ./EAtom   XYG3_Comp          energy
+  6th         N_0                          ./EAtom   XYG3_Comp          energy
+  7th         O_0                          ./EAtom   XYG3_Comp          energy
+  8th         F_0                          ./EAtom   XYG3_Comp          energy
+  9th        Ne_0                          ./EAtom   XYG3_Comp          energy
+ 10th        Na_0                          ./EAtom   XYG3_Comp          energy
+ 11th        Mg_0                          ./EAtom   XYG3_Comp          energy
+ 12th        Al_0                          ./EAtom   XYG3_Comp          energy
+ 13th        Si_0                          ./EAtom   XYG3_Comp          energy
+ 14th         P_0                          ./EAtom   XYG3_Comp          energy
+ 15th         S_0                          ./EAtom   XYG3_Comp          energy
+ 16th        Cl_0                          ./EAtom   XYG3_Comp          energy
+ 17th        G2-1                             ./G2   XYG3_Comp          energy
+ 18th        G2-2                             ./G2   XYG3_Comp          energy
+ 19th        G2-3                             ./G2   XYG3_Comp          energy
+ 20th        G2-4                             ./G2   XYG3_Comp          energy
+ 21th        G2-5                             ./G2   XYG3_Comp          energy
+ 22th        G2-6                             ./G2   XYG3_Comp          energy
+ 23th        G2-7                             ./G2   XYG3_Comp          energy
+ 24th        G2-8                             ./G2   XYG3_Comp          energy
+ 25th        G2-9                             ./G2   XYG3_Comp          energy
+ 26th       G2-10                             ./G2   XYG3_Comp          energy
+ 27th       G2-11                             ./G2   XYG3_Comp          energy
+ 28th       G2-12                             ./G2   XYG3_Comp          energy
+ 29th       G2-13                             ./G2   XYG3_Comp          energy
+ 30th       G2-14                             ./G2   XYG3_Comp          energy
+ 31th       G2-15                             ./G2   XYG3_Comp          energy
+ 32th       G2-16                             ./G2   XYG3_Comp          energy
+ 33th       G2-17                             ./G2   XYG3_Comp          energy
+ 34th       G2-18                             ./G2   XYG3_Comp          energy
+ 35th       G2-19                             ./G2   XYG3_Comp          energy
+ 36th       G2-20                             ./G2   XYG3_Comp          energy
+ 37th       G2-21                             ./G2   XYG3_Comp          energy
+ 38th       G2-22                             ./G2   XYG3_Comp          energy
+ 39th       G2-23                             ./G2   XYG3_Comp          energy
+ 40th       G2-24                             ./G2   XYG3_Comp          energy
+ 41th       G2-25                             ./G2   XYG3_Comp          energy
+ 42th       G2-26                             ./G2   XYG3_Comp          energy
+ 43th       G2-27                             ./G2   XYG3_Comp          energy
+ 44th       G2-28                             ./G2   XYG3_Comp          energy
+ 45th       G2-29                             ./G2   XYG3_Comp          energy
+ 46th       G2-30                             ./G2   XYG3_Comp          energy
+ 47th       G2-31                             ./G2   XYG3_Comp          energy
+ 48th       G2-32                             ./G2   XYG3_Comp          energy
+ 49th       G2-33                             ./G2   XYG3_Comp          energy
+ 50th       G2-34                             ./G2   XYG3_Comp          energy
+ 51th       G2-35                             ./G2   XYG3_Comp          energy
+ 52th       G2-36                             ./G2   XYG3_Comp          energy
+ 53th       G2-37                             ./G2   XYG3_Comp          energy
+ 54th       G2-38                             ./G2   XYG3_Comp          energy
+ 55th       G2-39                             ./G2   XYG3_Comp          energy
+ 56th       G2-40                             ./G2   XYG3_Comp          energy
+ 57th       G2-41                             ./G2   XYG3_Comp          energy
+ 58th       G2-42                             ./G2   XYG3_Comp          energy
+ 59th       G2-43                             ./G2   XYG3_Comp          energy
+ 60th       G2-44                             ./G2   XYG3_Comp          energy
+ 61th       G2-45                             ./G2   XYG3_Comp          energy
+ 62th       G2-46                             ./G2   XYG3_Comp          energy
+ 63th       G2-47                             ./G2   XYG3_Comp          energy
+ 64th       G2-48                             ./G2   XYG3_Comp          energy
+ 65th       G2-49                             ./G2   XYG3_Comp          energy
+ 66th       G2-50                             ./G2   XYG3_Comp          energy
+ 67th       G2-51                             ./G2   XYG3_Comp          energy
+ 68th       G2-52                             ./G2   XYG3_Comp          energy
+ 69th       G2-53                             ./G2   XYG3_Comp          energy
+ 70th       G2-54                             ./G2   XYG3_Comp          energy
+ 71th       G2-55                             ./G2   XYG3_Comp          energy
+ 72th       G2-56                             ./G2   XYG3_Comp          energy
+ 73th       G2-57                             ./G2   XYG3_Comp          energy
+ 74th       G2-58                             ./G2   XYG3_Comp          energy
+ 75th       G2-59                             ./G2   XYG3_Comp          energy
+ 76th       G2-60                             ./G2   XYG3_Comp          energy
+ 77th       G2-61                             ./G2   XYG3_Comp          energy
+ 78th       G2-62                             ./G2   XYG3_Comp          energy
+ 79th       G2-63                             ./G2   XYG3_Comp          energy
+ 80th       G2-64                             ./G2   XYG3_Comp          energy
+ 81th       G2-65                             ./G2   XYG3_Comp          energy
+ 82th       G2-66                             ./G2   XYG3_Comp          energy
+ 83th       G2-67                             ./G2   XYG3_Comp          energy
+ 84th       G2-68                             ./G2   XYG3_Comp          energy
+ 85th       G2-69                             ./G2   XYG3_Comp          energy
+ 86th       G2-70                             ./G2   XYG3_Comp          energy
+ 87th       G2-71                             ./G2   XYG3_Comp          energy
+ 88th       G2-72                             ./G2   XYG3_Comp          energy
+ 89th       G2-73                             ./G2   XYG3_Comp          energy
+ 90th       G2-74                             ./G2   XYG3_Comp          energy
+ 91th       G2-75                             ./G2   XYG3_Comp          energy
+ 92th       G2-76                             ./G2   XYG3_Comp          energy
+ 93th       G2-77                             ./G2   XYG3_Comp          energy
+ 94th       G2-78                             ./G2   XYG3_Comp          energy
+ 95th       G2-79                             ./G2   XYG3_Comp          energy
+ 96th       G2-80                             ./G2   XYG3_Comp          energy
+ 97th       G2-81                             ./G2   XYG3_Comp          energy
+ 98th       G2-82                             ./G2   XYG3_Comp          energy
+ 99th       G2-83                             ./G2   XYG3_Comp          energy
+100th       G2-84                             ./G2   XYG3_Comp          energy
+101th       G2-85                             ./G2   XYG3_Comp          energy
+102th       G2-86                             ./G2   XYG3_Comp          energy
+103th       G2-87                             ./G2   XYG3_Comp          energy
+104th       G2-88                             ./G2   XYG3_Comp          energy
+105th       G2-89                             ./G2   XYG3_Comp          energy
+106th       G2-90                             ./G2   XYG3_Comp          energy
+107th       G2-91                             ./G2   XYG3_Comp          energy
+108th       G2-92                             ./G2   XYG3_Comp          energy
+109th       G2-93                             ./G2   XYG3_Comp          energy
+110th       G2-94                             ./G2   XYG3_Comp          energy
+111th       G2-95                             ./G2   XYG3_Comp          energy
+112th       G2-96                             ./G2   XYG3_Comp          energy
+113th       G2-97                             ./G2   XYG3_Comp          energy
+114th       G2-98                             ./G2   XYG3_Comp          energy
+115th       G2-99                             ./G2   XYG3_Comp          energy
+116th      G2-100                             ./G2   XYG3_Comp          energy
+117th      G2-101                             ./G2   XYG3_Comp          energy
+118th      G2-102                             ./G2   XYG3_Comp          energy
+119th      G2-103                             ./G2   XYG3_Comp          energy
+120th      G2-104                             ./G2   XYG3_Comp          energy
+121th      G2-105                             ./G2   XYG3_Comp          energy
+122th      G2-106                             ./G2   XYG3_Comp          energy
+123th      G2-107                             ./G2   XYG3_Comp          energy
+124th      G2-108                             ./G2   XYG3_Comp          energy
+125th      G2-109                             ./G2   XYG3_Comp          energy
+126th      G2-110                             ./G2   XYG3_Comp          energy
+127th      G2-111                             ./G2   XYG3_Comp          energy
+128th      G2-112                             ./G2   XYG3_Comp          energy
+129th      G2-113                             ./G2   XYG3_Comp          energy
+130th      G2-114                             ./G2   XYG3_Comp          energy
+131th      G2-115                             ./G2   XYG3_Comp          energy
+132th      G2-116                             ./G2   XYG3_Comp          energy
+133th      G2-117                             ./G2   XYG3_Comp          energy
+134th      G2-118                             ./G2   XYG3_Comp          energy
+135th      G2-119                             ./G2   XYG3_Comp          energy
+136th      G2-120                             ./G2   XYG3_Comp          energy
+137th      G2-121                             ./G2   XYG3_Comp          energy
+138th      G2-122                             ./G2   XYG3_Comp          energy
+139th      G2-123                             ./G2   XYG3_Comp          energy
+140th      G2-124                             ./G2   XYG3_Comp          energy
+141th      G2-125                             ./G2   XYG3_Comp          energy
+142th      G2-126                             ./G2   XYG3_Comp          energy
+143th      G2-127                             ./G2   XYG3_Comp          energy
+144th      G2-128                             ./G2   XYG3_Comp          energy
+145th      G2-129                             ./G2   XYG3_Comp          energy
+146th      G2-130                             ./G2   XYG3_Comp          energy
+147th      G2-131                             ./G2   XYG3_Comp          energy
+148th      G2-132                             ./G2   XYG3_Comp          energy
+149th      G2-133                             ./G2   XYG3_Comp          energy
+150th      G2-134                             ./G2   XYG3_Comp          energy
+151th      G2-135                             ./G2   XYG3_Comp          energy
+152th      G2-136                             ./G2   XYG3_Comp          energy
+153th      G2-137                             ./G2   XYG3_Comp          energy
+154th      G2-138                             ./G2   XYG3_Comp          energy
+155th      G2-139                             ./G2   XYG3_Comp          energy
+156th      G2-140                             ./G2   XYG3_Comp          energy
+157th      G2-141                             ./G2   XYG3_Comp          energy
+158th      G2-142                             ./G2   XYG3_Comp          energy
+159th      G2-143                             ./G2   XYG3_Comp          energy
+160th      G2-144                             ./G2   XYG3_Comp          energy
+161th      G2-145                             ./G2   XYG3_Comp          energy
+162th      G2-146                             ./G2   XYG3_Comp          energy
+163th      G2-147                             ./G2   XYG3_Comp          energy
+164th      G2-148                             ./G2   XYG3_Comp          energy
+165th      G2-149                             ./G2   XYG3_Comp          energy
+166th      G2-150                             ./G2   XYG3_Comp          energy
+167th      G2-151                             ./G2   XYG3_Comp          energy
+168th      G2-152                             ./G2   XYG3_Comp          energy
+169th      G2-153                             ./G2   XYG3_Comp          energy
+170th      G2-154                             ./G2   XYG3_Comp          energy
+171th      G2-155                             ./G2   XYG3_Comp          energy
+172th      G2-156                             ./G2   XYG3_Comp          energy
+173th      G2-157                             ./G2   XYG3_Comp          energy
+174th      G2-158                             ./G2   XYG3_Comp          energy
+175th      G2-159                             ./G2   XYG3_Comp          energy
+176th      G2-160                             ./G2   XYG3_Comp          energy
+177th      G2-161                             ./G2   XYG3_Comp          energy
+178th      G2-162                             ./G2   XYG3_Comp          energy
+179th      G2-163                             ./G2   XYG3_Comp          energy
+180th      G2-164                             ./G2   XYG3_Comp          energy
+181th      G2-165                             ./G2   XYG3_Comp          energy
+182th      G2-166                             ./G2   XYG3_Comp          energy
+183th      G2-167                             ./G2   XYG3_Comp          energy
+184th      G2-168                             ./G2   XYG3_Comp          energy
+185th      G2-169                             ./G2   XYG3_Comp          energy
+186th      G2-170                             ./G2   XYG3_Comp          energy
+187th      G2-171                             ./G2   XYG3_Comp          energy
+188th      G2-172                             ./G2   XYG3_Comp          energy
+189th      G2-173                             ./G2   XYG3_Comp          energy
+190th      G2-174                             ./G2   XYG3_Comp          energy
+191th      G2-175                             ./G2   XYG3_Comp          energy
+192th      G2-176                             ./G2   XYG3_Comp          energy
+193th      G2-177                             ./G2   XYG3_Comp          energy
+194th      G2-178                             ./G2   XYG3_Comp          energy
+195th      G2-179                             ./G2   XYG3_Comp          energy
+196th      G2-180                             ./G2   XYG3_Comp          energy
+197th      G2-181                             ./G2   XYG3_Comp          energy
+198th      G2-182                             ./G2   XYG3_Comp          energy
+199th      G2-183                             ./G2   XYG3_Comp          energy
+200th      G2-184                             ./G2   XYG3_Comp          energy
+201th      G2-185                             ./G2   XYG3_Comp          energy
+202th      G2-186                             ./G2   XYG3_Comp          energy
+203th      G2-187                             ./G2   XYG3_Comp          energy
+204th      G2-188                             ./G2   XYG3_Comp          energy
+205th      G2-189                             ./G2   XYG3_Comp          energy
+206th      G2-190                             ./G2   XYG3_Comp          energy
+207th      G2-191                             ./G2   XYG3_Comp          energy
+208th      G2-192                             ./G2   XYG3_Comp          energy
+209th      G2-193                             ./G2   XYG3_Comp          energy
+210th      G2-194                             ./G2   XYG3_Comp          energy
+211th      G2-195                             ./G2   XYG3_Comp          energy
+212th      G2-196                             ./G2   XYG3_Comp          energy
+213th      G2-197                             ./G2   XYG3_Comp          energy
+214th      G2-198                             ./G2   XYG3_Comp          energy
+215th      G2-199                             ./G2   XYG3_Comp          energy
+216th      G2-200                             ./G2   XYG3_Comp          energy
+217th      G2-201                             ./G2   XYG3_Comp          energy
+218th      G2-202                             ./G2   XYG3_Comp          energy
+219th      G2-203                             ./G2   XYG3_Comp          energy
+220th      G2-204                             ./G2   XYG3_Comp          energy
+221th      G2-205                             ./G2   XYG3_Comp          energy
+222th      G2-206                             ./G2   XYG3_Comp          energy
+223th      G2-207                             ./G2   XYG3_Comp          energy
+224th      G2-208                             ./G2   XYG3_Comp          energy
+225th      G2-209                             ./G2   XYG3_Comp          energy
+226th      G2-210                             ./G2   XYG3_Comp          energy
+227th      G2-211                             ./G2   XYG3_Comp          energy
+228th      G2-212                             ./G2   XYG3_Comp          energy
+229th      G2-213                             ./G2   XYG3_Comp          energy
+230th      G2-214                             ./G2   XYG3_Comp          energy
+231th      G2-215                             ./G2   XYG3_Comp          energy
+232th      G2-216                             ./G2   XYG3_Comp          energy
+233th      G2-217                             ./G2   XYG3_Comp          energy
+234th      G2-218                             ./G2   XYG3_Comp          energy
+235th      G2-219                             ./G2   XYG3_Comp          energy
+236th      G2-220                             ./G2   XYG3_Comp          energy
+237th      G2-221                             ./G2   XYG3_Comp          energy
+238th      G2-222                             ./G2   XYG3_Comp          energy
+239th      G2-223                             ./G2   XYG3_Comp          energy
+240th        NHL1                              ./.   XYG3_Comp          energy
+241th        NHL2                              ./.   XYG3_Comp          energy
+242th        NHL3                              ./.   XYG3_Comp          energy
+243th        NHL4                              ./.   XYG3_Comp          energy
+244th        NHL5                              ./.   XYG3_Comp          energy
+245th        NHL6                              ./.   XYG3_Comp          energy
+246th        NHL7                              ./.   XYG3_Comp          energy
+247th        NHL8                              ./.   XYG3_Comp          energy
+248th        NHL9                              ./.   XYG3_Comp          energy
+249th       NHL10                              ./.   XYG3_Comp          energy
+250th       NHL11                              ./.   XYG3_Comp          energy
+251th       NHL12                              ./.   XYG3_Comp          energy
+252th       NHL13                              ./.   XYG3_Comp          energy
+253th       NHL14                              ./.   XYG3_Comp          energy
+254th       NHL15                              ./.   XYG3_Comp          energy
+255th       NHL16                              ./.   XYG3_Comp          energy
+256th       NHL17                              ./.   XYG3_Comp          energy
+257th       NHL18                              ./.   XYG3_Comp          energy
+258th       NHL19                              ./.   XYG3_Comp          energy
+259th       NHL20                              ./.   XYG3_Comp          energy
+260th       NHL21                              ./.   XYG3_Comp          energy
+261th       NHL22                              ./.   XYG3_Comp          energy
+262th       NHL23                              ./.   XYG3_Comp          energy
+263th       NHL24                              ./.   XYG3_Comp          energy
+264th       NHL25                              ./.   XYG3_Comp          energy
+265th       NHL26                              ./.   XYG3_Comp          energy
+266th       NHL27                              ./.   XYG3_Comp          energy
+267th       NHL28                              ./.   XYG3_Comp          energy
+268th       NHL29                              ./.   XYG3_Comp          energy
+269th       NHL30                              ./.   XYG3_Comp          energy
+270th       NHL31                              ./.   XYG3_Comp          energy
+271th        NHT1                              ./.   XYG3_Comp          energy
+272th        NHT2                              ./.   XYG3_Comp          energy
+273th        NHT3                              ./.   XYG3_Comp          energy
+274th        NHT4                              ./.   XYG3_Comp          energy
+275th        NHT5                              ./.   XYG3_Comp          energy
+276th        NHT6                              ./.   XYG3_Comp          energy
+277th        NHT7                              ./.   XYG3_Comp          energy
+278th        NHT8                              ./.   XYG3_Comp          energy
+279th        NHT9                              ./.   XYG3_Comp          energy
+280th       NHT10                              ./.   XYG3_Comp          energy
+281th       NHT11                              ./.   XYG3_Comp          energy
+282th       NHT12                              ./.   XYG3_Comp          energy
+283th       NHT13                              ./.   XYG3_Comp          energy
+284th       NHT14                              ./.   XYG3_Comp          energy
+285th       NHT15                              ./.   XYG3_Comp          energy
+286th         HL1                              ./.   XYG3_Comp          energy
+287th         HL2                              ./.   XYG3_Comp          energy
+288th         HL3                              ./.   XYG3_Comp          energy
+289th         HL4                              ./.   XYG3_Comp          energy
+290th         HL5                              ./.   XYG3_Comp          energy
+291th         HL6                              ./.   XYG3_Comp          energy
+292th         HL7                              ./.   XYG3_Comp          energy
+293th         HL8                              ./.   XYG3_Comp          energy
+294th         HL9                              ./.   XYG3_Comp          energy
+295th        HL10                              ./.   XYG3_Comp          energy
+296th        HL11                              ./.   XYG3_Comp          energy
+297th        HL12                              ./.   XYG3_Comp          energy
+298th        HL13                              ./.   XYG3_Comp          energy
+299th        HL14                              ./.   XYG3_Comp          energy
+300th        HL15                              ./.   XYG3_Comp          energy
+301th        HL16                              ./.   XYG3_Comp          energy
+302th        HL17                              ./.   XYG3_Comp          energy
+303th        HL18                              ./.   XYG3_Comp          energy
+304th        HL19                              ./.   XYG3_Comp          energy
+305th        HL20                              ./.   XYG3_Comp          energy
+306th        HL21                              ./.   XYG3_Comp          energy
+307th         HT1                              ./.   XYG3_Comp          energy
+308th         HT2                              ./.   XYG3_Comp          energy
+309th         HT3                              ./.   XYG3_Comp          energy
+310th         HT4                              ./.   XYG3_Comp          energy
+311th         HT5                              ./.   XYG3_Comp          energy
+312th         HT6                              ./.   XYG3_Comp          energy
+313th         HT7                              ./.   XYG3_Comp          energy
+314th         HT8                              ./.   XYG3_Comp          energy
+315th         HT9                              ./.   XYG3_Comp          energy
+316th        HT10                              ./.   XYG3_Comp          energy
+317th        HT11                              ./.   XYG3_Comp          energy
+318th        HT12                              ./.   XYG3_Comp          energy
+319th        HT13                              ./.   XYG3_Comp          energy
+320th        HT14                              ./.   XYG3_Comp          energy
+321th        HT15                              ./.   XYG3_Comp          energy
+322th        HT16                              ./.   XYG3_Comp          energy
+323th        HT17                              ./.   XYG3_Comp          energy
+324th        HT18                              ./.   XYG3_Comp          energy
+325th        HT19                              ./.   XYG3_Comp          energy
+326th         NB1                              ./.   XYG3_Comp          energy
+327th         NB2                              ./.   XYG3_Comp          energy
+328th         NB3                              ./.   XYG3_Comp          energy
+329th         NB4                              ./.   XYG3_Comp          energy
+330th         NB5                              ./.   XYG3_Comp          energy
+331th         NB6                              ./.   XYG3_Comp          energy
+332th         NB7                              ./.   XYG3_Comp          energy
+333th         NB8                              ./.   XYG3_Comp          energy
+334th         NB9                              ./.   XYG3_Comp          energy
+335th        NB10                              ./.   XYG3_Comp          energy
+336th        NB11                              ./.   XYG3_Comp          energy
+337th        NB12                              ./.   XYG3_Comp          energy
+338th        NB13                              ./.   XYG3_Comp          energy
+339th        NB14                              ./.   XYG3_Comp          energy
+340th        NB15                              ./.   XYG3_Comp          energy
+341th        NB16                              ./.   XYG3_Comp          energy
+342th        NB17                              ./.   XYG3_Comp          energy
+343th        NB18                              ./.   XYG3_Comp          energy
+344th        NB19                              ./.   XYG3_Comp          energy
+345th        NB20                              ./.   XYG3_Comp          energy
+346th        NB21                              ./.   XYG3_Comp          energy
+347th        NB22                              ./.   XYG3_Comp          energy
+348th        NB23                              ./.   XYG3_Comp          energy
+349th        NB24                              ./.   XYG3_Comp          energy
+350th        NB25                              ./.   XYG3_Comp          energy
+351th        NB26                              ./.   XYG3_Comp          energy
+352th        NB27                              ./.   XYG3_Comp          energy
+353th        NB28                              ./.   XYG3_Comp          energy
+354th        NB29                              ./.   XYG3_Comp          energy
+355th        NB30                              ./.   XYG3_Comp          energy
+356th        NB31                              ./.   XYG3_Comp          energy
+357th        NB32                              ./.   XYG3_Comp          energy
+358th        NB33                              ./.   XYG3_Comp          energy
+359th        NB34                              ./.   XYG3_Comp          energy
+360th        NB35                              ./.   XYG3_Comp          energy
+361th        NB36                              ./.   XYG3_Comp          energy
+362th        NB37                              ./.   XYG3_Comp          energy
+363th        NB38                              ./.   XYG3_Comp          energy
+364th        NB39                              ./.   XYG3_Comp          energy
+365th        NB40                              ./.   XYG3_Comp          energy
+366th        NB41                              ./.   XYG3_Comp          energy
+367th        NB42                              ./.   XYG3_Comp          energy
+368th        NB43                              ./.   XYG3_Comp          energy
+369th        NB44                              ./.   XYG3_Comp          energy
+370th        NB45                              ./.   XYG3_Comp          energy
+371th        NB46                              ./.   XYG3_Comp          energy
+372th        NB47                              ./.   XYG3_Comp          energy
+373th        NB48                              ./.   XYG3_Comp          energy
+374th        NB49                              ./.   XYG3_Comp          energy
+375th        NB50                              ./.   XYG3_Comp          energy
+376th        NB51                              ./.   XYG3_Comp          energy
+377th        NB52                              ./.   XYG3_Comp          energy
+378th    1-1_NCIE                              ./.   XYG3_Comp          energy
+379th    2-1_NCIE                              ./.   XYG3_Comp          energy
+380th    3-1_NCIE                              ./.   XYG3_Comp          energy
+381th    4-1_NCIE                              ./.   XYG3_Comp          energy
+382th    4-2_NCIE                              ./.   XYG3_Comp          energy
+383th    5-1_NCIE                              ./.   XYG3_Comp          energy
+384th    6-1_NCIE                              ./.   XYG3_Comp          energy
+385th    7-1_NCIE                              ./.   XYG3_Comp          energy
+386th    7-2_NCIE                              ./.   XYG3_Comp          energy
+387th    8-1_NCIE                              ./.   XYG3_Comp          energy
+388th    8-2_NCIE                              ./.   XYG3_Comp          energy
+389th    9-1_NCIE                              ./.   XYG3_Comp          energy
+390th    9-2_NCIE                              ./.   XYG3_Comp          energy
+391th   10-1_NCIE                              ./.   XYG3_Comp          energy
+392th   10-2_NCIE                              ./.   XYG3_Comp          energy
+393th   11-1_NCIE                              ./.   XYG3_Comp          energy
+394th   11-2_NCIE                              ./.   XYG3_Comp          energy
+395th   12-1_NCIE                              ./.   XYG3_Comp          energy
+396th   12-2_NCIE                              ./.   XYG3_Comp          energy
+397th   13-1_NCIE                              ./.   XYG3_Comp          energy
+398th   13-2_NCIE                              ./.   XYG3_Comp          energy
+399th   14-1_NCIE                              ./.   XYG3_Comp          energy
+400th   15-1_NCIE                              ./.   XYG3_Comp          energy
+401th   16-1_NCIE                              ./.   XYG3_Comp          energy
+402th   16-2_NCIE                              ./.   XYG3_Comp          energy
+403th   17-1_NCIE                              ./.   XYG3_Comp          energy
+404th   17-2_NCIE                              ./.   XYG3_Comp          energy
+405th   18-1_NCIE                              ./.   XYG3_Comp          energy
+406th   18-2_NCIE                              ./.   XYG3_Comp          energy
+407th   19-1_NCIE                              ./.   XYG3_Comp          energy
+408th   19-2_NCIE                              ./.   XYG3_Comp          energy
+409th   20-1_NCIE                              ./.   XYG3_Comp          energy
+410th   20-2_NCIE                              ./.   XYG3_Comp          energy
+411th   21-1_NCIE                              ./.   XYG3_Comp          energy
+412th   21-2_NCIE                              ./.   XYG3_Comp          energy
+413th   22-1_NCIE                              ./.   XYG3_Comp          energy
+414th   22-2_NCIE                              ./.   XYG3_Comp          energy
+415th   23-1_NCIE                              ./.   XYG3_Comp          energy
+416th   23-2_NCIE                              ./.   XYG3_Comp          energy
+417th   24-1_NCIE                              ./.   XYG3_Comp          energy
+418th   25-1_NCIE                              ./.   XYG3_Comp          energy
+419th   25-2_NCIE                              ./.   XYG3_Comp          energy
+420th   26-1_NCIE                              ./.   XYG3_Comp          energy
+421th   27-1_NCIE                              ./.   XYG3_Comp          energy
+422th   28-1_NCIE                              ./.   XYG3_Comp          energy
+423th   29-1_NCIE                              ./.   XYG3_Comp          energy
+424th   30-1_NCIE                              ./.   XYG3_Comp          energy
+425th   31-1_NCIE                              ./.   XYG3_Comp          energy
+426th       S22_1                              ./.   XYG3_Comp          energy
+427th     S22_01a                              ./.   XYG3_Comp          energy
+428th       S22_2                              ./.   XYG3_Comp          energy
+429th     S22_02a                              ./.   XYG3_Comp          energy
+430th       S22_3                              ./.   XYG3_Comp          energy
+431th     S22_03a                              ./.   XYG3_Comp          energy
+432th       S22_4                              ./.   XYG3_Comp          energy
+433th     S22_04a                              ./.   XYG3_Comp          energy
+434th       S22_5                              ./.   XYG3_Comp          energy
+435th     S22_05a                              ./.   XYG3_Comp          energy
+436th       S22_6                              ./.   XYG3_Comp          energy
+437th     S22_06a                              ./.   XYG3_Comp          energy
+438th     S22_06b                              ./.   XYG3_Comp          energy
+439th       S22_7                              ./.   XYG3_Comp          energy
+440th     S22_07a                              ./.   XYG3_Comp          energy
+441th     S22_07b                              ./.   XYG3_Comp          energy
+442th       S22_8                              ./.   XYG3_Comp          energy
+443th     S22_08a                              ./.   XYG3_Comp          energy
+444th       S22_9                              ./.   XYG3_Comp          energy
+445th     S22_09a                              ./.   XYG3_Comp          energy
+446th      S22_10                              ./.   XYG3_Comp          energy
+447th     S22_10a                              ./.   XYG3_Comp          energy
+448th     S22_10b                              ./.   XYG3_Comp          energy
+449th      S22_11                              ./.   XYG3_Comp          energy
+450th     S22_11a                              ./.   XYG3_Comp          energy
+451th      S22_12                              ./.   XYG3_Comp          energy
+452th     S22_12a                              ./.   XYG3_Comp          energy
+453th      S22_13                              ./.   XYG3_Comp          energy
+454th     S22_13a                              ./.   XYG3_Comp          energy
+455th      S22_14                              ./.   XYG3_Comp          energy
+456th     S22_14a                              ./.   XYG3_Comp          energy
+457th     S22_14b                              ./.   XYG3_Comp          energy
+458th      S22_15                              ./.   XYG3_Comp          energy
+459th     S22_15a                              ./.   XYG3_Comp          energy
+460th     S22_15b                              ./.   XYG3_Comp          energy
+461th      S22_16                              ./.   XYG3_Comp          energy
+462th     S22_16a                              ./.   XYG3_Comp          energy
+463th     S22_16b                              ./.   XYG3_Comp          energy
+464th      S22_17                              ./.   XYG3_Comp          energy
+465th     S22_17a                              ./.   XYG3_Comp          energy
+466th     S22_17b                              ./.   XYG3_Comp          energy
+467th      S22_18                              ./.   XYG3_Comp          energy
+468th     S22_18a                              ./.   XYG3_Comp          energy
+469th     S22_18b                              ./.   XYG3_Comp          energy
+470th      S22_19                              ./.   XYG3_Comp          energy
+471th     S22_19a                              ./.   XYG3_Comp          energy
+472th     S22_19b                              ./.   XYG3_Comp          energy
+473th      S22_20                              ./.   XYG3_Comp          energy
+474th     S22_20a                              ./.   XYG3_Comp          energy
+475th     S22_20b                              ./.   XYG3_Comp          energy
+476th      S22_21                              ./.   XYG3_Comp          energy
+477th     S22_21a                              ./.   XYG3_Comp          energy
+478th     S22_21b                              ./.   XYG3_Comp          energy
+479th      S22_22                              ./.   XYG3_Comp          energy
+480th     S22_22a                              ./.   XYG3_Comp          energy
+481th     S22_22b                              ./.   XYG3_Comp          energy
+482th     01a_S22                              ./.   XYG3_Comp          energy
+483th     02a_S22                              ./.   XYG3_Comp          energy
+484th     03a_S22                              ./.   XYG3_Comp          energy
+485th     04a_S22                              ./.   XYG3_Comp          energy
+486th     05a_S22                              ./.   XYG3_Comp          energy
+487th     06a_S22                              ./.   XYG3_Comp          energy
+488th     06b_S22                              ./.   XYG3_Comp          energy
+489th     07a_S22                              ./.   XYG3_Comp          energy
+490th     07b_S22                              ./.   XYG3_Comp          energy
+491th     08a_S22                              ./.   XYG3_Comp          energy
+492th     09a_S22                              ./.   XYG3_Comp          energy
+493th     10a_S22                              ./.   XYG3_Comp          energy
+494th     10b_S22                              ./.   XYG3_Comp          energy
+495th     11a_S22                              ./.   XYG3_Comp          energy
+496th     12a_S22                              ./.   XYG3_Comp          energy
+497th     13a_S22                              ./.   XYG3_Comp          energy
+498th     14a_S22                              ./.   XYG3_Comp          energy
+499th     14b_S22                              ./.   XYG3_Comp          energy
+500th     15a_S22                              ./.   XYG3_Comp          energy
+501th     15b_S22                              ./.   XYG3_Comp          energy
+502th     16a_S22                              ./.   XYG3_Comp          energy
+503th     16b_S22                              ./.   XYG3_Comp          energy
+504th     17a_S22                              ./.   XYG3_Comp          energy
+505th     17b_S22                              ./.   XYG3_Comp          energy
+506th     18a_S22                              ./.   XYG3_Comp          energy
+507th     18b_S22                              ./.   XYG3_Comp          energy
+508th     19a_S22                              ./.   XYG3_Comp          energy
+509th     19b_S22                              ./.   XYG3_Comp          energy
+510th     20a_S22                              ./.   XYG3_Comp          energy
+511th     20b_S22                              ./.   XYG3_Comp          energy
+512th     21a_S22                              ./.   XYG3_Comp          energy
+513th     21b_S22                              ./.   XYG3_Comp          energy
+514th     22a_S22                              ./.   XYG3_Comp          energy
+515th     22b_S22                              ./.   XYG3_Comp          energy
+516th         AM2                              ./.   XYG3_Comp          energy
+517th         AD2                              ./.   XYG3_Comp          energy
+518th         AM3                              ./.   XYG3_Comp          energy
+519th         AD3                              ./.   XYG3_Comp          energy
+520th         AM4                              ./.   XYG3_Comp          energy
+521th         AD4                              ./.   XYG3_Comp          energy
+522th         AM5                              ./.   XYG3_Comp          energy
+523th         AD5                              ./.   XYG3_Comp          energy
+524th         AM6                              ./.   XYG3_Comp          energy
+525th         AD6                              ./.   XYG3_Comp          energy
+526th         AM7                              ./.   XYG3_Comp          energy
+527th         AD7                              ./.   XYG3_Comp          energy
+528th    AM2_BSSE                              ./.   XYG3_Comp          energy
+529th    AM3_BSSE                              ./.   XYG3_Comp          energy
+530th    AM4_BSSE                              ./.   XYG3_Comp          energy
+531th    AM5_BSSE                              ./.   XYG3_Comp          energy
+532th    AM6_BSSE                              ./.   XYG3_Comp          energy
+533th    AM7_BSSE                              ./.   XYG3_Comp          energy
+534th       IP_11                              ./.   XYG3_Comp          energy
+535th       IP_12                              ./.   XYG3_Comp          energy
+536th      IP_137                              ./.   XYG3_Comp          energy
+537th       IP_13                              ./.   XYG3_Comp          energy
+538th       IP_14                              ./.   XYG3_Comp          energy
+539th       IP_18                              ./.   XYG3_Comp          energy
+540th       IP_19                              ./.   XYG3_Comp          energy
+541th       IP_20                              ./.   XYG3_Comp          energy
+542th       IP_22                              ./.   XYG3_Comp          energy
+543th       IP_25                              ./.   XYG3_Comp          energy
+544th       IP_26                              ./.   XYG3_Comp          energy
+545th       IP_30                              ./.   XYG3_Comp          energy
+546th       IP_34                              ./.   XYG3_Comp          energy
+547th       IP_37                              ./.   XYG3_Comp          energy
+548th       IP_43                              ./.   XYG3_Comp          energy
+549th       IP_44                              ./.   XYG3_Comp          energy
+550th       IP_45                              ./.   XYG3_Comp          energy
+551th       IP_48                              ./.   XYG3_Comp          energy
+552th       IP_51                              ./.   XYG3_Comp          energy
+553th       IP_08                              ./.   XYG3_Comp          energy
+554th       IP_al                              ./.   XYG3_Comp          energy
+555th      IP_al+                              ./.   XYG3_Comp          energy
+556th        IP_b                              ./.   XYG3_Comp          energy
+557th       IP_b+                              ./.   XYG3_Comp          energy
+558th       IP_be                              ./.   XYG3_Comp          energy
+559th      IP_be+                              ./.   XYG3_Comp          energy
+560th        IP_c                              ./.   XYG3_Comp          energy
+561th       IP_c+                              ./.   XYG3_Comp          energy
+562th       IP_cl                              ./.   XYG3_Comp          energy
+563th      IP_cl+                              ./.   XYG3_Comp          energy
+564th        IP_f                              ./.   XYG3_Comp          energy
+565th       IP_f+                              ./.   XYG3_Comp          energy
+566th        IP_h                              ./.   XYG3_Comp          energy
+567th       IP_59                              ./.   XYG3_Comp          energy
+568th       IP_60                              ./.   XYG3_Comp          energy
+569th       IP_61                              ./.   XYG3_Comp          energy
+570th       IP_62                              ./.   XYG3_Comp          energy
+571th       IP_63                              ./.   XYG3_Comp          energy
+572th       IP_64                              ./.   XYG3_Comp          energy
+573th       IP_65                              ./.   XYG3_Comp          energy
+574th       IP_66                              ./.   XYG3_Comp          energy
+575th       IP_67                              ./.   XYG3_Comp          energy
+576th       IP_68                              ./.   XYG3_Comp          energy
+577th       IP_70                              ./.   XYG3_Comp          energy
+578th       IP_71                              ./.   XYG3_Comp          energy
+579th       IP_72                              ./.   XYG3_Comp          energy
+580th       IP_73                              ./.   XYG3_Comp          energy
+581th       IP_74                              ./.   XYG3_Comp          energy
+582th       IP_75                              ./.   XYG3_Comp          energy
+583th       IP_76                              ./.   XYG3_Comp          energy
+584th       IP_77                              ./.   XYG3_Comp          energy
+585th       IP_78                              ./.   XYG3_Comp          energy
+586th       IP_79                              ./.   XYG3_Comp          energy
+587th       IP_80                              ./.   XYG3_Comp          energy
+588th      IP_n65                              ./.   XYG3_Comp          energy
+589th       IP_li                              ./.   XYG3_Comp          energy
+590th      IP_li+                              ./.   XYG3_Comp          energy
+591th       IP_mg                              ./.   XYG3_Comp          energy
+592th      IP_mg+                              ./.   XYG3_Comp          energy
+593th       IP_na                              ./.   XYG3_Comp          energy
+594th      IP_na+                              ./.   XYG3_Comp          energy
+595th        IP_n                              ./.   XYG3_Comp          energy
+596th       IP_n+                              ./.   XYG3_Comp          energy
+597th        IP_o                              ./.   XYG3_Comp          energy
+598th       IP_o+                              ./.   XYG3_Comp          energy
+599th        IP_P                              ./.   XYG3_Comp          energy
+600th       IP_P+                              ./.   XYG3_Comp          energy
+601th        IP_s                              ./.   XYG3_Comp          energy
+602th       IP_s+                              ./.   XYG3_Comp          energy
+603th       IP_si                              ./.   XYG3_Comp          energy
+604th      IP_si+                              ./.   XYG3_Comp          energy
+605th       EA_10                              ./.   XYG3_Comp          energy
+606th      EA_10n                              ./.   XYG3_Comp          energy
+607th       EA_11                              ./.   XYG3_Comp          energy
+608th      EA_11n                              ./.   XYG3_Comp          energy
+609th       EA_12                              ./.   XYG3_Comp          energy
+610th      EA_12n                              ./.   XYG3_Comp          energy
+611th       EA_13                              ./.   XYG3_Comp          energy
+612th      EA_13n                              ./.   XYG3_Comp          energy
+613th       EA_14                              ./.   XYG3_Comp          energy
+614th      EA_14n                              ./.   XYG3_Comp          energy
+615th       EA_15                              ./.   XYG3_Comp          energy
+616th      EA_15n                              ./.   XYG3_Comp          energy
+617th       EA_16                              ./.   XYG3_Comp          energy
+618th      EA_16n                              ./.   XYG3_Comp          energy
+619th       EA_17                              ./.   XYG3_Comp          energy
+620th      EA_17n                              ./.   XYG3_Comp          energy
+621th       EA_18                              ./.   XYG3_Comp          energy
+622th      EA_18n                              ./.   XYG3_Comp          energy
+623th       EA_19                              ./.   XYG3_Comp          energy
+624th      EA_19n                              ./.   XYG3_Comp          energy
+625th       EA_20                              ./.   XYG3_Comp          energy
+626th      EA_20n                              ./.   XYG3_Comp          energy
+627th       EA_21                              ./.   XYG3_Comp          energy
+628th      EA_21n                              ./.   XYG3_Comp          energy
+629th       EA_22                              ./.   XYG3_Comp          energy
+630th      EA_22n                              ./.   XYG3_Comp          energy
+631th       EA_23                              ./.   XYG3_Comp          energy
+632th      EA_23n                              ./.   XYG3_Comp          energy
+633th       EA_24                              ./.   XYG3_Comp          energy
+634th      EA_24n                              ./.   XYG3_Comp          energy
+635th       EA_25                              ./.   XYG3_Comp          energy
+636th      EA_25n                              ./.   XYG3_Comp          energy
+637th        EA_8                              ./.   XYG3_Comp          energy
+638th       EA_8n                              ./.   XYG3_Comp          energy
+639th        EA_9                              ./.   XYG3_Comp          energy
+640th       EA_9n                              ./.   XYG3_Comp          energy
+641th       EA_c-                              ./.   XYG3_Comp          energy
+642th        EA_c                              ./.   XYG3_Comp          energy
+643th      EA_cl-                              ./.   XYG3_Comp          energy
+644th       EA_cl                              ./.   XYG3_Comp          energy
+645th       EA_f-                              ./.   XYG3_Comp          energy
+646th        EA_f                              ./.   XYG3_Comp          energy
+647th       EA_o-                              ./.   XYG3_Comp          energy
+648th        EA_o                              ./.   XYG3_Comp          energy
+649th       EA_p-                              ./.   XYG3_Comp          energy
+650th        EA_p                              ./.   XYG3_Comp          energy
+651th       EA_s-                              ./.   XYG3_Comp          energy
+652th        EA_s                              ./.   XYG3_Comp          energy
+653th      EA_si-                              ./.   XYG3_Comp          energy
+654th       EA_si                              ./.   XYG3_Comp          energy
+==----------------------------------------------------------------------------==
+=>Loaded ConfigIO.EngyList :
+==----------------------------------------------------------------------------==
+ Num. Ind. Sca. Ind. Sca. Ind. Sca. Ind. Sca. Ind. Sca.       Ref. Data  Weight
+--------------------------------------------------------------------------------
+    3   17 -1.0    2  1.0    0  1.0                          0.09243892    1.00
+    3   18 -1.0    3  1.0    0  1.0                          0.07957642    1.00
+    3   19 -1.0    5  1.0    0  1.0                          0.13384681    1.00
+    3   20 -1.0    5  1.0    0  2.0                          0.30352967    1.00
+    3   21 -1.0    5  1.0    0  2.0                          0.28835670    1.00
+    3   22 -1.0    5  1.0    0  3.0                          0.49018106    1.00
+    3   23 -1.0    5  1.0    0  4.0                          0.66984673    1.00
+    3   24 -1.0    6  1.0    0  1.0                          0.13317579    1.00
+    3   25 -1.0    6  1.0    0  2.0                          0.28966865    1.00
+    3   26 -1.0    6  1.0    0  3.0                          0.47492741    1.00
+    3   27 -1.0    7  1.0    0  1.0                          0.17002763    1.00
+    3   28 -1.0    7  1.0    0  2.0                          0.37105034    1.00
+    3   29 -1.0    8  1.0    0  1.0                          0.22540442    1.00
+    3   30 -1.0   13  1.0    0  2.0                          0.24210164    1.00
+    3   31 -1.0   13  1.0    0  2.0                          0.20897806    1.00
+    3   32 -1.0   13  1.0    0  3.0                          0.35987311    1.00
+    3   33 -1.0   13  1.0    0  4.0                          0.51369849    1.00
+    3   34 -1.0   14  1.0    0  2.0                          0.24372814    1.00
+    3   35 -1.0   14  1.0    0  3.0                          0.38557158    1.00
+    3   36 -1.0   15  1.0    0  2.0                          0.29168768    1.00
+    3   37 -1.0   16  1.0    0  1.0                          0.17091820    1.00
+    2   38 -1.0    2  2.0                                    0.03883725    1.00
+    3   39 -1.0    2  1.0    8  1.0                          0.21990291    1.00
+    3   40 -1.0    5  2.0    0  2.0                          0.64658118    1.00
+    3   41 -1.0    5  2.0    0  4.0                          0.89828073    1.00
+    3   42 -1.0    5  2.0    0  6.0                          1.13530336    1.00
+    3   43 -1.0    5  1.0    6  1.0                          0.28924953    1.00
+    4   44 -1.0    0  1.0    5  1.0    6  1.0                0.49862265    1.00
+    3   45 -1.0    5  1.0    7  1.0                          0.41369900    1.00
+    4   46 -1.0    0  1.0    5  1.0    7  1.0                0.44469117    1.00
+    4   47 -1.0    0  2.0    5  1.0    7  1.0                0.59612755    1.00
+    4   48 -1.0    0  4.0    5  1.0    7  1.0                0.81733503    1.00
+    2   49 -1.0    6  2.0                                    0.36411583    1.00
+    3   50 -1.0    6  2.0    0  4.0                          0.69857406    1.00
+    3   51 -1.0    6  1.0    7  1.0                          0.24376208    1.00
+    2   52 -1.0    7  2.0                                    0.19247259    1.00
+    3   53 -1.0    0  2.0    7  2.0                          0.42897377    1.00
+    2   54 -1.0    8  2.0                                    0.06248993    1.00
+    3   55 -1.0    5  1.0    7  2.0                          0.62115158    1.00
+    2   56 -1.0   10  2.0                                    0.02714180    1.00
+    2   57 -1.0   13  2.0                                    0.12044845    1.00
+    2   58 -1.0   14  2.0                                    0.18681505    1.00
+    2   59 -1.0   15  2.0                                    0.16373968    1.00
+    2   60 -1.0   16  2.0                                    0.09502380    1.00
+    3   61 -1.0   10  1.0   16  1.0                          0.15752347    1.00
+    3   62 -1.0   13  1.0    7  1.0                          0.30749551    1.00
+    3   63 -1.0   15  1.0    5  1.0                          0.27409607    1.00
+    3   64 -1.0   15  1.0    7  1.0                          0.20055912    1.00
+    3   65 -1.0   16  1.0    7  1.0                          0.10457835    1.00
+    3   66 -1.0    8  1.0   16  1.0                          0.09978269    1.00
+    3   67 -1.0   13  2.0    0  6.0                          0.84652660    1.00
+    4   68 -1.0    5  1.0    0  3.0   16  1.0                0.63013224    1.00
+    4   69 -1.0    0  4.0    5  1.0   15  1.0                0.75584199    1.00
+    4   70 -1.0    0  1.0    7  1.0   16  1.0                0.26379817    1.00
+    3   71 -1.0   15  1.0    7  2.0                          0.41325375    1.00
+    3   72 -1.0    8  3.0    4  1.0                          0.75119504    1.00
+    3   73 -1.0   16  3.0    4  1.0                          0.51831762    1.00
+    3   74 -1.0    8  3.0   12  1.0                          0.68215434    1.00
+    3   75 -1.0   16  3.0   12  1.0                          0.49238925    1.00
+    3   76 -1.0    8  4.0    5  1.0                          0.76132566    1.00
+    3   77 -1.0   16  4.0    5  1.0                          0.50352645    1.00
+    4   78 -1.0    5  1.0    7  1.0   15  1.0                0.53287291    1.00
+    3   79 -1.0    5  1.0   15  2.0                          0.44473038    1.00
+    4   80 -1.0    5  1.0    8  2.0    7  1.0                0.67599321    1.00
+    3   81 -1.0    8  4.0   13  1.0                          0.91637573    1.00
+    3   82 -1.0   16  4.0   13  1.0                          0.61692203    1.00
+    3   83 -1.0    6  2.0    7  1.0                          0.43154982    1.00
+    4   84 -1.0   16  1.0    6  1.0    7  1.0                0.30661700    1.00
+    3   85 -1.0    8  3.0    6  1.0                          0.32787872    1.00
+    3   86 -1.0    8  3.0   14  1.0                          0.58172867    1.00
+    2   87 -1.0    7  3.0                                    0.23505182    1.00
+    3   88 -1.0    8  2.0    7  1.0                          0.14969134    1.00
+    3   89 -1.0    8  3.0   16  1.0                          0.20291393    1.00
+    3   90 -1.0    8  4.0    5  2.0                          0.93315359    1.00
+    3   91 -1.0   16  4.0    5  2.0                          0.74914061    1.00
+    4   92 -1.0    8  3.0    5  2.0    6  1.0                1.02124918    1.00
+    3   93 -1.0    0  4.0    5  3.0                          1.12377172    1.00
+    3   94 -1.0    0  4.0    5  3.0                          1.12124189    1.00
+    3   95 -1.0    0  4.0    5  3.0                          1.08881058    1.00
+    3   96 -1.0    0  6.0    5  3.0                          1.37185945    1.00
+    3   97 -1.0    0  6.0    5  3.0                          1.36014609    1.00
+    3   98 -1.0    0  8.0    5  3.0                          1.60445440    1.00
+    3   99 -1.0    0  6.0    5  4.0                          1.61424261    1.00
+    3  100 -1.0    0  6.0    5  4.0                          1.60060963    1.00
+    3  101 -1.0    0  6.0    5  4.0                          1.57942487    1.00
+    3  102 -1.0    0  6.0    5  4.0                          1.57368326    1.00
+    3  103 -1.0    0  6.0    5  4.0                          1.59697803    1.00
+    3  104 -1.0    0  8.0    5  4.0                          1.83127907    1.00
+    3  105 -1.0    0  8.0    5  4.0                          1.84677866    1.00
+    3  106 -1.0    0 10.0    5  4.0                          2.07373327    1.00
+    3  107 -1.0    0 10.0    5  4.0                          2.07649894    1.00
+    3  108 -1.0    0  8.0    5  5.0                          2.04713312    1.00
+    3  109 -1.0    0  6.0    5  6.0                          2.18055899    1.00
+    4  110 -1.0    0  2.0    8  2.0    5  1.0                0.69679616    1.00
+    4  111 -1.0    0  1.0    8  3.0    5  1.0                0.73138858    1.00
+    4  112 -1.0    0  2.0   16  2.0    5  1.0                0.59205706    1.00
+    4  113 -1.0    0  1.0   16  3.0    5  1.0                0.55094554    1.00
+    4  114 -1.0    0  5.0    5  1.0    6  1.0                0.92795612    1.00
+    4  115 -1.0    0  3.0    5  2.0    6  1.0                0.98149227    1.00
+    5  116 -1.0    0  3.0    5  1.0    6  1.0    7  2.0      0.95857798    1.00
+    5  117 -1.0    0  3.0    5  1.0    6  1.0    7  2.0      0.95423291    1.00
+    4  118 -1.0    0  6.0    5  1.0   13  1.0                1.00042475    1.00
+    4  119 -1.0    0  2.0    5  1.0    7  2.0                0.79917701    1.00
+    4  120 -1.0    0  4.0    5  2.0    7  2.0                1.25147615    1.00
+    5  121 -1.0    0  5.0    5  2.0    6  1.0    7  1.0      1.38343956    1.00
+    4  122 -1.0    0  5.0    5  2.0    6  1.0                1.14760746    1.00
+    3  123 -1.0    6  2.0    5  2.0                          0.80076705    1.00
+    4  124 -1.0    0  7.0    5  2.0    6  1.0                1.38704569    1.00
+    4  125 -1.0    0  7.0    5  2.0    6  1.0                1.39837920    1.00
+    4  126 -1.0    0  2.0    5  2.0    7  1.0                0.84913620    1.00
+    4  127 -1.0    0  4.0    5  2.0    7  1.0                1.03732776    1.00
+    4  128 -1.0    0  4.0    5  2.0    7  1.0                1.07939675    1.00
+    4  129 -1.0    0  2.0    5  2.0    7  2.0                1.01044585    1.00
+    4  130 -1.0    0  6.0    5  2.0    7  1.0                1.29157713    1.00
+    4  131 -1.0    0  6.0    5  2.0    7  1.0                1.27189496    1.00
+    4  132 -1.0    0  4.0    5  2.0   15  1.0                0.99508724    1.00
+    5  133 -1.0    0  6.0    5  2.0   15  1.0    7  1.0      1.36416473    1.00
+    4  134 -1.0    0  6.0    5  2.0   15  1.0                1.22619866    1.00
+    4  135 -1.0    0  6.0    5  2.0   15  1.0                1.22367702    1.00
+    4  136 -1.0    0  3.0    5  2.0    8  1.0                0.91239096    1.00
+    4  137 -1.0    0  5.0    5  2.0   16  1.0                1.10303914    1.00
+    4  138 -1.0    0  3.0    5  2.0   16  1.0                0.86079928    1.00
+    4  139 -1.0    0  3.0    5  3.0    6  1.0                1.21794840    1.00
+    4  140 -1.0    0  6.0    5  3.0    7  1.0                1.56000994    1.00
+    4  141 -1.0    0  4.0    5  2.0    7  2.0                1.28058686    1.00
+    5  142 -1.0    0  3.0    5  2.0    7  1.0    8  1.0      1.12637855    1.00
+    5  143 -1.0    0  3.0    5  2.0    7  1.0   16  1.0      1.06573210    1.00
+    4  144 -1.0    0  7.0    5  3.0   16  1.0                1.57191436    1.00
+    4  145 -1.0    0  8.0    5  3.0    7  1.0                1.76660695    1.00
+    4  146 -1.0    0  8.0    5  3.0    7  1.0                1.74535292    1.00
+    4  147 -1.0    0  9.0    5  3.0    6  1.0                1.84952125    1.00
+    4  148 -1.0    0  4.0    5  4.0    7  1.0                1.58477955    1.00
+    4  149 -1.0    0  4.0    5  4.0   15  1.0                1.53600902    1.00
+    4  150 -1.0    0  5.0    5  4.0    6  1.0                1.70856838    1.00
+    4  151 -1.0    0  5.0    5  5.0    6  1.0                1.97337465    1.00
+    2  152 -1.0    0  2.0                                    0.17468795    1.00
+    3  153 -1.0    0  1.0   15  1.0                          0.13938422    1.00
+    3  154 -1.0    0  1.0    5  2.0                          0.42299522    1.00
+    3  155 -1.0    0  3.0    5  2.0                          0.70925872    1.00
+    4  156 -1.0    0  3.0    5  2.0    7  1.0                0.92717812    1.00
+    4  157 -1.0    0  3.0    5  1.0    7  1.0                0.65302875    1.00
+    4  158 -1.0    0  3.0    5  1.0    7  1.0                0.63862562    1.00
+    4  159 -1.0    0  5.0    5  2.0    7  1.0                1.11095181    1.00
+    4  160 -1.0    0  3.0    5  1.0   15  1.0                0.60812348    1.00
+    3  161 -1.0    0  5.0    5  2.0                          0.96185224    1.00
+    3  162 -1.0    0  7.0    5  3.0                          1.43510682    1.00
+    3  163 -1.0    0  9.0    5  4.0                          1.91096094    1.00
+    3  164 -1.0    6  1.0    7  2.0                          0.36308966    1.00
+    3  165 -1.0    0  6.0    5  4.0                          1.59349253    1.00
+    3  166 -1.0    0  8.0    5  5.0                          2.08856719    1.00
+    3  167 -1.0    0 10.0    5  5.0                          2.33374712    1.00
+    3  168 -1.0    0 12.0    5  5.0                          2.54326386    1.00
+    3  169 -1.0    0 12.0    5  5.0                          2.55038745    1.00
+    3  170 -1.0    0  8.0    5  6.0                          2.35530087    1.00
+    3  171 -1.0    0  8.0    5  6.0                          2.35575627    1.00
+    3  172 -1.0    0 12.0    5  6.0                          2.81314374    1.00
+    3  173 -1.0    0 14.0    5  6.0                          3.01221826    1.00
+    3  174 -1.0    0 14.0    5  6.0                          3.01370366    1.00
+    3  175 -1.0    0  8.0    5  7.0                          2.65361399    1.00
+    3  176 -1.0    0 16.0    5  7.0                          3.48160163    1.00
+    3  177 -1.0    0  8.0    5  8.0                          2.83599857    1.00
+    3  178 -1.0    0 18.0    5  8.0                          3.95087621    1.00
+    3  179 -1.0    0  8.0    5 10.0                          3.44726303    1.00
+    3  180 -1.0    0  8.0    5 10.0                          3.39351242    1.00
+    4  181 -1.0    0  6.0    5  3.0    7  2.0                1.73360206    1.00
+    4  182 -1.0    0 10.0    5  4.0    7  1.0                2.24208193    1.00
+    4  183 -1.0    0  7.0    5  6.0    6  1.0                2.45507805    1.00
+    4  184 -1.0    0  6.0    5  6.0    7  1.0                2.34674436    1.00
+    4  185 -1.0    0  6.0    5  4.0    7  1.0                1.75925799    1.00
+    4  186 -1.0    0  8.0    5  4.0    7  1.0                2.01154384    1.00
+    4  187 -1.0    0  8.0    5  5.0    7  1.0                2.29030335    1.00
+    4  188 -1.0    0  4.0    5  6.0    7  2.0                2.26973621    1.00
+    4  189 -1.0    0  4.0    5  4.0    6  2.0                1.76703427    1.00
+    5  190 -1.0    0  6.0    5  2.0    7  2.0   15  1.0      1.54766892    1.00
+    4  191 -1.0    0  5.0    5  6.0   16  1.0                2.14854966    1.00
+    4  192 -1.0    0  4.0    5  4.0    6  2.0                1.76023117    1.00
+    4  193 -1.0    0  4.0    5  4.0    6  2.0                1.76668017    1.00
+    4  194 -1.0    0  4.0    5  4.0    7  1.0                1.54395793    1.00
+    4  195 -1.0    0  6.0    5  4.0    7  1.0                1.79250887    1.00
+    4  196 -1.0    0  6.0    5  4.0    7  3.0                2.16852195    1.00
+    4  197 -1.0    0  6.0    5  4.0   15  1.0                1.73113839    1.00
+    4  198 -1.0    0  7.0    5  4.0    6  1.0                1.92387214    1.00
+    4  199 -1.0    0  8.0    5  4.0    7  1.0                2.02973931    1.00
+    4  200 -1.0    0  8.0    5  4.0    7  1.0                2.02100509    1.00
+    4  201 -1.0    0  8.0    5  4.0    7  2.0                2.16018543    1.00
+    4  202 -1.0    0  8.0    5  4.0   15  1.0                1.96304012    1.00
+    4  203 -1.0    0  9.0    5  4.0   16  1.0                2.05101545    1.00
+    4  204 -1.0    0  9.0    5  4.0   16  1.0                2.04210657    1.00
+    4  205 -1.0    0  9.0    5  4.0    6  1.0                2.12114306    1.00
+    5  206 -1.0    0  9.0    5  4.0    6  1.0    7  2.0      2.37622334    1.00
+    4  207 -1.0    0 10.0    5  4.0    7  1.0                2.22023991    1.00
+    4  208 -1.0    0 10.0    5  4.0    7  2.0                2.37081676    1.00
+    4  209 -1.0    0 10.0    5  4.0   15  1.0                2.17165057    1.00
+    4  210 -1.0    0 10.0    5  4.0   15  2.0                2.26817746    1.00
+    4  211 -1.0    0 11.0    5  4.0    6  1.0                2.34742360    1.00
+    4  212 -1.0    0 12.0    5  4.0   13  1.0                2.46404403    1.00
+    4  213 -1.0    0  6.0    5  5.0   15  1.0                2.00894698    1.00
+    4  214 -1.0    0  7.0    5  5.0    6  1.0                2.17144073    1.00
+    4  215 -1.0    0 10.0    5  5.0    7  1.0                2.48813281    1.00
+    4  216 -1.0    0 10.0    5  5.0    7  1.0                2.49839336    1.00
+    4  217 -1.0    0 10.0    5  5.0    7  2.0                2.68209251    1.00
+    4  218 -1.0    0 10.0    5  5.0   15  1.0                2.43547358    1.00
+    4  219 -1.0    0 11.0    5  5.0    6  1.0                2.59928964    1.00
+    4  220 -1.0    0 12.0    5  5.0    7  1.0                2.69221430    1.00
+    4  221 -1.0    0  4.0    5  6.0    8  2.0                2.21078473    1.00
+    4  222 -1.0    0  4.0    5  6.0    8  2.0                2.20978732    1.00
+    4  223 -1.0    0  5.0    5  6.0    8  1.0                2.19664882    1.00
+    4  224 -1.0    0 14.0    5  6.0    7  1.0                3.16717861    1.00
+    3  225 -1.0    8  5.0   14  1.0                          0.89039001    1.00
+    3  226 -1.0    8  6.0   15  1.0                          0.76613979    1.00
+    2  227 -1.0   14  4.0                                    0.46164485    1.00
+    3  228 -1.0    7  3.0   15  1.0                          0.54930879    1.00
+    3  229 -1.0   16  2.0   15  1.0                          0.20835857    1.00
+    4  230 -1.0   16  3.0   14  1.0    7  1.0                0.57580299    1.00
+    3  231 -1.0   16  5.0   14  1.0                          0.49850272    1.00
+    4  232 -1.0   16  2.0    7  2.0   15  1.0                0.53286491    1.00
+    3  233 -1.0   16  3.0   14  1.0                          0.37437689    1.00
+    3  234 -1.0   16  2.0   15  2.0                          0.31510761    1.00
+    3  235 -1.0   16  2.0   13  1.0                          0.33134548    1.00
+    4  236 -1.0    8  3.0   16  1.0    5  1.0                0.69122540    1.00
+    3  237 -1.0    8  6.0    5  2.0                          1.26027624    1.00
+    3  238 -1.0    8  3.0    5  1.0                          0.54955660    1.00
+    3  239 -1.0    0  5.0    5  6.0                          1.98908321    1.00
+    3  271  1.0  240 -1.0  241 -1.0                          0.02340999    3.00
+    3  272  1.0  240 -1.0  243 -1.0                          0.00505171    3.00
+    3  273  1.0  240 -1.0  245 -1.0                          0.00274099    3.00
+    3  274  1.0  247 -1.0  245 -1.0                          0.01091616    3.00
+    2  275  1.0  249 -1.0                                    0.07674778    3.00
+    3  276  1.0  251 -1.0  252 -1.0                         -0.00054182    3.00
+    2  276  1.0  253 -1.0                                    0.02132237    3.00
+    3  277  1.0  254 -1.0  255 -1.0                          0.00494016    3.00
+    2  277  1.0  256 -1.0                                    0.02168890    3.00
+    3  278  1.0  251 -1.0  255 -1.0                         -0.01998375    3.00
+    2  278  1.0  258 -1.0                                    0.04718650    3.00
+    3  279  1.0  259 -1.0  252 -1.0                         -0.00443021    3.00
+    2  279  1.0  262 -1.0                                    0.01746586    3.00
+    3  280  1.0  240 -1.0  263 -1.0                          0.02890791    3.00
+    3  285  1.0  240 -1.0  266 -1.0                          0.06721805    3.00
+    3  284  1.0  240 -1.0  268 -1.0                          0.02868480    3.00
+    3  281  1.0  240 -1.0  252 -1.0                          0.04841357    3.00
+    3  282  1.0  240 -1.0  265 -1.0                          0.00361747    3.00
+    3  283  1.0  247 -1.0  267 -1.0                          0.01184045    3.00
+    3  307  1.0  286 -1.0  287 -1.0                          0.00908352    3.00
+    3  308  1.0  290 -1.0  288 -1.0                          0.00812736    3.00
+    3  309  1.0  292 -1.0  288 -1.0                          0.01928256    3.00
+    3  310  1.0  290 -1.0  293 -1.0                          0.01067712    3.00
+    3  311  1.0  286 -1.0  288 -1.0                          0.01529856    3.00
+    3  312  1.0  290 -1.0  294 -1.0                          0.00509952    3.00
+    3  313  1.0  287 -1.0  292 -1.0                          0.00270912    3.00
+    3  314  1.0  290 -1.0  296 -1.0                          0.00541824    3.00
+    3  315  1.0  298 -1.0  288 -1.0                          0.00286848    3.00
+    3  316  1.0  300 -1.0  293 -1.0                          0.02183232    3.00
+    3  317  1.0  286 -1.0  301 -1.0                          0.00494016    3.00
+    3  318  1.0  286 -1.0  290 -1.0                          0.01705152    3.00
+    3  319  1.0  286 -1.0  303 -1.0                          0.00557760    3.00
+    3  320  1.0  300 -1.0  287 -1.0                          0.01561728    3.00
+    3  321  1.0  295 -1.0  292 -1.0                          0.01274880    3.00
+    3  322  1.0  295 -1.0  297 -1.0                          0.01195200    3.00
+    3  323  1.0  296 -1.0  295 -1.0                          0.01657344    3.00
+    3  324  1.0  295 -1.0  293 -1.0                          0.02310720    3.00
+    2  325  1.0  306 -1.0                                    0.06119424    3.00
+    2  271  1.0  242 -1.0                                    0.01708339    3.00
+    2  272  1.0  244 -1.0                                    0.03614285    3.00
+    2  273  1.0  246 -1.0                                    0.06653280    3.00
+    2  274  1.0  248 -1.0                                    0.05254100    3.00
+    2  275  1.0  250 -1.0                                    0.05276410    3.00
+    3  276  1.0  251 -1.0  252 -1.0                         -0.00054182    3.00
+    2  276  1.0  253 -1.0                                    0.02132237    3.00
+    3  277  1.0  254 -1.0  255 -1.0                          0.00494016    3.00
+    2  277  1.0  256 -1.0                                    0.02168890    3.00
+    3  278  1.0  252 -1.0  254 -1.0                          0.03204730    3.00
+    2  278  1.0  257 -1.0                                    0.00460550    3.00
+    3  279  1.0  260 -1.0  251 -1.0                          0.02761709    3.00
+    2  279  1.0  261 -1.0                                    0.07521792    3.00
+    3  280  1.0  264 -1.0  241 -1.0                          0.13261940    3.00
+    3  285  1.0  266 -1.0  240 -1.0                          0.06721805    3.00
+    3  284  1.0  268 -1.0  240 -1.0                          0.02868480    3.00
+    3  281  1.0  266 -1.0  247 -1.0                          0.09086708    3.00
+    3  282  1.0  266 -1.0  269 -1.0                          0.16920846    3.00
+    3  283  1.0  252 -1.0  270 -1.0                          0.09588692    3.00
+    3  307  1.0  288 -1.0  289 -1.0                          0.01386432    3.00
+    3  308  1.0  286 -1.0  291 -1.0                          0.03378432    3.00
+    3  309  1.0  286 -1.0  293 -1.0                          0.02438208    3.00
+    3  310  1.0  292 -1.0  291 -1.0                          0.03123456    3.00
+    3  311  1.0  286 -1.0  288 -1.0                          0.01529856    3.00
+    3  312  1.0  291 -1.0  295 -1.0                          0.02023872    3.00
+    3  313  1.0  289 -1.0  293 -1.0                          0.01258944    3.00
+    3  314  1.0  291 -1.0  297 -1.0                          0.03171264    3.00
+    3  315  1.0  299 -1.0  286 -1.0                          0.05322624    3.00
+    3  316  1.0  290 -1.0  292 -1.0                          0.01290816    3.00
+    3  317  1.0  302 -1.0  288 -1.0                          0.03697152    3.00
+    3  318  1.0  288 -1.0  300 -1.0                          0.02087616    3.00
+    3  319  1.0  288 -1.0  304 -1.0                          0.02756928    3.00
+    3  320  1.0  290 -1.0  289 -1.0                          0.01657344    3.00
+    3  321  1.0  293 -1.0  305 -1.0                          0.03569664    3.00
+    3  322  1.0  296 -1.0  305 -1.0                          0.02916288    3.00
+    3  323  1.0  294 -1.0  297 -1.0                          0.02772864    3.00
+    3  324  1.0  292 -1.0  294 -1.0                          0.02836608    3.00
+    2  325  1.0  306 -1.0                                    0.06119424    3.00
+    1  566 -1.0                                              0.50182467    3.00
+    2  590  1.0  589 -1.0                                    0.19649089    3.00
+    2  559  1.0  556 -1.0                                    0.34246466    3.00
+    2  557  1.0  556 -1.0                                    0.30342146    3.00
+    2  561  1.0  560 -1.0                                    0.41369859    3.00
+    2  596  1.0  595 -1.0                                    0.53433411    3.00
+    2  598  1.0  597 -1.0                                    0.50007171    3.00
+    2  565  1.0  564 -1.0                                    0.64014916    3.00
+    2  594  1.0  593 -1.0                                    0.18884161    3.00
+    2  592  1.0  591 -1.0                                    0.28095170    3.00
+    2  555  1.0  554 -1.0                                    0.21991681    3.00
+    2  604  1.0  603 -1.0                                    0.29959682    3.00
+    2  600  1.0  599 -1.0                                    0.38549186    3.00
+    2  602  1.0  601 -1.0                                    0.38087042    3.00
+    2  563  1.0  562 -1.0                                    0.47664579    3.00
+    2  567  1.0  553 -1.0                                    0.47224586    3.00
+    2  568  1.0  534 -1.0                                    0.37559561    3.00
+    2  569  1.0  535 -1.0                                    0.47954136    3.00
+    2  570  1.0  537 -1.0                                    0.46636388    3.00
+    2  571  1.0  538 -1.0                                    0.59172125    3.00
+    2  572  1.0  539 -1.0                                    0.40698475    3.00
+    2  573  1.0  588 -1.0                                    0.37307294    3.00
+    2  574  1.0  540 -1.0                                    0.36073847    3.00
+    2  575  1.0  541 -1.0                                    0.36305716    3.00
+    2  576  1.0  536 -1.0                                    0.38134850    3.00
+    2  577  1.0  542 -1.0                                    0.46924989    3.00
+    2  578  1.0  543 -1.0                                    0.42164268    3.00
+    2  579  1.0  544 -1.0                                    0.38837469    3.00
+    2  580  1.0  545 -1.0                                    0.51471052    3.00
+    2  581  1.0  546 -1.0                                    0.57268410    3.00
+    2  582  1.0  547 -1.0                                    0.44258578    3.00
+    2  583  1.0  548 -1.0                                    0.38701216    3.00
+    2  584  1.0  549 -1.0                                    0.34379851    3.00
+    2  585  1.0  550 -1.0                                    0.42243630    3.00
+    2  586  1.0  552 -1.0                                    0.46485156    3.00
+    2  587  1.0  551 -1.0                                    0.41617345    3.00
+    2  642  1.0  641 -1.0                                    0.04653312    3.00
+    2  648  1.0  647 -1.0                                    0.05370432    3.00
+    2  646  1.0  645 -1.0                                    0.12493825    3.00
+    2  654  1.0  653 -1.0                                    0.05115456    3.00
+    2  650  1.0  649 -1.0                                    0.02756928    3.00
+    2  652  1.0  651 -1.0                                    0.07649280    3.00
+    2  644  1.0  643 -1.0                                    0.13306561    3.00
+    2  638  1.0  637 -1.0                                    0.04446144    3.00
+    2  640  1.0  639 -1.0                                    0.02135424    3.00
+    2  606  1.0  605 -1.0                                    0.00191232    3.00
+    2  608  1.0  607 -1.0                                    0.01322688    3.00
+    2  610  1.0  609 -1.0                                    0.02677248    3.00
+    2  612  1.0  611 -1.0                                    0.06645312    3.00
+    2  614  1.0  613 -1.0                                    0.04669248    3.00
+    2  616  1.0  615 -1.0                                    0.03999936    3.00
+    2  618  1.0  617 -1.0                                    0.05003904    3.00
+    2  620  1.0  619 -1.0                                    0.03744960    3.00
+    2  622  1.0  621 -1.0                                    0.04589568    3.00
+    2  624  1.0  623 -1.0                                    0.08637313    3.00
+    2  626  1.0  625 -1.0                                    0.01513920    3.00
+    2  628  1.0  627 -1.0                                    0.00031872    3.00
+    2  630  1.0  629 -1.0                                    0.14262721    3.00
+    2  632  1.0  631 -1.0                                    0.03968064    3.00
+    2  634  1.0  633 -1.0                                    0.06055680    3.00
+    2  636  1.0  635 -1.0                                    0.08716993    3.00
+    3  346 -1.0  326  1.0  378  1.0                          0.00501984  100.00
+    3  347 -1.0  327  1.0  379  1.0                          0.00728275  100.00
+    3  348 -1.0  328  1.0  380  1.0                          0.00792019  100.00
+    5  349 -1.0  328  0.5  326  0.5  381  0.5  382  0.5      0.01021498  100.00
+    3  350 -1.0  329  1.0  383  1.0                          0.02380839  100.00
+    3  351 -1.0  330  1.0  384  1.0                          0.02573664  100.00
+    5  352 -1.0  331  0.5  332  0.5  385  0.5  386  0.5      0.00168922  100.00
+    5  353 -1.0  326  0.5  332  0.5  387  0.5  388  0.5      0.00288442  100.00
+    5  354 -1.0  334  0.5  333  0.5  389  0.5  390  0.5      0.00607162  100.00
+    5  355 -1.0  335  0.5  333  0.5  391  0.5  392  0.5      0.00774490  100.00
+    5  356 -1.0  326  0.5  336  0.5  393  0.5  394  0.5      0.00777677  100.00
+    5  357 -1.0  328  0.5  333  0.5  395  0.5  396  0.5      0.00854170  100.00
+    5  358 -1.0  326  0.5  333  0.5  397  0.5  398  0.5      0.01692403  100.00
+    3  359 -1.0  337  1.0  399  1.0                          0.00264538  100.00
+    3  360 -1.0  338  1.0  400  1.0                          0.00320314  100.00
+    5  361 -1.0  337  0.5  338  0.5  401  0.5  402  0.5      0.00533856  100.00
+    5  362 -1.0  339  0.5  338  0.5  403  0.5  404  0.5      0.00565728  100.00
+    5  363 -1.0  340  0.5  335  0.5  405  0.5  406  0.5      0.00572102  100.00
+    5  364 -1.0  340  0.5  338  0.5  407  0.5  408  0.5      0.00662938  100.00
+    5  365 -1.0  341  0.5  342  0.5  409  0.5  410  0.5      0.00074899  100.00
+    5  366 -1.0  341  0.5  343  0.5  411  0.5  412  0.5      0.00035059  100.00
+    3  371 -1.0  343  1.0  420  1.0                          0.00081274  100.00
+    5  368 -1.0  344  0.5  341  0.5  415  0.5  416  0.5      0.00006374  100.00
+    5  367 -1.0  344  0.5  345  0.5  413  0.5  414  0.5      0.00009562  100.00
+    3  369 -1.0  341  1.0  417  1.0                          0.00012749  100.00
+    5  370 -1.0  341  0.5  345  0.5  418  0.5  419  0.5      0.00020717  100.00
+    3  372 -1.0  334  1.0  421  1.0                          0.00213542  100.00
+    3  373 -1.0  331  1.0  422  1.0                          0.00226291  100.00
+    3  374 -1.0  377  1.0  423  1.0                          0.00288442  100.00
+    3  375 -1.0  377  1.0  424  1.0                          0.00436646  100.00
+    3  376 -1.0  377  1.0  425  1.0                          0.00443021  100.00
+    3  426 -1.0  482  1.0  427  1.0                          0.00505171  200.00
+    3  428 -1.0  483  1.0  429  1.0                          0.00799987  200.00
+    3  430 -1.0  484  1.0  431  1.0                          0.02995968  200.00
+    3  432 -1.0  485  1.0  433  1.0                          0.02568883  200.00
+    3  434 -1.0  486  1.0  435  1.0                          0.03297159  200.00
+    5  436 -1.0  487  0.5  488  0.5  437  0.5  438  0.5      0.02709120  200.00
+    5  439 -1.0  489  0.5  490  0.5  440  0.5  441  0.5      0.02667687  200.00
+    3  442 -1.0  491  1.0  443  1.0                          0.00084461  200.00
+    3  444 -1.0  492  1.0  445  1.0                          0.00239040  200.00
+    5  446 -1.0  493  0.5  494  0.5  447  0.5  448  0.5      0.00231072  200.00
+    3  449 -1.0  495  1.0  450  1.0                          0.00417523  200.00
+    3  451 -1.0  496  1.0  452  1.0                          0.00669312  200.00
+    3  453 -1.0  497  1.0  454  1.0                          0.01552166  200.00
+    5  455 -1.0  498  0.5  499  0.5  456  0.5  457  0.5      0.00731462  200.00
+    5  458 -1.0  500  0.5  501  0.5  459  0.5  460  0.5      0.01858138  200.00
+    5  461 -1.0  502  0.5  503  0.5  462  0.5  463  0.5      0.00240634  200.00
+    5  464 -1.0  504  0.5  505  0.5  465  0.5  466  0.5      0.00524294  200.00
+    5  467 -1.0  506  0.5  507  0.5  468  0.5  469  0.5      0.00369715  200.00
+    5  470 -1.0  508  0.5  509  0.5  471  0.5  472  0.5      0.00725088  200.00
+    5  473 -1.0  510  0.5  511  0.5  474  0.5  475  0.5      0.00431866  200.00
+    5  476 -1.0  512  0.5  513  0.5  477  0.5  478  0.5      0.00895603  200.00
+    5  479 -1.0  514  0.5  515  0.5  480  0.5  481  0.5      0.01129862  200.00
+    3  517 -1.0  528  1.0  516  1.0                          0.00207168  600.00
+    3  519 -1.0  529  1.0  518  1.0                          0.00313939  600.00
+    3  521 -1.0  530  1.0  520  1.0                          0.00444614  600.00
+    3  523 -1.0  531  1.0  522  1.0                          0.00586445  600.00
+    3  525 -1.0  532  1.0  524  1.0                          0.00734650  600.00
+    3  527 -1.0  533  1.0  526  1.0                          0.00892416  600.00
+==----------------------------------------------------------------------------==
+=>No first-excitation PT2 data for training
+=>No second-excitation PT2 data for training
+=>No polar data for training
+=>No nmr data for training
+=>No geom data for training
+=>Optimization job is xyg3
+=>Initial Guess
+  9.19373133E-01  8.58978732E-02  5.81311116E-01  3.97482664E-01  9.76443271E-03
+=>Optimization Algorithm employed is fmin_mad
+=>Function for optimizing
+  def opt_func(C,P):
+      '''\
+      The function for optimization, where C is the parameters
+      '''
+      a1, a3, a4, a8, a11= C
+  #a1  = 0.942841
+      a2  = 1. - a1
+  #a3  = 0.093339
+  #a4  = 0.588415
+      a5  = a4      #a5  = 0.588415
+      a6  = 0.
+  #a8  = 1 - a4
+      a7  = a8
+      a9  = a8
+  #a11 = 0.
+      a10 = a11
+      a12 = a11
+  
+      E_noXC, Ex_HF, Ex_LDA, dEx_B, Ec_VWN, dEc_LYP, Ec_PT21, aaaa, abab, bbbb,\
+      aaaa_erf200, abab_erf200, bbbb_erf200 = P
+      return E_noXC + a1*Ex_HF + a2*Ex_LDA + a3*dEx_B + a4*Ec_VWN + a5* dEc_LYP \
+             + a6*Ec_PT21 + a7*aaaa + a8*abab + a9*bbbb\
+          + a10*aaaa_erf200 + a11*abab_erf200 + a12*bbbb_erf200
+  
+  def opt_func_constrained(C,P):
+      '''\
+      The constrained function for optimization, where C is the parameters
+      '''
+      con = 0.5
+      for a in C:
+          if a<0 or a>1:
+              con = -1
+              break
+      return con
+=>Testing parameters in this round
+  9.19373133E-01  8.58978732E-02  5.81311116E-01  3.97482664E-01  9.76443271E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350587;        wAD =       0.05933072
+=>       MAD =       0.02661179;       wMAD =       0.10237528
+=>       RMS =       0.48757547;       wRMS =       1.49311497
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.65341790E-01  8.58978732E-02  5.81311116E-01  3.97482664E-01  9.76443271E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.01660131;        wAD =       0.04301367
+=>       MAD =       0.03262874;       wMAD =       0.11054646
+=>       RMS =       0.48800273;       wRMS =       1.49582818
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19373133E-01  9.01927669E-02  5.81311116E-01  3.97482664E-01  9.76443271E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02302671;        wAD =       0.05738751
+=>       MAD =       0.02667736;       wMAD =       0.10260019
+=>       RMS =       0.48760376;       wRMS =       1.49343239
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19373133E-01  8.58978732E-02  6.10376672E-01  3.97482664E-01  9.76443271E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02764716;        wAD =       0.06829912
+=>       MAD =       0.02929084;       wMAD =       0.10551174
+=>       RMS =       0.48771858;       wRMS =       1.49275741
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19373133E-01  8.58978732E-02  5.81311116E-01  4.17356797E-01  9.76443271E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02868553;        wAD =       0.07079873
+=>       MAD =       0.03003342;       wMAD =       0.10608287
+=>       RMS =       0.48772408;       wRMS =       1.49321860
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19373133E-01  8.58978732E-02  5.81311116E-01  3.97482664E-01  1.02526543E-02
+==----------------------------------------------------------------------------==
+=>        AD =       0.02351498;        wAD =       0.05943680
+=>       MAD =       0.02661311;       wMAD =       0.10237785
+=>       RMS =       0.48757561;       wRMS =       1.49310678
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.73404476E-01  8.76158307E-02  5.92937338E-01  4.05432317E-01  9.95972136E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.03395079;        wAD =       0.08308748
+=>       MAD =       0.03526852;       wMAD =       0.11548957
+=>       RMS =       0.48766846;       wRMS =       1.49193074
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.42357461E-01  8.63273626E-02  5.84217672E-01  3.99470077E-01  9.81325487E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02093868;        wAD =       0.05303213
+=>       MAD =       0.02815461;       wMAD =       0.10445850
+=>       RMS =       0.48776083;       wRMS =       1.49424115
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.28566864E-01  8.77876264E-02  5.94099961E-01  3.78403496E-01  9.97925023E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.01876783;        wAD =       0.04819578
+=>       MAD =       0.03013031;       wMAD =       0.10668643
+=>       RMS =       0.48767235;       wRMS =       1.49396259
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.21671566E-01  8.63703115E-02  5.84508327E-01  4.07618472E-01  9.81813709E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02620611;        wAD =       0.06514799
+=>       MAD =       0.02802529;       wMAD =       0.10382897
+=>       RMS =       0.48766279;       wRMS =       1.49317434
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.29486237E-01  8.79766017E-02  5.54687067E-01  4.02331953E-01  1.00007320E-02
+==----------------------------------------------------------------------------==
+=>        AD =       0.01922978;        wAD =       0.04943494
+=>       MAD =       0.02956487;       wMAD =       0.10630980
+=>       RMS =       0.48763346;       wRMS =       1.49431491
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.21901409E-01  8.64175553E-02  5.96454271E-01  3.98694986E-01  9.82350753E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02554282;        wAD =       0.06358307
+=>       MAD =       0.02763026;       wMAD =       0.10349605
+=>       RMS =       0.48766122;       wRMS =       1.49302980
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.98319488E-01  8.75831895E-02  5.85740707E-01  4.00034503E-01  9.95601088E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02777991;        wAD =       0.06892232
+=>       MAD =       0.02932163;       wMAD =       0.10570707
+=>       RMS =       0.48752950;       wRMS =       1.49232416
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.31347968E-01  8.66413193E-02  5.84598430E-01  3.99611184E-01  9.84894388E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02264899;        wAD =       0.05700467
+=>       MAD =       0.02686116;       wMAD =       0.10281378
+=>       RMS =       0.48767781;       wRMS =       1.49366472
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.22875945E-01  8.76486437E-02  5.85486092E-01  3.88683193E-01  9.96345138E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02108964;        wAD =       0.05354912
+=>       MAD =       0.02786488;       wMAD =       0.10396401
+=>       RMS =       0.48760305;       wRMS =       1.49349930
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.21972661E-01  8.66898945E-02  5.84752768E-01  4.02884652E-01  9.85446566E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02492699;        wAD =       0.06224828
+=>       MAD =       0.02713356;       wMAD =       0.10288602
+=>       RMS =       0.48763516;       wRMS =       1.49319701
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.22674602E-01  8.77103355E-02  5.68859548E-01  3.99282545E-01  9.97046419E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02150660;        wAD =       0.05458012
+=>       MAD =       0.02756442;       wMAD =       0.10373556
+=>       RMS =       0.48758461;       wRMS =       1.49363106
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.22094707E-01  8.67407504E-02  5.89555590E-01  3.98841876E-01  9.86024669E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02453376;        wAD =       0.06133234
+=>       MAD =       0.02696409;       wMAD =       0.10272615
+=>       RMS =       0.48763382;       wRMS =       1.49315343
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.22652169E-01  8.74583386E-02  5.82482179E-01  3.93475768E-01  9.94181847E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02196513;        wAD =       0.05554854
+=>       MAD =       0.02722779;       wMAD =       0.10320566
+=>       RMS =       0.48760044;       wRMS =       1.49343032
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.22142538E-01  8.68820056E-02  5.84185121E-01  4.00532431E-01  9.87630386E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02418653;        wAD =       0.06057334
+=>       MAD =       0.02677304;       wMAD =       0.10252827
+=>       RMS =       0.48762223;       wRMS =       1.49323669
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.09594690E-01  8.76031884E-02  5.82471193E-01  3.97117736E-01  9.95828425E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02485815;        wAD =       0.06221961
+=>       MAD =       0.02705409;       wMAD =       0.10292336
+=>       RMS =       0.48753258;       wRMS =       1.49277337
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.25909648E-01  8.68817866E-02  5.84066621E-01  3.98987822E-01  9.87627897E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02320128;        wAD =       0.05830841
+=>       MAD =       0.02666120;       wMAD =       0.10250227
+=>       RMS =       0.48763866;       wRMS =       1.49343103
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.20373927E-01  8.75601718E-02  5.75318446E-01  3.97945422E-01  9.95339435E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02244039;        wAD =       0.05668238
+=>       MAD =       0.02695627;       wMAD =       0.10292464
+=>       RMS =       0.48757747;       wRMS =       1.49338797
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.21664512E-01  8.69456057E-02  5.85996304E-01  3.98617762E-01  9.88353361E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02401042;        wAD =       0.06016985
+=>       MAD =       0.02673296;       wMAD =       0.10248463
+=>       RMS =       0.48761753;       wRMS =       1.49320485
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.24012053E-01  8.28092908E-02  5.85436995E-01  3.99758673E-01  1.00968487E-02
+==----------------------------------------------------------------------------==
+=>        AD =       0.02434092;        wAD =       0.06174014
+=>       MAD =       0.02686876;       wMAD =       0.10264939
+=>       RMS =       0.48760965;       wRMS =       1.49303143
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.20532863E-01  8.83468979E-02  5.82342586E-01  3.98051666E-01  9.84753670E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02335526;        wAD =       0.05847567
+=>       MAD =       0.02661663;       wMAD =       0.10244592
+=>       RMS =       0.48760436;       wRMS =       1.49332140
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.20598778E-01  8.67060091E-02  5.81825976E-01  3.95716600E-01  9.97347067E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02284860;        wAD =       0.05771524
+=>       MAD =       0.02673463;       wMAD =       0.10256914
+=>       RMS =       0.48758424;       wRMS =       1.49324117
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.21756598E-01  8.68380064E-02  5.83595335E-01  3.99328473E-01  9.90059557E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02385204;        wAD =       0.05985882
+=>       MAD =       0.02667071;       wMAD =       0.10243313
+=>       RMS =       0.48761188;       wRMS =       1.49323458
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.15170447E-01  8.66887160E-02  5.81755962E-01  3.97397470E-01  9.98322220E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02409415;        wAD =       0.06060033
+=>       MAD =       0.02670181;       wMAD =       0.10249690
+=>       RMS =       0.48755629;       wRMS =       1.49296662
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.17855247E-01  8.67369836E-02  5.82333626E-01  3.97795058E-01  9.95648639E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02387093;        wAD =       0.06002735
+=>       MAD =       0.02665357;       wMAD =       0.10242429
+=>       RMS =       0.48757638;       wRMS =       1.49308037
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.17891878E-01  8.65414480E-02  5.78361208E-01  3.97438448E-01  1.00051487E-02
+==----------------------------------------------------------------------------==
+=>        AD =       0.02322922;        wAD =       0.05868190
+=>       MAD =       0.02663567;       wMAD =       0.10243562
+=>       RMS =       0.48756055;       wRMS =       1.49313834
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.17967133E-01  8.44179759E-02  5.80422375E-01  3.97759257E-01  1.01041904E-02
+==----------------------------------------------------------------------------==
+=>        AD =       0.02383395;        wAD =       0.06045857
+=>       MAD =       0.02664670;       wMAD =       0.10243487
+=>       RMS =       0.48755566;       wRMS =       1.49295476
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.20638220E-01  8.53740370E-02  5.85228219E-01  3.98500799E-01  9.98619507E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02420189;        wAD =       0.06096301
+=>       MAD =       0.02678945;       wMAD =       0.10256221
+=>       RMS =       0.48759856;       wRMS =       1.49306234
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18578463E-01  8.62495952E-02  5.80077961E-01  3.97704036E-01  1.00004103E-02
+==----------------------------------------------------------------------------==
+=>        AD =       0.02347239;        wAD =       0.05925218
+=>       MAD =       0.02660718;       wMAD =       0.10238148
+=>       RMS =       0.48756958;       wRMS =       1.49311740
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.20807497E-01  8.82301568E-02  5.83029287E-01  3.98157901E-01  9.84564134E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02345253;        wAD =       0.05870378
+=>       MAD =       0.02661349;       wMAD =       0.10242641
+=>       RMS =       0.48760800;       wRMS =       1.49331237
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.16638392E-01  8.63669864E-02  5.79629908E-01  3.96120456E-01  1.00272545E-02
+==----------------------------------------------------------------------------==
+=>        AD =       0.02327464;        wAD =       0.05884152
+=>       MAD =       0.02662172;       wMAD =       0.10240294
+=>       RMS =       0.48755041;       wRMS =       1.49305815
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.15919850E-01  8.42295679E-02  5.78836204E-01  3.96476050E-01  1.01548539E-02
+==----------------------------------------------------------------------------==
+=>        AD =       0.02360299;        wAD =       0.06005165
+=>       MAD =       0.02660989;       wMAD =       0.10241364
+=>       RMS =       0.48753091;       wRMS =       1.49288256
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18097941E-01  8.47197747E-02  5.78132895E-01  3.96311289E-01  1.01233559E-02
+==----------------------------------------------------------------------------==
+=>        AD =       0.02307741;        wAD =       0.05873780
+=>       MAD =       0.02667077;       wMAD =       0.10245108
+=>       RMS =       0.48754513;       wRMS =       1.49303139
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.17915921E-01  8.62326814E-02  5.81283444E-01  3.97424116E-01  9.99820377E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02367255;        wAD =       0.05970496
+=>       MAD =       0.02661801;       wMAD =       0.10238985
+=>       RMS =       0.48756827;       wRMS =       1.49306777
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.20831767E-01  8.80284359E-02  5.82609214E-01  3.98009525E-01  9.86232829E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02337318;        wAD =       0.05857482
+=>       MAD =       0.02661750;       wMAD =       0.10243578
+=>       RMS =       0.48760490;       wRMS =       1.49330785
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.17147829E-01  8.51792849E-02  5.79779456E-01  3.96859418E-01  1.00817225E-02
+==----------------------------------------------------------------------------==
+=>        AD =       0.02354554;        wAD =       0.05968244
+=>       MAD =       0.02660836;       wMAD =       0.10239296
+=>       RMS =       0.48754934;       wRMS =       1.49298710
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.20317000E-01  8.54159368E-02  5.81875329E-01  3.98660703E-01  1.00117150E-02
+==----------------------------------------------------------------------------==
+=>        AD =       0.02380989;        wAD =       0.06012133
+=>       MAD =       0.02665111;       wMAD =       0.10241425
+=>       RMS =       0.48758523;       wRMS =       1.49310134
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.17558044E-01  8.61292240E-02  5.80191263E-01  3.96755518E-01  1.00233696E-02
+==----------------------------------------------------------------------------==
+=>        AD =       0.02340845;        wAD =       0.05916147
+=>       MAD =       0.02660727;       wMAD =       0.10238159
+=>       RMS =       0.48755898;       wRMS =       1.49306816
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19971648E-01  8.69836139E-02  5.81890503E-01  3.97880181E-01  9.93390576E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02348416;        wAD =       0.05907201
+=>       MAD =       0.02661139;       wMAD =       0.10238860
+=>       RMS =       0.48758980;       wRMS =       1.49320371
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.20025848E-01  8.62305904E-02  5.80629340E-01  3.97497909E-01  9.99170530E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02328179;        wAD =       0.05879631
+=>       MAD =       0.02662598;       wMAD =       0.10240928
+=>       RMS =       0.48757971;       wRMS =       1.49317729
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18443403E-01  8.62321587E-02  5.81119918E-01  3.97442564E-01  9.99657915E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02357486;        wAD =       0.05947780
+=>       MAD =       0.02661102;       wMAD =       0.10237820
+=>       RMS =       0.48757105;       wRMS =       1.49309484
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.17358822E-01  8.51790758E-02  5.79714046E-01  3.96866798E-01  1.00810727E-02
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350646;        wAD =       0.05959158
+=>       MAD =       0.02660770;       wMAD =       0.10239030
+=>       RMS =       0.48755047;       wRMS =       1.49299784
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19318442E-01  8.65324794E-02  5.81346389E-01  3.97626835E-01  9.97069749E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02348973;        wAD =       0.05920190
+=>       MAD =       0.02661017;       wMAD =       0.10238179
+=>       RMS =       0.48757996;       wRMS =       1.49315196
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18012029E-01  8.56302103E-02  5.80258160E-01  3.97120143E-01  1.00442809E-02
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350089;        wAD =       0.05946169
+=>       MAD =       0.02660834;       wMAD =       0.10238254
+=>       RMS =       0.48756030;       wRMS =       1.49304902
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18991838E-01  8.63069121E-02  5.81074332E-01  3.97500162E-01  9.98909335E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02349252;        wAD =       0.05926685
+=>       MAD =       0.02660968;       wMAD =       0.10237872
+=>       RMS =       0.48757504;       wRMS =       1.49312615
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.20345944E-01  8.61045410E-02  5.81766514E-01  3.98289318E-01  9.97789834E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02361580;        wAD =       0.05954427
+=>       MAD =       0.02662213;       wMAD =       0.10238656
+=>       RMS =       0.48758777;       wRMS =       1.49315606
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18255019E-01  8.61230532E-02  5.80585076E-01  3.97138968E-01  1.00120018E-02
+==----------------------------------------------------------------------------==
+=>        AD =       0.02346029;        wAD =       0.05925717
+=>       MAD =       0.02660713;       wMAD =       0.10237616
+=>       RMS =       0.48756615;       wRMS =       1.49309006
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19196147E-01  8.59335529E-02  5.82082662E-01  3.97114773E-01  1.00054943E-02
+==----------------------------------------------------------------------------==
+=>        AD =       0.02354702;        wAD =       0.05945556
+=>       MAD =       0.02661509;       wMAD =       0.10238248
+=>       RMS =       0.48757576;       wRMS =       1.49309572
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18732884E-01  8.61705847E-02  5.80579136E-01  3.97556720E-01  1.00016813E-02
+==----------------------------------------------------------------------------==
+=>        AD =       0.02349105;        wAD =       0.05930302
+=>       MAD =       0.02660874;       wMAD =       0.10237841
+=>       RMS =       0.48757112;       wRMS =       1.49311196
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18679190E-01  8.58217051E-02  5.80888213E-01  3.97341270E-01  1.00218464E-02
+==----------------------------------------------------------------------------==
+=>        AD =       0.02352630;        wAD =       0.05945536
+=>       MAD =       0.02661068;       wMAD =       0.10237955
+=>       RMS =       0.48756871;       wRMS =       1.49308132
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18913676E-01  8.61856104E-02  5.81027802E-01  3.97460439E-01  9.99728160E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350096;        wAD =       0.05931398
+=>       MAD =       0.02660991;       wMAD =       0.10237697
+=>       RMS =       0.48757346;       wRMS =       1.49311492
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19010461E-01  8.59640428E-02  5.81562875E-01  3.97246200E-01  1.00074986E-02
+==----------------------------------------------------------------------------==
+=>        AD =       0.02353174;        wAD =       0.05942357
+=>       MAD =       0.02661261;       wMAD =       0.10237957
+=>       RMS =       0.48757357;       wRMS =       1.49309664
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18802278E-01  8.61189492E-02  5.80825071E-01  3.97479090E-01  1.00031356E-02
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350122;        wAD =       0.05933316
+=>       MAD =       0.02660956;       wMAD =       0.10237686
+=>       RMS =       0.48757173;       wRMS =       1.49310813
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19443493E-01  8.58571850E-02  5.80904155E-01  3.97374966E-01  1.00152233E-02
+==----------------------------------------------------------------------------==
+=>        AD =       0.02341847;        wAD =       0.05919093
+=>       MAD =       0.02661220;       wMAD =       0.10237998
+=>       RMS =       0.48757395;       wRMS =       1.49311913
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18693425E-01  8.61384153E-02  5.81065977E-01  3.97425665E-01  1.00012402E-02
+==----------------------------------------------------------------------------==
+=>        AD =       0.02353576;        wAD =       0.05940608
+=>       MAD =       0.02661037;       wMAD =       0.10237649
+=>       RMS =       0.48757176;       wRMS =       1.49310089
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18241880E-01  8.62876873E-02  5.80614901E-01  3.97312066E-01  9.65858240E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02348667;        wAD =       0.05921964
+=>       MAD =       0.02660648;       wMAD =       0.10237779
+=>       RMS =       0.48756782;       wRMS =       1.49310493
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18524693E-01  8.61902338E-02  5.80788954E-01  3.97354716E-01  9.80710039E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02349374;        wAD =       0.05927393
+=>       MAD =       0.02660810;       wMAD =       0.10237678
+=>       RMS =       0.48756976;       wRMS =       1.49310534
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18545743E-01  8.60017995E-02  5.80802675E-01  3.97292002E-01  9.83788266E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02349779;        wAD =       0.05932645
+=>       MAD =       0.02660880;       wMAD =       0.10237648
+=>       RMS =       0.48756849;       wRMS =       1.49309282
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18554527E-01  8.60216008E-02  5.80996449E-01  3.97198516E-01  9.76592749E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02349616;        wAD =       0.05930459
+=>       MAD =       0.02660885;       wMAD =       0.10237712
+=>       RMS =       0.48756892;       wRMS =       1.49309350
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18740341E-01  8.60946121E-02  5.80867915E-01  3.97408946E-01  9.94383357E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02349995;        wAD =       0.05932602
+=>       MAD =       0.02660938;       wMAD =       0.10237598
+=>       RMS =       0.48757103;       wRMS =       1.49310447
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18918371E-01  8.59120675E-02  5.81064149E-01  3.97344582E-01  1.00166560E-02
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350612;        wAD =       0.05938464
+=>       MAD =       0.02661083;       wMAD =       0.10237756
+=>       RMS =       0.48757139;       wRMS =       1.49309596
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18623113E-01  8.61206922E-02  5.80857753E-01  3.97352182E-01  9.85948928E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02349684;        wAD =       0.05930161
+=>       MAD =       0.02660877;       wMAD =       0.10237596
+=>       RMS =       0.48757017;       wRMS =       1.49310298
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18721514E-01  8.59567969E-02  5.80703837E-01  3.97244240E-01  9.76581582E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02344853;        wAD =       0.05921071
+=>       MAD =       0.02660841;       wMAD =       0.10237675
+=>       RMS =       0.48756877;       wRMS =       1.49310127
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18700447E-01  8.60930107E-02  5.80975442E-01  3.97380309E-01  9.94238409E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02351396;        wAD =       0.05935724
+=>       MAD =       0.02660968;       wMAD =       0.10237582
+=>       RMS =       0.48757101;       wRMS =       1.49310097
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18931078E-01  8.61298971E-02  5.81036245E-01  3.97413226E-01  9.97097391E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02349297;        wAD =       0.05930265
+=>       MAD =       0.02660990;       wMAD =       0.10237658
+=>       RMS =       0.48757304;       wRMS =       1.49311255
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18642077E-01  8.60338239E-02  5.80861068E-01  3.97322308E-01  9.87115547E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02349658;        wAD =       0.05932050
+=>       MAD =       0.02660907;       wMAD =       0.10237596
+=>       RMS =       0.48756963;       wRMS =       1.49309775
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19376625E-01  8.59729516E-02  5.81364242E-01  3.97639596E-01  9.74051627E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02354499;        wAD =       0.05939727
+=>       MAD =       0.02661313;       wMAD =       0.10237653
+=>       RMS =       0.48757677;       wRMS =       1.49311842
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18535420E-01  8.60855278E-02  5.80779867E-01  3.97264125E-01  9.94413040E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02348146;        wAD =       0.05929219
+=>       MAD =       0.02660843;       wMAD =       0.10237578
+=>       RMS =       0.48756881;       wRMS =       1.49309714
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18809336E-01  8.59977590E-02  5.81046183E-01  3.97311689E-01  9.80880321E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02349793;        wAD =       0.05931489
+=>       MAD =       0.02660973;       wMAD =       0.10237622
+=>       RMS =       0.48757100;       wRMS =       1.49310106
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18757589E-01  8.60703988E-02  5.80912482E-01  3.97384632E-01  9.91007598E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02349945;        wAD =       0.05932323
+=>       MAD =       0.02660946;       wMAD =       0.10237566
+=>       RMS =       0.48757102;       wRMS =       1.49310361
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18980354E-01  8.59515615E-02  5.81078237E-01  3.97381433E-01  9.91338218E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350209;        wAD =       0.05934795
+=>       MAD =       0.02661060;       wMAD =       0.10237625
+=>       RMS =       0.48757220;       wRMS =       1.49310280
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18712423E-01  8.60784095E-02  5.80912874E-01  3.97359495E-01  9.87296251E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02349815;        wAD =       0.05931319
+=>       MAD =       0.02660923;       wMAD =       0.10237562
+=>       RMS =       0.48757068;       wRMS =       1.49310294
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18989528E-01  8.60562641E-02  5.81095645E-01  3.97426182E-01  9.90243880E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350297;        wAD =       0.05932613
+=>       MAD =       0.02661036;       wMAD =       0.10237577
+=>       RMS =       0.48757317;       wRMS =       1.49311010
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19046790E-01  8.59823788E-02  5.81029352E-01  3.97386530E-01  9.81523207E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02348121;        wAD =       0.05927695
+=>       MAD =       0.02661003;       wMAD =       0.10237619
+=>       RMS =       0.48757265;       wRMS =       1.49311054
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18787033E-01  8.60653527E-02  5.80988919E-01  3.97381864E-01  9.91059609E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350577;        wAD =       0.05933717
+=>       MAD =       0.02660977;       wMAD =       0.10237550
+=>       RMS =       0.48757142;       wRMS =       1.49310336
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19312462E-01  8.59817915E-02  5.81308547E-01  3.97549810E-01  9.80007203E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02352342;        wAD =       0.05935999
+=>       MAD =       0.02661207;       wMAD =       0.10237599
+=>       RMS =       0.48757590;       wRMS =       1.49311686
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18729681E-01  8.60595937E-02  5.80912037E-01  3.97335546E-01  9.90811581E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02349195;        wAD =       0.05930914
+=>       MAD =       0.02660928;       wMAD =       0.10237552
+=>       RMS =       0.48757058;       wRMS =       1.49310207
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18754415E-01  8.60123871E-02  5.80919327E-01  3.97351498E-01  9.84403443E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02349751;        wAD =       0.05931925
+=>       MAD =       0.02660945;       wMAD =       0.10237579
+=>       RMS =       0.48757050;       wRMS =       1.49310068
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18930750E-01  8.60452949E-02  5.81051565E-01  3.97407511E-01  9.88783771E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350161;        wAD =       0.05932441
+=>       MAD =       0.02661013;       wMAD =       0.10237561
+=>       RMS =       0.48757250;       wRMS =       1.49310774
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19055619E-01  8.59882108E-02  5.81158123E-01  3.97402200E-01  9.82750195E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350189;        wAD =       0.05932262
+=>       MAD =       0.02661061;       wMAD =       0.10237550
+=>       RMS =       0.48757323;       wRMS =       1.49310882
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19238063E-01  8.59441206E-02  5.81255830E-01  3.97444419E-01  9.84643120E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350468;        wAD =       0.05933643
+=>       MAD =       0.02661140;       wMAD =       0.10237551
+=>       RMS =       0.48757460;       wRMS =       1.49311185
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19142662E-01  8.59367655E-02  5.81198845E-01  3.97411166E-01  9.81499339E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350246;        wAD =       0.05933002
+=>       MAD =       0.02661100;       wMAD =       0.10237571
+=>       RMS =       0.48757362;       wRMS =       1.49310868
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18983728E-01  8.60181625E-02  5.81088385E-01  3.97408425E-01  9.86962663E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350182;        wAD =       0.05932582
+=>       MAD =       0.02661035;       wMAD =       0.10237544
+=>       RMS =       0.48757278;       wRMS =       1.49310798
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19445350E-01  8.59058942E-02  5.81408912E-01  3.97512283E-01  9.77931962E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02351606;        wAD =       0.05935196
+=>       MAD =       0.02661254;       wMAD =       0.10237571
+=>       RMS =       0.48757642;       wRMS =       1.49311672
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18908598E-01  8.60211689E-02  5.81036256E-01  3.97379730E-01  9.87591676E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02349798;        wAD =       0.05931985
+=>       MAD =       0.02661003;       wMAD =       0.10237546
+=>       RMS =       0.48757204;       wRMS =       1.49310573
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.18805181E-01  8.60521867E-02  5.80977290E-01  3.97377534E-01  9.85279846E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350065;        wAD =       0.05931804
+=>       MAD =       0.02660962;       wMAD =       0.10237550
+=>       RMS =       0.48757137;       wRMS =       1.49310449
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19263470E-01  8.59256881E-02  5.81239548E-01  3.97438357E-01  9.76551452E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02349752;        wAD =       0.05930965
+=>       MAD =       0.02661119;       wMAD =       0.10237549
+=>       RMS =       0.48757454;       wRMS =       1.49311344
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19428638E-01  8.58882547E-02  5.81356082E-01  3.97467017E-01  9.78839857E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350138;        wAD =       0.05932543
+=>       MAD =       0.02661198;       wMAD =       0.10237537
+=>       RMS =       0.48757585;       wRMS =       1.49311588
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19327408E-01  8.59122482E-02  5.81254432E-01  3.97468277E-01  9.79805373E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02349994;        wAD =       0.05932196
+=>       MAD =       0.02661152;       wMAD =       0.10237548
+=>       RMS =       0.48757503;       wRMS =       1.49311438
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19145132E-01  8.59693949E-02  5.81178960E-01  3.97444088E-01  9.87305684E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350528;        wAD =       0.05933986
+=>       MAD =       0.02661107;       wMAD =       0.10237548
+=>       RMS =       0.48757393;       wRMS =       1.49311014
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19008283E-01  8.60056935E-02  5.81133887E-01  3.97404492E-01  9.87051888E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350500;        wAD =       0.05933471
+=>       MAD =       0.02661056;       wMAD =       0.10237553
+=>       RMS =       0.48757299;       wRMS =       1.49310750
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19247627E-01  8.59356095E-02  5.81224296E-01  3.97452331E-01  9.81617002E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350120;        wAD =       0.05932515
+=>       MAD =       0.02661128;       wMAD =       0.10237540
+=>       RMS =       0.48757452;       wRMS =       1.49311266
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19231558E-01  8.59350327E-02  5.81227494E-01  3.97431979E-01  9.77276103E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02349802;        wAD =       0.05931093
+=>       MAD =       0.02661110;       wMAD =       0.10237545
+=>       RMS =       0.48757433;       wRMS =       1.49311275
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19597276E-01  8.58488042E-02  5.81446693E-01  3.97517236E-01  9.72863882E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350534;        wAD =       0.05932737
+=>       MAD =       0.02661270;       wMAD =       0.10237556
+=>       RMS =       0.48757714;       wRMS =       1.49311997
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19080767E-01  8.59780777E-02  5.81138865E-01  3.97414107E-01  9.83909728E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02349982;        wAD =       0.05932173
+=>       MAD =       0.02661066;       wMAD =       0.10237538
+=>       RMS =       0.48757331;       wRMS =       1.49310929
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19214000E-01  8.59521584E-02  5.81220004E-01  3.97457838E-01  9.85832905E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350602;        wAD =       0.05934061
+=>       MAD =       0.02661132;       wMAD =       0.10237546
+=>       RMS =       0.48757444;       wRMS =       1.49311156
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19227168E-01  8.59393141E-02  5.81225621E-01  3.97438444E-01  9.79415304E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350002;        wAD =       0.05931835
+=>       MAD =       0.02661115;       wMAD =       0.10237540
+=>       RMS =       0.48757436;       wRMS =       1.49311245
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19559206E-01  8.58374892E-02  5.81414007E-01  3.97493400E-01  9.73127401E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350150;        wAD =       0.05932274
+=>       MAD =       0.02661245;       wMAD =       0.10237544
+=>       RMS =       0.48757663;       wRMS =       1.49311813
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19415336E-01  8.58826575E-02  5.81332601E-01  3.97472156E-01  9.76586217E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350158;        wAD =       0.05932351
+=>       MAD =       0.02661189;       wMAD =       0.10237534
+=>       RMS =       0.48757566;       wRMS =       1.49311559
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19391033E-01  8.58936750E-02  5.81319563E-01  3.97476866E-01  9.79543126E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350392;        wAD =       0.05933227
+=>       MAD =       0.02661188;       wMAD =       0.10237538
+=>       RMS =       0.48757557;       wRMS =       1.49311490
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19427936E-01  8.58806057E-02  5.81358995E-01  3.97472793E-01  9.76511878E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350383;        wAD =       0.05932831
+=>       MAD =       0.02661201;       wMAD =       0.10237543
+=>       RMS =       0.48757582;       wRMS =       1.49311559
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19292704E-01  8.59218586E-02  5.81257971E-01  3.97457446E-01  9.80340721E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350186;        wAD =       0.05932594
+=>       MAD =       0.02661146;       wMAD =       0.10237533
+=>       RMS =       0.48757485;       wRMS =       1.49311339
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19245199E-01  8.59338137E-02  5.81239091E-01  3.97440490E-01  9.78904791E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350028;        wAD =       0.05931866
+=>       MAD =       0.02661122;       wMAD =       0.10237537
+=>       RMS =       0.48757449;       wRMS =       1.49311275
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19621237E-01  8.58317054E-02  5.81459879E-01  3.97513803E-01  9.72536215E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350457;        wAD =       0.05932798
+=>       MAD =       0.02661281;       wMAD =       0.10237550
+=>       RMS =       0.48757721;       wRMS =       1.49311974
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19215885E-01  8.59414846E-02  5.81219119E-01  3.97439031E-01  9.81066350E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350101;        wAD =       0.05932329
+=>       MAD =       0.02661116;       wMAD =       0.10237534
+=>       RMS =       0.48757429;       wRMS =       1.49311190
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19188265E-01  8.59428203E-02  5.81187878E-01  3.97449698E-01  9.78496683E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350286;        wAD =       0.05932342
+=>       MAD =       0.02661103;       wMAD =       0.10237540
+=>       RMS =       0.48757405;       wRMS =       1.49311156
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19368545E-01  8.59018961E-02  5.81314031E-01  3.97462687E-01  9.78754064E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350175;        wAD =       0.05932493
+=>       MAD =       0.02661174;       wMAD =       0.10237532
+=>       RMS =       0.48757540;       wRMS =       1.49311480
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19421042E-01  8.58844943E-02  5.81334844E-01  3.97485104E-01  9.78371457E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350454;        wAD =       0.05933269
+=>       MAD =       0.02661200;       wMAD =       0.10237539
+=>       RMS =       0.48757578;       wRMS =       1.49311552
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19289160E-01  8.59214839E-02  5.81263029E-01  3.97451643E-01  9.78771458E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350135;        wAD =       0.05932217
+=>       MAD =       0.02661141;       wMAD =       0.10237533
+=>       RMS =       0.48757481;       wRMS =       1.49311344
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19479667E-01  8.58688231E-02  5.81372381E-01  3.97491608E-01  9.75291942E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350396;        wAD =       0.05932762
+=>       MAD =       0.02661219;       wMAD =       0.10237534
+=>       RMS =       0.48757619;       wRMS =       1.49311698
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19281830E-01  8.59233192E-02  5.81257434E-01  3.97452175E-01  9.79622748E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350174;        wAD =       0.05932437
+=>       MAD =       0.02661141;       wMAD =       0.10237532
+=>       RMS =       0.48757476;       wRMS =       1.49311317
+==----------------------------------------------------------------------------==
+=>Optimized result by fmin algorithm
+  9.19373133E-01  8.58978732E-02  5.81311116E-01  3.97482664E-01  9.76443271E-03
+=>Testing parameters in this round
+  9.19373133E-01  8.58978732E-02  5.81311116E-01  3.97482664E-01  9.76443271E-03
+=>Batch corresponds to these parameters ::
+  9.19373133E-01  8.58978732E-02  5.81311116E-01  3.97482664E-01  9.76443271E-03
+==----------------------------------------------------------------------------==
+=>        AD =       0.02350587;        wAD =       0.05933072
+=>       MAD =       0.02661179;       wMAD =       0.10237528
+=>       RMS =       0.48757547;       wRMS =       1.49311497
+==----------------------------------------------------------------------------==
+=>Total job time:       5.19(wall)
+=>Fitting end at Sat Mar  3 00:03:52 2012
+=>----------------------------------------------------------------------------==
+  #Filename:  DFT_Fit
+  #Author  :  Igor Ying Zhang, Xin Xu
+  #Version :  0.3(20100731)
+  #Purpose :  DFT optimization using several algorithms

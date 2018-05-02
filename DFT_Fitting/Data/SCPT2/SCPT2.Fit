@@ -1,0 +1,120 @@
+=>Fitting start from Fri Apr 26 10:40:47 2013
+=>This project aims to ::
+  "======================== PES N2 and H2 ============================"
+  "              There are 56 molecules in G2-1 set                   "
+  "All the geometries are optimized at the level of B3LYP/6-311+G(d,p)"
+=>1) Project pool is 
+  "/home/zhang/Dropbox/SourceCode-Pool/DFT_Fitting/Data/SCPT2/SCPT2"
+=>2) Project batch type is "0" which to run all the jobs
+=>3) QC package employed is "aims"
+=>There are 2 <Macro-Path>s specified in SCPT2.ctl :
+  Macro-Path :   <PATH1> = /home/zhang/Dropbox/SourceCode-Pool/Batch_Config/D...
+  Macro-Path :   <PATH2> = /home/zhang/Dropbox/SourceCode-Pool/Batch_Config/D...
+=>Loaded ConfigIO.BatcList :
+==----------------------------------------------------------------------------==
+Index        Name                        Direction    JobInput         JobType
+--------------------------------------------------------------------------------
+  0th           H  /home/zhang/Dropbox/SourceCo...           H           scpt2
+  1th      H2_0_6  /home/zhang/Dropbox/SourceCo...      H2_0_6           scpt2
+  2th    H2_0_6_5  /home/zhang/Dropbox/SourceCo...    H2_0_6_5           scpt2
+==----------------------------------------------------------------------------==
+=>Loaded ConfigIO.EngyList :
+==----------------------------------------------------------------------------==
+ Num. Ind. Sca. Ind. Sca.       Ref. Data  Weight
+--------------------------------------------------------------------------------
+    2    1  1.0    0 -2.0     -0.15546645    1.00
+    2    2  1.0    0 -2.0     -0.16798407    1.00
+==----------------------------------------------------------------------------==
+=>No first-excitation PT2 data for training
+=>No second-excitation PT2 data for training
+=>No polar data for training
+=>No nmr data for training
+=>No geom data for training
+=>Optimization job is scpt2
+=>This batch run for aims
+=>Basis sets are loading from 
+  /home/zhang/Documents/Package-Pool/aims/my_basis_pool/gaussian/cc-pVDZ
+=>Initial Guess
+  1.00000000E+00  1.00000000E+00  0.00000000E+00
+=>Optimization Algorithm employed is batch
+=>Function for optimizing
+  def update_aims_scpt2(C,FitClass):
+      '''\
+      update xc_functional group for SCPT2 type optimization in Aims package\
+      '''
+      FitClass.add_CMD=[]
+      FitClass.add_CMD.append('en_shift            %16i' %3)
+      FitClass.add_CMD.append('coupling_pt2_factor %16.8f' %C[0])
+      FitClass.add_CMD.append('coupling_pt2_screen %16.8f' %C[1])
+      FitClass.add_CMD.append('coupling_pt2_shift  %16.8f' %C[2])
+      return
+  
+  def opt_func_constrained(C,P):
+      '''\
+      The constrained function for optimization, where C is the parameters
+      '''
+      con = 0.5
+      for a in C:
+          if a<0 or a>1:
+  	    con = -1
+              break
+      return con
+=>Testing parameters in this round
+  1.00000000E+00  1.00000000E+00  0.00000000E+00
+=>NProcs for AIMS jobs
+  2 2 2
+=>NProcs for AIMS jobs
+  1 1 4
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 1 atom(s) in this case
+=>Coupled MP2 total energy    :      -0.65496707
+=>C Energy CPT2               :       0.00000000
+=>X Energy HF                 :      -0.31139317
+=>DFT Energy                  :      -0.50028987
+=>X Energy                    :      -0.15070698
+=>C Energy GGA                :      -0.00600899
+=>X Energy LDA                :      -0.26702764
+=>C Energy LDA                :      -0.02215689
+=>C Energy PT2                :       0.00000000
+=>Optimized SCPT2             :      -0.49927049
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>Coupled MP2 total energy    :      -1.49456669
+=>C Energy CPT2               :      -0.03256184
+=>X Energy HF                 :      -0.71030646
+=>DFT Energy                  :      -1.13895256
+=>X Energy                    :      -0.34094776
+=>C Energy GGA                :      -0.04630641
+=>X Energy LDA                :      -0.60841368
+=>C Energy LDA                :      -0.09774421
+=>C Energy PT2                :      -0.03300982
+=>Optimized SCPT2             :      -1.13941346
+=>The direction of basis set is required
+=>This is a batch job for energy calculation
+=>There is(are) 2 atom(s) in this case
+=>Coupled MP2 total energy    :      -1.49940491
+=>C Energy CPT2               :      -0.03344773
+=>X Energy HF                 :      -0.69154393
+=>DFT Energy                  :      -1.15318901
+=>X Energy                    :      -0.33288643
+=>C Energy GGA                :      -0.04588933
+=>X Energy LDA                :      -0.59303507
+=>C Energy LDA                :      -0.09668416
+=>C Energy PT2                :      -0.03394509
+=>Optimized SCPT2             :      -1.15363295
+=>Batch corresponds to these parameters ::
+  1.00000000E+00  1.00000000E+00  0.00000000E+00
+==----------------------------------------------------------------------------==
+=>        AD =       0.01374303;        wAD =       0.01374303
+=>       MAD =       0.01374303;       wMAD =       0.01374303
+=>       RMS =       0.01376935;       wRMS =       0.01376935
+==----------------------------------------------------------------------------==
+=>Total job time:       8.82(wall)
+=>Fitting end at Fri Apr 26 10:40:56 2013
+=>----------------------------------------------------------------------------==
+  #Filename:  DFT_Fit
+  #Author  :  Igor Ying Zhang, Xin Xu
+  #Version :  0.3(20100731)
+  #Purpose :  DFT optimization using several algorithms

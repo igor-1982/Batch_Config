@@ -1,0 +1,39 @@
+Batch=Batch {
+ main="/home/igor/Documents/Package-Pool/Batch_Config" {
+  Batch.py
+  Batch.csh
+  qBatch
+  Batch.pbs
+  ProgUpdate
+  README
+ }
+ modules="/home/igor/Documents/Package-Pool/Batch_Config/Modules"  {
+  gaussian_manage.py
+  qchem_manage.py
+  cp2k_manage.py
+  aims_manage.py
+  dft_d.py
+  my_io.py
+  rsync_project.py
+  opt.py
+  pos_scf.py
+  G03_Environment
+  G09_Environment
+  QChem_Environment
+  QChem_Environment.par
+  QChem_Environment.ser
+  CP2K_Environment
+  Aims_Environment
+  aims_runscr
+  aims_runscr_eos
+  aims_runscr_draco
+  aims_runscr_xhpc1
+  aims_runscr_langchao
+ }
+ Script_aims="/home/igor/Documents/Package-Pool/Batch_Config/Data/Aims/Scripts" {
+ aims_mgrep_batch.py
+ aims_mgrep_batch_2.py
+ aims_mgrep_batch_wrpa.py
+ aims_batch_del.py
+ }
+}

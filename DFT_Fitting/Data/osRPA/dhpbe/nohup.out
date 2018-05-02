@@ -1,0 +1,135 @@
+Error in batch flag identifying of g2-100-245.04425598 "ConfigIO.get_XYG3Comp"
+Optimization terminated successfully.
+         Current function value: 0.033626
+         Iterations: 147
+         Function evaluations: 260
+Optimization terminated successfully.
+         Current function value: 0.032098
+         Iterations: 192
+         Function evaluations: 336
+Traceback (most recent call last):
+  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 297, in <module>
+    main()
+  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 258, in main
+    run_optimization(MainFit)                               #  Run optimization based on MainFit
+  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 189, in run_optimization
+    args=tuple([FitClass]))
+  File "/usr/lib/python2.7/site-packages/scipy/optimize/optimize.py", line 408, in fmin
+    res = _minimize_neldermead(func, x0, args, callback=callback, **opts)
+  File "/usr/lib/python2.7/site-packages/scipy/optimize/optimize.py", line 532, in _minimize_neldermead
+    fsim[k] = func(sim[k])
+  File "/usr/lib/python2.7/site-packages/scipy/optimize/optimize.py", line 292, in function_wrapper
+    return function(*(wrapper_args + args))
+  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 43, in calc_statistic
+    return calc_statistic_xyg3(C,FitClass)
+  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 62, in calc_statistic_xyg3
+    FitClass.run_OptCalc(opt_func,C)
+  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/modules/my_io.py", line 3587, in run_OptCalc
+    TmpResult   = func(C,self.CompDict[index])
+  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/Data/osRPA/dhpbe/opt_func.py", line 9, in opt_func
+    E_noXC, Ex_HF, Ex_PBE, Ec_PBE, ospt2, rospt2, Ex_SCAN, Ec_SCAN = P
+ValueError: need more than 7 values to unpack
+Optimization terminated successfully.
+         Current function value: 0.003803
+         Iterations: 98
+         Function evaluations: 177
+Optimization terminated successfully.
+         Current function value: 0.003296
+         Iterations: 140
+         Function evaluations: 252
+Optimization terminated successfully.
+         Current function value: 0.003119
+         Iterations: 438
+         Function evaluations: 715
+Optimization terminated successfully.
+         Current function value: 0.024874
+         Iterations: 53
+         Function evaluations: 98
+Optimization terminated successfully.
+         Current function value: 0.020094
+         Iterations: 56
+         Function evaluations: 104
+Optimization terminated successfully.
+         Current function value: 0.020274
+         Iterations: 96
+         Function evaluations: 175
+Optimization terminated successfully.
+         Current function value: 0.019137
+         Iterations: 266
+         Function evaluations: 462
+Optimization terminated successfully.
+         Current function value: 0.004292
+         Iterations: 197
+         Function evaluations: 331
+Optimization terminated successfully.
+         Current function value: 0.009683
+         Iterations: 121
+         Function evaluations: 206
+Optimization terminated successfully.
+         Current function value: 0.003358
+         Iterations: 122
+         Function evaluations: 211
+Optimization terminated successfully.
+         Current function value: 0.015453
+         Iterations: 303
+         Function evaluations: 503
+Optimization terminated successfully.
+         Current function value: 0.010059
+         Iterations: 124
+         Function evaluations: 210
+Optimization terminated successfully.
+         Current function value: 0.010565
+         Iterations: 138
+         Function evaluations: 245
+Optimization terminated successfully.
+         Current function value: 0.015109
+         Iterations: 250
+         Function evaluations: 438
+Optimization terminated successfully.
+         Current function value: 0.012186
+         Iterations: 129
+         Function evaluations: 227
+Optimization terminated successfully.
+         Current function value: 0.010289
+         Iterations: 171
+         Function evaluations: 299
+Optimization terminated successfully.
+         Current function value: 0.010515
+         Iterations: 131
+         Function evaluations: 236
+Optimization terminated successfully.
+         Current function value: 0.010723
+         Iterations: 155
+         Function evaluations: 277
+Optimization terminated successfully.
+         Current function value: 0.012677
+         Iterations: 117
+         Function evaluations: 209
+Optimization terminated successfully.
+         Current function value: 0.011061
+         Iterations: 76
+         Function evaluations: 135
+Optimization terminated successfully.
+         Current function value: 0.010707
+         Iterations: 202
+         Function evaluations: 332
+Optimization terminated successfully.
+         Current function value: 0.010414
+         Iterations: 213
+         Function evaluations: 353
+Optimization terminated successfully.
+         Current function value: 0.012988
+         Iterations: 149
+         Function evaluations: 249
+Optimization terminated successfully.
+         Current function value: 0.008341
+         Iterations: 180
+         Function evaluations: 307
+Optimization terminated successfully.
+         Current function value: 0.011771
+         Iterations: 126
+         Function evaluations: 217
+Optimization terminated successfully.
+         Current function value: 0.009713
+         Iterations: 488
+         Function evaluations: 739

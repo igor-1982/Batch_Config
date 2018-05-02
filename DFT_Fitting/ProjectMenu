@@ -1,0 +1,34 @@
+Fit=DFT_Fitting {
+ main="/home/igor/Documents/Package-Pool/Batch_Config/DFT_Fitting" filter="*.py *.csh *.sh" flag="lST" {
+  DFT_Fit.py
+  DFT_Fit.csh
+  DFT_Fit_Home.csh
+  DFT_Fit_Home.sh
+  DFT_Fit_xhpc1.sh
+ }
+ modules="/home/igor/Documents/Package-Pool/Batch_Config/Modules"  flag="lST" {
+  Aims_Environment
+  Aims_Environment.xhpc1
+  CP2K_Environment
+  G03_Environment
+  G09_Environment
+  ProgUpdate
+  ProjectMenu
+  QChem_Environment.par
+  QChem_Environment.ser
+  aims_manage.py
+  config
+  cp2k_manage.py
+  dft_d.py
+  gaussian_manage.py
+  gaussian_manage_example.py
+  my_io.py
+  opt.py
+  pos_scf.py
+  qchem_manage.py
+  rGO.tar.gzxx
+  rsync_project.py
+  tags
+  }
+ }
+}

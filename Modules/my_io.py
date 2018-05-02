@@ -911,7 +911,7 @@ class ConfigIO:
         '''   "ProjTool" by "__project__ ";'''
         '''3) Obtain macro-path environment "PathList" by "__macro_path__ "'''
         from re import compile
-        from os import rename, mkdir, makedirs
+        from os import rename, mkdir, makedirs, listdir, remove
         from os.path import isdir, abspath
         from my_io import print_Error, print_List, print_String
         # ================================#
@@ -1002,8 +1002,11 @@ class ConfigIO:
         if len(self.ProjDir) > 0:
             if self.ProjCtrl == 0:
                 if isdir(self.ProjDir):
-                    rename(self.ProjDir, '%s_BackUp' % self.ProjDir)
-                    mkdir(self.ProjDir)
+                    for xFile in listdir(self.ProjDir):
+                        if isfile(xFile) and xFile[-4:]=='.log':
+                            remove('%s/%s' %(self.ProjDir, xFile))
+                    #rename(self.ProjDir, '%s_BackUp' % self.ProjDir)
+                    #mkdir(self.ProjDir)
                 else:
                     makedirs(self.ProjDir)
             elif self.ProjCtrl == 1:
@@ -2625,6 +2628,8 @@ class ConfigIO:
                                        self.AimsCfg,
                                        self.BatchScriptName)
             elif self.ProjCtrl == 1:
+                # NOTE: it has been out of date because of introducing 
+                #       a new flag FlagLog for parsing the results
                 pass
             elif self.ProjCtrl == 2:
                 if isfile('%s.log' % tmpJob.Proj):
