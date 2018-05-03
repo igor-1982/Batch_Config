@@ -175,21 +175,28 @@ def calc_statistic_scsrpa(C,FitClass):
             if isfile(axFile) and xFile[-4:]=='.log':
                 remove(axFile)
             if isdir(axFile):
-                bxFile = '%s/RUNNING' %(axFile)
-                if isfile(bxFile):
-                    remove(bxFile)
+                for yFile in listdir(axFile):
+                    ayFile = '%s/%s' %(axFile, yFile)
+                    if isfile(ayFile) and\
+                       yFile=='RUNNING' or\
+                       yFile[-4:]=='.log':
+                        remove(ayFile)
     update_aims_scsrpa(C,FitClass)
     FlagBatch = FitClass.run_AimBatch()
     if FitClass.BatchType == 'serial':
         pass
     elif FitClass.BatchType == 'queue': 
-        tmpProjCtrl = FitClass.ProjCtrl
         # we should not re-run all finished jobs during this check
-        FitClass.ProjType = 2
+        tmpProjCtrl = FitClass.ProjCtrl
+        FitClass.ProjCtrl = 2
+        # we would like to turn of detailed output during the check
+        tmpIPrint = FitClass.IPrint
+        FitClass.IPrint = 0
         while not FlagBatch:
             time.sleep(5)
             FlagBatch = FitClass.run_AimBatch()
         FitClass.ProjType = tmpProjCtrl
+        FitClass.IPrint = tmpIPrint
     if FitClass.OptAlgo[:5] == 'batch':
         FitClass.get_OptResu(iop=1)
         print_List(FitClass.IOut,FitClass.InitGuess,\

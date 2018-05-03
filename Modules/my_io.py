@@ -1001,11 +1001,19 @@ class ConfigIO:
                      % self.ProjTool, 1)
         if len(self.ProjDir) > 0:
             if self.ProjCtrl == 0:
+                # Initialize the running folder
                 if isdir(self.ProjDir):
                     for xFile in listdir(self.ProjDir):
                         axFile = '%s/%s' %(self.ProjDir, xFile)
                         if isfile(axFile) and xFile[-4:]=='.log':
                             remove(axFile)
+                        if isdir(axFile):
+                            for yFile in listdir(axFile):
+                                ayFile = '%s/%s' %(axFile, yFile)
+                                if isfile(ayFile) and\
+                                   yFile=='RUNNING' or\
+                                   yFile[-4:]=='.log':
+                                    remove(ayFile)
                     #rename(self.ProjDir, '%s_BackUp' % self.ProjDir)
                     #mkdir(self.ProjDir)
                 else:

@@ -50,7 +50,9 @@ class AimsIO:
         self.WorkDir = getcwd().strip()  # STRING, current DIR
         self.HomeDir = getenv('HOME')    # STRING, home DIR
         self.BasisDir = ''
-        print_String(self.IOut, 'The direction of basis set is required', 1)
+        print_String(self.IOut, 
+                'The direction of basis set is required', 
+                self.IPrint)
 
         self.BasisDir = ''   # basis set direction
 
@@ -124,7 +126,7 @@ class AimsIO:
                     wff.close()
                     print_String(self.IOut,
                                  "There is(are) %i atom(s) in this case"
-                                 % num_atom, 1)
+                                 % num_atom, self.IPrint)
                     sff.write('electron %6i\n' % num_atom)
                     sff.close()
                     self.ElemNum = num_atom
@@ -405,7 +407,7 @@ class AimsIO:
             nnode = ntasks/ntaskpernode
             if not nnode*ntaskpernode == ntasks:
                 nnode = nnode+1
-            print(self.Proj,nnode,nproc,ntaskpernode)
+            #print(self.Proj,nnode,nproc,ntaskpernode)
             iFile2 = iFile1.replace('<jobname>', 'job-%s' % self.Proj)
             iFile1 = iFile2.replace('<version>', cfg)
             iFile2 = iFile1.replace('<joblog>', '%s.log' % self.Proj)
