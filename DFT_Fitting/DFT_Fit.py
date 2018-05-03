@@ -209,7 +209,7 @@ def calc_statistic_scsrpa(C,FitClass):
                 cFile.close()
                 #WARNNING: dangerous! should be updated by further effort
                 tmpString =\
-                    '(?P<iters>\d+) %s RUN %s\s*\S*\s*\S*\s*(?P<iters>\S+)' %(un,qn)
+                    '(?P<iters>\d+) %s RUN %s\s*\S*\s*\S*\s*(?P<jobs>\S+)' %(un,qn)
                 p16 = re.compile(tmpString)
                 p16p = p16.findall(tFile)
                 for (jobi, jobn) in p16p:
@@ -221,6 +221,10 @@ def calc_statistic_scsrpa(C,FitClass):
                             remove('%s/%s/%s.log' 
                                     %(FitClass.ProjDir,fn,fn))
                             os.system('bkill %s' %jobi)
+                            print_String(FitClass.IOut, 
+                                'Unexpected error for the job of %s' 
+                                %fn, 
+                                1)
                             continue
                 interval = 0
             FlagBatch = FitClass.run_AimBatch()
