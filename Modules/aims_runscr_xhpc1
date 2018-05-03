@@ -9,9 +9,10 @@ LD_LIBRARY_PATH=$MKL_HOME/lib/intel64_lin:$LD_LIBRARY_PATH; export LD_LIBRARY_PA
 
 AIMS=/share/home/wenxinzy/export/bin
 
+rm job-*.out
+
 aimsx="$AIMS/aims.<version>.x"
 
 mpirun -n <ntasks> $aimsx > <joblog>
 
 rm RUNNING
-rm job-*.out
