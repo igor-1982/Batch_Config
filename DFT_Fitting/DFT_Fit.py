@@ -176,7 +176,8 @@ def calc_statistic_scsrpa(C,FitClass):
                 remove(axFile)
             if isdir(axFile):
                 bxFile = '%s/RUNNING' %(axFile)
-                remove(bxFile)
+                if isfile(bxFile):
+                    remove(bxFile)
     update_aims_scsrpa(C,FitClass)
     FlagBatch = FitClass.run_AimBatch()
     if FitClass.BatchType == 'serial':
