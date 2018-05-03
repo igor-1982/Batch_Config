@@ -18,7 +18,7 @@ __info__	= ['#Filename:  DFT_Fit',
     '#Author  :  Igor Ying Zhang, Xin Xu',
     '#Version :  %s' % __version__,
     '#Purpose :  DFT optimization using several algorithms']
-iprint	= 0
+iprint	= 1
 
 import sys
 import os
@@ -193,7 +193,7 @@ def calc_statistic_scsrpa(C,FitClass):
         FitClass.IPrint = 0
         FlagBatch = FitClass.run_AimBatch()
         while not FlagBatch:
-            time.sleep(5)
+            time.sleep(2)
             FlagBatch = FitClass.run_AimBatch()
         FitClass.ProjType = tmpProjCtrl
         FitClass.IPrint = tmpIPrint

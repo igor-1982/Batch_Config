@@ -2542,7 +2542,6 @@ class ConfigIO:
         from my_io import print_String
         import aims_manage as aims
         List_Procs = [self.Procs]*self.NBatc
-        print_List(self.IOut, List_Procs, 3, 'NProcs for AIMS jobs')
         for procs, indices in self.Special_Procs.iteritems():
             for index in indices:
                 try:
@@ -2551,7 +2550,8 @@ class ConfigIO:
                     print_String(self.IOut, 'Warning: Error in ' +
                                  'loading nprocs for special jobs', 1)
                     pass
-        print_List(self.IOut, List_Procs, 3, 'NProcs for AIMS jobs')
+        if self.IPrint>0:
+            print_List(self.IOut, List_Procs, 3, 'NProcs for AIMS jobs')
         job_index = 0
         FlagLogTot = True
         for job in self.BatcList:
