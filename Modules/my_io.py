@@ -2625,7 +2625,7 @@ class ConfigIO:
 
             if self.ProjCtrl == 0:
                 if self.BatchType == 'queue':
-                    print(tmpJob.Proj,job_NPN,job_special_procs)
+                    #print(tmpJob.Proj,job_NPN,job_special_procs)
                     FlagLog = \
                         tmpJob.run_Job_v02(job_special_procs,
                                            self.Threads,

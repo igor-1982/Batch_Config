@@ -405,6 +405,7 @@ class AimsIO:
             nnode = ntasks/ntaskpernode
             if not nnode*ntaskpernode == ntasks:
                 nnode = nnode+1
+            print(self.Proj,nnode,nproc,ntaskpernode)
             iFile2 = iFile1.replace('<jobname>', 'job-%s' % self.Proj)
             iFile1 = iFile2.replace('<version>', cfg)
             iFile2 = iFile1.replace('<joblog>', '%s.log' % self.Proj)

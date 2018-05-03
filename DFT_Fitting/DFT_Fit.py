@@ -168,11 +168,15 @@ def calc_statistic_scsrpa(C,FitClass):
 
     print_List(FitClass.IOut,C,
         4,Info='Testing parameters in this round')
+    # Initialize the running folder
     if isdir(FitClass.ProjDir):
         for xFile in listdir(FitClass.ProjDir):
             axFile = '%s/%s' %(FitClass.ProjDir, xFile)
             if isfile(axFile) and xFile[-4:]=='.log':
                 remove(axFile)
+            if isdir(axFile):
+                bxFile = '%s/RUNNING' %(axFile)
+                remove(bxFile)
     update_aims_scsrpa(C,FitClass)
     FlagBatch = FitClass.run_AimBatch()
     if FitClass.BatchType == 'serial':
