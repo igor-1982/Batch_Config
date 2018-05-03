@@ -158,6 +158,7 @@ def calc_statistic_scsrpa(C,FitClass):
     '''\
     return statistic informations for SCPT2 type optimization\
     '''
+    import time
     from my_io      import print_List
     from my_io      import print_Error
 
@@ -166,7 +167,13 @@ def calc_statistic_scsrpa(C,FitClass):
     print_List(FitClass.IOut,C,
         4,Info='Testing parameters in this round')
     update_aims_scsrpa(C,FitClass)
-    FitClass.run_AimBatch()
+    FlagBatch = FitClass.run_AimBatch()
+    if FitClass.BatchType == 'serial':
+        pass
+    elif FitClass.BatchType == 'queue': 
+         while FlagBatch:
+             time.sleep(5)
+             FlagBatch = FitClass.run_AimBatch()
     if FitClass.OptAlgo[:5] == 'batch':
         FitClass.get_OptResu(iop=1)
         print_List(FitClass.IOut,FitClass.InitGuess,\

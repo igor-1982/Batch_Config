@@ -1425,6 +1425,7 @@ class ConfigIO:
             print_List_free(self.IOut,PrintList,2,FormList,
                 'Loaded ConfigIO.BatcList')
         return
+
     def get_TrainSet(self):
         '''Obtain training set from config file'''
         from my_io   import print_Error
@@ -2425,6 +2426,7 @@ class ConfigIO:
                                  1)
                 pass
         return
+
     def run_QcmBatch(self):
         '''Batch Q-Chem jobs and collect result based on job flag'''
         from os              import chdir
@@ -2542,6 +2544,7 @@ class ConfigIO:
                     pass
         print_List(self.IOut, List_Procs, 3, 'NProcs for AIMS jobs')
         job_index = 0
+        FlagLogTot = True
         for job in self.BatcList:
             job_special_procs = List_Procs[job_index]
             job_index += 1
@@ -2654,6 +2657,8 @@ class ConfigIO:
                             tmpJob.run_Job(job_special_procs,
                                            self.AimsCfg,
                                            self.BatchScriptName)
+            # To determine if we can proceed to the next batch
+            FlagLogTot = FlagLogTot and FlagLog
             if not FlagLog:
                 continue
             if FlagSCF:
@@ -2748,7 +2753,7 @@ class ConfigIO:
                     job[4]['energy'] = [tmpJob.Energy['scsrpa']]
                 except:
                     job[4]['energy'] = ['NAN']
-        return
+        return FlagLogTot
 
     def run_CP2Batch(self):
         '''Batch CP2K jobs and collect result based on job flag'''
@@ -3456,7 +3461,7 @@ class ConfigIO:
                 from opt_func import update_aims_scsrpa
             except:
                 print_Error(self.IOut, 'Error in importing ' +
-                            '\"update_aims_scpt2\"' +
+                            '\"update_aims_scsrpa\"' +
                             ' \"ConfigIO.get_OptFunc\"')
 
         if self.OptAlgo[:11] == 'fmin_cobyla':
@@ -3567,7 +3572,8 @@ class ConfigIO:
                 print_String(self.IOut,
                              'An invalid result for the %5ith reaction' % i, 2)
 
-        if NumData > 0:
+        # if NumData > 0:
+        if NumData == len(self.NEngy):
             AD = AD / float(NumData)
             wAD = wAD / float(NumData)
             MAD = MAD / float(NumData)

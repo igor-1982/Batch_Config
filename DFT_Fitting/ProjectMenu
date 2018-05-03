@@ -1,7 +1,6 @@
 Fit=DFT_Fitting {
  main="/home/igor/Documents/Package-Pool/Batch_Config/DFT_Fitting" filter="*.py *.csh *.sh" flag="lST" {
   DFT_Fit.py
-  DFT_Fit.csh
   DFT_Fit_Home.csh
   DFT_Fit_Home.sh
   DFT_Fit_xhpc1.sh
@@ -14,9 +13,16 @@ Fit=DFT_Fitting {
   G09_Environment
   ProgUpdate
   ProjectMenu
+  QChem_Environment
   QChem_Environment.par
   QChem_Environment.ser
   aims_manage.py
+  aims_runscr
+  aims_runscr_draco
+  aims_runscr_eos
+  aims_runscr_langchao
+  aims_runscr_xhpc1
+  batch_qdel.sh
   config
   cp2k_manage.py
   dft_d.py

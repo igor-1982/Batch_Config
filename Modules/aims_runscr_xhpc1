@@ -14,3 +14,4 @@ aimsx="$AIMS/aims.<version>.x"
 mpirun -n <ntasks> $aimsx > <joblog>
 
 rm RUNNING
+rm job-*.out
