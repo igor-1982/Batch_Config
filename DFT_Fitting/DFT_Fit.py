@@ -214,7 +214,7 @@ def calc_statistic_scsrpa(C,FitClass):
                 p16 = re.compile(tmpString)
                 p16p = p16.findall(tFile)
                 for (jobi, jobn) in p16p:
-                    for job in Flag.BatcList:
+                    for job in FitClass.BatcList:
                         fn, fe = splitext(job[2])
                         if fn==jobn[-len(fn):]:
                             remove('%s/%s/RUNNING' 
