@@ -209,8 +209,7 @@ def calc_statistic_scsrpa(C,FitClass):
                 cFile.close()
                 #WARNNING: dangerous! should be updated by further effort
                 tmpString =\
-                    '(?P<iters>\d+) %s RUN %s\s*\S*\s*\S*'+\
-                    '\s*(?P<iters>\S+)' 
+                    '(?P<iters>\d+) %s RUN %s\s*\S*\s*\S*\s*(?P<iters>\S+)' 
                     %(un,qn)
                 p16 = re.compile(tmpString)
                 p16p = p16.findall(tFile)
