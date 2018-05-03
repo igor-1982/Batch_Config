@@ -1003,8 +1003,9 @@ class ConfigIO:
             if self.ProjCtrl == 0:
                 if isdir(self.ProjDir):
                     for xFile in listdir(self.ProjDir):
-                        if isfile(xFile) and xFile[-4:]=='.log':
-                            remove('%s/%s' %(self.ProjDir, xFile))
+                        axFile = '%s/%s' %(self.ProjDir, xFile)
+                        if isfile(axFile) and xFile[-4:]=='.log':
+                            remove(axFile)
                     #rename(self.ProjDir, '%s_BackUp' % self.ProjDir)
                     #mkdir(self.ProjDir)
                 else:

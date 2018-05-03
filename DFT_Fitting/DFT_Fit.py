@@ -166,14 +166,23 @@ def calc_statistic_scsrpa(C,FitClass):
 
     print_List(FitClass.IOut,C,
         4,Info='Testing parameters in this round')
+    if isdir(FitClass.ProjDir):
+        for xFile in listdir(FitClass.ProjDir):
+            axFile = '%s/%s' %(FitClass.ProjDir, xFile)
+            if isfile(axFile) and xFile[-4:]=='.log':
+                remove(axFile)
     update_aims_scsrpa(C,FitClass)
     FlagBatch = FitClass.run_AimBatch()
     if FitClass.BatchType == 'serial':
         pass
     elif FitClass.BatchType == 'queue': 
-         while not FlagBatch:
-             time.sleep(5)
-             FlagBatch = FitClass.run_AimBatch()
+        tmpProjCtrl = FitClass.ProjCtrl
+        # we should not re-run all finished jobs during this check
+        FitClass.ProjType = 2
+        while not FlagBatch:
+            time.sleep(5)
+            FlagBatch = FitClass.run_AimBatch()
+        FitClass.ProjType = tmpProjCtrl
     if FitClass.OptAlgo[:5] == 'batch':
         FitClass.get_OptResu(iop=1)
         print_List(FitClass.IOut,FitClass.InitGuess,\
