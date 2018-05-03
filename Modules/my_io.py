@@ -1237,8 +1237,8 @@ class ConfigIO:
                 try:
                     tmpList = self.f.readline().split("#")[0].split("::")
                     try:
-                        tmpList = [int(x)-1 for x in tmpList[-1].split()]
-                        nprocs = tmpList[0]+1
+                        tmpList = [int(x) for x in tmpList[-1].split()]
+                        nprocs = tmpList[0]
                         self.Special_Procs[nprocs] = tmpList[1:]
                     except ValueError:
                         print_String(self.IOut,
@@ -2616,6 +2616,9 @@ class ConfigIO:
             tmpJob.form_Basis()
             if self.ProjCtrl == 0:
                 if self.BatchType == 'queue':
+                    job_NPN = self.NPN
+                    if job_NPN < job_special_procs:
+                        job_NPN = job_special_procs
                     FlagLog = \
                         tmpJob.run_Job_v02(job_special_procs,
                                            self.Threads,

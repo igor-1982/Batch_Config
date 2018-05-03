@@ -18,7 +18,7 @@ __info__	= ['#Filename:  DFT_Fit',
     '#Author  :  Igor Ying Zhang, Xin Xu',
     '#Version :  %s' % __version__,
     '#Purpose :  DFT optimization using several algorithms']
-iprint	= 2
+iprint	= 0
 
 import sys
 import os
