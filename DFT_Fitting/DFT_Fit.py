@@ -192,13 +192,18 @@ def calc_statistic_scsrpa(C,FitClass):
         tmpIPrint = FitClass.IPrint
         FitClass.IPrint = 0
         FlagBatch = FitClass.run_AimBatch()
+        interval = 0
         while not FlagBatch:
             time.sleep(2)
             FlagBatch = FitClass.run_AimBatch()
+            interval = interval + 2
         FitClass.ProjType = tmpProjCtrl
         FitClass.IPrint = tmpIPrint
         # Print the results when all jobs are finished
         FlagBatch = FitClass.run_AimBatch()
+        print_String(self.IOut, 
+                'This batch takes %i Seconds', 
+                interval)
     if FitClass.OptAlgo[:5] == 'batch':
         FitClass.get_OptResu(iop=1)
         print_List(FitClass.IOut,FitClass.InitGuess,\
