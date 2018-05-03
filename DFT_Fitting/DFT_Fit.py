@@ -219,17 +219,18 @@ def calc_statistic_scsrpa(C,FitClass):
                         if fn==jobn[-len(fn):]:
                             remove('%s/%s/RUNNING' 
                                     %(FitClass.ProjDir,fn))
-                            try:
-                                remove('%s/%s/%s.log' 
-                                        %(FitClass.ProjDir,fn,fn))
-                            try:
-                                remove('%s/%s.log' 
-                                        %(FitClass.ProjDir,fn))
+                            xFile = '%s/%s/%s.log' 
+                                     %(FitClass.ProjDir,fn,fn)
+                            if isfile(xFile):
+                                remove(xFile)
+                            xFile = '%s/%s.log' 
+                                     %(FitClass.ProjDir,fn)
+                            if isfile(xFile):
+                                remove(xFile)
                             os.system('bkill %s' %jobi)
                             print_String(FitClass.IOut, 
                                 'Unexpected error for the job of %s' 
-                                %fn, 
-                                1)
+                                %fn,1)
                             continue
                 interval = 0
             FlagBatch = FitClass.run_AimBatch()
