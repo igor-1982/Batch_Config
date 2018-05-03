@@ -182,6 +182,7 @@ def calc_statistic_scsrpa(C,FitClass):
                        yFile=='RUNNING' or\
                        yFile[-4:]=='.log':
                         remove(ayFile)
+    time.sleep(2)
     update_aims_scsrpa(C,FitClass)
     if FitClass.BatchType == 'serial':
         FitClass.run_AimBatch()
@@ -196,7 +197,7 @@ def calc_statistic_scsrpa(C,FitClass):
         interval = 0
         while not FlagBatch:
             time.sleep(2)
-            if interval >= 50:
+            if interval >= 100:
                 if FitClass.BatchCmd =='bsub':
                     qq = 'bjobs'
                 else:
@@ -209,7 +210,7 @@ def calc_statistic_scsrpa(C,FitClass):
                 cFile.close()
                 #WARNNING: dangerous! should be updated by further effort
                 tmpString =\
-                    '(?P<iters>\d+) %s RUN %s\s*\S*\s*\S*\s*(?P<jobs>\S+)' %(un,qn)
+                   '(?P<iters>\d+)\s*%s\s*RUN\s*%s\s*\S*\s*\S*\s*(?P<jobs>\S+)' %(un,qn) 
                 p16 = re.compile(tmpString)
                 p16p = p16.findall(tFile)
                 for (jobi, jobn) in p16p:
@@ -218,8 +219,12 @@ def calc_statistic_scsrpa(C,FitClass):
                         if fn==jobn[-len(fn):]:
                             remove('%s/%s/RUNNING' 
                                     %(FitClass.ProjDir,fn))
-                            remove('%s/%s/%s.log' 
-                                    %(FitClass.ProjDir,fn,fn))
+                            try:
+                                remove('%s/%s/%s.log' 
+                                        %(FitClass.ProjDir,fn,fn))
+                            try:
+                                remove('%s/%s.log' 
+                                        %(FitClass.ProjDir,fn))
                             os.system('bkill %s' %jobi)
                             print_String(FitClass.IOut, 
                                 'Unexpected error for the job of %s' 
