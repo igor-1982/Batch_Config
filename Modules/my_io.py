@@ -2547,7 +2547,13 @@ class ConfigIO:
         FlagLogTot = True
         for job in self.BatcList:
             job_special_procs = List_Procs[job_index]
+
+            job_NPN = self.NPN
+            if job_NPN < job_special_procs:
+                job_NPN = job_special_procs
+
             job_index += 1
+
             self.IOut.flush()  # Flush Output file
 
             strf = job[3].strip().lower()
@@ -2614,15 +2620,14 @@ class ConfigIO:
                              'calculation', 1)
             tmpJob.form_Control()
             tmpJob.form_Basis()
+
+
             if self.ProjCtrl == 0:
                 if self.BatchType == 'queue':
-                    job_NPN = self.NPN
-                    if job_NPN < job_special_procs:
-                        job_NPN = job_special_procs
                     FlagLog = \
                         tmpJob.run_Job_v02(job_special_procs,
                                            self.Threads,
-                                           self.NPN,
+                                           job_NPN,
                                            self.AimsCfg,
                                            self.BatchScriptName,
                                            self.BatchCmd,
@@ -2649,7 +2654,7 @@ class ConfigIO:
                         FlagLog = \
                             tmpJob.run_Job_v02(job_special_procs,
                                                self.Threads,
-                                               self.NPN,
+                                               job_NPN,
                                                self.AimsCfg,
                                                self.BatchScriptName,
                                                self.BatchCmd,

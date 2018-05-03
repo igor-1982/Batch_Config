@@ -171,7 +171,7 @@ def calc_statistic_scsrpa(C,FitClass):
     if FitClass.BatchType == 'serial':
         pass
     elif FitClass.BatchType == 'queue': 
-         while FlagBatch:
+         while not FlagBatch:
              time.sleep(5)
              FlagBatch = FitClass.run_AimBatch()
     if FitClass.OptAlgo[:5] == 'batch':
