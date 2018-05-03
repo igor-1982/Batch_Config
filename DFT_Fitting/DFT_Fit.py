@@ -160,7 +160,7 @@ def calc_statistic_scsrpa(C,FitClass):
     '''
     import time
     from os.path import isdir, abspath, isfile
-    from os import listdir
+    from os import listdir, remove
     from my_io import print_List
     from my_io import print_Error
 
