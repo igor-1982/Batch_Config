@@ -162,6 +162,7 @@ def calc_statistic_scsrpa(C,FitClass):
     from os.path import isdir, abspath, isfile
     from os import listdir, remove
     from my_io import print_List
+    from my_io import print_String
     from my_io import print_Error
 
     from opt_func import update_aims_scsrpa
