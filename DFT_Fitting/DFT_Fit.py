@@ -159,11 +159,12 @@ def calc_statistic_scsrpa(C,FitClass):
     return statistic informations for SCPT2 type optimization\
     '''
     import time
-    from os.path    import isdir, abspath, isfile
-    from my_io      import print_List
-    from my_io      import print_Error
+    from os.path import isdir, abspath, isfile
+    from os import listdir
+    from my_io import print_List
+    from my_io import print_Error
 
-    from opt_func   import update_aims_scsrpa
+    from opt_func import update_aims_scsrpa
 
     print_List(FitClass.IOut,C,
         4,Info='Testing parameters in this round')
