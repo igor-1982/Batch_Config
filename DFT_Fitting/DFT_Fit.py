@@ -219,12 +219,10 @@ def calc_statistic_scsrpa(C,FitClass):
                         if fn==jobn[-len(fn):]:
                             remove('%s/%s/RUNNING' 
                                     %(FitClass.ProjDir,fn))
-                            xFile = '%s/%s/%s.log' 
-                                     %(FitClass.ProjDir,fn,fn)
+                            xFile = '%s/%s/%s.log' %(FitClass.ProjDir,fn,fn)
                             if isfile(xFile):
                                 remove(xFile)
-                            xFile = '%s/%s.log' 
-                                     %(FitClass.ProjDir,fn)
+                            xFile = '%s/%s.log' %(FitClass.ProjDir,fn)
                             if isfile(xFile):
                                 remove(xFile)
                             os.system('bkill %s' %jobi)
