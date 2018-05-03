@@ -3569,6 +3569,7 @@ class ConfigIO:
         wMAD = 0.0
         wRMS = 0.0
         NumData = 0
+        InvNumData = 0
         for i in range(self.NEngy):
             try:
                 dv = self.Result[i]
@@ -3587,11 +3588,12 @@ class ConfigIO:
 
                 NumData = NumData + 1
             except TypeError:
+                InvNumData = InvNumData + 1
                 print_String(self.IOut,
                              'An invalid result for the %5ith reaction' % i, 2)
 
         # if NumData > 0:
-        if NumData == len(self.NEngy):
+        if InvNumData == 0:
             AD = AD / float(NumData)
             wAD = wAD / float(NumData)
             MAD = MAD / float(NumData)

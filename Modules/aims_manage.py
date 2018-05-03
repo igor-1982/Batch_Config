@@ -292,7 +292,7 @@ class AimsIO:
             else:
                 print_String(self.IOut,
                              "There is(are) %i atom(s) in this case"
-                             % self.ElemNum, 1)
+                             % self.ElemNum, self.IPrint)
 
         if not os.path.isfile("%s/control.in" % self.Proj):
             print_Error(self.IOut,
@@ -1220,7 +1220,7 @@ class AimsIO:
                 self.Energy['scsrpa'] = float(p16p[-1])
                 print_String(self.IOut,
                              'scsRPA total energy          : %16.8f'
-                             % self.Energy['scsrpa'], 1)
+                             % self.Energy['scsrpa'], self.IPrint)
         return
 
     def parse_Control(self):

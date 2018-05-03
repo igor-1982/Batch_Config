@@ -182,9 +182,8 @@ def calc_statistic_scsrpa(C,FitClass):
                        yFile[-4:]=='.log':
                         remove(ayFile)
     update_aims_scsrpa(C,FitClass)
-    FlagBatch = FitClass.run_AimBatch()
     if FitClass.BatchType == 'serial':
-        pass
+        FitClass.run_AimBatch()
     elif FitClass.BatchType == 'queue': 
         # we should not re-run all finished jobs during this check
         tmpProjCtrl = FitClass.ProjCtrl
@@ -192,11 +191,14 @@ def calc_statistic_scsrpa(C,FitClass):
         # we would like to turn of detailed output during the check
         tmpIPrint = FitClass.IPrint
         FitClass.IPrint = 0
+        FlagBatch = FitClass.run_AimBatch()
         while not FlagBatch:
             time.sleep(5)
             FlagBatch = FitClass.run_AimBatch()
         FitClass.ProjType = tmpProjCtrl
         FitClass.IPrint = tmpIPrint
+        # Print the results when all jobs are finished
+        FlagBatch = FitClass.run_AimBatch()
     if FitClass.OptAlgo[:5] == 'batch':
         FitClass.get_OptResu(iop=1)
         print_List(FitClass.IOut,FitClass.InitGuess,\
