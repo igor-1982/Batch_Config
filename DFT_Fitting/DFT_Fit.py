@@ -216,9 +216,9 @@ def calc_statistic_scsrpa(C,FitClass):
                 for (jobi, jobn) in p16p:
                     for job in FitClass.BatcList:
                         fn, fe = splitext(job[2])
-                        if fn==jobn[-len(fn):]:
-                            remove('%s/%s/RUNNING' 
-                                    %(FitClass.ProjDir,fn))
+                        fR = '%s/%s/RUNNING' %(FitClass.ProjDir,fn)
+                        if fn==jobn[-len(fn):] and isfile(fR):
+                            remove(fR)
                             xFile = '%s/%s/%s.log' %(FitClass.ProjDir,fn,fn)
                             if isfile(xFile):
                                 remove(xFile)
