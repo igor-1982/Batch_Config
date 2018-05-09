@@ -1041,6 +1041,11 @@ class AimsIO:
                 print_String(self.IOut,
                              'Overall HOMO-LUMO gap       : %16.8f'
                              % self.Energy['HLG'], 1)
+            else:
+                self.Energy['HLG'] = 'NAN'
+                print_String(self.IOut,
+                             'Overall HOMO-LUMO gap       : %16s'
+                             % self.Energy['HLG'], 1)
         elif iop == 9:   # for truncated CI results
             p16 = re.compile(
                 'E\[CI\] = :\s*(?P<iters1>\d+.\d+),\s*(?P<iters2>-?\d+.\d+)')
