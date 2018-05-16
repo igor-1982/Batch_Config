@@ -1162,39 +1162,23 @@ class AimsIO:
                 print_String(self.IOut,
                              'Exact exchange energy       : %16.8f'
                              % self.Energy['Exx'], 1)
-            self.Energy['SR'] = [0,0]
+            self.Energy['SR'] = [-1,-1]
             tmpString =\
                 'Special radius of non-interacting response matrix in ' +\
-                'each spin channel = *(?P<iters>\d+.\d+).'
+                'each spin channel = *(?P<itera>\d+.\d+) *(?P<iterb>\d+.\d+).'
             p16 = re.compile(tmpString)
             p16p = p16.findall(lfs)
             if len(p16p) != 0:
-                self.Energy['SR'][0] = float(p16p[-1])
-                self.Energy['SR'][1] = float(p16p[-1])
-            tmpString =\
-                "Special radius of non-interacting response matrix in " +\
-                "the a-spin channel [<>]=? \d.\d *\( *(?P<iters>\d+.\d+)\)."
-            p16 = re.compile(tmpString)
-            p16p = p16.findall(lfs)
-            if len(p16p) != 0:
-                self.Energy['SR'][0] = float(p16p[0])
-            tmpString =\
-                'Special radius of non-interacting response matrix in ' +\
-                'the b-spin channel [<>]=? \d.\d *\( *(?P<iters>\d+.\d+)\).'
-            p16 = re.compile(tmpString)
-            p16p = p16.findall(lfs)
-            if len(p16p) != 0:
-                #print('b-spin',p16p[0],p16p)
-                self.Energy['SR'][1] = float(p16p[0])
-            if self.Energy.get('HLG') is None:
-                p17 = re.compile('Overall HOMO-LUMO gap:\s*(?P<iters>\d+.\d+) eV')
-                p17p = p17.findall(lfs)
-                if len(p17p) != 0:
-                    self.Energy['HLG'] = float(p17p[-1])
-                else:
-                    self.Energy['HLG'] = 0
-            if self.Energy['SR'][0]!=0 and self.Energy['SR'][1]!=0 \
-                    and self.Energy['HLG']!=0:
+                self.Energy['SR'][0] = float(p16p[-1][0])
+                self.Energy['SR'][1] = float(p16p[-1][1])
+            p17 = re.compile('Overall HOMO-LUMO gap:\s*(?P<iters>\d+.\d+) eV')
+            p17p = p17.findall(lfs)
+            if len(p17p) != 0:
+                self.Energy['HLG'] = float(p17p[-1])
+            else:
+                self.Energy['HLG'] = -1
+            if self.Energy['SR'][0]!=-1 and self.Energy['SR'][1]!=-1 \
+                    and self.Energy['HLG']!=-1:
                 self.Energy['SR'].insert(0,self.Energy['HLG'])
                 print_String(self.IOut,
                     'Special radius of X0        : %16.8f%16.8f%16.8f'
