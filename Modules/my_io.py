@@ -2585,6 +2585,7 @@ class ConfigIO:
             FlagXYG3 = strf.find('xyg3') != -1
             FlagOSRPA = strf.find('osrpa') != -1
             FlagSCSRPA = strf.find('scsrpa') != -1
+            FlagDHRPA = strf.find('dhrpa') != -1
             if FlagSCPT2:
                 FlagCMP2 = False
                 FlagMP2 = False
@@ -2608,7 +2609,7 @@ class ConfigIO:
                     system('cp -r %s/%s ./' % (job[1], job[2]))
             # try: del tmpJob # Reinitialize tmpJob
             # except: pass
-            tmpJob = aims.AimsIO(self.IOut, job[2], self.IPrint)
+            tmpJob = aims.AimsIO(self.IOut, job[2], self.IPrint, InitGuess=self.InitGuess)
             if len(self.add_CMD) != 0:
                 tmpJob.add_CMD = self.add_CMD[:]
             # tmpJob.qchem2aims(job[2])
@@ -2769,6 +2770,12 @@ class ConfigIO:
                 tmpJob.get_Result(18)
                 try:
                     job[4]['energy'] = [tmpJob.Energy['scsrpa']]
+                except:
+                    job[4]['energy'] = ['NAN']
+            if FlagDHRPA:
+                tmpJob.get_Result(19)
+                try:
+                    job[4]['energy'] = [tmpJob.Energy['dhrpa']]
                 except:
                     job[4]['energy'] = ['NAN']
         return FlagLogTot

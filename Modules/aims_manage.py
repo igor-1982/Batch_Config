@@ -28,7 +28,7 @@ class AimsIO:
               'pb': 82, 'bi': 83, 'rn': 86
               }
 
-    def __init__(self, iout, proj=None, bugctrl=0):
+    def __init__(self, iout, proj=None, bugctrl=0,InitGuess=None):
         '''Initialize variables belonged to GauIO'''
         from os import getcwd, getenv
         from os.path import splitext
@@ -53,6 +53,10 @@ class AimsIO:
         print_String(self.IOut, 
                 'The direction of basis set is required', 
                 self.IPrint)
+        if InitGuess is not None:
+            self.InitGuess = InitGuess
+        else:
+            self.InitGuess = [1.0]*10
 
         self.BasisDir = ''   # basis set direction
 
@@ -1210,6 +1214,55 @@ class AimsIO:
                 print_String(self.IOut,
                              'scsRPA total energy          : %16.8f'
                              % self.Energy['scsrpa'], self.IPrint)
+        elif iop == 19:    # for dhRPA
+            tmpString =\
+                'Exchange-only total energy *:\s*(?P<iters>-?\d+.\d+) Ha'
+            p16 = re.compile(tmpString)
+            p16p = p16.findall(lfs)
+            if len(p16p) != 0:
+                self.Energy['Enoxc'] = float(p16p[-1])
+            tmpString =\
+                'OS-RPA correlation energy *:\s*(?P<iters>-?\d+.\d+)  Ha'
+            p16 = re.compile(tmpString)
+            p16p = p16.findall(lfs)
+            if len(p16p) != 0:
+                self.Energy['EcosRPA'] = float(p16p[-1])
+            tmpString =\
+                ' RPA correlation energy *:\s*(?P<iters>-?\d+.\d+)  Ha'
+            p16 = re.compile(tmpString)
+            p16p = p16.findall(lfs)
+            if len(p16p) != 0:
+                self.Energy['EcRPA'] = float(p16p[-1])
+                self.Energy['EcssRPA'] = \
+                        self.Energy['EcRPA']-self.Energy['EcosRPA']
+            tmpString =\
+                'Exact exchange energy *:\s*(?P<iters>-?\d+.\d+) Ha'
+            p16 = re.compile(tmpString)
+            p16p = p16.findall(lfs)
+            if len(p16p) != 0:
+                self.Energy['Exx'] = float(p16p[-1])
+                self.Energy['Enoxc']=self.Energy['Enoxc']-self.Energy['Exx']
+            p13 = re.compile('XC contributuion for \s*(?P<iters>\w+)')
+            p13p = p13.findall(lfs)
+            if p13p:
+                for x in p13p[-4:]:
+                    xlenght = len(x)
+                    if x.find('PBE')!=-1:
+                        p14 = re.compile('X %s *:\s*(?P<iters>-?\d+.\d+) Ha' % x)
+                        p14p = p14.findall(lfs)
+                        if p14p:
+                            self.Energy['ExPBE'] = float(p14p[-1])
+                        p14 = re.compile('C %s *:\s*(?P<iters>-?\d+.\d+) Ha' % x)
+                        p14p = p14.findall(lfs)
+                        if p14p:
+                            self.Energy['EcPBE'] = float(p14p[-1])
+            g1, g2, g3, g4 = InitGuess[-4:]
+            self.Energy['dhrpa'] = self.Energy['Enoxc']+\
+                    g1*self.Energy['Exx']+\
+                    (1.0-g1)*self.Energy['ExPBE']+\
+                    g2*self.Energy['EcPBE']+\
+                    g3*self.Energy['EcosRPA']+\
+                    g4*self.Energy['EcssRPA']
         return
 
     def parse_Control(self):
