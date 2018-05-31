@@ -1257,7 +1257,6 @@ class AimsIO:
                         if p14p:
                             self.Energy['EcPBE'] = float(p14p[-1])
             g1, g2, g3, g4 = self.InitGuess[-4:]
-            print(g1,g2,g3,g4)
             self.Energy['dhrpa'] = self.Energy['Enoxc']+\
                     g1*self.Energy['Exx']+\
                     (1.0-g1)*self.Energy['ExPBE']+\
