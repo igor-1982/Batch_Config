@@ -2594,11 +2594,8 @@ class ConfigIO:
                 FlagMP2 = False
             if FlagCDHDF:
                 FlagDHDF = False
-            if FlagOSRPA:
+            if FlagOSRPA or FlagSCSRPA or FlagDHRPA:
                 FlagRPA = False
-            if FlagSCSRPA:
-                FlagRPA = False
-
             if len(self.ProjDir) == 0:   # Enter project workdir
                 chdir(job[1])
             else:
