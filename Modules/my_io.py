@@ -2772,7 +2772,16 @@ class ConfigIO:
             if FlagDHRPA:
                 tmpJob.get_Result(19)
                 try:
-                    job[4]['energy'] = [tmpJob.Energy['dhrpa']]
+                    g1, g2, g3, g4 = self.InitGuess[-4:]
+                    job[4]['energy'] = [tmpJob.Energy['Enoxc']+\
+                            g1*tmpJob.Energy['Exx']+\
+                            (1.0-g1)*tmpJob.Energy['ExPBE']+\
+                            g2*tmpJob.Energy['EcPBE']+\
+                            g3*tmpJob.Energy['EcosRPA']+\
+                            g4*tmpJob.Energy['EcssRPA']]
+                    print_String(self.IOut,
+                                 'dhRPA total energy           : %16.8f'
+                                 % tmpJob.Energy['dhrpa'], self.IPrint)
                 except:
                     job[4]['energy'] = ['NAN']
         return FlagLogTot

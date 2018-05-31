@@ -1256,16 +1256,6 @@ class AimsIO:
                         p14p = p14.findall(lfs)
                         if p14p:
                             self.Energy['EcPBE'] = float(p14p[-1])
-            g1, g2, g3, g4 = self.InitGuess[-4:]
-            self.Energy['dhrpa'] = self.Energy['Enoxc']+\
-                    g1*self.Energy['Exx']+\
-                    (1.0-g1)*self.Energy['ExPBE']+\
-                    g2*self.Energy['EcPBE']+\
-                    g3*self.Energy['EcosRPA']+\
-                    g4*self.Energy['EcssRPA']
-            print_String(self.IOut,
-                         'dhRPA total energy           : %16.8f'
-                         % self.Energy['dhrpa'], self.IPrint)
         return
 
     def parse_Control(self):
