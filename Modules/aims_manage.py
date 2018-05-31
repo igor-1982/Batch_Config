@@ -1263,6 +1263,9 @@ class AimsIO:
                     g2*self.Energy['EcPBE']+\
                     g3*self.Energy['EcosRPA']+\
                     g4*self.Energy['EcssRPA']
+            print_String(self.IOut,
+                         'dhRPA total energy           : %16.8f'
+                         % self.Energy['dhrpa'], self.IPrint)
         return
 
     def parse_Control(self):
