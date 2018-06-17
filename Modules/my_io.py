@@ -2781,7 +2781,7 @@ class ConfigIO:
                             g4*tmpJob.Energy['EcssRPA']]
                     print_String(self.IOut,
                                  'dhRPA total energy           : %16.8f'
-                                 % tmpJob.Energy['dhrpa'], self.IPrint)
+                                 % job[4]['energy'][0], self.IPrint)
                 except:
                     job[4]['energy'] = ['NAN']
         return FlagLogTot
