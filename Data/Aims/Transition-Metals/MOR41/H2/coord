@@ -1,0 +1,15 @@
+$coord
+    1.50940675291726      0.08788609302164      0.14312664955070      h
+    2.02406148508274      0.77275590597836      1.25679398344930      h
+$user-defined bonds
+$redundant
+     number_of_atoms             2
+     degrees_of_freedom          1
+     internal_coordinates        1
+     frozen_coordinates          0
+# definitions of redundant internals
+   1 k  1.0000000000000 stre   1    2           val=   1.40505
+         1 non zero eigenvalues  of BmBt
+           1           2.000000000    1    0
+         1
+$end
