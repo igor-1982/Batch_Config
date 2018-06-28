@@ -1,553 +1,64 @@
+  File "/home/igor/Documents/Package-Pool/Batch_Config/DFT_Fitting/DFT_Fit.py", line 338
+    print 'Error in getting grobal environment '+\
+                                               ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print('Error in getting grobal environment '+\)?
+  File "/home/igor/Documents/Package-Pool/Batch_Config/DFT_Fitting/DFT_Fit.py", line 338
+    print 'Error in getting grobal environment '+\
+                                               ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print('Error in getting grobal environment '+\)?
 Optimization terminated successfully.
-         Current function value: 0.014330
-         Iterations: 295
-         Function evaluations: 490
-Optimization terminated successfully.
-         Current function value: 0.014939
-         Iterations: 100
-         Function evaluations: 179
-Optimization terminated successfully.
-         Current function value: 0.011155
-         Iterations: 450
-         Function evaluations: 702
-Optimization terminated successfully.
-         Current function value: 0.011988
-         Iterations: 237
-         Function evaluations: 381
-Optimization terminated successfully.
-         Current function value: 0.052984
-         Iterations: 211
-         Function evaluations: 350
-Optimization terminated successfully.
-         Current function value: 0.021840
-         Iterations: 166
-         Function evaluations: 276
-Optimization terminated successfully.
-         Current function value: 0.030145
-         Iterations: 269
-         Function evaluations: 446
-Optimization terminated successfully.
-         Current function value: 0.030315
-         Iterations: 79
-         Function evaluations: 135
-Optimization terminated successfully.
-         Current function value: 0.029480
-         Iterations: 96
-         Function evaluations: 168
-Optimization terminated successfully.
-         Current function value: 0.002438
-         Iterations: 146
-         Function evaluations: 254
-Optimization terminated successfully.
-         Current function value: 0.002081
-         Iterations: 153
-         Function evaluations: 260
-Optimization terminated successfully.
-         Current function value: 0.006820
-         Iterations: 151
-         Function evaluations: 257
-Optimization terminated successfully.
-         Current function value: 0.009732
-         Iterations: 43
-         Function evaluations: 80
-Optimization terminated successfully.
-         Current function value: 0.007424
-         Iterations: 96
-         Function evaluations: 170
-Optimization terminated successfully.
-         Current function value: 0.016564
-         Iterations: 64
-         Function evaluations: 116
-Optimization terminated successfully.
-         Current function value: 0.039939
-         Iterations: 52
-         Function evaluations: 93
-Optimization terminated successfully.
-         Current function value: 0.022303
-         Iterations: 39
-         Function evaluations: 74
-Optimization terminated successfully.
-         Current function value: 0.022950
-         Iterations: 39
-         Function evaluations: 75
-Optimization terminated successfully.
-         Current function value: 0.016886
-         Iterations: 130
-         Function evaluations: 226
-Optimization terminated successfully.
-         Current function value: 0.003628
-         Iterations: 115
-         Function evaluations: 208
-Optimization terminated successfully.
-         Current function value: 0.003628
-         Iterations: 115
-         Function evaluations: 208
-Optimization terminated successfully.
-         Current function value: 0.002342
-         Iterations: 112
-         Function evaluations: 199
-Optimization terminated successfully.
-         Current function value: 0.002449
-         Iterations: 119
-         Function evaluations: 213
-Optimization terminated successfully.
-         Current function value: 0.003348
-         Iterations: 92
-         Function evaluations: 164
-Optimization terminated successfully.
-         Current function value: 0.011969
-         Iterations: 121
-         Function evaluations: 210
-Optimization terminated successfully.
-         Current function value: 0.002557
-         Iterations: 102
-         Function evaluations: 178
-Optimization terminated successfully.
-         Current function value: 0.010251
-         Iterations: 97
-         Function evaluations: 173
-Error :: EngyList[276][0] is inconsistent with the number of the following molecules "ConfigIO.get_TrainSet"
-Optimization terminated successfully.
-         Current function value: 0.016413
-         Iterations: 141
-         Function evaluations: 245
-Optimization terminated successfully.
-         Current function value: 0.002219
-         Iterations: 110
-         Function evaluations: 192
-Optimization terminated successfully.
-         Current function value: 0.002389
-         Iterations: 114
-         Function evaluations: 208
-Optimization terminated successfully.
-         Current function value: 0.002219
-         Iterations: 110
-         Function evaluations: 192
-Optimization terminated successfully.
-         Current function value: 0.002219
-         Iterations: 110
-         Function evaluations: 192
-Error in importing "opt_func" "ConfigIO.get_OptFunc"
-Error in importing "opt_func" "ConfigIO.get_OptFunc"
-Optimization terminated successfully.
-         Current function value: 0.002982
-         Iterations: 47
-         Function evaluations: 89
-Optimization terminated successfully.
-         Current function value: 0.002696
-         Iterations: 39
-         Function evaluations: 75
-Optimization terminated successfully.
-         Current function value: 0.002480
-         Iterations: 43
-         Function evaluations: 78
-Optimization terminated successfully.
-         Current function value: 0.002408
-         Iterations: 42
-         Function evaluations: 80
-Optimization terminated successfully.
-         Current function value: 0.002460
-         Iterations: 50
-         Function evaluations: 96
-Optimization terminated successfully.
-         Current function value: 0.002653
-         Iterations: 45
-         Function evaluations: 83
-Optimization terminated successfully.
-         Current function value: 0.008813
-         Iterations: 48
-         Function evaluations: 91
-Optimization terminated successfully.
-         Current function value: 0.008296
+         Current function value: 0.007886
          Iterations: 120
-         Function evaluations: 216
+         Function evaluations: 212
 Optimization terminated successfully.
-         Current function value: 0.006221
-         Iterations: 110
-         Function evaluations: 195
+         Current function value: 0.007368
+         Iterations: 120
+         Function evaluations: 214
 Optimization terminated successfully.
-         Current function value: 0.006221
-         Iterations: 96
-         Function evaluations: 167
+         Current function value: 0.006446
+         Iterations: 167
+         Function evaluations: 297
 Optimization terminated successfully.
-         Current function value: 0.006706
-         Iterations: 50
-         Function evaluations: 94
-Optimization terminated successfully.
-         Current function value: 0.009598
-         Iterations: 48
-         Function evaluations: 89
-Optimization terminated successfully.
-         Current function value: 0.006221
-         Iterations: 96
-         Function evaluations: 167
-Optimization terminated successfully.
-         Current function value: 0.006706
-         Iterations: 50
-         Function evaluations: 94
-Optimization terminated successfully.
-         Current function value: 0.002531
-         Iterations: 146
-         Function evaluations: 254
-Optimization terminated successfully.
-         Current function value: 0.002531
-         Iterations: 146
-         Function evaluations: 254
-Optimization terminated successfully.
-         Current function value: 0.002070
-         Iterations: 168
-         Function evaluations: 292
-Optimization terminated successfully.
-         Current function value: 0.001811
-         Iterations: 157
-         Function evaluations: 276
-Optimization terminated successfully.
-         Current function value: 0.009418
-         Iterations: 138
-         Function evaluations: 238
-Error in batch flag identifying of __xyg3 "ConfigIO.get_XYG3Comp"
-Traceback (most recent call last):
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 297, in <module>
-    main()
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 258, in main
-    run_optimization(MainFit)                               #  Run optimization based on MainFit
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 189, in run_optimization
-    args=tuple([FitClass]))
-  File "/usr/lib/python2.7/site-packages/scipy/optimize/optimize.py", line 408, in fmin
-    res = _minimize_neldermead(func, x0, args, callback=callback, **opts)
-  File "/usr/lib/python2.7/site-packages/scipy/optimize/optimize.py", line 532, in _minimize_neldermead
-    fsim[k] = func(sim[k])
-  File "/usr/lib/python2.7/site-packages/scipy/optimize/optimize.py", line 292, in function_wrapper
-    return function(*(wrapper_args + args))
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 43, in calc_statistic
-    return calc_statistic_xyg3(C,FitClass)
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 62, in calc_statistic_xyg3
-    FitClass.run_OptCalc(opt_func,C)
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/modules/my_io.py", line 3587, in run_OptCalc
-    TmpResult   = func(C,self.CompDict[index])
-KeyError: 275
-Traceback (most recent call last):
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 297, in <module>
-    main()
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 258, in main
-    run_optimization(MainFit)                               #  Run optimization based on MainFit
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 189, in run_optimization
-    args=tuple([FitClass]))
-  File "/usr/lib/python2.7/site-packages/scipy/optimize/optimize.py", line 408, in fmin
-    res = _minimize_neldermead(func, x0, args, callback=callback, **opts)
-  File "/usr/lib/python2.7/site-packages/scipy/optimize/optimize.py", line 532, in _minimize_neldermead
-    fsim[k] = func(sim[k])
-  File "/usr/lib/python2.7/site-packages/scipy/optimize/optimize.py", line 292, in function_wrapper
-    return function(*(wrapper_args + args))
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 43, in calc_statistic
-    return calc_statistic_xyg3(C,FitClass)
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 62, in calc_statistic_xyg3
-    FitClass.run_OptCalc(opt_func,C)
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/modules/my_io.py", line 3587, in run_OptCalc
-    TmpResult   = func(C,self.CompDict[index])
-KeyError: 275
-Optimization terminated successfully.
-         Current function value: 0.009418
-         Iterations: 138
-         Function evaluations: 238
-Optimization terminated successfully.
-         Current function value: 0.008190
-         Iterations: 255
-         Function evaluations: 420
-Optimization terminated successfully.
-         Current function value: 0.008198
-         Iterations: 273
-         Function evaluations: 462
-Optimization terminated successfully.
-         Current function value: 0.005927
-         Iterations: 122
-         Function evaluations: 215
-Optimization terminated successfully.
-         Current function value: 0.005920
-         Iterations: 93
-         Function evaluations: 162
-Optimization terminated successfully.
-         Current function value: 0.005928
-         Iterations: 127
-         Function evaluations: 213
-Optimization terminated successfully.
-         Current function value: 0.006702
-         Iterations: 114
-         Function evaluations: 200
-Optimization terminated successfully.
-         Current function value: 0.009299
-         Iterations: 93
-         Function evaluations: 176
-Optimization terminated successfully.
-         Current function value: 0.012706
-         Iterations: 102
-         Function evaluations: 178
-Optimization terminated successfully.
-         Current function value: 0.006077
-         Iterations: 112
-         Function evaluations: 199
-Optimization terminated successfully.
-         Current function value: 0.007626
-         Iterations: 85
-         Function evaluations: 150
-Optimization terminated successfully.
-         Current function value: 0.006703
-         Iterations: 88
-         Function evaluations: 158
-Optimization terminated successfully.
-         Current function value: 0.005840
-         Iterations: 85
-         Function evaluations: 154
-Optimization terminated successfully.
-         Current function value: 0.007712
-         Iterations: 104
-         Function evaluations: 179
-Optimization terminated successfully.
-         Current function value: 0.007332
-         Iterations: 82
-         Function evaluations: 147
-Optimization terminated successfully.
-         Current function value: 0.007309
-         Iterations: 78
-         Function evaluations: 140
-Optimization terminated successfully.
-         Current function value: 0.007315
-         Iterations: 133
-         Function evaluations: 225
-Optimization terminated successfully.
-         Current function value: 0.007313
-         Iterations: 279
-         Function evaluations: 469
-Optimization terminated successfully.
-         Current function value: 0.007510
-         Iterations: 127
-         Function evaluations: 220
-Optimization terminated successfully.
-         Current function value: 0.008495
-         Iterations: 100
-         Function evaluations: 184
-Optimization terminated successfully.
-         Current function value: 0.008078
-         Iterations: 112
-         Function evaluations: 200
-Optimization terminated successfully.
-         Current function value: 0.008296
-         Iterations: 73
-         Function evaluations: 127
-Optimization terminated successfully.
-         Current function value: 0.008495
-         Iterations: 100
-         Function evaluations: 184
-Traceback (most recent call last):
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 297, in <module>
-    main()
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 258, in main
-    run_optimization(MainFit)                               #  Run optimization based on MainFit
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 189, in run_optimization
-    args=tuple([FitClass]))
-  File "/usr/lib/python2.7/site-packages/scipy/optimize/optimize.py", line 408, in fmin
-    res = _minimize_neldermead(func, x0, args, callback=callback, **opts)
-  File "/usr/lib/python2.7/site-packages/scipy/optimize/optimize.py", line 532, in _minimize_neldermead
-    fsim[k] = func(sim[k])
-  File "/usr/lib/python2.7/site-packages/scipy/optimize/optimize.py", line 292, in function_wrapper
-    return function(*(wrapper_args + args))
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 43, in calc_statistic
-    return calc_statistic_xyg3(C,FitClass)
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 62, in calc_statistic_xyg3
-    FitClass.run_OptCalc(opt_func,C)
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/modules/my_io.py", line 3587, in run_OptCalc
-    TmpResult   = func(C,self.CompDict[index])
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/Data/osRPA/dhpbe0/opt_func.py", line 12, in opt_func
-    return E_noXC + a1*Ex_HF + a2*Ex_PBE + a3*Ec_PBE + a4*rospt2 + a5*rsspt2
-NameError: global name 'a3' is not defined
-Optimization terminated successfully.
-         Current function value: 0.014498
-         Iterations: 48
-         Function evaluations: 92
-Traceback (most recent call last):
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 297, in <module>
-    main()
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 258, in main
-    run_optimization(MainFit)                               #  Run optimization based on MainFit
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 189, in run_optimization
-    args=tuple([FitClass]))
-  File "/usr/lib/python2.7/site-packages/scipy/optimize/optimize.py", line 408, in fmin
-    res = _minimize_neldermead(func, x0, args, callback=callback, **opts)
-  File "/usr/lib/python2.7/site-packages/scipy/optimize/optimize.py", line 532, in _minimize_neldermead
-    fsim[k] = func(sim[k])
-  File "/usr/lib/python2.7/site-packages/scipy/optimize/optimize.py", line 292, in function_wrapper
-    return function(*(wrapper_args + args))
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 43, in calc_statistic
-    return calc_statistic_xyg3(C,FitClass)
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 62, in calc_statistic_xyg3
-    FitClass.run_OptCalc(opt_func,C)
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/modules/my_io.py", line 3587, in run_OptCalc
-    TmpResult   = func(C,self.CompDict[index])
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/Data/osRPA/dhpbe0/opt_func.py", line 5, in opt_func
-    a1, a3, a4, a5 = C
-ValueError: need more than 2 values to unpack
-Traceback (most recent call last):
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 297, in <module>
-    main()
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 258, in main
-    run_optimization(MainFit)                               #  Run optimization based on MainFit
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 189, in run_optimization
-    args=tuple([FitClass]))
-  File "/usr/lib/python2.7/site-packages/scipy/optimize/optimize.py", line 408, in fmin
-    res = _minimize_neldermead(func, x0, args, callback=callback, **opts)
-  File "/usr/lib/python2.7/site-packages/scipy/optimize/optimize.py", line 532, in _minimize_neldermead
-    fsim[k] = func(sim[k])
-  File "/usr/lib/python2.7/site-packages/scipy/optimize/optimize.py", line 292, in function_wrapper
-    return function(*(wrapper_args + args))
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 43, in calc_statistic
-    return calc_statistic_xyg3(C,FitClass)
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 62, in calc_statistic_xyg3
-    FitClass.run_OptCalc(opt_func,C)
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/modules/my_io.py", line 3587, in run_OptCalc
-    TmpResult   = func(C,self.CompDict[index])
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/Data/osRPA/dhpbe0/opt_func.py", line 5, in opt_func
-    a1, a3, a4, a5 = C
-ValueError: need more than 2 values to unpack
-Optimization terminated successfully.
-         Current function value: 0.009279
-         Iterations: 327
-         Function evaluations: 558
-Traceback (most recent call last):
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 297, in <module>
-    main()
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 258, in main
-    run_optimization(MainFit)                               #  Run optimization based on MainFit
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 189, in run_optimization
-    args=tuple([FitClass]))
-  File "/usr/lib/python2.7/site-packages/scipy/optimize/optimize.py", line 408, in fmin
-    res = _minimize_neldermead(func, x0, args, callback=callback, **opts)
-  File "/usr/lib/python2.7/site-packages/scipy/optimize/optimize.py", line 532, in _minimize_neldermead
-    fsim[k] = func(sim[k])
-  File "/usr/lib/python2.7/site-packages/scipy/optimize/optimize.py", line 292, in function_wrapper
-    return function(*(wrapper_args + args))
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 43, in calc_statistic
-    return calc_statistic_xyg3(C,FitClass)
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 62, in calc_statistic_xyg3
-    FitClass.run_OptCalc(opt_func,C)
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/modules/my_io.py", line 3587, in run_OptCalc
-    TmpResult   = func(C,self.CompDict[index])
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/Data/osRPA/dhpbe0/opt_func.py", line 5, in opt_func
-    a4, a5 = C
-ValueError: too many values to unpack
-Optimization terminated successfully.
-         Current function value: 0.014611
-         Iterations: 47
-         Function evaluations: 90
-Optimization terminated successfully.
-         Current function value: 0.014611
-         Iterations: 58
-         Function evaluations: 108
-Optimization terminated successfully.
-         Current function value: 0.009569
-         Iterations: 288
-         Function evaluations: 485
-Optimization terminated successfully.
-         Current function value: 0.005747
-         Iterations: 277
-         Function evaluations: 481
-Optimization terminated successfully.
-         Current function value: 0.001760
-         Iterations: 357
-         Function evaluations: 601
-Optimization terminated successfully.
-         Current function value: 0.002180
-         Iterations: 133
-         Function evaluations: 237
-Optimization terminated successfully.
-         Current function value: 0.008790
-         Iterations: 155
-         Function evaluations: 269
-Warning: Maximum number of function evaluations has been exceeded.
-Traceback (most recent call last):
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 297, in <module>
-    main()
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 258, in main
-    run_optimization(MainFit)                               #  Run optimization based on MainFit
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 189, in run_optimization
-    args=tuple([FitClass]))
-  File "/usr/lib/python2.7/site-packages/scipy/optimize/optimize.py", line 408, in fmin
-    res = _minimize_neldermead(func, x0, args, callback=callback, **opts)
-  File "/usr/lib/python2.7/site-packages/scipy/optimize/optimize.py", line 532, in _minimize_neldermead
-    fsim[k] = func(sim[k])
-  File "/usr/lib/python2.7/site-packages/scipy/optimize/optimize.py", line 292, in function_wrapper
-    return function(*(wrapper_args + args))
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 43, in calc_statistic
-    return calc_statistic_xyg3(C,FitClass)
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 62, in calc_statistic_xyg3
-    FitClass.run_OptCalc(opt_func,C)
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/modules/my_io.py", line 3587, in run_OptCalc
-    TmpResult   = func(C,self.CompDict[index])
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/Data/osRPA/dhpbe0/opt_func.py", line 5, in opt_func
-    a1, a3, a4 = C
-ValueError: too many values to unpack
-Optimization terminated successfully.
-         Current function value: 0.004876
-         Iterations: 124
-         Function evaluations: 222
-Optimization terminated successfully.
-         Current function value: 0.007270
-         Iterations: 130
-         Function evaluations: 232
-Traceback (most recent call last):
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 297, in <module>
-    main()
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 258, in main
-    run_optimization(MainFit)                               #  Run optimization based on MainFit
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 189, in run_optimization
-    args=tuple([FitClass]))
-  File "/usr/lib/python2.7/site-packages/scipy/optimize/optimize.py", line 408, in fmin
-    res = _minimize_neldermead(func, x0, args, callback=callback, **opts)
-  File "/usr/lib/python2.7/site-packages/scipy/optimize/optimize.py", line 532, in _minimize_neldermead
-    fsim[k] = func(sim[k])
-  File "/usr/lib/python2.7/site-packages/scipy/optimize/optimize.py", line 292, in function_wrapper
-    return function(*(wrapper_args + args))
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 43, in calc_statistic
-    return calc_statistic_xyg3(C,FitClass)
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/DFT_Fit.py", line 62, in calc_statistic_xyg3
-    FitClass.run_OptCalc(opt_func,C)
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/modules/my_io.py", line 3587, in run_OptCalc
-    TmpResult   = func(C,self.CompDict[index])
-  File "/home/igor/Dropbox/SourceCode-Pool/DFT_Fitting/Data/osRPA/dhpbe0/opt_func.py", line 5, in opt_func
-    a1, a3, a4 = C
-ValueError: need more than 2 values to unpack
-Optimization terminated successfully.
-         Current function value: 0.013078
-         Iterations: 51
-         Function evaluations: 97
-Optimization terminated successfully.
-         Current function value: 0.013078
-         Iterations: 51
-         Function evaluations: 97
-Optimization terminated successfully.
-         Current function value: 0.001801
-         Iterations: 69
-         Function evaluations: 124
-Optimization terminated successfully.
-         Current function value: 0.007270
-         Iterations: 105
-         Function evaluations: 190
-Optimization terminated successfully.
-         Current function value: 0.020928
-         Iterations: 11
-         Function evaluations: 22
-Optimization terminated successfully.
-         Current function value: 0.003414
-         Iterations: 53
-         Function evaluations: 99
-Optimization terminated successfully.
-         Current function value: 0.003358
-         Iterations: 119
-         Function evaluations: 216
-Optimization terminated successfully.
-         Current function value: 0.003358
+         Current function value: 0.005651
          Iterations: 132
-         Function evaluations: 233
+         Function evaluations: 240
 Optimization terminated successfully.
-         Current function value: 0.001760
-         Iterations: 311
-         Function evaluations: 518
+         Current function value: 0.005651
+         Iterations: 135
+         Function evaluations: 243
+Optimization terminated successfully.
+         Current function value: 0.010183
+         Iterations: 30
+         Function evaluations: 59
+Optimization terminated successfully.
+         Current function value: 0.006584
+         Iterations: 46
+         Function evaluations: 87
+Optimization terminated successfully.
+         Current function value: 0.012599
+         Iterations: 55
+         Function evaluations: 101
+Optimization terminated successfully.
+         Current function value: 0.006197
+         Iterations: 78
+         Function evaluations: 143
+Optimization terminated successfully.
+         Current function value: 0.011113
+         Iterations: 44
+         Function evaluations: 86
+Optimization terminated successfully.
+         Current function value: 0.008349
+         Iterations: 125
+         Function evaluations: 217
+Optimization terminated successfully.
+         Current function value: 0.005565
+         Iterations: 191
+         Function evaluations: 333
+Optimization terminated successfully.
+         Current function value: 0.005651
+         Iterations: 93
+         Function evaluations: 163
+Optimization terminated successfully.
+         Current function value: 0.006445
+         Iterations: 99
+         Function evaluations: 180

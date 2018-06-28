@@ -2,11 +2,11 @@ def opt_func(C,P):
     '''\
     The function for optimization, where C is the parameters
     '''
-    a1, a3, a4, a5 = C
-    #a1 = 1.0
+    a3, a4,a5 = C
+    a1 = 0.5
     #a3 = 0.0
     a2 = 1. - a1
-    #a5 = a4
+    #a5 = 0.0
 
     E_noXC, Ex_HF, Ex_PBE, Ec_PBE, rsspt2, rospt2, Ex_SCAN, Ec_SCAN = P
     #return E_noXC + a1*Ex_HF + a2*Ex_SCAN + a3*Ec_SCAN + a4*rospt2 + a5*rsspt2

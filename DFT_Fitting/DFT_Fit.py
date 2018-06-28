@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2.7
 #Usage          :: hybrid_parameter_fit.py [AtomList] [MoleList] [AtomCode]
 #Purpose        :: To optimize the hybrid parameter in DFT against the specified atomization set
 #Authors        :: Igor Ying Zhang, and Xin Xu
