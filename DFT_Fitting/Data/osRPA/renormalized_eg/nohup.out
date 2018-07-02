@@ -1,0 +1,158 @@
+Optimization terminated successfully.
+         Current function value: 0.008956
+         Iterations: 118
+         Function evaluations: 200
+Optimization terminated successfully.
+         Current function value: 0.010407
+         Iterations: 115
+         Function evaluations: 201
+Optimization terminated successfully.
+         Current function value: 0.006782
+         Iterations: 132
+         Function evaluations: 227
+Optimization terminated successfully.
+         Current function value: 0.006984
+         Iterations: 316
+         Function evaluations: 539
+Optimization terminated successfully.
+         Current function value: 0.009159
+         Iterations: 188
+         Function evaluations: 329
+Optimization terminated successfully.
+         Current function value: 0.014208
+         Iterations: 138
+         Function evaluations: 228
+Optimization terminated successfully.
+         Current function value: 0.012101
+         Iterations: 113
+         Function evaluations: 195
+Optimization terminated successfully.
+         Current function value: 0.009374
+         Iterations: 106
+         Function evaluations: 191
+Optimization terminated successfully.
+         Current function value: 0.011488
+         Iterations: 98
+         Function evaluations: 171
+Optimization terminated successfully.
+         Current function value: 0.009374
+         Iterations: 106
+         Function evaluations: 191
+Optimization terminated successfully.
+         Current function value: 0.013340
+         Iterations: 98
+         Function evaluations: 174
+Optimization terminated successfully.
+         Current function value: 0.011217
+         Iterations: 123
+         Function evaluations: 217
+Optimization terminated successfully.
+         Current function value: 0.009322
+         Iterations: 114
+         Function evaluations: 202
+Error in open config file
+Exception AttributeError: "ConfigIO instance has no attribute 'f'" in <bound method ConfigIO.__del__ of <my_io.ConfigIO instance at 0x7f3223493830>> ignored
+Optimization terminated successfully.
+         Current function value: 0.008891
+         Iterations: 127
+         Function evaluations: 225
+Optimization terminated successfully.
+         Current function value: 0.009109
+         Iterations: 278
+         Function evaluations: 463
+Optimization terminated successfully.
+         Current function value: 0.014558
+         Iterations: 123
+         Function evaluations: 209
+Optimization terminated successfully.
+         Current function value: 0.021118
+         Iterations: 240
+         Function evaluations: 410
+Optimization terminated successfully.
+         Current function value: 0.015607
+         Iterations: 158
+         Function evaluations: 275
+Optimization terminated successfully.
+         Current function value: 0.009807
+         Iterations: 266
+         Function evaluations: 444
+Optimization terminated successfully.
+         Current function value: 0.005376
+         Iterations: 250
+         Function evaluations: 431
+Optimization terminated successfully.
+         Current function value: 0.005376
+         Iterations: 207
+         Function evaluations: 343
+Optimization terminated successfully.
+         Current function value: 0.009994
+         Iterations: 133
+         Function evaluations: 230
+Optimization terminated successfully.
+         Current function value: 0.014778
+         Iterations: 132
+         Function evaluations: 226
+Optimization terminated successfully.
+         Current function value: 0.009994
+         Iterations: 133
+         Function evaluations: 230
+Optimization terminated successfully.
+         Current function value: 0.012086
+         Iterations: 99
+         Function evaluations: 172
+Optimization terminated successfully.
+         Current function value: 0.015982
+         Iterations: 120
+         Function evaluations: 212
+Optimization terminated successfully.
+         Current function value: 0.015047
+         Iterations: 189
+         Function evaluations: 317
+Optimization terminated successfully.
+         Current function value: 0.009741
+         Iterations: 299
+         Function evaluations: 503
+Optimization terminated successfully.
+         Current function value: 0.009308
+         Iterations: 127
+         Function evaluations: 224
+Optimization terminated successfully.
+         Current function value: 0.013140
+         Iterations: 116
+         Function evaluations: 204
+Optimization terminated successfully.
+         Current function value: 0.011110
+         Iterations: 424
+         Function evaluations: 699
+Optimization terminated successfully.
+         Current function value: 0.032184
+         Iterations: 203
+         Function evaluations: 335
+Optimization terminated successfully.
+         Current function value: 0.037087
+         Iterations: 181
+         Function evaluations: 312
+Optimization terminated successfully.
+         Current function value: 0.050452
+         Iterations: 181
+         Function evaluations: 312
+Optimization terminated successfully.
+         Current function value: 0.009253
+         Iterations: 86
+         Function evaluations: 159
+Optimization terminated successfully.
+         Current function value: 0.009205
+         Iterations: 111
+         Function evaluations: 197
+Optimization terminated successfully.
+         Current function value: 0.011607
+         Iterations: 115
+         Function evaluations: 204
+Optimization terminated successfully.
+         Current function value: 0.009279
+         Iterations: 118
+         Function evaluations: 207
+Optimization terminated successfully.
+         Current function value: 0.009256
+         Iterations: 236
+         Function evaluations: 402
