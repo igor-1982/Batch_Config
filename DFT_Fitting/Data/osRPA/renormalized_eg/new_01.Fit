@@ -1,0 +1,2845 @@
+=>Fitting start from Sat Jun 30 15:32:56 2018
+=>This project aims to ::
+  "================================ Total(358) ================================"
+  "There are about :                                                           "
+  " 1)  223 HOFs from the G3 set                                               "
+  " 2)   76 Barrier Heights from Trulhar's set                                 "
+  " 3)   31 Non Bonding interactions from NCIE set                             "
+  " 4)   22 Non Bonding interactions from S22  set                             "
+  " 5)    6 n-alkane dimers from ADIM6                                         "
+  " NOTE :: "
+  " 1) G3 atomization is generated using freq scale factor 0.9877 and          "
+  "    correct SO contribution                                                 "
+=>1) Project pool is 
+  "/home/igor/Documents/Package-Pool/Batch_Config/DFT_Fitting/Data/osRPA/renormalized_eg/PBE0"
+=>2) Project batch type is "2" which to run the job, if no log and chk exist
+=>3) QC package employed is "aims"
+=>There are 2 <Macro-Path>s specified in new_01.ctl :
+  Macro-Path :   <PATH1> = .
+  Macro-Path :   <PATH2> = .
+=>Loaded ConfigIO.BatcList :
+==----------------------------------------------------------------------------==
+Index        Name                        Direction    JobInput         JobType
+--------------------------------------------------------------------------------
+  0th         H_0                          ./EAtom   XYG3_Comp          energy
+  1th        Li_0                          ./EAtom   XYG3_Comp          energy
+  2th        Be_0                          ./EAtom   XYG3_Comp          energy
+  3th         B_0                          ./EAtom   XYG3_Comp          energy
+  4th         C_0                          ./EAtom   XYG3_Comp          energy
+  5th         N_0                          ./EAtom   XYG3_Comp          energy
+  6th         O_0                          ./EAtom   XYG3_Comp          energy
+  7th         F_0                          ./EAtom   XYG3_Comp          energy
+  8th        Na_0                          ./EAtom   XYG3_Comp          energy
+  9th        Mg_0                          ./EAtom   XYG3_Comp          energy
+ 10th        Al_0                          ./EAtom   XYG3_Comp          energy
+ 11th        Si_0                          ./EAtom   XYG3_Comp          energy
+ 12th         P_0                          ./EAtom   XYG3_Comp          energy
+ 13th         S_0                          ./EAtom   XYG3_Comp          energy
+ 14th        Cl_0                          ./EAtom   XYG3_Comp          energy
+ 15th        G2-1                             ./G2   XYG3_Comp          energy
+ 16th        G2-2                             ./G2   XYG3_Comp          energy
+ 17th        G2-3                             ./G2   XYG3_Comp          energy
+ 18th        G2-4                             ./G2   XYG3_Comp          energy
+ 19th        G2-5                             ./G2   XYG3_Comp          energy
+ 20th        G2-6                             ./G2   XYG3_Comp          energy
+ 21th        G2-7                             ./G2   XYG3_Comp          energy
+ 22th        G2-8                             ./G2   XYG3_Comp          energy
+ 23th        G2-9                             ./G2   XYG3_Comp          energy
+ 24th       G2-10                             ./G2   XYG3_Comp          energy
+ 25th       G2-11                             ./G2   XYG3_Comp          energy
+ 26th       G2-12                             ./G2   XYG3_Comp          energy
+ 27th       G2-13                             ./G2   XYG3_Comp          energy
+ 28th       G2-14                             ./G2   XYG3_Comp          energy
+ 29th       G2-15                             ./G2   XYG3_Comp          energy
+ 30th       G2-16                             ./G2   XYG3_Comp          energy
+ 31th       G2-17                             ./G2   XYG3_Comp          energy
+ 32th       G2-18                             ./G2   XYG3_Comp          energy
+ 33th       G2-19                             ./G2   XYG3_Comp          energy
+ 34th       G2-20                             ./G2   XYG3_Comp          energy
+ 35th       G2-21                             ./G2   XYG3_Comp          energy
+ 36th       G2-22                             ./G2   XYG3_Comp          energy
+ 37th       G2-23                             ./G2   XYG3_Comp          energy
+ 38th       G2-24                             ./G2   XYG3_Comp          energy
+ 39th       G2-25                             ./G2   XYG3_Comp          energy
+ 40th       G2-26                             ./G2   XYG3_Comp          energy
+ 41th       G2-27                             ./G2   XYG3_Comp          energy
+ 42th       G2-28                             ./G2   XYG3_Comp          energy
+ 43th       G2-29                             ./G2   XYG3_Comp          energy
+ 44th       G2-30                             ./G2   XYG3_Comp          energy
+ 45th       G2-31                             ./G2   XYG3_Comp          energy
+ 46th       G2-32                             ./G2   XYG3_Comp          energy
+ 47th       G2-33                             ./G2   XYG3_Comp          energy
+ 48th       G2-34                             ./G2   XYG3_Comp          energy
+ 49th       G2-35                             ./G2   XYG3_Comp          energy
+ 50th       G2-36                             ./G2   XYG3_Comp          energy
+ 51th       G2-37                             ./G2   XYG3_Comp          energy
+ 52th       G2-38                             ./G2   XYG3_Comp          energy
+ 53th       G2-39                             ./G2   XYG3_Comp          energy
+ 54th       G2-40                             ./G2   XYG3_Comp          energy
+ 55th       G2-41                             ./G2   XYG3_Comp          energy
+ 56th       G2-42                             ./G2   XYG3_Comp          energy
+ 57th       G2-43                             ./G2   XYG3_Comp          energy
+ 58th       G2-44                             ./G2   XYG3_Comp          energy
+ 59th       G2-45                             ./G2   XYG3_Comp          energy
+ 60th       G2-46                             ./G2   XYG3_Comp          energy
+ 61th       G2-47                             ./G2   XYG3_Comp          energy
+ 62th       G2-48                             ./G2   XYG3_Comp          energy
+ 63th       G2-49                             ./G2   XYG3_Comp          energy
+ 64th       G2-50                             ./G2   XYG3_Comp          energy
+ 65th       G2-51                             ./G2   XYG3_Comp          energy
+ 66th       G2-52                             ./G2   XYG3_Comp          energy
+ 67th       G2-53                             ./G2   XYG3_Comp          energy
+ 68th       G2-54                             ./G2   XYG3_Comp          energy
+ 69th       G2-55                             ./G2   XYG3_Comp          energy
+ 70th       G2-56                             ./G2   XYG3_Comp          energy
+ 71th       G2-57                             ./G2   XYG3_Comp          energy
+ 72th       G2-58                             ./G2   XYG3_Comp          energy
+ 73th       G2-59                             ./G2   XYG3_Comp          energy
+ 74th       G2-60                             ./G2   XYG3_Comp          energy
+ 75th       G2-61                             ./G2   XYG3_Comp          energy
+ 76th       G2-62                             ./G2   XYG3_Comp          energy
+ 77th       G2-63                             ./G2   XYG3_Comp          energy
+ 78th       G2-64                             ./G2   XYG3_Comp          energy
+ 79th       G2-65                             ./G2   XYG3_Comp          energy
+ 80th       G2-66                             ./G2   XYG3_Comp          energy
+ 81th       G2-67                             ./G2   XYG3_Comp          energy
+ 82th       G2-68                             ./G2   XYG3_Comp          energy
+ 83th       G2-69                             ./G2   XYG3_Comp          energy
+ 84th       G2-70                             ./G2   XYG3_Comp          energy
+ 85th       G2-71                             ./G2   XYG3_Comp          energy
+ 86th       G2-72                             ./G2   XYG3_Comp          energy
+ 87th       G2-73                             ./G2   XYG3_Comp          energy
+ 88th       G2-74                             ./G2   XYG3_Comp          energy
+ 89th       G2-75                             ./G2   XYG3_Comp          energy
+ 90th       G2-76                             ./G2   XYG3_Comp          energy
+ 91th       G2-77                             ./G2   XYG3_Comp          energy
+ 92th       G2-78                             ./G2   XYG3_Comp          energy
+ 93th       G2-79                             ./G2   XYG3_Comp          energy
+ 94th       G2-80                             ./G2   XYG3_Comp          energy
+ 95th       G2-81                             ./G2   XYG3_Comp          energy
+ 96th       G2-82                             ./G2   XYG3_Comp          energy
+ 97th       G2-83                             ./G2   XYG3_Comp          energy
+ 98th       G2-84                             ./G2   XYG3_Comp          energy
+ 99th       G2-85                             ./G2   XYG3_Comp          energy
+100th       G2-86                             ./G2   XYG3_Comp          energy
+101th       G2-87                             ./G2   XYG3_Comp          energy
+102th       G2-88                             ./G2   XYG3_Comp          energy
+103th       G2-89                             ./G2   XYG3_Comp          energy
+104th       G2-90                             ./G2   XYG3_Comp          energy
+105th       G2-91                             ./G2   XYG3_Comp          energy
+106th       G2-92                             ./G2   XYG3_Comp          energy
+107th       G2-93                             ./G2   XYG3_Comp          energy
+108th       G2-94                             ./G2   XYG3_Comp          energy
+109th       G2-95                             ./G2   XYG3_Comp          energy
+110th       G2-96                             ./G2   XYG3_Comp          energy
+111th       G2-97                             ./G2   XYG3_Comp          energy
+112th       G2-98                             ./G2   XYG3_Comp          energy
+113th       G2-99                             ./G2   XYG3_Comp          energy
+114th      G2-100                             ./G2   XYG3_Comp          energy
+115th      G2-101                             ./G2   XYG3_Comp          energy
+116th      G2-102                             ./G2   XYG3_Comp          energy
+117th      G2-103                             ./G2   XYG3_Comp          energy
+118th      G2-104                             ./G2   XYG3_Comp          energy
+119th      G2-105                             ./G2   XYG3_Comp          energy
+120th      G2-106                             ./G2   XYG3_Comp          energy
+121th      G2-107                             ./G2   XYG3_Comp          energy
+122th      G2-108                             ./G2   XYG3_Comp          energy
+123th      G2-109                             ./G2   XYG3_Comp          energy
+124th      G2-110                             ./G2   XYG3_Comp          energy
+125th      G2-111                             ./G2   XYG3_Comp          energy
+126th      G2-112                             ./G2   XYG3_Comp          energy
+127th      G2-113                             ./G2   XYG3_Comp          energy
+128th      G2-114                             ./G2   XYG3_Comp          energy
+129th      G2-115                             ./G2   XYG3_Comp          energy
+130th      G2-116                             ./G2   XYG3_Comp          energy
+131th      G2-117                             ./G2   XYG3_Comp          energy
+132th      G2-118                             ./G2   XYG3_Comp          energy
+133th      G2-119                             ./G2   XYG3_Comp          energy
+134th      G2-120                             ./G2   XYG3_Comp          energy
+135th      G2-121                             ./G2   XYG3_Comp          energy
+136th      G2-122                             ./G2   XYG3_Comp          energy
+137th      G2-123                             ./G2   XYG3_Comp          energy
+138th      G2-124                             ./G2   XYG3_Comp          energy
+139th      G2-125                             ./G2   XYG3_Comp          energy
+140th      G2-126                             ./G2   XYG3_Comp          energy
+141th      G2-127                             ./G2   XYG3_Comp          energy
+142th      G2-128                             ./G2   XYG3_Comp          energy
+143th      G2-129                             ./G2   XYG3_Comp          energy
+144th      G2-130                             ./G2   XYG3_Comp          energy
+145th      G2-131                             ./G2   XYG3_Comp          energy
+146th      G2-132                             ./G2   XYG3_Comp          energy
+147th      G2-133                             ./G2   XYG3_Comp          energy
+148th      G2-134                             ./G2   XYG3_Comp          energy
+149th      G2-135                             ./G2   XYG3_Comp          energy
+150th      G2-136                             ./G2   XYG3_Comp          energy
+151th      G2-137                             ./G2   XYG3_Comp          energy
+152th      G2-138                             ./G2   XYG3_Comp          energy
+153th      G2-139                             ./G2   XYG3_Comp          energy
+154th      G2-140                             ./G2   XYG3_Comp          energy
+155th      G2-141                             ./G2   XYG3_Comp          energy
+156th      G2-142                             ./G2   XYG3_Comp          energy
+157th      G2-143                             ./G2   XYG3_Comp          energy
+158th      G2-144                             ./G2   XYG3_Comp          energy
+159th      G2-145                             ./G2   XYG3_Comp          energy
+160th      G2-146                             ./G2   XYG3_Comp          energy
+161th      G2-147                             ./G2   XYG3_Comp          energy
+162th      G2-148                             ./G2   XYG3_Comp          energy
+163th      G2-149                             ./G2   XYG3_Comp          energy
+164th      G2-150                             ./G2   XYG3_Comp          energy
+165th      G2-151                             ./G2   XYG3_Comp          energy
+166th      G2-152                             ./G2   XYG3_Comp          energy
+167th      G2-153                             ./G2   XYG3_Comp          energy
+168th      G2-154                             ./G2   XYG3_Comp          energy
+169th      G2-155                             ./G2   XYG3_Comp          energy
+170th      G2-156                             ./G2   XYG3_Comp          energy
+171th      G2-157                             ./G2   XYG3_Comp          energy
+172th      G2-158                             ./G2   XYG3_Comp          energy
+173th      G2-159                             ./G2   XYG3_Comp          energy
+174th      G2-160                             ./G2   XYG3_Comp          energy
+175th      G2-161                             ./G2   XYG3_Comp          energy
+176th      G2-162                             ./G2   XYG3_Comp          energy
+177th      G2-163                             ./G2   XYG3_Comp          energy
+178th      G2-164                             ./G2   XYG3_Comp          energy
+179th      G2-165                             ./G2   XYG3_Comp          energy
+180th      G2-166                             ./G2   XYG3_Comp          energy
+181th      G2-167                             ./G2   XYG3_Comp          energy
+182th      G2-168                             ./G2   XYG3_Comp          energy
+183th      G2-169                             ./G2   XYG3_Comp          energy
+184th      G2-170                             ./G2   XYG3_Comp          energy
+185th      G2-171                             ./G2   XYG3_Comp          energy
+186th      G2-172                             ./G2   XYG3_Comp          energy
+187th      G2-173                             ./G2   XYG3_Comp          energy
+188th      G2-174                             ./G2   XYG3_Comp          energy
+189th      G2-175                             ./G2   XYG3_Comp          energy
+190th      G2-176                             ./G2   XYG3_Comp          energy
+191th      G2-177                             ./G2   XYG3_Comp          energy
+192th      G2-178                             ./G2   XYG3_Comp          energy
+193th      G2-179                             ./G2   XYG3_Comp          energy
+194th      G2-180                             ./G2   XYG3_Comp          energy
+195th      G2-181                             ./G2   XYG3_Comp          energy
+196th      G2-182                             ./G2   XYG3_Comp          energy
+197th      G2-183                             ./G2   XYG3_Comp          energy
+198th      G2-184                             ./G2   XYG3_Comp          energy
+199th      G2-185                             ./G2   XYG3_Comp          energy
+200th      G2-186                             ./G2   XYG3_Comp          energy
+201th      G2-187                             ./G2   XYG3_Comp          energy
+202th      G2-188                             ./G2   XYG3_Comp          energy
+203th      G2-189                             ./G2   XYG3_Comp          energy
+204th      G2-190                             ./G2   XYG3_Comp          energy
+205th      G2-191                             ./G2   XYG3_Comp          energy
+206th      G2-192                             ./G2   XYG3_Comp          energy
+207th      G2-193                             ./G2   XYG3_Comp          energy
+208th      G2-194                             ./G2   XYG3_Comp          energy
+209th      G2-195                             ./G2   XYG3_Comp          energy
+210th      G2-196                             ./G2   XYG3_Comp          energy
+211th      G2-197                             ./G2   XYG3_Comp          energy
+212th      G2-198                             ./G2   XYG3_Comp          energy
+213th      G2-199                             ./G2   XYG3_Comp          energy
+214th      G2-200                             ./G2   XYG3_Comp          energy
+215th      G2-201                             ./G2   XYG3_Comp          energy
+216th      G2-202                             ./G2   XYG3_Comp          energy
+217th      G2-203                             ./G2   XYG3_Comp          energy
+218th      G2-204                             ./G2   XYG3_Comp          energy
+219th      G2-205                             ./G2   XYG3_Comp          energy
+220th      G2-206                             ./G2   XYG3_Comp          energy
+221th      G2-207                             ./G2   XYG3_Comp          energy
+222th      G2-208                             ./G2   XYG3_Comp          energy
+223th      G2-209                             ./G2   XYG3_Comp          energy
+224th      G2-210                             ./G2   XYG3_Comp          energy
+225th      G2-211                             ./G2   XYG3_Comp          energy
+226th      G2-212                             ./G2   XYG3_Comp          energy
+227th      G2-213                             ./G2   XYG3_Comp          energy
+228th      G2-214                             ./G2   XYG3_Comp          energy
+229th      G2-215                             ./G2   XYG3_Comp          energy
+230th      G2-216                             ./G2   XYG3_Comp          energy
+231th      G2-217                             ./G2   XYG3_Comp          energy
+232th      G2-218                             ./G2   XYG3_Comp          energy
+233th      G2-219                             ./G2   XYG3_Comp          energy
+234th      G2-220                             ./G2   XYG3_Comp          energy
+235th      G2-221                             ./G2   XYG3_Comp          energy
+236th      G2-222                             ./G2   XYG3_Comp          energy
+237th      G2-223                             ./G2   XYG3_Comp          energy
+238th     Cr2-BE3                             ./G2   XYG3_Comp          energy
+239th      V2-BE3                             ./G2   XYG3_Comp          energy
+240th     Fe2-BE3                             ./G2   XYG3_Comp          energy
+241th      Cr-BE3                             ./G2   XYG3_Comp          energy
+242th       V-BE3                             ./G2   XYG3_Comp          energy
+243th      Fe-BE3                             ./G2   XYG3_Comp          energy
+244th   TiCl-BE13                             ./G2   XYG3_Comp          energy
+245th    VF5-BE13                             ./G2   XYG3_Comp          energy
+246th   CrCl-BE13                             ./G2   XYG3_Comp          energy
+247th   CrOF-BE13                             ./G2   XYG3_Comp          energy
+248th  CoC4O4H...                             ./G2   XYG3_Comp          energy
+249th  FeC5O5-...                             ./G2   XYG3_Comp          energy
+250th     VS-BE13                             ./G2   XYG3_Comp          energy
+251th    CuH-BE13                             ./G2   XYG3_Comp          energy
+252th   CuCl-BE13                             ./G2   XYG3_Comp          energy
+253th     VO-BE13                             ./G2   XYG3_Comp          energy
+254th   NiCl-BE13                             ./G2   XYG3_Comp          energy
+255th  CO_di-BE13                             ./G2   XYG3_Comp          energy
+256th     Ti-BE13                             ./G2   XYG3_Comp          energy
+257th     Cl-BE13                             ./G2   XYG3_Comp          energy
+258th      V-BE13                             ./G2   XYG3_Comp          energy
+259th      F-BE13                             ./G2   XYG3_Comp          energy
+260th      O-BE13                             ./G2   XYG3_Comp          energy
+261th     Fe-BE13                             ./G2   XYG3_Comp          energy
+262th     Co-BE13                             ./G2   XYG3_Comp          energy
+263th      H-BE13                             ./G2   XYG3_Comp          energy
+264th     Ni-BE13                             ./G2   XYG3_Comp          energy
+265th     Cu-BE13                             ./G2   XYG3_Comp          energy
+266th     Cr-BE13                             ./G2   XYG3_Comp          energy
+267th      S-BE13                             ./G2   XYG3_Comp          energy
+268th      C-BE13                             ./G2   XYG3_Comp          energy
+269th    100-G2RC                             ./G2   XYG3_Comp          energy
+270th    104-G2RC                             ./G2   XYG3_Comp          energy
+271th    106-G2RC                             ./G2   XYG3_Comp          energy
+272th    113-G2RC                             ./G2   XYG3_Comp          energy
+273th    117-G2RC                             ./G2   XYG3_Comp          energy
+274th    118-G2RC                             ./G2   XYG3_Comp          energy
+275th     11-G2RC                             ./G2   XYG3_Comp          energy
+276th    121-G2RC                             ./G2   XYG3_Comp          energy
+277th    126-G2RC                             ./G2   XYG3_Comp          energy
+278th    128-G2RC                             ./G2   XYG3_Comp          energy
+279th     13-G2RC                             ./G2   XYG3_Comp          energy
+280th     14-G2RC                             ./G2   XYG3_Comp          energy
+281th     18-G2RC                             ./G2   XYG3_Comp          energy
+282th      1-G2RC                             ./G2   XYG3_Comp          energy
+283th     21-G2RC                             ./G2   XYG3_Comp          energy
+284th     22-G2RC                             ./G2   XYG3_Comp          energy
+285th     23-G2RC                             ./G2   XYG3_Comp          energy
+286th     24-G2RC                             ./G2   XYG3_Comp          energy
+287th     25-G2RC                             ./G2   XYG3_Comp          energy
+288th     26-G2RC                             ./G2   XYG3_Comp          energy
+289th     30-G2RC                             ./G2   XYG3_Comp          energy
+290th     32-G2RC                             ./G2   XYG3_Comp          energy
+291th     33-G2RC                             ./G2   XYG3_Comp          energy
+292th     34-G2RC                             ./G2   XYG3_Comp          energy
+293th     39-G2RC                             ./G2   XYG3_Comp          energy
+294th     40-G2RC                             ./G2   XYG3_Comp          energy
+295th     45-G2RC                             ./G2   XYG3_Comp          energy
+296th     47-G2RC                             ./G2   XYG3_Comp          energy
+297th     51-G2RC                             ./G2   XYG3_Comp          energy
+298th     52-G2RC                             ./G2   XYG3_Comp          energy
+299th     56-G2RC                             ./G2   XYG3_Comp          energy
+300th     57-G2RC                             ./G2   XYG3_Comp          energy
+301th     58-G2RC                             ./G2   XYG3_Comp          energy
+302th     59-G2RC                             ./G2   XYG3_Comp          energy
+303th     60-G2RC                             ./G2   XYG3_Comp          energy
+304th     61-G2RC                             ./G2   XYG3_Comp          energy
+305th     62-G2RC                             ./G2   XYG3_Comp          energy
+306th     66-G2RC                             ./G2   XYG3_Comp          energy
+307th     67-G2RC                             ./G2   XYG3_Comp          energy
+308th     68-G2RC                             ./G2   XYG3_Comp          energy
+309th      6-G2RC                             ./G2   XYG3_Comp          energy
+310th     73-G2RC                             ./G2   XYG3_Comp          energy
+311th     82-G2RC                             ./G2   XYG3_Comp          energy
+312th     88-G2RC                             ./G2   XYG3_Comp          energy
+313th      8-G2RC                             ./G2   XYG3_Comp          energy
+314th     94-G2RC                             ./G2   XYG3_Comp          energy
+315th     97-G2RC                             ./G2   XYG3_Comp          energy
+==----------------------------------------------------------------------------==
+=>Loaded ConfigIO.EngyList :
+==----------------------------------------------------------------------------==
+ Num. Ind. Sca. Ind. Sca. Ind. Sca. Ind. Sca. Ind. Sca.       Ref. Data  Weight
+--------------------------------------------------------------------------------
+    3   15 -1.0    1  1.0    0  1.0                          0.09240337    1.00
+    3   16 -1.0    2  1.0    0  1.0                          0.07954580    1.00
+    3   17 -1.0    4  1.0    0  1.0                          0.13385373    1.00
+    3   18 -1.0    4  1.0    0  2.0                          0.30337566    1.00
+    3   19 -1.0    4  1.0    0  2.0                          0.28830930    1.00
+    3   20 -1.0    4  1.0    0  3.0                          0.49011726    1.00
+    3   21 -1.0    4  1.0    0  4.0                          0.66962252    1.00
+    3   22 -1.0    5  1.0    0  1.0                          0.13319060    1.00
+    3   23 -1.0    5  1.0    0  2.0                          0.28959063    1.00
+    3   24 -1.0    5  1.0    0  3.0                          0.47478335    1.00
+    3   25 -1.0    6  1.0    0  1.0                          0.17004838    1.00
+    3   26 -1.0    6  1.0    0  2.0                          0.37095453    1.00
+    3   27 -1.0    7  1.0    0  1.0                          0.22537183    1.00
+    3   28 -1.0   11  1.0    0  2.0                          0.24208682    1.00
+    3   29 -1.0   11  1.0    0  2.0                          0.20900966    1.00
+    3   30 -1.0   11  1.0    0  3.0                          0.35990075    1.00
+    3   31 -1.0   11  1.0    0  4.0                          0.51376758    1.00
+    3   32 -1.0   12  1.0    0  2.0                          0.24371235    1.00
+    3   33 -1.0   12  1.0    0  3.0                          0.38552813    1.00
+    3   34 -1.0   13  1.0    0  2.0                          0.29160275    1.00
+    3   35 -1.0   14  1.0    0  1.0                          0.17085893    1.00
+    2   36 -1.0    1  2.0                                    0.03883527    1.00
+    3   37 -1.0    1  1.0    7  1.0                          0.21970754    1.00
+    3   38 -1.0    4  2.0    0  2.0                          0.64665991    1.00
+    3   39 -1.0    4  2.0    0  4.0                          0.89807527    1.00
+    3   40 -1.0    4  2.0    0  6.0                          1.13507720    1.00
+    3   41 -1.0    4  1.0    5  1.0                          0.28925941    1.00
+    4   42 -1.0    0  1.0    4  1.0    5  1.0                0.49840756    1.00
+    3   43 -1.0    4  1.0    6  1.0                          0.41371778    1.00
+    4   44 -1.0    0  1.0    4  1.0    6  1.0                0.44465464    1.00
+    4   45 -1.0    0  2.0    4  1.0    6  1.0                0.59601990    1.00
+    4   46 -1.0    0  4.0    4  1.0    6  1.0                0.81721300    1.00
+    2   47 -1.0    5  2.0                                    0.36414644    1.00
+    3   48 -1.0    5  2.0    0  4.0                          0.69852855    1.00
+    3   49 -1.0    5  1.0    6  1.0                          0.24374825    1.00
+    2   50 -1.0    6  2.0                                    0.19240246    1.00
+    3   51 -1.0    0  2.0    6  2.0                          0.42889491    1.00
+    2   52 -1.0    7  2.0                                    0.06229550    1.00
+    3   53 -1.0    4  1.0    6  2.0                          0.62102732    1.00
+    2   54 -1.0    8  2.0                                    0.02714276    1.00
+    2   55 -1.0   11  2.0                                    0.12042782    1.00
+    2   56 -1.0   12  2.0                                    0.18680322    1.00
+    2   57 -1.0   13  2.0                                    0.16368255    1.00
+    2   58 -1.0   14  2.0                                    0.09496976    1.00
+    3   59 -1.0    8  1.0   14  1.0                          0.15751075    1.00
+    3   60 -1.0   11  1.0    6  1.0                          0.30742934    1.00
+    3   61 -1.0   13  1.0    4  1.0                          0.27411482    1.00
+    3   62 -1.0   13  1.0    6  1.0                          0.20048705    1.00
+    3   63 -1.0   14  1.0    6  1.0                          0.10450933    1.00
+    3   64 -1.0    7  1.0   14  1.0                          0.09968412    1.00
+    3   65 -1.0   11  2.0    0  6.0                          0.84662798    1.00
+    4   66 -1.0    4  1.0    0  3.0   14  1.0                0.63009868    1.00
+    4   67 -1.0    0  4.0    4  1.0   13  1.0                0.75576994    1.00
+    4   68 -1.0    0  1.0    6  1.0   14  1.0                0.26362258    1.00
+    3   69 -1.0   13  1.0    6  2.0                          0.40977415    1.00
+    3   70 -1.0    7  3.0    3  1.0                          0.74694868    1.00
+    3   71 -1.0   14  3.0    3  1.0                          0.51017942    1.00
+    3   72 -1.0    7  3.0   10  1.0                          0.67753946    1.00
+    3   73 -1.0   14  3.0   10  1.0                          0.48365767    1.00
+    3   74 -1.0    7  4.0    4  1.0                          0.75572254    1.00
+    3   75 -1.0   14  4.0    4  1.0                          0.49244831    1.00
+    4   76 -1.0    4  1.0    6  1.0   13  1.0                0.52995016    1.00
+    3   77 -1.0    4  1.0   13  2.0                          0.44080292    1.00
+    4   78 -1.0    4  1.0    7  2.0    6  1.0                0.67220091    1.00
+    3   79 -1.0    7  4.0   11  1.0                          0.90971726    1.00
+    3   80 -1.0   14  4.0   11  1.0                          0.60482198    1.00
+    3   81 -1.0    5  2.0    6  1.0                          0.43060819    1.00
+    4   82 -1.0   14  1.0    5  1.0    6  1.0                0.30319860    1.00
+    3   83 -1.0    7  3.0    5  1.0                          0.32386570    1.00
+    3   84 -1.0    7  3.0   12  1.0                          0.57763820    1.00
+    2   85 -1.0    6  3.0                                    0.23267266    1.00
+    3   86 -1.0    7  2.0    6  1.0                          0.14627886    1.00
+    3   87 -1.0    7  3.0   14  1.0                          0.19614786    1.00
+    3   88 -1.0    7  4.0    4  2.0                          0.92736989    1.00
+    3   89 -1.0   14  4.0    4  2.0                          0.73777659    1.00
+    4   90 -1.0    7  3.0    4  2.0    5  1.0                1.01663576    1.00
+    3   91 -1.0    0  4.0    4  3.0                          1.12296063    1.00
+    3   92 -1.0    0  4.0    4  3.0                          1.12009989    1.00
+    3   93 -1.0    0  4.0    4  3.0                          1.08751170    1.00
+    3   94 -1.0    0  6.0    4  3.0                          1.37075983    1.00
+    3   95 -1.0    0  6.0    4  3.0                          1.35900783    1.00
+    3   96 -1.0    0  8.0    4  3.0                          1.60333895    1.00
+    3   97 -1.0    0  6.0    4  4.0                          1.61273955    1.00
+    3   98 -1.0    0  6.0    4  4.0                          1.59938800    1.00
+    3   99 -1.0    0  6.0    4  4.0                          1.57787558    1.00
+    3  100 -1.0    0  6.0    4  4.0                          1.57216644    1.00
+    3  101 -1.0    0  6.0    4  4.0                          1.59551550    1.00
+    3  102 -1.0    0  8.0    4  4.0                          1.82982714    1.00
+    3  103 -1.0    0  8.0    4  4.0                          1.84528080    1.00
+    3  104 -1.0    0 10.0    4  4.0                          2.07228855    1.00
+    3  105 -1.0    0 10.0    4  4.0                          2.07506255    1.00
+    3  106 -1.0    0  8.0    4  5.0                          2.04522760    1.00
+    3  107 -1.0    0  6.0    4  6.0                          2.17883457    1.00
+    4  108 -1.0    0  2.0    7  2.0    4  1.0                0.69382557    1.00
+    4  109 -1.0    0  1.0    7  3.0    4  1.0                0.72703017    1.00
+    4  110 -1.0    0  2.0   14  2.0    4  1.0                0.58647134    1.00
+    4  111 -1.0    0  1.0   14  3.0    4  1.0                0.54267582    1.00
+    4  112 -1.0    0  5.0    4  1.0    5  1.0                0.92752728    1.00
+    4  113 -1.0    0  3.0    4  2.0    5  1.0                0.98082788    1.00
+    5  114 -1.0    0  3.0    4  1.0    5  1.0    6  2.0      0.95668597    1.00
+    5  115 -1.0    0  3.0    4  1.0    5  1.0    6  2.0      0.95224012    1.00
+    4  116 -1.0    0  6.0    4  1.0   11  1.0                0.99878182    1.00
+    4  117 -1.0    0  2.0    4  1.0    6  2.0                0.79727935    1.00
+    4  118 -1.0    0  4.0    4  2.0    6  2.0                1.24926768    1.00
+    5  119 -1.0    0  5.0    4  2.0    5  1.0    6  1.0      1.38294487    1.00
+    4  120 -1.0    0  5.0    4  2.0    5  1.0                1.14678879    1.00
+    3  121 -1.0    5  2.0    4  2.0                          0.80017573    1.00
+    4  122 -1.0    0  7.0    4  2.0    5  1.0                1.38625285    1.00
+    4  123 -1.0    0  7.0    4  2.0    5  1.0                1.39759140    1.00
+    4  124 -1.0    0  2.0    4  2.0    6  1.0                0.84767645    1.00
+    4  125 -1.0    0  4.0    4  2.0    6  1.0                1.03590961    1.00
+    4  126 -1.0    0  4.0    4  2.0    6  1.0                1.07796296    1.00
+    4  127 -1.0    0  2.0    4  2.0    6  2.0                1.00831471    1.00
+    4  128 -1.0    0  6.0    4  2.0    6  1.0                1.29014835    1.00
+    4  129 -1.0    0  6.0    4  2.0    6  1.0                1.27038731    1.00
+    4  130 -1.0    0  4.0    4  2.0   13  1.0                0.99267223    1.00
+    5  131 -1.0    0  6.0    4  2.0   13  1.0    6  1.0      1.36095891    1.00
+    4  132 -1.0    0  6.0    4  2.0   13  1.0                1.22376667    1.00
+    4  133 -1.0    0  6.0    4  2.0   13  1.0                1.22123469    1.00
+    4  134 -1.0    0  3.0    4  2.0    7  1.0                0.91027531    1.00
+    4  135 -1.0    0  5.0    4  2.0   14  1.0                1.09974880    1.00
+    4  136 -1.0    0  3.0    4  2.0   14  1.0                0.85740225    1.00
+    4  137 -1.0    0  3.0    4  3.0    5  1.0                1.21691900    1.00
+    4  138 -1.0    0  6.0    4  3.0    6  1.0                1.55830048    1.00
+    4  139 -1.0    0  4.0    4  2.0    6  2.0                1.27840337    1.00
+    5  140 -1.0    0  3.0    4  2.0    6  1.0    7  1.0      1.12360527    1.00
+    5  141 -1.0    0  3.0    4  2.0    6  1.0   14  1.0      1.06167252    1.00
+    4  142 -1.0    0  7.0    4  3.0   14  1.0                1.56832046    1.00
+    4  143 -1.0    0  8.0    4  3.0    6  1.0                1.76486891    1.00
+    4  144 -1.0    0  8.0    4  3.0    6  1.0                1.74353938    1.00
+    4  145 -1.0    0  9.0    4  3.0    5  1.0                1.84838186    1.00
+    4  146 -1.0    0  4.0    4  4.0    6  1.0                1.58274796    1.00
+    4  147 -1.0    0  4.0    4  4.0   13  1.0                1.53284857    1.00
+    4  148 -1.0    0  5.0    4  4.0    5  1.0                1.70722514    1.00
+    4  149 -1.0    0  5.0    4  5.0    5  1.0                1.97171610    1.00
+    2  150 -1.0    0  2.0                                    0.17457832    1.00
+    3  151 -1.0    0  1.0   13  1.0                          0.13755977    1.00
+    3  152 -1.0    0  1.0    4  2.0                          0.42340140    1.00
+    3  153 -1.0    0  3.0    4  2.0                          0.70850615    1.00
+    4  154 -1.0    0  3.0    4  2.0    6  1.0                0.92585280    1.00
+    4  155 -1.0    0  3.0    4  1.0    6  1.0                0.65179374    1.00
+    4  156 -1.0    0  3.0    4  1.0    6  1.0                0.63743824    1.00
+    4  157 -1.0    0  5.0    4  2.0    6  1.0                1.11054006    1.00
+    4  158 -1.0    0  3.0    4  1.0   13  1.0                0.60601894    1.00
+    3  159 -1.0    0  5.0    4  2.0                          0.96116402    1.00
+    3  160 -1.0    0  7.0    4  3.0                          1.43397653    1.00
+    3  161 -1.0    0  9.0    4  4.0                          1.90955842    1.00
+    3  162 -1.0    5  1.0    6  2.0                          0.36159926    1.00
+    3  163 -1.0    0  6.0    4  4.0                          1.59205297    1.00
+    3  164 -1.0    0  8.0    4  5.0                          2.08673592    1.00
+    3  165 -1.0    0 10.0    4  5.0                          2.33204498    1.00
+    3  166 -1.0    0 12.0    4  5.0                          2.54149091    1.00
+    3  167 -1.0    0 12.0    4  5.0                          2.54863836    1.00
+    3  168 -1.0    0  8.0    4  6.0                          2.35336098    1.00
+    3  169 -1.0    0  8.0    4  6.0                          2.35386838    1.00
+    3  170 -1.0    0 12.0    4  6.0                          2.81109456    1.00
+    3  171 -1.0    0 14.0    4  6.0                          3.01012095    1.00
+    3  172 -1.0    0 14.0    4  6.0                          3.01159012    1.00
+    3  173 -1.0    0  8.0    4  7.0                          2.65153542    1.00
+    3  174 -1.0    0 16.0    4  7.0                          3.47918491    1.00
+    3  175 -1.0    0  8.0    4  8.0                          2.83349490    1.00
+    3  176 -1.0    0 18.0    4  8.0                          3.94812829    1.00
+    3  177 -1.0    0  8.0    4 10.0                          3.44440377    1.00
+    3  178 -1.0    0  8.0    4 10.0                          3.39028835    1.00
+    4  179 -1.0    0  6.0    4  3.0    6  2.0                1.73111684    1.00
+    4  180 -1.0    0 10.0    4  4.0    6  1.0                2.24002915    1.00
+    4  181 -1.0    0  7.0    4  6.0    5  1.0                2.45321599    1.00
+    4  182 -1.0    0  6.0    4  6.0    6  1.0                2.34409561    1.00
+    4  183 -1.0    0  6.0    4  4.0    6  1.0                1.75693771    1.00
+    4  184 -1.0    0  8.0    4  4.0    6  1.0                2.00952428    1.00
+    4  185 -1.0    0  8.0    4  5.0    6  1.0                2.28800836    1.00
+    4  186 -1.0    0  4.0    4  6.0    6  2.0                2.26630874    1.00
+    4  187 -1.0    0  4.0    4  4.0    5  2.0                1.76570905    1.00
+    5  188 -1.0    0  6.0    4  2.0    6  2.0   13  1.0      1.54362509    1.00
+    4  189 -1.0    0  5.0    4  6.0   14  1.0                2.14409885    1.00
+    4  190 -1.0    0  4.0    4  4.0    5  2.0                1.75905227    1.00
+    4  191 -1.0    0  4.0    4  4.0    5  2.0                1.76530161    1.00
+    4  192 -1.0    0  4.0    4  4.0    6  1.0                1.54201931    1.00
+    4  193 -1.0    0  6.0    4  4.0    6  1.0                1.79040441    1.00
+    4  194 -1.0    0  6.0    4  4.0    6  3.0                2.16492882    1.00
+    4  195 -1.0    0  6.0    4  4.0   13  1.0                1.72815283    1.00
+    4  196 -1.0    0  7.0    4  4.0    5  1.0                1.92257336    1.00
+    4  197 -1.0    0  8.0    4  4.0    6  1.0                2.02767063    1.00
+    4  198 -1.0    0  8.0    4  4.0    6  1.0                2.01890919    1.00
+    4  199 -1.0    0  8.0    4  4.0    6  2.0                2.15750503    1.00
+    4  200 -1.0    0  8.0    4  4.0   13  1.0                1.96007688    1.00
+    4  201 -1.0    0  9.0    4  4.0   14  1.0                2.04701055    1.00
+    4  202 -1.0    0  9.0    4  4.0   14  1.0                2.03818723    1.00
+    4  203 -1.0    0  9.0    4  4.0    5  1.0                2.11980158    1.00
+    5  204 -1.0    0  9.0    4  4.0    5  1.0    6  2.0      2.37335355    1.00
+    4  205 -1.0    0 10.0    4  4.0    6  1.0                2.21812928    1.00
+    4  206 -1.0    0 10.0    4  4.0    6  2.0                2.36795405    1.00
+    4  207 -1.0    0 10.0    4  4.0   13  1.0                2.16849056    1.00
+    4  208 -1.0    0 10.0    4  4.0   13  2.0                2.26338171    1.00
+    4  209 -1.0    0 11.0    4  4.0    5  1.0                2.34602949    1.00
+    4  210 -1.0    0 12.0    4  4.0   11  1.0                2.46140361    1.00
+    4  211 -1.0    0  6.0    4  5.0   13  1.0                2.00548689    1.00
+    4  212 -1.0    0  7.0    4  5.0    5  1.0                2.16982749    1.00
+    4  213 -1.0    0 10.0    4  5.0    6  1.0                2.48581633    1.00
+    4  214 -1.0    0 10.0    4  5.0    6  1.0                2.49595703    1.00
+    4  215 -1.0    0 10.0    4  5.0    6  2.0                2.67892842    1.00
+    4  216 -1.0    0 10.0    4  5.0   13  1.0                2.43220660    1.00
+    4  217 -1.0    0 11.0    4  5.0    5  1.0                2.59763095    1.00
+    4  218 -1.0    0 12.0    4  5.0    6  1.0                2.68976010    1.00
+    4  219 -1.0    0  4.0    4  6.0    7  2.0                2.20636400    1.00
+    4  220 -1.0    0  4.0    4  6.0    7  2.0                2.20534490    1.00
+    4  221 -1.0    0  5.0    4  6.0    7  1.0                2.19356444    1.00
+    4  222 -1.0    0 14.0    4  6.0    6  1.0                3.16441770    1.00
+    3  223 -1.0    7  5.0   12  1.0                          0.88358498    1.00
+    3  224 -1.0    7  6.0   13  1.0                          0.75582233    1.00
+    2  225 -1.0   12  4.0                                    0.46156839    1.00
+    3  226 -1.0    6  3.0   13  1.0                          0.54484235    1.00
+    3  227 -1.0   14  2.0   13  1.0                          0.20110480    1.00
+    4  228 -1.0   14  3.0   12  1.0    6  1.0                0.56689332    1.00
+    3  229 -1.0   14  5.0   12  1.0                          0.48488074    1.00
+    4  230 -1.0   14  2.0    6  2.0   13  1.0                0.52391177    1.00
+    3  231 -1.0   14  3.0   12  1.0                          0.36621229    1.00
+    3  232 -1.0   14  2.0   13  2.0                          0.30603388    1.00
+    3  233 -1.0   14  2.0   11  1.0                          0.32457634    1.00
+    4  234 -1.0    7  3.0   14  1.0    4  1.0                0.68421344    1.00
+    3  235 -1.0    7  6.0    4  2.0                          1.25171994    1.00
+    3  236 -1.0    7  3.0    4  1.0                          0.54527011    1.00
+    3  237 -1.0    0  5.0    4  6.0                          1.98722459    1.00
+    2  238 -1.0  241  2.0                                    0.05737000   30.00
+    2  239 -1.0  242  2.0                                    0.10230900   30.00
+    2  240 -1.0  243  2.0                                    0.04226200   30.00
+    3  244 -1.0  256  1.0  257  1.0                          0.16060302  100.00
+    3  245 -1.0  258  1.0  259  5.0                          0.89902950   10.00
+    3  246 -1.0  266  1.0  257  1.0                          0.14366305   10.00
+    4  247 -1.0  266  1.0  260  1.0  259  1.0                0.39454351   10.00
+    5  248 -1.0  262  1.0  268  4.0  260  4.0  263  1.0      1.96033529   10.00
+    3  249 -1.0  261  1.0  255  5.0                          0.23489666   10.00
+    3  250 -1.0  258  1.0  267  1.0                          0.17035585   10.00
+    3  251 -1.0  265  1.0  263  1.0                          0.09975937   10.00
+    3  252 -1.0  265  1.0  257  1.0                          0.13975873   10.00
+    3  253 -1.0  258  1.0  260  1.0                          0.24063362   10.00
+    3  254 -1.0  264  1.0  257  1.0                          0.14023681   10.00
+    3  274 -1.0  273  1.0  279  1.0                         -0.00152986  100.00
+    3  294 -1.0  282 -1.0  270  1.0                         -0.00323501  100.00
+    3  272 -1.0  289  1.0  313  1.0                         -0.00406368  100.00
+    3  298 -1.0  282 -1.0  281  2.0                         -0.00618317  100.00
+    4  289 -1.0  279 -1.0  294  1.0  282  1.0               -0.01117114  100.00
+    4  278 -1.0  279 -1.0  277  1.0  284  1.0               -0.01587226  100.00
+    3  269 -1.0  279 -1.0  271  1.0                         -0.03207917  100.00
+    3  287 -1.0  280 -1.0  276  1.0                         -0.04042963  100.00
+    3  293 -1.0  295 -1.0  297  2.0                         -0.04210291  100.00
+    4  301 -1.0  302 -1.0  300  1.0  303  1.0               -0.04278816  100.00
+    4  307 -1.0  304 -1.0  306  1.0  305  1.0               -0.04195949  100.00
+    3  290 -1.0  282 -1.0  291  1.0                         -0.04658093  100.00
+    3  287 -1.0  288 -1.0  312  1.0                         -0.05215853  100.00
+    4  296 -1.0  282 -3.0  281  1.0  279  1.0               -0.05403898  100.00
+    3  292 -1.0  282 -3.0  275  2.0                         -0.06194324  100.00
+    4  313 -1.0  295 -2.0  315  1.0  284  2.0               -0.07502669  100.00
+    3  287 -1.0  282 -1.0  288  1.0                         -0.07716212  100.00
+    4  299 -1.0  282 -3.0  283  1.0  279  2.0               -0.09636500  100.00
+    4  289 -1.0  282 -3.0  279  1.0  313  1.0               -0.10323341  100.00
+    4  310 -1.0  282 -1.0  293  1.0  279  1.0               -0.10951220  100.00
+    4  308 -1.0  282 -1.0  292  1.0  279  1.0               -0.12866727  100.00
+    3  288 -1.0  309 -1.0  311  1.0                         -0.17379803  100.00
+    3  282 -1.0  293 -1.0  280  2.0                         -0.21400456  100.00
+    2  287 -3.0  314  1.0                                   -0.24154197  100.00
+    3  285 -1.0  293 -1.0  286  2.0                         -0.33895874  100.00
+==----------------------------------------------------------------------------==
+=>No first-excitation PT2 data for training
+=>No second-excitation PT2 data for training
+=>No polar data for training
+=>No nmr data for training
+=>No geom data for training
+=>Optimization job is xyg3
+=>Initial Guess
+  7.00000000E-01  2.00000000E-01  7.00000000E-01  4.00000000E-01
+=>Optimization Algorithm employed is fmin_mad
+=>Function for optimizing
+  def opt_func(C,P):
+      '''\
+      The function for optimization, where C is the parameters
+      '''
+      a1, a3, a4, a5 = C
+      #a1 = 0.8
+      #a3 = 0.0
+      a2 = 1. - a1
+      #a5 = a4/2.0
+  
+      E_noXC, Ex_HF, Ex_PBE, Ec_PBE, rsspt2, rospt2, Ex_SCAN, Ec_SCAN = P
+      #return E_noXC + a1*Ex_HF + a2*Ex_SCAN + a3*Ec_SCAN + a4*rospt2 + a5*rsspt2
+      return E_noXC + a1*Ex_HF + a2*Ex_PBE + a3*Ec_PBE + a4*rospt2 + a5*rsspt2
+      #return E_noXC + a1*Ex_HF + a2*Ex_PBE + a3*Ec_PBE + a4*rospt2 + \
+      #           a5*(Ex_SCAN-Ex_PBE) + a6*(Ec_SCAN-Ec_PBE)
+  
+  def opt_func_constrained(C,P):
+      '''\
+      The constrained function for optimization, where C is the parameters
+      '''
+      con = 0.5
+      for a in C:
+          if a<0 or a>1:
+              con = -1
+              break
+      return con
+=>Testing parameters in this round
+  7.00000000E-01  2.00000000E-01  7.00000000E-01  4.00000000E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.05369394;        wAD =      -0.06433125
+=>       MAD =       0.05431997;       wMAD =       0.12108213
+=>       RMS =       0.06878185;       wRMS =       0.25035820
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.35000000E-01  2.00000000E-01  7.00000000E-01  4.00000000E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.05739206;        wAD =      -0.08509645
+=>       MAD =       0.05791054;       wMAD =       0.13173247
+=>       RMS =       0.07249348;       wRMS =       0.28656121
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.00000000E-01  2.10000000E-01  7.00000000E-01  4.00000000E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.05130655;        wAD =      -0.06279894
+=>       MAD =       0.05190705;       wMAD =       0.11671349
+=>       RMS =       0.06568388;       wRMS =       0.24343166
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.00000000E-01  2.00000000E-01  7.35000000E-01  4.00000000E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.04499717;        wAD =      -0.04510000
+=>       MAD =       0.04571451;       wMAD =       0.10554807
+=>       RMS =       0.05833011;       wRMS =       0.22919114
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.00000000E-01  2.00000000E-01  7.00000000E-01  4.20000000E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.05339179;        wAD =      -0.06330582
+=>       MAD =       0.05401148;       wMAD =       0.11937446
+=>       RMS =       0.06845644;       wRMS =       0.24420333
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  6.65000000E-01  2.05000000E-01  7.17500000E-01  4.10000000E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.04430266;        wAD =      -0.03267156
+=>       MAD =       0.04519181;       wMAD =       0.10425435
+=>       RMS =       0.05836872;       wRMS =       0.22338731
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  6.30000000E-01  2.07500000E-01  7.26250000E-01  4.15000000E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.03775796;        wAD =      -0.00645912
+=>       MAD =       0.03925482;       wMAD =       0.10391958
+=>       RMS =       0.05178859;       wRMS =       0.24221944
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  6.65000000E-01  2.08750000E-01  7.30625000E-01  4.17500000E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.04003279;        wAD =      -0.02450070
+=>       MAD =       0.04101340;       wMAD =       0.09849786
+=>       RMS =       0.05324710;       wRMS =       0.22027245
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  6.47500000E-01  2.13125000E-01  7.45937500E-01  4.26250000E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.03320222;        wAD =      -0.00458542
+=>       MAD =       0.03470936;       wMAD =       0.09603304
+=>       RMS =       0.04579268;       wRMS =       0.23502129
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  6.38750000E-01  2.15312500E-01  7.53593750E-01  4.00625000E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.03024017;        wAD =       0.00383408
+=>       MAD =       0.03216135;       wMAD =       0.09748118
+=>       RMS =       0.04260204;       wRMS =       0.25298608
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  6.08125000E-01  2.07968750E-01  7.80390625E-01  4.20937500E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.02179221;        wAD =       0.03664371
+=>       MAD =       0.02611087;       wMAD =       0.10809769
+=>       RMS =       0.03524683;       wRMS =       0.32642494
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  6.31093750E-01  2.08476563E-01  7.60292969E-01  4.15703125E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.02917080;        wAD =       0.01178305
+=>       MAD =       0.03157017;       wMAD =       0.10096338
+=>       RMS =       0.04200725;       wRMS =       0.26933927
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  5.73671875E-01  2.22207031E-01  7.58037109E-01  4.28789063E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.02018841;        wAD =       0.04738630
+=>       MAD =       0.02566960;       wMAD =       0.11472366
+=>       RMS =       0.03482759;       wRMS =       0.34926557
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  6.68417969E-01  2.05551758E-01  7.40759277E-01  4.07197266E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.03879498;        wAD =      -0.02197843
+=>       MAD =       0.03983943;       wMAD =       0.09852686
+=>       RMS =       0.05175217;       wRMS =       0.22558367
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  6.62880859E-01  2.13732910E-01  7.74041748E-01  4.09887695E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.02794612;        wAD =       0.00098575
+=>       MAD =       0.02966580;       wMAD =       0.09127455
+=>       RMS =       0.03919515;       wRMS =       0.24464109
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  6.79321289E-01  2.16849365E-01  7.97937622E-01  4.07331543E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.02304019;        wAD =       0.00470819
+=>       MAD =       0.02492785;       wMAD =       0.08541989
+=>       RMS =       0.03298567;       wRMS =       0.24864831
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  6.85900879E-01  2.16942749E-01  7.58821106E-01  4.04998779E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.03346798;        wAD =      -0.02079384
+=>       MAD =       0.03445959;       wMAD =       0.08986347
+=>       RMS =       0.04464404;       wRMS =       0.21807532
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  6.57318115E-01  2.25563049E-01  7.87385712E-01  4.12405396E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.02118030;        wAD =       0.01355993
+=>       MAD =       0.02371283;       wMAD =       0.08742849
+=>       RMS =       0.03154063;       wRMS =       0.26007277
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  6.96270142E-01  2.20927582E-01  7.91447220E-01  4.24867859E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.02520519;        wAD =      -0.00738965
+=>       MAD =       0.02645901;       wMAD =       0.08125989
+=>       RMS =       0.03469531;       wRMS =       0.22325689
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.25030212E-01  2.23735123E-01  8.10373955E-01  4.36989288E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.02268770;        wAD =      -0.01300151
+=>       MAD =       0.02372228;       wMAD =       0.07435825
+=>       RMS =       0.03081179;       wRMS =       0.21333302
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.26285248E-01  2.28420143E-01  8.31321697E-01  4.04612503E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.01698587;        wAD =      -0.00317820
+=>       MAD =       0.01842307;       wMAD =       0.07125864
+=>       RMS =       0.02417494;       wRMS =       0.23273264
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.65677872E-01  2.36067715E-01  8.74013796E-01  3.93793755E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00887769;        wAD =      -0.00247458
+=>       MAD =       0.01059688;       wMAD =       0.06154807
+=>       RMS =       0.01416198;       wRMS =       0.24138942
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.27772865E-01  2.34164877E-01  8.76034436E-01  4.20261211E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00442496;        wAD =       0.02218985
+=>       MAD =       0.00834906;       wMAD =       0.06831437
+=>       RMS =       0.01238374;       wRMS =       0.27685730
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.91583004E-01  2.29845490E-01  8.91794193E-01  4.16782503E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00833496;        wAD =      -0.00784896
+=>       MAD =       0.00985707;       wMAD =       0.05951570
+=>       RMS =       0.01312630;       wRMS =       0.23657034
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.58715448E-01  2.31986711E-01  9.43998433E-01  4.18971057E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00191229;        wAD =      -0.01855340
+=>       MAD =       0.00546685;       wMAD =       0.05794124
+=>       RMS =       0.00854589;       wRMS =       0.25003219
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.59276910E-01  2.46127847E-01  9.54272688E-01  4.27676113E-01
+==----------------------------------------------------------------------------==
+=>        AD =       0.00408888;        wAD =      -0.01062801
+=>       MAD =       0.00736843;       wMAD =       0.05915311
+=>       RMS =       0.01042583;       wRMS =       0.25494963
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.80691335E-01  2.50438452E-01  1.01378572E+00  3.93361779E-01
+==----------------------------------------------------------------------------==
+=>        AD =       0.01712466;        wAD =       0.00826844
+=>       MAD =       0.01864756;       wMAD =       0.07704544
+=>       RMS =       0.02465564;       wRMS =       0.30297664
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.63945493E-01  2.30410955E-01  8.61226897E-01  4.26082411E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.01273461;        wAD =      -0.00768403
+=>       MAD =       0.01401567;       wMAD =       0.06339254
+=>       RMS =       0.01830652;       wRMS =       0.22651223
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.96034996E-01  2.38131737E-01  9.40721471E-01  4.13000456E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00529290;        wAD =      -0.04185986
+=>       MAD =       0.00773569;       wMAD =       0.06718839
+=>       RMS =       0.01107733;       wRMS =       0.26267078
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.53969463E-01  2.37140022E-01  9.24549712E-01  4.14815645E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00507591;        wAD =      -0.02584743
+=>       MAD =       0.00682985;       wMAD =       0.06001850
+=>       RMS =       0.00981760;       wRMS =       0.24349758
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.04874354E-01  2.45250193E-01  9.87190418E-01  4.01545873E-01
+==----------------------------------------------------------------------------==
+=>        AD =       0.00684609;        wAD =      -0.02106769
+=>       MAD =       0.01094033;       wMAD =       0.06899716
+=>       RMS =       0.01473658;       wRMS =       0.27646936
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.99177708E-01  2.34120764E-01  8.92717777E-01  4.19948277E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00783943;        wAD =      -0.01102994
+=>       MAD =       0.00929193;       wMAD =       0.05851232
+=>       RMS =       0.01234001;       wRMS =       0.23294979
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.19891893E-01  2.38619958E-01  9.83755509E-01  4.46911791E-01
+==----------------------------------------------------------------------------==
+=>        AD =       0.00350831;        wAD =      -0.03055481
+=>       MAD =       0.00912945;       wMAD =       0.06891659
+=>       RMS =       0.01232347;       wRMS =       0.26753426
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.04231377E-01  2.36705775E-01  9.01449224E-01  4.07073264E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00578119;        wAD =      -0.00949464
+=>       MAD =       0.00748258;       wMAD =       0.05718102
+=>       RMS =       0.01044555;       wRMS =       0.23959313
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.06731258E-01  2.37330527E-01  9.21669349E-01  4.22018710E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00064611;        wAD =       0.00099444
+=>       MAD =       0.00435153;       wMAD =       0.05584940
+=>       RMS =       0.00797082;       wRMS =       0.25188092
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.83112156E-01  2.37425780E-01  9.20229168E-01  4.25620242E-01
+==----------------------------------------------------------------------------==
+=>        AD =       0.00156880;        wAD =       0.01441537
+=>       MAD =       0.00448159;       wMAD =       0.05950796
+=>       RMS =       0.00871739;       wRMS =       0.26922176
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.75150986E-01  2.23944042E-01  8.75644704E-01  4.06329541E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.01217839;        wAD =      -0.00841376
+=>       MAD =       0.01349547;       wMAD =       0.06418471
+=>       RMS =       0.01761820;       wRMS =       0.23601224
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.38245429E-01  2.40581896E-01  9.34615692E-01  4.22339470E-01
+==----------------------------------------------------------------------------==
+=>        AD =       0.00002206;        wAD =      -0.01007445
+=>       MAD =       0.00495462;       wMAD =       0.05519957
+=>       RMS =       0.00799075;       wRMS =       0.24764401
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.54784048E-01  2.39181690E-01  9.58148572E-01  4.15252973E-01
+==----------------------------------------------------------------------------==
+=>        AD =       0.00368067;        wAD =      -0.00753409
+=>       MAD =       0.00696820;       wMAD =       0.05846109
+=>       RMS =       0.01010462;       wRMS =       0.26053740
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.40882463E-01  2.37916459E-01  9.41790874E-01  4.16426799E-01
+==----------------------------------------------------------------------------==
+=>        AD =       0.00080064;        wAD =      -0.00840805
+=>       MAD =       0.00521617;       wMAD =       0.05591946
+=>       RMS =       0.00830316;       wRMS =       0.25288210
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.86329815E-01  2.44280618E-01  9.05764136E-01  4.14958064E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00089000;        wAD =       0.00506205
+=>       MAD =       0.00446514;       wMAD =       0.05664460
+=>       RMS =       0.00810678;       wRMS =       0.25231533
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.31863106E-01  2.43348974E-01  9.50470801E-01  4.30798258E-01
+==----------------------------------------------------------------------------==
+=>        AD =       0.00542449;        wAD =       0.00328163
+=>       MAD =       0.00751660;       wMAD =       0.05995610
+=>       RMS =       0.01083230;       wRMS =       0.26235180
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.11139309E-01  2.38366575E-01  9.13704618E-01  4.13004512E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00297977;        wAD =      -0.00630057
+=>       MAD =       0.00530671;       wMAD =       0.05534267
+=>       RMS =       0.00851385;       wRMS =       0.24438507
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.62169414E-01  2.32817111E-01  9.50126130E-01  4.21936681E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00051158;        wAD =      -0.01695637
+=>       MAD =       0.00557766;       wMAD =       0.05786948
+=>       RMS =       0.00851919;       wRMS =       0.25217679
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.05289715E-01  2.41414741E-01  9.16854635E-01  4.16702719E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00079540;        wAD =      -0.00044255
+=>       MAD =       0.00434977;       wMAD =       0.05543190
+=>       RMS =       0.00788622;       wRMS =       0.24948114
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.89820393E-01  2.40930411E-01  9.01631274E-01  4.20605906E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00300025;        wAD =       0.00049648
+=>       MAD =       0.00560795;       wMAD =       0.05650090
+=>       RMS =       0.00875351;       wRMS =       0.24475045
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.28116946E-01  2.38669947E-01  9.31750974E-01  4.17471576E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00014958;        wAD =      -0.00618192
+=>       MAD =       0.00467603;       wMAD =       0.05509652
+=>       RMS =       0.00793410;       wRMS =       0.25001078
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.34664441E-01  2.42186052E-01  9.26793610E-01  4.12740428E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00130524;        wAD =      -0.01249418
+=>       MAD =       0.00483216;       wMAD =       0.05533846
+=>       RMS =       0.00798005;       wRMS =       0.24564926
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.50793347E-01  2.38487494E-01  9.36577812E-01  4.16075275E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00141087;        wAD =      -0.01708301
+=>       MAD =       0.00527025;       wMAD =       0.05706752
+=>       RMS =       0.00828012;       wRMS =       0.24779244
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.16665623E-01  2.40682929E-01  9.21785429E-01  4.16545858E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00094927;        wAD =      -0.00460267
+=>       MAD =       0.00442264;       wMAD =       0.05467580
+=>       RMS =       0.00785056;       wRMS =       0.24753829
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.47706910E-01  2.42693837E-01  9.43768234E-01  4.21544154E-01
+==----------------------------------------------------------------------------==
+=>        AD =       0.00178876;        wAD =      -0.01037604
+=>       MAD =       0.00581822;       wMAD =       0.05665352
+=>       RMS =       0.00873335;       wRMS =       0.25157056
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.20281209E-01  2.39448391E-01  9.21220522E-01  4.15139423E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00178764;        wAD =      -0.00731944
+=>       MAD =       0.00467246;       wMAD =       0.05467516
+=>       RMS =       0.00801410;       wRMS =       0.24574992
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.16990162E-01  2.37505529E-01  9.27892698E-01  4.23007735E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00012697;        wAD =      -0.00159505
+=>       MAD =       0.00442304;       wMAD =       0.05538075
+=>       RMS =       0.00789534;       wRMS =       0.25113956
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.30245871E-01  2.41015922E-01  9.27068382E-01  4.15307255E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00101067;        wAD =      -0.00976940
+=>       MAD =       0.00468606;       wMAD =       0.05480444
+=>       RMS =       0.00790447;       wRMS =       0.24640022
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.09409396E-01  2.39326698E-01  9.16296962E-01  4.09892586E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00197064;        wAD =      -0.00386226
+=>       MAD =       0.00475093;       wMAD =       0.05524284
+=>       RMS =       0.00815974;       wRMS =       0.24791155
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.31036421E-01  2.40268097E-01  9.30036009E-01  4.19227749E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00047612;        wAD =      -0.00852140
+=>       MAD =       0.00470455;       wMAD =       0.05477925
+=>       RMS =       0.00788567;       wRMS =       0.24736064
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.20997617E-01  2.42037722E-01  9.18304198E-01  4.15638566E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00196227;        wAD =      -0.00892454
+=>       MAD =       0.00471866;       wMAD =       0.05440953
+=>       RMS =       0.00798328;       wRMS =       0.24334670
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.17437953E-01  2.43721610E-01  9.11580810E-01  4.14722061E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00286861;        wAD =      -0.01029585
+=>       MAD =       0.00512192;       wMAD =       0.05450469
+=>       RMS =       0.00825478;       wRMS =       0.24015337
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.14244564E-01  2.40202648E-01  9.18604697E-01  4.17968543E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00157697;        wAD =      -0.00491462
+=>       MAD =       0.00455942;       wMAD =       0.05466555
+=>       RMS =       0.00794592;       wRMS =       0.24584224
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.05058086E-01  2.40917748E-01  9.09921414E-01  4.13418446E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00266195;        wAD =      -0.00435923
+=>       MAD =       0.00512927;       wMAD =       0.05524792
+=>       RMS =       0.00836163;       wRMS =       0.24426835
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.24541837E-01  2.40430509E-01  9.25007361E-01  4.17775423E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00102258;        wAD =      -0.00748086
+=>       MAD =       0.00454496;       wMAD =       0.05456546
+=>       RMS =       0.00785903;       wRMS =       0.24637985
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.23366990E-01  2.40376706E-01  9.19782960E-01  4.16715119E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00222546;        wAD =      -0.00971706
+=>       MAD =       0.00483282;       wMAD =       0.05452655
+=>       RMS =       0.00809075;       wRMS =       0.24329220
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.21294294E-01  2.42075402E-01  9.19629085E-01  4.18909403E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00160600;        wAD =      -0.00819910
+=>       MAD =       0.00459379;       wMAD =       0.05428761
+=>       RMS =       0.00787664;       wRMS =       0.24351437
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.21800837E-01  2.43388908E-01  9.18833367E-01  4.20794393E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00151517;        wAD =      -0.00863893
+=>       MAD =       0.00456276;       wMAD =       0.05410214
+=>       RMS =       0.00781266;       wRMS =       0.24243203
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.31109077E-01  2.42914275E-01  9.22359245E-01  4.17493208E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00178577;        wAD =      -0.01246607
+=>       MAD =       0.00478575;       wMAD =       0.05485753
+=>       RMS =       0.00795640;       wRMS =       0.24272003
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.18460692E-01  2.40880555E-01  9.19543334E-01  4.17849709E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00162917;        wAD =      -0.00680248
+=>       MAD =       0.00458908;       wMAD =       0.05445547
+=>       RMS =       0.00792234;       wRMS =       0.24473568
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.17771231E-01  2.42911436E-01  9.13224569E-01  4.17723471E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00264346;        wAD =      -0.00956065
+=>       MAD =       0.00499073;       wMAD =       0.05435993
+=>       RMS =       0.00816340;       wRMS =       0.24051333
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.16148198E-01  2.44232604E-01  9.15169774E-01  4.19287950E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00164957;        wAD =      -0.00724624
+=>       MAD =       0.00455559;       wMAD =       0.05410515
+=>       RMS =       0.00782661;       wRMS =       0.24224284
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.19898249E-01  2.45404780E-01  9.13222620E-01  4.18872481E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00225607;        wAD =      -0.01038269
+=>       MAD =       0.00478609;       wMAD =       0.05406414
+=>       RMS =       0.00795399;       wRMS =       0.23966677
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.20617028E-01  2.47666893E-01  9.10062263E-01  4.19383867E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00256951;        wAD =      -0.01217280
+=>       MAD =       0.00491700;       wMAD =       0.05418635
+=>       RMS =       0.00800229;       wRMS =       0.23740634
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.16811641E-01  2.45931142E-01  9.11920967E-01  4.22700581E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00206987;        wAD =      -0.00898972
+=>       MAD =       0.00468181;       wMAD =       0.05382425
+=>       RMS =       0.00785495;       wRMS =       0.23902504
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.14718653E-01  2.47877851E-01  9.08729352E-01  4.26231589E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00212367;        wAD =      -0.00902231
+=>       MAD =       0.00466762;       wMAD =       0.05353586
+=>       RMS =       0.00779422;       wRMS =       0.23689543
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.18511738E-01  2.47540636E-01  9.14752987E-01  4.24869736E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00112879;        wAD =      -0.00808444
+=>       MAD =       0.00442091;       wMAD =       0.05363456
+=>       RMS =       0.00761698;       wRMS =       0.24009283
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.21316540E-01  2.47873483E-01  9.12599389E-01  4.26096149E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00186227;        wAD =      -0.01081795
+=>       MAD =       0.00462054;       wMAD =       0.05357899
+=>       RMS =       0.00773048;       wRMS =       0.23745308
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.15421753E-01  2.50959468E-01  9.05818807E-01  4.27240584E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00217023;        wAD =      -0.01051477
+=>       MAD =       0.00466050;       wMAD =       0.05320464
+=>       RMS =       0.00771923;       wRMS =       0.23463517
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.12232211E-01  2.54744748E-01  8.99311527E-01  4.30463680E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00249775;        wAD =      -0.01145268
+=>       MAD =       0.00476258;       wMAD =       0.05291540
+=>       RMS =       0.00771052;       wRMS =       0.23087548
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.13491322E-01  2.53613579E-01  9.04474007E-01  4.34958096E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00155018;        wAD =      -0.00930600
+=>       MAD =       0.00439469;       wMAD =       0.05277857
+=>       RMS =       0.00743568;       wRMS =       0.23298803
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.10287858E-01  2.57717979E-01  9.00099701E-01  4.43000904E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00119723;        wAD =      -0.00876765
+=>       MAD =       0.00422900;       wMAD =       0.05237519
+=>       RMS =       0.00721010;       wRMS =       0.22983847
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.10765893E-01  2.56566395E-01  8.95616997E-01  4.38026425E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271168;        wAD =      -0.01194586
+=>       MAD =       0.00484138;       wMAD =       0.05261991
+=>       RMS =       0.00769377;       wRMS =       0.22752913
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.02685767E-01  2.60580003E-01  8.89279399E-01  4.42765149E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00240289;        wAD =      -0.00977630
+=>       MAD =       0.00464767;       wMAD =       0.05226666
+=>       RMS =       0.00746148;       wRMS =       0.22515264
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.93370381E-01  2.66933263E-01  8.77619405E-01  4.51099650E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00267320;        wAD =      -0.00925548
+=>       MAD =       0.00478068;       wMAD =       0.05209528
+=>       RMS =       0.00740810;       wRMS =       0.21935822
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.98609519E-01  2.70103341E-01  8.77594463E-01  4.55063740E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00241626;        wAD =      -0.01168853
+=>       MAD =       0.00452881;       wMAD =       0.05172410
+=>       RMS =       0.00713789;       wRMS =       0.21739551
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.90554952E-01  2.81216086E-01  8.62027019E-01  4.69479816E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00256256;        wAD =      -0.01302163
+=>       MAD =       0.00448817;       wMAD =       0.05113893
+=>       RMS =       0.00685013;       wRMS =       0.20884146
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.90257331E-01  2.76472113E-01  8.68370034E-01  4.70339717E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00207458;        wAD =      -0.01004263
+=>       MAD =       0.00429953;       wMAD =       0.05140731
+=>       RMS =       0.00678973;       wRMS =       0.21204514
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.81469367E-01  2.84603325E-01  8.58441083E-01  4.78933618E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00154211;        wAD =      -0.00859784
+=>       MAD =       0.00399025;       wMAD =       0.05126761
+=>       RMS =       0.00641984;       wRMS =       0.20821275
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.67538157E-01  2.96894414E-01  8.33129069E-01  4.91925497E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00322899;        wAD =      -0.01169114
+=>       MAD =       0.00500228;       wMAD =       0.05147324
+=>       RMS =       0.00692620;       wRMS =       0.19637825
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.71539523E-01  3.02659706E-01  8.33364197E-01  5.04239674E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00203092;        wAD =      -0.01242114
+=>       MAD =       0.00405088;       wMAD =       0.05109110
+=>       RMS =       0.00600813;       wRMS =       0.19543325
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.60624093E-01  3.20522928E-01  8.11236593E-01  5.30809687E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00170977;        wAD =      -0.01400397
+=>       MAD =       0.00373049;       wMAD =       0.05158226
+=>       RMS =       0.00540177;       wRMS =       0.18781161
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.99372429E-01  2.75581200E-01  8.77972097E-01  4.69570916E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00087609;        wAD =      -0.01035048
+=>       MAD =       0.00392356;       wMAD =       0.05143777
+=>       RMS =       0.00652640;       wRMS =       0.21576682
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.91413861E-01  2.80909504E-01  8.66761340E-01  4.75159561E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00146431;        wAD =      -0.01068565
+=>       MAD =       0.00396108;       wMAD =       0.05111093
+=>       RMS =       0.00644930;       wRMS =       0.21062321
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.77231521E-01  2.98222198E-01  8.41926785E-01  4.93566617E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00172536;        wAD =      -0.01232050
+=>       MAD =       0.00389635;       wMAD =       0.05098872
+=>       RMS =       0.00602166;       wRMS =       0.19954263
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.70718616E-01  3.09097240E-01  8.28705161E-01  5.05180068E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00155075;        wAD =      -0.01345944
+=>       MAD =       0.00370644;       wMAD =       0.05103918
+=>       RMS =       0.00566642;       wRMS =       0.19462756
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.83900561E-01  2.96900422E-01  8.43598588E-01  4.92289217E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00234947;        wAD =      -0.01562662
+=>       MAD =       0.00417574;       wMAD =       0.05098826
+=>       RMS =       0.00625179;       wRMS =       0.19934005
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.85116158E-01  3.03048970E-01  8.36177341E-01  4.98967016E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00275315;        wAD =      -0.01914101
+=>       MAD =       0.00434038;       wMAD =       0.05164904
+=>       RMS =       0.00626953;       wRMS =       0.19661966
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.71487781E-01  3.08129829E-01  8.30798437E-01  5.13147719E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00122248;        wAD =      -0.01250532
+=>       MAD =       0.00356685;       wMAD =       0.05109967
+=>       RMS =       0.00556638;       wRMS =       0.19448186
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.60665832E-01  3.22046573E-01  8.08082664E-01  5.26462052E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00219980;        wAD =      -0.01575114
+=>       MAD =       0.00398436;       wMAD =       0.05153641
+=>       RMS =       0.00557560;       wRMS =       0.18722866
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.83726853E-01  2.91193771E-01  8.52091671E-01  4.87985184E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00164819;        wAD =      -0.01195202
+=>       MAD =       0.00391524;       wMAD =       0.05096208
+=>       RMS =       0.00617603;       wRMS =       0.20340212
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.86711448E-01  2.86358219E-01  8.54692184E-01  4.75892627E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00265449;        wAD =      -0.01365482
+=>       MAD =       0.00450273;       wMAD =       0.05106441
+=>       RMS =       0.00674137;       wRMS =       0.20518084
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.94245669E-01  2.83677599E-01  8.62790417E-01  4.70627148E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00215784;        wAD =      -0.01435584
+=>       MAD =       0.00422364;       wMAD =       0.05116864
+=>       RMS =       0.00660252;       wRMS =       0.20885908
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.77216059E-01  2.97914179E-01  8.40720752E-01  4.95836543E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00206265;        wAD =      -0.01290482
+=>       MAD =       0.00407068;       wMAD =       0.05097479
+=>       RMS =       0.00613511;       wRMS =       0.19845917
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.74326049E-01  3.05757066E-01  8.34476714E-01  5.08946153E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00123834;        wAD =      -0.01274716
+=>       MAD =       0.00359273;       wMAD =       0.05105750
+=>       RMS =       0.00563223;       wRMS =       0.19585606
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.77422399E-01  3.00907354E-01  8.39530582E-01  5.00682772E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00159238;        wAD =      -0.01297407
+=>       MAD =       0.00378831;       wMAD =       0.05097410
+=>       RMS =       0.00586781;       wRMS =       0.19786438
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.83901416E-01  2.95235665E-01  8.46044011E-01  4.94830240E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00210098;        wAD =      -0.01440826
+=>       MAD =       0.00406273;       wMAD =       0.05092226
+=>       RMS =       0.00617601;       wRMS =       0.19984134
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.87236363E-01  2.93742399E-01  8.48102624E-01  4.95462051E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00228878;        wAD =      -0.01545215
+=>       MAD =       0.00415665;       wMAD =       0.05098163
+=>       RMS =       0.00626887;       wRMS =       0.20009118
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.77232803E-01  2.95725064E-01  8.45594920E-01  4.97378153E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00135262;        wAD =      -0.01049297
+=>       MAD =       0.00376281;       wMAD =       0.05108230
+=>       RMS =       0.00597571;       wRMS =       0.20072183
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.82233621E-01  2.96606582E-01  8.44097671E-01  4.93561451E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00210026;        wAD =      -0.01434321
+=>       MAD =       0.00405903;       wMAD =       0.05092747
+=>       RMS =       0.00615778;       wRMS =       0.19952666
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.86426085E-01  2.94057507E-01  8.50161215E-01  4.92693280E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00165825;        wAD =      -0.01393397
+=>       MAD =       0.00386586;       wMAD =       0.05096294
+=>       RMS =       0.00606309;       wRMS =       0.20175653
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.90721589E-01  2.87639409E-01  8.56666703E-01  4.83852306E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00216146;        wAD =      -0.01434466
+=>       MAD =       0.00416370;       wMAD =       0.05101009
+=>       RMS =       0.00642702;       wRMS =       0.20462260
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.80747196E-01  2.97590368E-01  8.43814612E-01  4.96475155E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00173465;        wAD =      -0.01331672
+=>       MAD =       0.00387698;       wMAD =       0.05093153
+=>       RMS =       0.00599836;       wRMS =       0.19943172
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.78878458E-01  2.96255686E-01  8.42862767E-01  4.93732735E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00213378;        wAD =      -0.01307614
+=>       MAD =       0.00411721;       wMAD =       0.05095878
+=>       RMS =       0.00620496;       wRMS =       0.19926890
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.79153492E-01  3.01650379E-01  8.36317860E-01  5.01314606E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00238665;        wAD =      -0.01562014
+=>       MAD =       0.00416680;       wMAD =       0.05093611
+=>       RMS =       0.00612641;       wRMS =       0.19604539
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.84139405E-01  2.99285811E-01  8.42274310E-01  4.99357991E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00202748;        wAD =      -0.01576803
+=>       MAD =       0.00396640;       wMAD =       0.05096025
+=>       RMS =       0.00602313;       wRMS =       0.19824125
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.80193695E-01  2.97013217E-01  8.42715653E-01  4.95139049E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00210721;        wAD =      -0.01374911
+=>       MAD =       0.00407554;       wMAD =       0.05092562
+=>       RMS =       0.00615461;       wRMS =       0.19894720
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.84384472E-01  2.91572537E-01  8.52018114E-01  4.88688341E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00163490;        wAD =      -0.01228851
+=>       MAD =       0.00390032;       wMAD =       0.05095141
+=>       RMS =       0.00615366;       wRMS =       0.20319689
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.80461237E-01  2.99130919E-01  8.40242923E-01  4.98158040E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00219871;        wAD =      -0.01478723
+=>       MAD =       0.00408662;       wMAD =       0.05092501
+=>       RMS =       0.00611707;       wRMS =       0.19768785
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.82647788E-01  2.96402824E-01  8.42735517E-01  4.94369234E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00251893;        wAD =      -0.01532719
+=>       MAD =       0.00429331;       wMAD =       0.05096813
+=>       RMS =       0.00633555;       wRMS =       0.19860420
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.81222344E-01  2.97293482E-01  8.43544838E-01  4.95948675E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00193072;        wAD =      -0.01381934
+=>       MAD =       0.00397088;       wMAD =       0.05092487
+=>       RMS =       0.00607015;       wRMS =       0.19920319
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.80655724E-01  2.97730060E-01  8.42176042E-01  4.98476551E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00206855;        wAD =      -0.01403877
+=>       MAD =       0.00403788;       wMAD =       0.05091910
+=>       RMS =       0.00609850;       wRMS =       0.19829821
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.79866776E-01  2.98291799E-01  8.41215227E-01  5.00934102E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00205269;        wAD =      -0.01388655
+=>       MAD =       0.00402733;       wMAD =       0.05091495
+=>       RMS =       0.00606980;       wRMS =       0.19769832
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.82532192E-01  2.97962715E-01  8.42807847E-01  4.99796480E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00203434;        wAD =      -0.01470158
+=>       MAD =       0.00399742;       wMAD =       0.05091977
+=>       RMS =       0.00606048;       wRMS =       0.19826703
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.83300127E-01  2.95260912E-01  8.46563039E-01  4.97596708E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00186065;        wAD =      -0.01362063
+=>       MAD =       0.00394724;       wMAD =       0.05092059
+=>       RMS =       0.00607677;       wRMS =       0.19983196
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.83577911E-01  2.96082063E-01  8.44770224E-01  5.00630090E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00209361;        wAD =      -0.01448917
+=>       MAD =       0.00404522;       wMAD =       0.05091265
+=>       RMS =       0.00611950;       wRMS =       0.19859155
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.84755694E-01  2.95476354E-01  8.45382916E-01  5.02970797E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00217506;        wAD =      -0.01482409
+=>       MAD =       0.00408328;       wMAD =       0.05090742
+=>       RMS =       0.00614655;       wRMS =       0.19829500
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.81325979E-01  2.98260224E-01  8.41940503E-01  5.05818803E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00196040;        wAD =      -0.01410816
+=>       MAD =       0.00396223;       wMAD =       0.05090643
+=>       RMS =       0.00599856;       wRMS =       0.19722512
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.80038260E-01  2.99772503E-01  8.39888749E-01  5.11313085E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00189011;        wAD =      -0.01395811
+=>       MAD =       0.00391449;       wMAD =       0.05092285
+=>       RMS =       0.00591306;       wRMS =       0.19598802
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.80940194E-01  2.99734634E-01  8.39110208E-01  5.07163383E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00225059;        wAD =      -0.01513956
+=>       MAD =       0.00409535;       wMAD =       0.05091116
+=>       RMS =       0.00607057;       wRMS =       0.19599238
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.80912129E-01  2.97918791E-01  8.41016580E-01  5.08647063E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00218503;        wAD =      -0.01427760
+=>       MAD =       0.00408839;       wMAD =       0.05090517
+=>       RMS =       0.00608264;       wRMS =       0.19632304
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.80102098E-01  2.97896828E-01  8.40120947E-01  5.13072354E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00226038;        wAD =      -0.01406561
+=>       MAD =       0.00414438;       wMAD =       0.05093521
+=>       RMS =       0.00610010;       wRMS =       0.19537752
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.84100222E-01  2.97403203E-01  8.42509877E-01  5.11365921E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00223285;        wAD =      -0.01528816
+=>       MAD =       0.00408515;       wMAD =       0.05089638
+=>       RMS =       0.00607836;       wRMS =       0.19623165
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.86216945E-01  2.96958905E-01  8.43157202E-01  5.16581831E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00232293;        wAD =      -0.01598896
+=>       MAD =       0.00411498;       wMAD =       0.05089112
+=>       RMS =       0.00608732;       wRMS =       0.19555948
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.85665180E-01  2.94572503E-01  8.46638393E-01  5.09845864E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00207112;        wAD =      -0.01445985
+=>       MAD =       0.00402915;       wMAD =       0.05089080
+=>       RMS =       0.00608398;       wRMS =       0.19767948
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.88027673E-01  2.91991437E-01  8.50402485E-01  5.11187105E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00198138;        wAD =      -0.01411999
+=>       MAD =       0.00399876;       wMAD =       0.05088333
+=>       RMS =       0.00609523;       wRMS =       0.19856202
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.83485669E-01  2.97088324E-01  8.42875469E-01  5.18146604E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00204981;        wAD =      -0.01442326
+=>       MAD =       0.00399804;       wMAD =       0.05089801
+=>       RMS =       0.00597973;       wRMS =       0.19552929
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.87995230E-01  2.93718505E-01  8.46785365E-01  5.21462498E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00230917;        wAD =      -0.01529675
+=>       MAD =       0.00413592;       wMAD =       0.05086906
+=>       RMS =       0.00612408;       wRMS =       0.19570859
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.91329855E-01  2.91447645E-01  8.49207796E-01  5.29284346E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00248356;        wAD =      -0.01589104
+=>       MAD =       0.00423141;       wMAD =       0.05086119
+=>       RMS =       0.00619739;       wRMS =       0.19497984
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.93617942E-01  2.90824365E-01  8.51804895E-01  5.28952880E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00223381;        wAD =      -0.01593403
+=>       MAD =       0.00407972;       wMAD =       0.05086700
+=>       RMS =       0.00609160;       wRMS =       0.19595948
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.96110538E-01  2.88522852E-01  8.54410720E-01  5.24856477E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00246103;        wAD =      -0.01654375
+=>       MAD =       0.00422215;       wMAD =       0.05094495
+=>       RMS =       0.00625936;       wRMS =       0.19700862
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.86641886E-01  2.94946956E-01  8.45759282E-01  5.19824072E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00215261;        wAD =      -0.01495339
+=>       MAD =       0.00404926;       wMAD =       0.05087303
+=>       RMS =       0.00604463;       wRMS =       0.19586908
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.93591733E-01  2.87646296E-01  8.55430027E-01  5.28042371E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00210275;        wAD =      -0.01446026
+=>       MAD =       0.00405831;       wMAD =       0.05083867
+=>       RMS =       0.00612282;       wRMS =       0.19714672
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.97279127E-01  2.82989992E-01  8.61566439E-01  5.33772641E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00199266;        wAD =      -0.01369591
+=>       MAD =       0.00403315;       wMAD =       0.05081997
+=>       RMS =       0.00614834;       wRMS =       0.19806101
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  7.96406732E-01  2.88113042E-01  8.53766721E-01  5.44729864E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00244994;        wAD =      -0.01611720
+=>       MAD =       0.00419832;       wMAD =       0.05081944
+=>       RMS =       0.00615158;       wRMS =       0.19391680
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.00596261E-01  2.86173845E-01  8.55448840E-01  5.61501243E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00268423;        wAD =      -0.01711580
+=>       MAD =       0.00432152;       wMAD =       0.05084672
+=>       RMS =       0.00620378;       wRMS =       0.19181031
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.02674942E-01  2.81740566E-01  8.62413644E-01  5.48545793E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00242738;        wAD =      -0.01586571
+=>       MAD =       0.00421840;       wMAD =       0.05082114
+=>       RMS =       0.00624327;       wRMS =       0.19548666
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.00227386E-01  2.81321257E-01  8.61672405E-01  5.49213442E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00244297;        wAD =      -0.01485090
+=>       MAD =       0.00426102;       wMAD =       0.05080585
+=>       RMS =       0.00627297;       wRMS =       0.19520066
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.03532109E-01  2.76569703E-01  8.66606160E-01  5.59343722E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00254755;        wAD =      -0.01430933
+=>       MAD =       0.00436554;       wMAD =       0.05080976
+=>       RMS =       0.00637314;       wRMS =       0.19490057
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.06964239E-01  2.75634784E-01  8.70501809E-01  5.58846524E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00217291;        wAD =      -0.01437381
+=>       MAD =       0.00412466;       wMAD =       0.05076790
+=>       RMS =       0.00620967;       wRMS =       0.19636076
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.14781430E-01  2.67728353E-01  8.81148816E-01  5.73627613E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00201759;        wAD =      -0.01361520
+=>       MAD =       0.00408336;       wMAD =       0.05074152
+=>       RMS =       0.00623139;       wRMS =       0.19721647
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.01672396E-01  2.78335756E-01  8.66663547E-01  5.52125987E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00202421;        wAD =      -0.01327389
+=>       MAD =       0.00406521;       wMAD =       0.05080845
+=>       RMS =       0.00615417;       wRMS =       0.19667030
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.09264845E-01  2.74759212E-01  8.70059305E-01  5.76075812E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00247469;        wAD =      -0.01523268
+=>       MAD =       0.00427285;       wMAD =       0.05076911
+=>       RMS =       0.00625739;       wRMS =       0.19338262
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.16566297E-01  2.62959247E-01  8.86005315E-01  5.80791563E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00202978;        wAD =      -0.01236914
+=>       MAD =       0.00413852;       wMAD =       0.05073983
+=>       RMS =       0.00631744;       wRMS =       0.19772731
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.26646080E-01  2.50382350E-01  9.02124611E-01  5.98822412E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00181970;        wAD =      -0.01049511
+=>       MAD =       0.00411851;       wMAD =       0.05071386
+=>       RMS =       0.00643758;       wRMS =       0.20036568
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.23787475E-01  2.58759830E-01  8.90839022E-01  5.96743653E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00235327;        wAD =      -0.01382305
+=>       MAD =       0.00428979;       wMAD =       0.05069217
+=>       RMS =       0.00642202;       wRMS =       0.19598157
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.34845014E-01  2.48971867E-01  9.02926760E-01  6.19052486E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00251780;        wAD =      -0.01409762
+=>       MAD =       0.00440457;       wMAD =       0.05063654
+=>       RMS =       0.00656879;       wRMS =       0.19569868
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.42541298E-01  2.39599634E-01  9.16457341E-01  6.34575720E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00197192;        wAD =      -0.01186941
+=>       MAD =       0.00419737;       wMAD =       0.05066080
+=>       RMS =       0.00648386;       wRMS =       0.19831343
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.50142066E-01  2.28581890E-01  9.31269459E-01  6.36963304E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00168881;        wAD =      -0.00980599
+=>       MAD =       0.00419011;       wMAD =       0.05068495
+=>       RMS =       0.00665583;       wRMS =       0.20345172
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.62305798E-01  2.16039517E-01  9.45240270E-01  6.71079348E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00198153;        wAD =      -0.00951887
+=>       MAD =       0.00435236;       wMAD =       0.05061190
+=>       RMS =       0.00684710;       wRMS =       0.20235953
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.86067982E-01  1.90195099E-01  9.77285997E-01  7.19805215E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00196350;        wAD =      -0.00747071
+=>       MAD =       0.00450443;       wMAD =       0.05091136
+=>       RMS =       0.00720363;       wRMS =       0.20632007
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.68271008E-01  2.16214104E-01  9.45822304E-01  6.82013017E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00226033;        wAD =      -0.01215084
+=>       MAD =       0.00443056;       wMAD =       0.05055647
+=>       RMS =       0.00683097;       wRMS =       0.19922938
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.89083472E-01  1.99129980E-01  9.67671150E-01  7.23608319E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00248064;        wAD =      -0.01297870
+=>       MAD =       0.00460871;       wMAD =       0.05055873
+=>       RMS =       0.00706006;       wRMS =       0.19886761
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.53839493E-01  2.31830671E-01  9.23953878E-01  6.66396982E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00267697;        wAD =      -0.01401238
+=>       MAD =       0.00454549;       wMAD =       0.05058746
+=>       RMS =       0.00674581;       wRMS =       0.19438307
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.67089358E-01  2.16928445E-01  9.42514265E-01  6.84695196E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00274639;        wAD =      -0.01302044
+=>       MAD =       0.00467340;       wMAD =       0.05053604
+=>       RMS =       0.00701169;       wRMS =       0.19708877
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.79363388E-01  2.05592851E-01  9.55542726E-01  7.09754933E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00313362;        wAD =      -0.01359596
+=>       MAD =       0.00495325;       wMAD =       0.05054603
+=>       RMS =       0.00731645;       wRMS =       0.19654263
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90907816E-01  1.91534502E-01  9.75838598E-01  7.33039785E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00231481;        wAD =      -0.01025364
+=>       MAD =       0.00460341;       wMAD =       0.05060460
+=>       RMS =       0.00716335;       wRMS =       0.20155048
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.77748039E-01  2.12214344E-01  9.48824252E-01  7.11993141E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00301772;        wAD =      -0.01519978
+=>       MAD =       0.00479517;       wMAD =       0.05066904
+=>       RMS =       0.00707237;       wRMS =       0.19398106
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.66166359E-01  2.15083224E-01  9.46136266E-01  6.81307796E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00224058;        wAD =      -0.01093910
+=>       MAD =       0.00444573;       wMAD =       0.05056935
+=>       RMS =       0.00687876;       wRMS =       0.20004961
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.36775294E-01  2.48493720E-01  9.03374758E-01  6.24166710E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00264732;        wAD =      -0.01480774
+=>       MAD =       0.00446174;       wMAD =       0.05063845
+=>       RMS =       0.00660264;       wRMS =       0.19480829
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.77374685E-01  2.05774306E-01  9.57722638E-01  7.05821516E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00239794;        wAD =      -0.01139216
+=>       MAD =       0.00455332;       wMAD =       0.05053477
+=>       RMS =       0.00700546;       wRMS =       0.19943675
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.85611212E-01  1.95169368E-01  9.72143858E-01  7.10521781E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00214565;        wAD =      -0.00973889
+=>       MAD =       0.00453485;       wMAD =       0.05064428
+=>       RMS =       0.00714495;       wRMS =       0.20425628
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.61782423E-01  2.22665345E-01  9.36001373E-01  6.77428181E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00254414;        wAD =      -0.01294401
+=>       MAD =       0.00452917;       wMAD =       0.05056160
+=>       RMS =       0.00683125;       wRMS =       0.19654830
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.71092379E-01  2.15707877E-01  9.44894024E-01  6.93671159E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00273382;        wAD =      -0.01381463
+=>       MAD =       0.00464345;       wMAD =       0.05054473
+=>       RMS =       0.00696706;       wRMS =       0.19617793
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.80131292E-01  2.04647021E-01  9.59475242E-01  7.05672262E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00252510;        wAD =      -0.01224503
+=>       MAD =       0.00461131;       wMAD =       0.05050115
+=>       RMS =       0.00706822;       wRMS =       0.19941323
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.89305727E-01  1.95637858E-01  9.71212177E-01  7.19794303E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00251558;        wAD =      -0.01189554
+=>       MAD =       0.00466031;       wMAD =       0.05047886
+=>       RMS =       0.00719169;       wRMS =       0.20096573
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.84160066E-01  2.00810140E-01  9.62349248E-01  7.19978070E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00293654;        wAD =      -0.01291055
+=>       MAD =       0.00484991;       wMAD =       0.05049508
+=>       RMS =       0.00726874;       wRMS =       0.19748370
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.87872540E-01  1.93867498E-01  9.72005140E-01  7.21473384E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00256440;        wAD =      -0.01079472
+=>       MAD =       0.00471459;       wMAD =       0.05053852
+=>       RMS =       0.00727013;       wRMS =       0.20156702
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.83677499E-01  1.99327593E-01  9.65227361E-01  7.14522827E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00260676;        wAD =      -0.01154970
+=>       MAD =       0.00469533;       wMAD =       0.05050557
+=>       RMS =       0.00719058;       wRMS =       0.20009363
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  9.00169630E-01  1.83846503E-01  9.85741447E-01  7.45363162E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00248202;        wAD =      -0.01085354
+=>       MAD =       0.00471848;       wMAD =       0.05056431
+=>       RMS =       0.00732458;       wRMS =       0.20218943
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.75359426E-01  2.08657960E-01  9.53321060E-01  6.99862187E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00268030;        wAD =      -0.01247872
+=>       MAD =       0.00467712;       wMAD =       0.05051357
+=>       RMS =       0.00708352;       wRMS =       0.19824278
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.88876674E-01  1.96442469E-01  9.68332285E-01  7.21257178E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00297165;        wAD =      -0.01302509
+=>       MAD =       0.00488964;       wMAD =       0.05049904
+=>       RMS =       0.00736862;       wRMS =       0.19894289
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.97650557E-01  1.87451070E-01  9.80239475E-01  7.37914001E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00283496;        wAD =      -0.01221173
+=>       MAD =       0.00485941;       wMAD =       0.05048156
+=>       RMS =       0.00742115;       wRMS =       0.20053973
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.96319013E-01  1.90843175E-01  9.75839232E-01  7.34948948E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00302261;        wAD =      -0.01347176
+=>       MAD =       0.00493097;       wMAD =       0.05053639
+=>       RMS =       0.00743551;       wRMS =       0.19887440
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.86837878E-01  1.97206488E-01  9.67880329E-01  7.19629358E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271072;        wAD =      -0.01203021
+=>       MAD =       0.00475069;       wMAD =       0.05048037
+=>       RMS =       0.00724853;       wRMS =       0.19977297
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90100440E-01  1.94110309E-01  9.72508329E-01  7.27400688E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00252725;        wAD =      -0.01149893
+=>       MAD =       0.00467405;       wMAD =       0.05051866
+=>       RMS =       0.00719951;       wRMS =       0.20044211
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.89182616E-01  1.95859429E-01  9.69376296E-01  7.22793055E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00286055;        wAD =      -0.01264355
+=>       MAD =       0.00483054;       wMAD =       0.05048031
+=>       RMS =       0.00732285;       wRMS =       0.19930319
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.97328322E-01  1.87267283E-01  9.82004890E-01  7.30087288E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00252437;        wAD =      -0.01147996
+=>       MAD =       0.00472311;       wMAD =       0.05049996
+=>       RMS =       0.00733370;       wRMS =       0.20291302
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.87452130E-01  1.97424425E-01  9.67263159E-01  7.22505375E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00283350;        wAD =      -0.01255291
+=>       MAD =       0.00480753;       wMAD =       0.05047577
+=>       RMS =       0.00727963;       wRMS =       0.19879631
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.78738618E-01  2.05613031E-01  9.57626505E-01  7.04447044E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00262521;        wAD =      -0.01234938
+=>       MAD =       0.00465922;       wMAD =       0.05050073
+=>       RMS =       0.00709935;       wRMS =       0.19892054
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.92922572E-01  1.91991560E-01  9.74586233E-01  7.29547262E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00278253;        wAD =      -0.01224614
+=>       MAD =       0.00480832;       wMAD =       0.05047218
+=>       RMS =       0.00733953;       wRMS =       0.20011631
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.92593645E-01  1.93250148E-01  9.73338604E-01  7.27690640E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00278536;        wAD =      -0.01263885
+=>       MAD =       0.00479733;       wMAD =       0.05047848
+=>       RMS =       0.00731508;       wRMS =       0.19981299
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.91954421E-01  1.93292567E-01  9.73823790E-01  7.26975734E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00259793;        wAD =      -0.01202317
+=>       MAD =       0.00470716;       wMAD =       0.05047675
+=>       RMS =       0.00724028;       wRMS =       0.20054109
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.93155658E-01  1.92341492E-01  9.73293715E-01  7.33565203E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00298407;        wAD =      -0.01283499
+=>       MAD =       0.00491338;       wMAD =       0.05049913
+=>       RMS =       0.00740393;       wRMS =       0.19867170
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90268210E-01  1.94813767E-01  9.71732561E-01  7.23237028E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00263270;        wAD =      -0.01213040
+=>       MAD =       0.00471633;       wMAD =       0.05046615
+=>       RMS =       0.00724082;       wRMS =       0.20038750
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.88705022E-01  1.95511012E-01  9.70364268E-01  7.23442060E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00263797;        wAD =      -0.01183746
+=>       MAD =       0.00472062;       wMAD =       0.05049183
+=>       RMS =       0.00723399;       wRMS =       0.20010837
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.91621489E-01  1.93815364E-01  9.72595020E-01  7.26628495E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00274851;        wAD =      -0.01243850
+=>       MAD =       0.00477698;       wMAD =       0.05047091
+=>       RMS =       0.00729434;       wRMS =       0.19988373
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.89177779E-01  1.95729991E-01  9.69264696E-01  7.23983345E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00290069;        wAD =      -0.01266081
+=>       MAD =       0.00485477;       wMAD =       0.05048106
+=>       RMS =       0.00734027;       wRMS =       0.19905297
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.91260261E-01  1.93901923E-01  9.72684016E-01  7.26227637E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00267362;        wAD =      -0.01218258
+=>       MAD =       0.00474034;       wMAD =       0.05046917
+=>       RMS =       0.00726347;       wRMS =       0.20016591
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.95584136E-01  1.89836881E-01  9.78535756E-01  7.30314836E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00258518;        wAD =      -0.01194591
+=>       MAD =       0.00472507;       wMAD =       0.05047809
+=>       RMS =       0.00729388;       wRMS =       0.20150600
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.89485132E-01  1.95527539E-01  9.70081308E-01  7.24457740E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00277142;        wAD =      -0.01240116
+=>       MAD =       0.00478218;       wMAD =       0.05046881
+=>       RMS =       0.00728129;       wRMS =       0.19946363
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.88394973E-01  1.97037736E-01  9.68960220E-01  7.20728188E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00263060;        wAD =      -0.01233018
+=>       MAD =       0.00469988;       wMAD =       0.05047354
+=>       RMS =       0.00720076;       wRMS =       0.19983713
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.91790673E-01  1.93253104E-01  9.73179729E-01  7.27342493E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00274454;        wAD =      -0.01226715
+=>       MAD =       0.00478048;       wMAD =       0.05046956
+=>       RMS =       0.00730446;       wRMS =       0.20004474
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.89780648E-01  1.94932803E-01  9.71243788E-01  7.24003954E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00266263;        wAD =      -0.01205214
+=>       MAD =       0.00473254;       wMAD =       0.05047560
+=>       RMS =       0.00725037;       wRMS =       0.20014736
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.91161279E-01  1.94094723E-01  9.72257212E-01  7.25972360E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00272704;        wAD =      -0.01234191
+=>       MAD =       0.00476557;       wMAD =       0.05046861
+=>       RMS =       0.00728321;       wRMS =       0.19994897
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.89296768E-01  1.95915872E-01  9.70197819E-01  7.22604889E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00265785;        wAD =      -0.01226088
+=>       MAD =       0.00472096;       wMAD =       0.05046869
+=>       RMS =       0.00722963;       wRMS =       0.19993785
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.88845433E-01  1.96274028E-01  9.69450434E-01  7.21908371E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00272088;        wAD =      -0.01238460
+=>       MAD =       0.00475143;       wMAD =       0.05047086
+=>       RMS =       0.00725356;       wRMS =       0.19970383
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90656554E-01  1.94494949E-01  9.71875621E-01  7.25147820E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00268544;        wAD =      -0.01223308
+=>       MAD =       0.00474303;       wMAD =       0.05046787
+=>       RMS =       0.00726092;       wRMS =       0.20004964
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.91206274E-01  1.94132116E-01  9.72950299E-01  7.24023308E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00258010;        wAD =      -0.01208198
+=>       MAD =       0.00469471;       wMAD =       0.05046912
+=>       RMS =       0.00722791;       wRMS =       0.20070124
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.89915417E-01  1.95178684E-01  9.70798556E-01  7.24349132E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00272359;        wAD =      -0.01232136
+=>       MAD =       0.00475852;       wMAD =       0.05046709
+=>       RMS =       0.00726714;       wRMS =       0.19977171
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.91703962E-01  1.93375189E-01  9.73134155E-01  7.26748281E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00272654;        wAD =      -0.01225251
+=>       MAD =       0.00477065;       wMAD =       0.05046872
+=>       RMS =       0.00729631;       wRMS =       0.20014154
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.89898566E-01  1.95280701E-01  9.70931903E-01  7.23640737E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00267502;        wAD =      -0.01225878
+=>       MAD =       0.00473337;       wMAD =       0.05046760
+=>       RMS =       0.00724623;       wRMS =       0.19998837
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.89208095E-01  1.95789327E-01  9.70412109E-01  7.22214999E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00263133;        wAD =      -0.01212990
+=>       MAD =       0.00471049;       wMAD =       0.05047087
+=>       RMS =       0.00722449;       wRMS =       0.20014946
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90672983E-01  1.94518374E-01  9.71795936E-01  7.25033019E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00270311;        wAD =      -0.01228891
+=>       MAD =       0.00475165;       wMAD =       0.05046761
+=>       RMS =       0.00726839;       wRMS =       0.19999894
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.89721034E-01  1.95400814E-01  9.70753858E-01  7.22982137E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00268178;        wAD =      -0.01226665
+=>       MAD =       0.00473678;       wMAD =       0.05046806
+=>       RMS =       0.00725013;       wRMS =       0.20002325
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90422674E-01  1.94721415E-01  9.71595180E-01  7.24606400E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00268452;        wAD =      -0.01224147
+=>       MAD =       0.00474146;       wMAD =       0.05046721
+=>       RMS =       0.00725822;       wRMS =       0.20004297
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.89579451E-01  1.95478909E-01  9.70733164E-01  7.22883629E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00265480;        wAD =      -0.01218710
+=>       MAD =       0.00472322;       wMAD =       0.05046788
+=>       RMS =       0.00723768;       wRMS =       0.20009589
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90399600E-01  1.94758508E-01  9.71530243E-01  7.24495672E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00269104;        wAD =      -0.01226346
+=>       MAD =       0.00474450;       wMAD =       0.05046703
+=>       RMS =       0.00726067;       wRMS =       0.20002314
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90604384E-01  1.94455485E-01  9.71896367E-01  7.24703379E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00269090;        wAD =      -0.01221957
+=>       MAD =       0.00474690;       wMAD =       0.05046682
+=>       RMS =       0.00726698;       wRMS =       0.20012401
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90171131E-01  1.94881806E-01  9.71383684E-01  7.23786205E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00268459;        wAD =      -0.01222592
+=>       MAD =       0.00474151;       wMAD =       0.05046611
+=>       RMS =       0.00725936;       wRMS =       0.20010970
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90045360E-01  1.94962002E-01  9.71277935E-01  7.23376108E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00268463;        wAD =      -0.01221815
+=>       MAD =       0.00474155;       wMAD =       0.05046606
+=>       RMS =       0.00725993;       wRMS =       0.20014312
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90743359E-01  1.94316197E-01  9.72419998E-01  7.23556961E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00262605;        wAD =      -0.01209442
+=>       MAD =       0.00471636;       wMAD =       0.05046552
+=>       RMS =       0.00724751;       wRMS =       0.20056880
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.91157330E-01  1.93884954E-01  9.73230719E-01  7.23160876E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00257728;        wAD =      -0.01198096
+=>       MAD =       0.00469722;       wMAD =       0.05046760
+=>       RMS =       0.00723855;       wRMS =       0.20097007
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90431056E-01  1.94515218E-01  9.72133187E-01  7.22941066E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00262611;        wAD =      -0.01206781
+=>       MAD =       0.00471614;       wMAD =       0.05046551
+=>       RMS =       0.00724699;       wRMS =       0.20058929
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90446785E-01  1.94393572E-01  9.72434660E-01  7.22163763E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00259365;        wAD =      -0.01196999
+=>       MAD =       0.00470290;       wMAD =       0.05046744
+=>       RMS =       0.00724051;       wRMS =       0.20087397
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90139609E-01  1.94848106E-01  9.71885474E-01  7.21852203E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00259384;        wAD =      -0.01203583
+=>       MAD =       0.00469922;       wMAD =       0.05046815
+=>       RMS =       0.00723100;       wRMS =       0.20072074
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90488190E-01  1.94553641E-01  9.71893644E-01  7.23990585E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00266664;        wAD =      -0.01217363
+=>       MAD =       0.00473472;       wMAD =       0.05046598
+=>       RMS =       0.00725780;       wRMS =       0.20027289
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90585773E-01  1.94359762E-01  9.72129821E-01  7.23695332E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00266901;        wAD =      -0.01214660
+=>       MAD =       0.00473803;       wMAD =       0.05046504
+=>       RMS =       0.00726520;       wRMS =       0.20039918
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90744555E-01  1.94132760E-01  9.72328450E-01  7.23924485E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00268717;        wAD =      -0.01215470
+=>       MAD =       0.00474891;       wMAD =       0.05046483
+=>       RMS =       0.00727747;       wRMS =       0.20040512
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.91158221E-01  1.93796906E-01  9.73109704E-01  7.23830440E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00261835;        wAD =      -0.01202714
+=>       MAD =       0.00471671;       wMAD =       0.05046557
+=>       RMS =       0.00725510;       wRMS =       0.20077613
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.91050406E-01  1.93826900E-01  9.73102026E-01  7.23135891E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00261220;        wAD =      -0.01199841
+=>       MAD =       0.00471457;       wMAD =       0.05046450
+=>       RMS =       0.00725578;       wRMS =       0.20089790
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.91331514E-01  1.93463530E-01  9.73706217E-01  7.22708545E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00258498;        wAD =      -0.01191079
+=>       MAD =       0.00470537;       wMAD =       0.05046538
+=>       RMS =       0.00725507;       wRMS =       0.20121241
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90326468E-01  1.94598632E-01  9.71882126E-01  7.22948761E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00265741;        wAD =      -0.01213053
+=>       MAD =       0.00473126;       wMAD =       0.05046493
+=>       RMS =       0.00725869;       wRMS =       0.20045442
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90532883E-01  1.94220557E-01  9.72302897E-01  7.22918141E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00266539;        wAD =      -0.01208130
+=>       MAD =       0.00473883;       wMAD =       0.05046321
+=>       RMS =       0.00727186;       wRMS =       0.20060427
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90427645E-01  1.94172737E-01  9.72244347E-01  7.22598731E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00268506;        wAD =      -0.01207474
+=>       MAD =       0.00475007;       wMAD =       0.05046206
+=>       RMS =       0.00728415;       wRMS =       0.20062223
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90843480E-01  1.93850297E-01  9.72645287E-01  7.23362868E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00269481;        wAD =      -0.01211138
+=>       MAD =       0.00475616;       wMAD =       0.05046310
+=>       RMS =       0.00729106;       wRMS =       0.20060023
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.91206575E-01  1.93392715E-01  9.73277929E-01  7.23562226E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00268221;        wAD =      -0.01203908
+=>       MAD =       0.00475339;       wMAD =       0.05046287
+=>       RMS =       0.00729533;       wRMS =       0.20080894
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.91019498E-01  1.93488565E-01  9.73306345E-01  7.22405373E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00264997;        wAD =      -0.01195710
+=>       MAD =       0.00473798;       wMAD =       0.05046120
+=>       RMS =       0.00728558;       wRMS =       0.20106112
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.91156970E-01  1.93166467E-01  9.73795292E-01  7.21645817E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00263138;        wAD =      -0.01185830
+=>       MAD =       0.00473252;       wMAD =       0.05045939
+=>       RMS =       0.00728980;       wRMS =       0.20139183
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90766929E-01  1.93464208E-01  9.72879402E-01  7.22448930E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00273453;        wAD =      -0.01204334
+=>       MAD =       0.00478231;       wMAD =       0.05046007
+=>       RMS =       0.00732495;       wRMS =       0.20081270
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90935580E-01  1.93247767E-01  9.73453198E-01  7.21764984E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00267178;        wAD =      -0.01189635
+=>       MAD =       0.00475279;       wMAD =       0.05045890
+=>       RMS =       0.00730583;       wRMS =       0.20121830
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90981629E-01  1.92946502E-01  9.73857153E-01  7.20966042E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00266027;        wAD =      -0.01178884
+=>       MAD =       0.00475125;       wMAD =       0.05045823
+=>       RMS =       0.00731331;       wRMS =       0.20153025
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90460011E-01  1.93482242E-01  9.73110168E-01  7.20267534E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00267341;        wAD =      -0.01184353
+=>       MAD =       0.00475447;       wMAD =       0.05045668
+=>       RMS =       0.00731048;       wRMS =       0.20136899
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90086729E-01  1.93527005E-01  9.73026288E-01  7.18620188E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00266901;        wAD =      -0.01174576
+=>       MAD =       0.00475520;       wMAD =       0.05045611
+=>       RMS =       0.00731813;       wRMS =       0.20165181
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.91068484E-01  1.92379354E-01  9.74534720E-01  7.19241758E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00266253;        wAD =      -0.01164338
+=>       MAD =       0.00476039;       wMAD =       0.05046323
+=>       RMS =       0.00733882;       wRMS =       0.20208015
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90587855E-01  1.93724391E-01  9.72816940E-01  7.21759487E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00267943;        wAD =      -0.01196690
+=>       MAD =       0.00475260;       wMAD =       0.05045960
+=>       RMS =       0.00729774;       wRMS =       0.20098264
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90639662E-01  1.93217974E-01  9.73868435E-01  7.19046837E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00258551;        wAD =      -0.01163656
+=>       MAD =       0.00471486;       wMAD =       0.05046169
+=>       RMS =       0.00728562;       wRMS =       0.20196799
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90735113E-01  1.93402650E-01  9.73126660E-01  7.21598407E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00269728;        wAD =      -0.01194165
+=>       MAD =       0.00476485;       wMAD =       0.05045840
+=>       RMS =       0.00731467;       wRMS =       0.20110005
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90892366E-01  1.92796920E-01  9.74085756E-01  7.19655739E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00264954;        wAD =      -0.01170037
+=>       MAD =       0.00474931;       wMAD =       0.05045602
+=>       RMS =       0.00732019;       wRMS =       0.20185690
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.91044621E-01  1.92333185E-01  9.74720164E-01  7.18603865E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00263459;        wAD =      -0.01156711
+=>       MAD =       0.00474787;       wMAD =       0.05047041
+=>       RMS =       0.00733159;       wRMS =       0.20229934
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90190948E-01  1.93170072E-01  9.73252636E-01  7.18774370E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00270667;        wAD =      -0.01173001
+=>       MAD =       0.00477795;       wMAD =       0.05045385
+=>       RMS =       0.00734360;       wRMS =       0.20167808
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.89707938E-01  1.93171874E-01  9.72981308E-01  7.17338647E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00274431;        wAD =      -0.01166586
+=>       MAD =       0.00480249;       wMAD =       0.05046947
+=>       RMS =       0.00737101;       wRMS =       0.20182384
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90340723E-01  1.92817600E-01  9.73984256E-01  7.17409763E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00264547;        wAD =      -0.01154085
+=>       MAD =       0.00475226;       wMAD =       0.05047318
+=>       RMS =       0.00733309;       wRMS =       0.20226442
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90636515E-01  1.93256387E-01  9.73341059E-01  7.20551246E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00268432;        wAD =      -0.01184145
+=>       MAD =       0.00476150;       wMAD =       0.05045609
+=>       RMS =       0.00731918;       wRMS =       0.20138875
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.89921650E-01  1.93428690E-01  9.72995717E-01  7.17834730E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00269451;        wAD =      -0.01171995
+=>       MAD =       0.00477067;       wMAD =       0.05045389
+=>       RMS =       0.00733721;       wRMS =       0.20175773
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90734011E-01  1.92799030E-01  9.73811296E-01  7.19787855E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00269850;        wAD =      -0.01175013
+=>       MAD =       0.00477434;       wMAD =       0.05045358
+=>       RMS =       0.00734188;       wRMS =       0.20168828
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.91057651E-01  1.92435042E-01  9.74203800E-01  7.20371688E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271325;        wAD =      -0.01175232
+=>       MAD =       0.00478419;       wMAD =       0.05045511
+=>       RMS =       0.00735381;       wRMS =       0.20170665
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90232972E-01  1.92840969E-01  9.73731643E-01  7.17475101E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00269028;        wAD =      -0.01160879
+=>       MAD =       0.00477466;       wMAD =       0.05047010
+=>       RMS =       0.00735220;       wRMS =       0.20210474
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90535629E-01  1.93152533E-01  9.73438705E-01  7.19782210E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00268581;        wAD =      -0.01178328
+=>       MAD =       0.00476474;       wMAD =       0.05045491
+=>       RMS =       0.00732741;       wRMS =       0.20156658
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.89798754E-01  1.93478242E-01  9.72663421E-01  7.18433843E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00274321;        wAD =      -0.01179131
+=>       MAD =       0.00479605;       wMAD =       0.05045334
+=>       RMS =       0.00735534;       wRMS =       0.20148856
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.89251948E-01  1.93818903E-01  9.71952254E-01  7.17822895E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00279004;        wAD =      -0.01183678
+=>       MAD =       0.00482164;       wMAD =       0.05045516
+=>       RMS =       0.00737365;       wRMS =       0.20130488
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.89787052E-01  1.93285484E-01  9.72922830E-01  7.17633189E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00273563;        wAD =      -0.01171242
+=>       MAD =       0.00479536;       wMAD =       0.05046162
+=>       RMS =       0.00736166;       wRMS =       0.20174032
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90348485E-01  1.93185771E-01  9.73309736E-01  7.19244954E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00269827;        wAD =      -0.01176557
+=>       MAD =       0.00477202;       wMAD =       0.05045380
+=>       RMS =       0.00733592;       wRMS =       0.20160975
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90614449E-01  1.92887867E-01  9.73522828E-01  7.20285781E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00272882;        wAD =      -0.01179856
+=>       MAD =       0.00478935;       wMAD =       0.05045460
+=>       RMS =       0.00735113;       wRMS =       0.20147477
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90094850E-01  1.93293484E-01  9.73127495E-01  7.18447493E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00270308;        wAD =      -0.01173960
+=>       MAD =       0.00477528;       wMAD =       0.05045328
+=>       RMS =       0.00734067;       wRMS =       0.20168689
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90297101E-01  1.93208191E-01  9.73203338E-01  7.19182702E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271486;        wAD =      -0.01179330
+=>       MAD =       0.00478058;       wMAD =       0.05045314
+=>       RMS =       0.00734323;       wRMS =       0.20155864
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90350178E-01  1.93227251E-01  9.73178689E-01  7.19386868E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271896;        wAD =      -0.01182495
+=>       MAD =       0.00478200;       wMAD =       0.05045411
+=>       RMS =       0.00734305;       wRMS =       0.20149906
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90113873E-01  1.93203703E-01  9.73093039E-01  7.18680992E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00273156;        wAD =      -0.01177161
+=>       MAD =       0.00479109;       wMAD =       0.05045245
+=>       RMS =       0.00735462;       wRMS =       0.20160139
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.89996566E-01  1.93212670E-01  9.72984690E-01  7.18399010E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00274821;        wAD =      -0.01177463
+=>       MAD =       0.00480091;       wMAD =       0.05045601
+=>       RMS =       0.00736405;       wRMS =       0.20159730
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.89418278E-01  1.93792781E-01  9.72232350E-01  7.17584660E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00274786;        wAD =      -0.01179778
+=>       MAD =       0.00479752;       wMAD =       0.05045388
+=>       RMS =       0.00735516;       wRMS =       0.20147966
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90405077E-01  1.93047468E-01  9.73416560E-01  7.19237056E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271084;        wAD =      -0.01176204
+=>       MAD =       0.00477988;       wMAD =       0.05045287
+=>       RMS =       0.00734514;       wRMS =       0.20163602
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90656697E-01  1.92898181E-01  9.73756794E-01  7.19340278E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00268697;        wAD =      -0.01174196
+=>       MAD =       0.00476811;       wMAD =       0.05045291
+=>       RMS =       0.00733666;       wRMS =       0.20175302
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90641524E-01  1.92885288E-01  9.73607371E-01  7.19773022E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271903;        wAD =      -0.01179485
+=>       MAD =       0.00478436;       wMAD =       0.05045350
+=>       RMS =       0.00734910;       wRMS =       0.20158763
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90231518E-01  1.93191435E-01  9.73247464E-01  7.18778875E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00270707;        wAD =      -0.01175342
+=>       MAD =       0.00477751;       wMAD =       0.05045278
+=>       RMS =       0.00734277;       wRMS =       0.20166205
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90406481E-01  1.92962202E-01  9.73553590E-01  7.18835898E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00270336;        wAD =      -0.01172122
+=>       MAD =       0.00477748;       wMAD =       0.05045526
+=>       RMS =       0.00734632;       wRMS =       0.20176775
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90324446E-01  1.93146694E-01  9.73290901E-01  7.19096001E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271199;        wAD =      -0.01177528
+=>       MAD =       0.00477978;       wMAD =       0.05045267
+=>       RMS =       0.00734400;       wRMS =       0.20161085
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.89880761E-01  1.93396469E-01  9.72767187E-01  7.18556183E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00274376;        wAD =      -0.01178921
+=>       MAD =       0.00479677;       wMAD =       0.05045303
+=>       RMS =       0.00735678;       wRMS =       0.20150226
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90462713E-01  1.93022753E-01  9.73509392E-01  7.19144255E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00270117;        wAD =      -0.01175378
+=>       MAD =       0.00477491;       wMAD =       0.05045250
+=>       RMS =       0.00734161;       wRMS =       0.20169027
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90161197E-01  1.93234825E-01  9.73153838E-01  7.18613005E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271505;        wAD =      -0.01176500
+=>       MAD =       0.00478157;       wMAD =       0.05045247
+=>       RMS =       0.00734634;       wRMS =       0.20164625
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90299596E-01  1.93112553E-01  9.73276122E-01  7.18988252E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00272281;        wAD =      -0.01177941
+=>       MAD =       0.00478613;       wMAD =       0.05045267
+=>       RMS =       0.00735049;       wRMS =       0.20161230
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90282577E-01  1.93132273E-01  9.73268957E-01  7.18935907E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271888;        wAD =      -0.01177291
+=>       MAD =       0.00478391;       wMAD =       0.05045250
+=>       RMS =       0.00734856;       wRMS =       0.20162474
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90185733E-01  1.93150083E-01  9.73221712E-01  7.18591078E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00272134;        wAD =      -0.01175637
+=>       MAD =       0.00478590;       wMAD =       0.05045331
+=>       RMS =       0.00735155;       wRMS =       0.20167051
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90289768E-01  1.93147541E-01  9.73273604E-01  7.18969771E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271433;        wAD =      -0.01177055
+=>       MAD =       0.00478128;       wMAD =       0.05045250
+=>       RMS =       0.00734588;       wRMS =       0.20162574
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90231199E-01  1.93172138E-01  9.73245980E-01  7.18768104E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271218;        wAD =      -0.01175755
+=>       MAD =       0.00478037;       wMAD =       0.05045244
+=>       RMS =       0.00734564;       wRMS =       0.20165707
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90205510E-01  1.93192071E-01  9.73234491E-01  7.18684202E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00270883;        wAD =      -0.01174987
+=>       MAD =       0.00477864;       wMAD =       0.05045267
+=>       RMS =       0.00734419;       wRMS =       0.20167324
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90194723E-01  1.93169168E-01  9.73227521E-01  7.18633407E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271565;        wAD =      -0.01175341
+=>       MAD =       0.00478252;       wMAD =       0.05045230
+=>       RMS =       0.00734820;       wRMS =       0.20167174
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90147200E-01  1.93179982E-01  9.73204479E-01  7.18465226E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271632;        wAD =      -0.01174485
+=>       MAD =       0.00478320;       wMAD =       0.05045375
+=>       RMS =       0.00734936;       wRMS =       0.20169477
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.89887783E-01  1.93367164E-01  9.72850796E-01  7.18203499E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00273605;        wAD =      -0.01177001
+=>       MAD =       0.00479320;       wMAD =       0.05045349
+=>       RMS =       0.00735584;       wRMS =       0.20159800
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90318980E-01  1.93108856E-01  9.73344743E-01  7.18909066E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00270989;        wAD =      -0.01175783
+=>       MAD =       0.00477935;       wMAD =       0.05045229
+=>       RMS =       0.00734514;       wRMS =       0.20166718
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90268190E-01  1.93092108E-01  9.73301803E-01  7.18882779E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271959;        wAD =      -0.01175521
+=>       MAD =       0.00478499;       wMAD =       0.05045247
+=>       RMS =       0.00735045;       wRMS =       0.20165244
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90241442E-01  1.93127787E-01  9.73264812E-01  7.18815336E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271845;        wAD =      -0.01175766
+=>       MAD =       0.00478412;       wMAD =       0.05045216
+=>       RMS =       0.00734942;       wRMS =       0.20165089
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90379299E-01  1.93085272E-01  9.73448489E-01  7.18881964E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00269652;        wAD =      -0.01174162
+=>       MAD =       0.00477246;       wMAD =       0.05045270
+=>       RMS =       0.00733965;       wRMS =       0.20172208
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90180229E-01  1.93174095E-01  9.73181901E-01  7.18731235E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00272280;        wAD =      -0.01176411
+=>       MAD =       0.00478630;       wMAD =       0.05045224
+=>       RMS =       0.00735085;       wRMS =       0.20163155
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90236488E-01  1.93117815E-01  9.73263509E-01  7.18776418E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00272122;        wAD =      -0.01175896
+=>       MAD =       0.00478579;       wMAD =       0.05045247
+=>       RMS =       0.00735116;       wRMS =       0.20165361
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90232521E-01  1.93158557E-01  9.73250362E-01  7.18770182E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271444;        wAD =      -0.01175790
+=>       MAD =       0.00478169;       wMAD =       0.05045230
+=>       RMS =       0.00734702;       wRMS =       0.20165621
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90235166E-01  1.93131396E-01  9.73259127E-01  7.18774339E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271896;        wAD =      -0.01175860
+=>       MAD =       0.00478440;       wMAD =       0.05045209
+=>       RMS =       0.00734978;       wRMS =       0.20165448
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90236488E-01  1.93117815E-01  9.73263509E-01  7.18776418E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00272122;        wAD =      -0.01175896
+=>       MAD =       0.00478579;       wMAD =       0.05045247
+=>       RMS =       0.00735116;       wRMS =       0.20165361
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90293186E-01  1.93101899E-01  9.73297771E-01  7.18981581E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271940;        wAD =      -0.01176569
+=>       MAD =       0.00478450;       wMAD =       0.05045228
+=>       RMS =       0.00734940;       wRMS =       0.20163031
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90156031E-01  1.93158733E-01  9.73157062E-01  7.18742179E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00272992;        wAD =      -0.01176520
+=>       MAD =       0.00479048;       wMAD =       0.05045275
+=>       RMS =       0.00735460;       wRMS =       0.20161644
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90278243E-01  1.93121325E-01  9.73297823E-01  7.18867344E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271490;        wAD =      -0.01175967
+=>       MAD =       0.00478205;       wMAD =       0.05045217
+=>       RMS =       0.00734750;       wRMS =       0.20165449
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90174354E-01  1.93175403E-01  9.73204060E-01  7.18612546E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271816;        wAD =      -0.01175433
+=>       MAD =       0.00478393;       wMAD =       0.05045257
+=>       RMS =       0.00734938;       wRMS =       0.20166540
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90263478E-01  1.93120275E-01  9.73274343E-01  7.18889322E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271909;        wAD =      -0.01176285
+=>       MAD =       0.00478435;       wMAD =       0.05045215
+=>       RMS =       0.00734939;       wRMS =       0.20163908
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90328935E-01  1.93076296E-01  9.73366151E-01  7.18941936E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271290;        wAD =      -0.01175528
+=>       MAD =       0.00478124;       wMAD =       0.05045221
+=>       RMS =       0.00734720;       wRMS =       0.20166793
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90291758E-01  1.93100746E-01  9.73320089E-01  7.18889261E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271537;        wAD =      -0.01175749
+=>       MAD =       0.00478246;       wMAD =       0.05045211
+=>       RMS =       0.00734811;       wRMS =       0.20165883
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90237679E-01  1.93118777E-01  9.73261362E-01  7.18816785E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00272104;        wAD =      -0.01175863
+=>       MAD =       0.00478565;       wMAD =       0.05045221
+=>       RMS =       0.00735086;       wRMS =       0.20164715
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90268102E-01  1.93120688E-01  9.73288708E-01  7.18854704E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271643;        wAD =      -0.01175941
+=>       MAD =       0.00478292;       wMAD =       0.05045213
+=>       RMS =       0.00734834;       wRMS =       0.20165266
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90287810E-01  1.93108765E-01  9.73306321E-01  7.18888478E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271648;        wAD =      -0.01176152
+=>       MAD =       0.00478295;       wMAD =       0.05045217
+=>       RMS =       0.00734839;       wRMS =       0.20165163
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90253034E-01  1.93123032E-01  9.73275189E-01  7.18833621E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271796;        wAD =      -0.01175862
+=>       MAD =       0.00478382;       wMAD =       0.05045213
+=>       RMS =       0.00734916;       wRMS =       0.20165108
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90260552E-01  1.93117656E-01  9.73297213E-01  7.18786641E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271527;        wAD =      -0.01175421
+=>       MAD =       0.00478246;       wMAD =       0.05045212
+=>       RMS =       0.00734831;       wRMS =       0.20166944
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90274755E-01  1.93112211E-01  9.73307379E-01  7.18818851E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271506;        wAD =      -0.01175624
+=>       MAD =       0.00478231;       wMAD =       0.05045210
+=>       RMS =       0.00734811;       wRMS =       0.20166662
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90263014E-01  1.93110317E-01  9.73303196E-01  7.18779842E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271590;        wAD =      -0.01175386
+=>       MAD =       0.00478287;       wMAD =       0.05045222
+=>       RMS =       0.00734881;       wRMS =       0.20167203
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90266830E-01  1.93118095E-01  9.73292330E-01  7.18835989E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271630;        wAD =      -0.01175802
+=>       MAD =       0.00478291;       wMAD =       0.05045211
+=>       RMS =       0.00734846;       wRMS =       0.20165750
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90273703E-01  1.93113568E-01  9.73292249E-01  7.18872579E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271757;        wAD =      -0.01176096
+=>       MAD =       0.00478357;       wMAD =       0.05045212
+=>       RMS =       0.00734892;       wRMS =       0.20164928
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90263840E-01  1.93116634E-01  9.73295972E-01  7.18808125E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271585;        wAD =      -0.01175590
+=>       MAD =       0.00478273;       wMAD =       0.05045210
+=>       RMS =       0.00734846;       wRMS =       0.20166440
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90228537E-01  1.93138422E-01  9.73257315E-01  7.18729392E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271771;        wAD =      -0.01175690
+=>       MAD =       0.00478372;       wMAD =       0.05045213
+=>       RMS =       0.00734929;       wRMS =       0.20166267
+==----------------------------------------------------------------------------==
+=>Testing parameters in this round
+  8.90275953E-01  1.93110165E-01  9.73304395E-01  7.18849293E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271596;        wAD =      -0.01175734
+=>       MAD =       0.00478277;       wMAD =       0.05045210
+=>       RMS =       0.00734841;       wRMS =       0.20165979
+==----------------------------------------------------------------------------==
+=>Optimized result by fmin algorithm
+  8.90235166E-01  1.93131396E-01  9.73259127E-01  7.18774339E-01
+=>Testing parameters in this round
+  8.90235166E-01  1.93131396E-01  9.73259127E-01  7.18774339E-01
+=>Batch corresponds to these parameters ::
+  8.90235166E-01  1.93131396E-01  9.73259127E-01  7.18774339E-01
+==----------------------------------------------------------------------------==
+=>        AD =      -0.00271896;        wAD =      -0.01175860
+=>       MAD =       0.00478440;       wMAD =       0.05045209
+=>       RMS =       0.00734978;       wRMS =       0.20165448
+==----------------------------------------------------------------------------==
+=>Total job time:       0.57(wall)
+=>Fitting end at Sat Jun 30 15:32:56 2018
+=>----------------------------------------------------------------------------==
+  #Filename:  DFT_Fit
+  #Author  :  Igor Ying Zhang, Xin Xu
+  #Version :  0.3(20100731)
+  #Purpose :  DFT optimization using several algorithms
